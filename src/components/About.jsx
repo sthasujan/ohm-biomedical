@@ -1,5 +1,9 @@
 import React from 'react';
 import aboutImg from '../assets/aboutImg.jpg';
+import customerIcon from "../assets/icons/customerIcon.png";
+import memberIcon from "../assets/icons/memberIcon.png";
+import serviceIcon from "../assets/icons/serviceIcon.png";
+import paymentIcon from "../assets/icons/paymentIcon.png";
 
 const About = () => {
     return (
@@ -28,9 +32,10 @@ const About = () => {
             <div className='px-4 lg:px-14 max-w-screen-2xl mx-auto bg-neutralSilver py-16'>
                 <div className='flex flex-col md:flex-row justify-between items-center gap-8'>
                     <div className='md:w-1/2'>
-                        <h2 className='text-4xl text-neutralDGrey font-semibold mb-4 md:w-4/5'>Welcome to <br />
-                            <span className='text-brandPrimary'>OHM Biomedical</span></h2>
+                        <h2 className='text-4xl text-brandSecondary font-semibold mb-4 md:w-4/5'>Trusted partner for all your medical device sales and after sales support. <br />
+                            <span className='text-brandPrimary'></span></h2>
                         <p className='md:w-3/4 text-sm text-neutralGrey md-8'>
+                            Delivering innovative and reliable Biomedical solutions, we advance healthcare technology and enhance patient outcomes with our expertise and commitment to excellence.
                         </p>
                     </div>
                     {/* stats */}
@@ -38,14 +43,14 @@ const About = () => {
                 gap-12'>
                         <div className='space-y-8'>
                             <div className='flex items-center gap-4'>
-                                <img src="/src/assets/icons/customerIcon.png" alt="" />
+                                <img src={customerIcon} alt="" />
                                 <div>
                                     <h4 className='text-2xl text-neutralDGrey font-semibold'>26,578</h4>
                                     <p>Customers</p>
                                 </div>
                             </div>
                             <div className='flex items-center gap-4'>
-                                <img src="/src/assets/icons/memberIcon.png" alt="" />
+                                <img src={memberIcon} alt="" />
                                 <div>
                                     <h4 className='text-2xl text-neutralDGrey font-semibold'>4,784</h4>
                                     <p>Member</p>
@@ -54,14 +59,14 @@ const About = () => {
                         </div>
                         <div className='space-y-8'>
                             <div className='flex items-center gap-4'>
-                                <img src="/src/assets/icons/serviceIcon.png" alt="" />
+                                <img src={serviceIcon} alt="" />
                                 <div>
                                     <h4 className='text-2xl text-neutralDGrey font-semibold'>2,245,012</h4>
                                     <p>Services</p>
                                 </div>
                             </div>
                             <div className='flex items-center gap-4'>
-                                <img src="/src/assets/icons/paymentIcon.png" alt="" />
+                                <img src={paymentIcon} alt="" />
                                 <div>
                                     <h4 className='text-2xl text-neutralDGrey font-semibold'>3,245,012</h4>
                                     <p>Payments</p>

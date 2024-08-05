@@ -1,9 +1,17 @@
 import React from 'react'
+import blender from "../assets/services/blender.webp";
+import ohm from "../assets/services/ohm.webp";
+import alpha_click from "../assets/partners/alpha_click.jpeg";
+import bbraun from "../assets/partners/bbraun.svg";
+import healwithlaserlogo from "../assets/partners/heal-with-laser-logo.png";
+import medilaze from "../assets/partners/medilaze.png";
+import mindray from "../assets/partners/mindray.png";
+import seimens from "../assets/partners/seimens.svg";
 
 const Services = () => {
     const services = [
-        {id: 1, title: "Bird Blender Service", description: "Need to add here!!!!", image:"/src/assets/services/blender.webp"},
-        {id: 1, title: "Biomedical Service", description: "Need to add here!!!!", image:"/src/assets/services/ohm.webp"},
+        {id: 1, title: "Bird Blender Service", description: "Need to add here!!!!", image:blender },
+        {id: 1, title: "Biomedical Service", description: "Need to add here!!!!", image:ohm},
     ]
     return (
         <div className='md:px-14 px-4 py-16 max-w-screen-2xl mx-auto' id="service">
@@ -14,12 +22,12 @@ const Services = () => {
                 {/* comapany logo*/}
 
                 <div className='my-12 flex flex-wrap justify-between items-center gap-8'>
-                    <img src="/src/assets/partners/alpha_click.jpeg" alt="" className='company-logo' />
-                    <img src="/src/assets/partners/bbraun.svg" alt="" className='company-logo' />
-                    <img src="/src/assets/partners/heal-with-laser-logo.png" alt="" className='company-logo' />
-                    <img src="/src/assets/partners/medilaze.png" alt="" className='company-logo' />
-                    <img src="/src/assets/partners/mindray.png" alt="" className='company-logo' />
-                    <img src="/src/assets/partners/seimens.svg" alt="" className='company-logo' />
+                    <img src={alpha_click} alt="" className='company-logo' />
+                    <img src={bbraun} alt="" className='company-logo' />
+                    <img src={healwithlaserlogo} alt="" className='company-logo' />
+                    <img src={medilaze} alt="" className='company-logo' />
+                    <img src={mindray} alt="" className='company-logo' />
+                    <img src={seimens} alt="" className='company-logo' />
                 </div>
 
                 {/* services card */}

@@ -22,3 +22,20 @@ header{
   transform: scale(1.05);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.address-container {
+  display: flex;
+  align-items: top;
+  flex-wrap: wrap;
+}
+
+.icon {
+  color: white;
+  margin-right: 8px;
+  margin-top: 3px;
+}
+
+.address-text {
+  margin: 0;
+  color: white;
+}
