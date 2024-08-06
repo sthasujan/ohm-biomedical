@@ -21,7 +21,8 @@ function App() {
                 <Route  path="/Yyaireventilator" element={<YyaireVentilator />} />
                 {/* Add other routes as needed */}
             </Routes>
-            <About />
+            {/* <About /> */}
+            <Services />
             <MyFooter />
         </Router>
     </>

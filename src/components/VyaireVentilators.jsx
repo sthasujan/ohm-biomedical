@@ -22,7 +22,7 @@ const YyaireVentilator = () => {
             <div className='container'>
                 <img src={productBgImg} alt="" className=''/>
                 <h1>Products: Vyaire Ventilator</h1>
-            </div>            
+            </div>           
 
             {/* all Blogs */}
             <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between'>

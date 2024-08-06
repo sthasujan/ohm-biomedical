@@ -40,7 +40,7 @@ const Navbar = () => {
             link: "Products",
             path: "#",
             dropdown: [
-                { link: 'Yyaire Ventilator', path: '/Yyaireventilator' },
+                { link: 'Vyaire Ventilator', path: '/Yyaireventilator' },
                 { link: 'Carefusion Bird Blender', path: '/Carefusionbirdblender' },
                 { link: 'Siemens Ultrasound', path: '/Siemensultrasound' },
             ],
@@ -53,7 +53,7 @@ const Navbar = () => {
 
     return (
         <header className='w-full bg-white fixed top-0 left-0 right-0'>
-            <nav className={`py-4 lg:px-14 px-4 ${isSticky ? "sticky top-0 left-0 right-0 border-b bg-white shadow-md duration-300" : ""}`}>
+            <nav className={`py-10 lg:px-14 px-4 ${isSticky ? "sticky top-0 left-0 right-0 border-b bg-white shadow-md duration-300" : ""}`}>
                 <div className='flex justify-between items-center text-base gap-8'>
                     <a href="#" className='text-2xl font-semibold flex items-center space-x-3'>
                         <img src={logo} className='w-20 inline-block items-center' alt="Logo" />
