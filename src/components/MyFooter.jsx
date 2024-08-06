@@ -25,7 +25,7 @@ const MyFooter = () => {
               </div>
               <div className="address-container">
                 <BsMailbox className="icon" />
-                <p className='text-white'>Support@ohmBiomedical.com.au</p>
+                <p className='text-white'>Support@ohmbiomedical.com.au</p>
               </div> 
             </div>
           </div>
@@ -61,12 +61,11 @@ const MyFooter = () => {
         <div className="w-full sm:flex sm:items-center sm:justify-between">
           <Footer.Copyright className='text-white' href="#" by="OHM Biomedical" year={2024} />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-end">
-            <Footer.Icon href="#" icon={BsFacebook} />
+            {/* <Footer.Icon href="#" icon={BsFacebook} /> */}
             <Footer.Icon href="#" icon={BsLinkedin} />
-            <Footer.Icon href="#" icon={BsInstagram} />
-            <Footer.Icon href="#" icon={BsYoutube} />
+            {/* <Footer.Icon href="#" icon={BsInstagram} />
+            <Footer.Icon href="#" icon={BsYoutube} /> */}
           </div>
-
         </div>
       </div>
     </Footer>

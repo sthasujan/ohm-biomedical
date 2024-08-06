@@ -42,7 +42,7 @@ const Services = () => {
                     {
                         services.map(service => <div key={service.id}>
                             <div>
-                                <div className='bg-[#E8F5E9] md-4 h-60 w-64 mx-auto rounded-tl-3xl
+                                <div className='bg-[#3838e4eb] md-4 h-60 w-64 mx-auto rounded-tl-3xl
                                 rounded-br-3xl'><img src={service.image} alt="" className='-ml-5' /></div>
                                 <h4 className='text-2xl font-bold text-neutralDGrey mb-2 px-2'>{service.title}</h4>
                                 <p className='text-sm text-neutralGrey'>{service.description}</p>

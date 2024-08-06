@@ -39,3 +39,25 @@ header{
   margin: 0;
   color: white;
 }
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Adjust as needed for contrast */
+  font-size: 2em; /* Adjust as needed */
+  text-align: center;
+  width: 100%; /* Ensure text doesn't overflow */
+}
