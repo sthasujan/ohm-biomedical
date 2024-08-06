@@ -8,6 +8,7 @@ import Services from './components/Services'
 import Blog from './components/Blog'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import YyaireVentilator from './components/VyaireVentilators'
+import Trustedpartners from './components/Trustedpartners'
 
 
 function App() {
@@ -17,12 +18,12 @@ function App() {
        <Router>
             <Navbar />
             <Routes>
-                <Route exact path="/" element={<Home />} />
+                <Route  path="/" element={<Home />} />
                 <Route  path="/Yyaireventilator" element={<YyaireVentilator />} />
                 {/* Add other routes as needed */}
             </Routes>
             {/* <About /> */}
-            <Services />
+            <Trustedpartners />
             <MyFooter />
         </Router>
     </>

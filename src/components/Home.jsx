@@ -28,17 +28,16 @@ const Home = () => {
         //         </div>
         //     </div>
         // </div>
-        <div className='container'>
+        <div className='container' id="home">
             <img src={productBgImg} alt="" className='' />
-            <div className='text-container'>
+            <div>
                 <h1 className='font-semibold mb-4 md:w-3/4 leading-snug whitespace-nowrap'>
-                    Authorized Distributor of Vyaire <br />
+                    Authorized Distributor of Vyaire Ventilation <br/>
                     <span className='text-xl md:text-3xl text-brandPrimary leading-snug'>
-                        Ventilation for Australia & New Zealand
-                    </span>
+                         For Australia & New Zealand
+                    </span><br />
+                    <span className='text-xl'>OHM Biomedical</span>
                 </h1>
-                <p className='md:text-2xl mb-8'>OHM Biomedical</p>
-                <button className='btn-primary'>Contact us</button>
             </div>
         </div>
     )

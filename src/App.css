@@ -48,7 +48,7 @@ header{
 
 .container img {
   width: 100%;
-  height: auto;
+  height: 400px;
 }
 
 .container h1 {
@@ -61,5 +61,6 @@ header{
   text-align: center;
   width: 100%; /* Ensure text doesn't overflow */
 }
+
 
 

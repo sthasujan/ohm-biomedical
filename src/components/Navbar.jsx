@@ -35,7 +35,7 @@ const Navbar = () => {
     }, []);
 
     const navItems = [
-        { link: "Home", path: "home" },
+        { link: "Home", path: "/" },
         {
             link: "Products",
             path: "#",
@@ -55,9 +55,9 @@ const Navbar = () => {
         <header className='w-full bg-white fixed top-0 left-0 right-0'>
             <nav className={`py-10 lg:px-14 px-4 ${isSticky ? "sticky top-0 left-0 right-0 border-b bg-white shadow-md duration-300" : ""}`}>
                 <div className='flex justify-between items-center text-base gap-8'>
-                    <a href="#" className='text-2xl font-semibold flex items-center space-x-3'>
+                    <NavLink to="/" className='text-2xl font-semibold flex items-center space-x-3'>
                         <img src={logo} className='w-20 inline-block items-center' alt="Logo" />
-                    </a>
+                    </NavLink>
                     <ul className='md:flex space-x-12 hidden'>
                         {navItems.map(({ link, path, dropdown }) => (
                             dropdown ? (
@@ -83,14 +83,22 @@ const Navbar = () => {
                                 </li>
                             ) : (
                                 <li key={path}>
-                                    <ScrollLink
-                                        to={path}
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-100}
-                                        className='block cursor-pointer text-base text-gray900 hover:text-brandPrimary first:font-medium'>
-                                        {link}
-                                    </ScrollLink>
+                                    {link === "Home" ? (
+                                        <NavLink
+                                            to={path}
+                                            className='block cursor-pointer text-base text-gray900 hover:text-brandPrimary first:font-medium'>
+                                            {link}
+                                        </NavLink>
+                                    ) : (
+                                        <ScrollLink
+                                            to={path}
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-100}
+                                            className='block cursor-pointer text-base text-gray900 hover:text-brandPrimary first:font-medium'>
+                                            {link}
+                                        </ScrollLink>
+                                    )}
                                 </li>
                             )
                         ))}
@@ -134,15 +142,12 @@ const Navbar = () => {
                                 )}
                             </div>
                         ) : (
-                            <ScrollLink
+                            <NavLink
                                 key={path}
                                 to={path}
-                                spy={true}
-                                smooth={true}
-                                offset={-100}
                                 className='block text-base text-white hover:text-brandPrimary first:font-medium'>
                                 {link}
-                            </ScrollLink>
+                            </NavLink>
                         )
                     ))}
                 </div>
