@@ -35,7 +35,7 @@ const Products = () => {
     <div className='md:px-14 px-4 py-16 max-w-screen-2xl mx-auto'>
       <div className='mt-15 md:w-1/2 mx-auto text-center'>
         <h2 className='text-xl text-black font-serif mb-3'>
-          "As the sole authorized distributor for Vyaire products in Australia and New Zealand, OHM Biomedical proudly offers comprehensive sales and expert servicing for Vyaire ventilators and CareFusion Bird blenders. Beyond these specific offerings, we provide a wide range of biomedical services, including preventive maintenance and repairs, to some of the leading healthcare companies in the industry."
+          OHM Biomedical is the sole authorized distributor for Vyaire products in Australia and New Zealand, offering comprehensive sales and expert servicing for Vyaire ventilators and CareFusion Bird blenders. In addition to these specific products, we also provide a broad range of biomedical services, including preventive maintenance and repairs, catering to some of the top healthcare companies in the industry.
         </h2>
       </div>
       <div className='text-center my-8'>
