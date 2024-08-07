@@ -1,11 +1,11 @@
 import React from 'react';
 import productBgImg from "../assets/products.webp";
-import Blog1 from "../assets/products/blog1.png";
-import Blog2 from "../assets/products/blog2.png";
-import Blog3 from "../assets/products/blog3.png";
-import Blog4 from "../assets/products/blog4.png";
-import Blog5 from "../assets/products/blog5.png";
-import Blog6 from "../assets/products/blog6.png";
+import Blog1 from "../assets/products/Vyaireventilators/blog1.png";
+import Blog2 from "../assets/products/Vyaireventilators/blog2.png";
+import Blog3 from "../assets/products/Vyaireventilators/blog3.png";
+import Blog4 from "../assets/products/Vyaireventilators/blog4.png";
+import Blog5 from "../assets/products/Vyaireventilators/blog5.png";
+import Blog6 from "../assets/products/Vyaireventilators/blog6.png";
 
 const YyaireVentilator = () => {
     const blogs = [

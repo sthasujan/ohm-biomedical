@@ -11,6 +11,7 @@ import YyaireVentilator from './components/VyaireVentilators'
 import Trustedpartners from './components/Trustedpartners'
 import Carefusionbirdblender from './components/Carefusionbirdblender'
 import Siemensultrasound from './components/Siemensultrasound'
+import Products from './components/Products'
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
                 <Route  path="/Siemensultrasound" element={<Siemensultrasound />} />
                 {/* Add other routes as needed */}
             </Routes>
-            {/* <About /> */}
+            <Products />
             <Trustedpartners />
             <MyFooter />
         </Router>

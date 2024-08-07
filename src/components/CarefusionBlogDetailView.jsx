@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const BlogDetailView = ({ blog, onClose }) => {
+const CarefusionBlogDetailView = ({ blog, onClose }) => {
     const [selectedImage, setSelectedImage] = useState(blog.images[0]);
     const [showFeatures, setShowFeatures] = useState(false);
     const [showResources, setShowResources] = useState(false);
@@ -76,4 +76,4 @@ const BlogDetailView = ({ blog, onClose }) => {
     );
 };
 
-export default BlogDetailView;
+export default CarefusionBlogDetailView;

@@ -36,7 +36,7 @@ const Home = () => {
                     <span className='text-xl md:text-3xl text-brandPrimary leading-snug'>
                          For Australia & New Zealand
                     </span><br />
-                    <span className='text-xl'>OHM Biomedical</span>
+                    {/* <span className='text-xl'>OHM Biomedical</span> */}
                 </h1>
             </div>
         </div>
