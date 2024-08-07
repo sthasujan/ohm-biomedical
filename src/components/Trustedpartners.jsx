@@ -8,12 +8,10 @@ import seimens from "../assets/partners/seimens.svg";
 
 const Trustedpartners = () => {
     return (
-        <div className='md:px-14 px-4 py-16 max-w-screen-2xl mx-auto' id="service">
-            <div className='text-center my-8'>
-                <h2 className='text-4xl text-brandPrimary font-bold mb-2'>Our Trusted <br/> Partners</h2>
-                {/* <p className='text-black'>We have been working with some Fortune 500+ clients</p> */}
-                {/* comapany logo*/}
-                <div className='my-12 flex flex-wrap justify-between items-center gap-8'>
+        <div className='md:px-14 px-4 max-w-screen-2xl mx-auto' id="service">
+            <div className='text-center my-2'>
+                <h2 className='text-4xl text-brandPrimary font-bold mb-2'>Our Trusted Partners</h2>
+                <div className='my-4 flex flex-wrap justify-between items-center gap-8'>
                     <img src={alpha_click} alt="" className='company-logo' />
                     <img src={bbraun} alt="" className='company-logo' />
                     <img src={healwithlaserlogo} alt="" className='company-logo' />
