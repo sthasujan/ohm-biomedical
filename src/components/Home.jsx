@@ -31,7 +31,8 @@ const Home = () => {
         <div className='container' id="home">
             <img src={productBgImg} alt="" className='' />
             <div>
-                <h1 className='font-semibold mb-4 md:w-3/4 leading-snug whitespace-nowrap'>
+                <h1 className='font-semibold mb-4 md:w-3/4 leading-snug whitespace-nowrap 
+                absolute top-[70%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl text-center w-full'>
                     Authorized Distributor of Vyaire Ventilation <br/>
                     <span className='text-xl md:text-3xl text-brandPrimary leading-snug'>
                          For Australia & New Zealand

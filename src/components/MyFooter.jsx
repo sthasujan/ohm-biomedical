@@ -51,6 +51,7 @@ const MyFooter = () => {
             <div>
               <Footer.Title title="" />
               <Footer.LinkGroup col>
+                <Footer.Icon href="https://www.linkedin.com/company/ohmbiomedical/" icon={BsLinkedin} />
                 <Footer.Link href="#" className='text-white'>Privacy Policy</Footer.Link>
                 <Footer.Link href="#" className='text-white'>Terms &amp; Conditions</Footer.Link>
               </Footer.LinkGroup>
@@ -62,7 +63,7 @@ const MyFooter = () => {
           <Footer.Copyright className='text-white' href="#" by="OHM Biomedical" year={2024} />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-end">
             {/* <Footer.Icon href="#" icon={BsFacebook} /> */}
-            <Footer.Icon href="#" icon={BsLinkedin} />
+            {/* <Footer.Icon href="#" icon={BsLinkedin} /> */}
             {/* <Footer.Icon href="#" icon={BsInstagram} />
             <Footer.Icon href="#" icon={BsYoutube} /> */}
           </div>

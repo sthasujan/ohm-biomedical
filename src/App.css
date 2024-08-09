@@ -46,15 +46,37 @@ header{
   max-width: 600px; /* Adjust as needed */
 }
 
-.container h1 {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white; /* Adjust as needed for contrast */
-  font-size: 2em; /* Adjust as needed */
-  text-align: center;
-  width: 100%; /* Ensure text doesn't overflow */
+/* Add this CSS to your component's stylesheet */
+
+.company-logos {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.scroll-container {
+  display: flex;
+  gap: 60px; /* Adjust spacing between logos */
+  width: max-content;
+  animation: scrollReverse 20s linear infinite; /* Adjust duration for desired speed */
+}
+
+/* Keyframes for reverse scrolling effect */
+@keyframes scrollReverse {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+}
+
+/* Make sure each image fits nicely and remains responsive */
+.scroll-container img {
+  width: 200px; /* Adjust size as needed */
+  height: auto;
+  object-fit: contain;
 }
 
 
