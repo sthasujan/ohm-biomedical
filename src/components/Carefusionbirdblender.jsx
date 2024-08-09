@@ -55,7 +55,8 @@ const Carefusionbirdblender = () => {
                 <>
                     <div className="container">
                         <img src={productBgImg} alt="" className="" />
-                        <h1>Products: Carefusion bird blenders</h1>
+                        <h1 className='whitespace-nowrap 
+                absolute top-[70%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl text-center w-full'>Products: Carefusion bird blenders</h1>
                     </div>
                     <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-12">
                         {/* all Blogs */}
@@ -63,7 +64,7 @@ const Carefusionbirdblender = () => {
                             {blogs.map((blog) => (
                                 <div key={blog.id} className="mx-auto relative mb-12 cursor-pointer">
                                     <img src={blog.image} alt="" className="hover:scale-95 transition-all duration-300" />
-                                    <div className="text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto absolute left-0 right-0 -bottom-18">
+                                    <div className="text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto absolute left-0 right-0 -bottom-24">
                                         <span className="inline-block bg-black text-white font-bold rounded-full px-3 py-1 mb-2">
                                             Blenders
                                         </span>
