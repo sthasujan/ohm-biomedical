@@ -1,77 +1,133 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import productBgImg from "../assets/products.webp";
+import Blog1 from '../assets/products/Carefusionbirdblenders/high_flow.png';
+import Blog2 from '../assets/products/Carefusionbirdblenders/low_flow.png';
+import Blog3 from '../assets/products/Carefusionbirdblenders/flow_meter.png';
 
-const CarefusionBlogDetailView = ({ blog, onClose }) => {
+const blogs = [
+    {
+        id: 1,
+        title: 'High Flow Bird Blender',
+        subtitle: 'High flow, high pressure blender for ventilators and CPAP.',
+        description: 'The High Flow Bird Blender is a high flow, high pressure blender that is ideal for use with ventilators, CPAP, and high flow oxygen therapy devices. It is designed to provide accurate FiO2 mixtures from two outlet ports and has an overall flow range of 2-120 LPM. The High Flow Bird Blender is perfect for use in hospitals, clinics, and other healthcare facilities where high flow oxygen therapy is required.',
+        image: Blog1,
+        images: [Blog1, Blog2, Blog3],
+        featuresAndBenefits: 'Features and benefits details...',
+        resourcePdf: 'resource.pdf'
+    },
+    {
+        id: 2,
+        title: 'Low Flow Bird Blender',
+        subtitle: 'Low flow, high pressure blender for ventilators and CPAP.',
+        description: 'The Low Flow Bird Blender is a low flow, high pressure blender that is ideal for use with ventilators, CPAP, and high flow oxygen therapy devices. It is designed to provide accurate FiO2 mixtures from two outlet ports and has an overall flow range of 2-120 LPM. The Low Flow Bird Blender is perfect for use in hospitals, clinics, and other healthcare facilities where low flow oxygen therapy is required.',
+        image: Blog2,
+        images: [Blog1, Blog2, Blog3],
+        featuresAndBenefits: 'Features and benefits details...',
+        resourcePdf: 'resource.pdf'
+    },
+    {
+        id: 3,
+        title: 'Flow Meter Bird MicroBlenders',
+        subtitle: 'Experience Precision in Every Breath with the Bird Blender',
+        description: 'At OHM Biomedical, we proudly present the Bird Blender, a cornerstone in respiratory care technology.Designed with precision and reliability in mind, the Bird Blender offers unparalleled control over oxygen concentration, ensuring optimal therapy outcomes for patients of all ages.',
+        image: Blog3,
+        images: [Blog1, Blog2, Blog3],
+        featuresAndBenefits: 'Features and benefits details...',
+        resourcePdf: 'resource.pdf'
+    },
+
+];
+
+const CarefusionBlogDetailView = () => {
+    const { id } = useParams();
+    const blog = blogs.find(blog => blog.id === parseInt(id));
     const [selectedImage, setSelectedImage] = useState(blog.images[0]);
     const [showFeatures, setShowFeatures] = useState(false);
     const [showResources, setShowResources] = useState(false);
 
-    const handleImageClick = (image) => {
-        setSelectedImage(image);
-    };
-
     return (
-        <div className="container mx-auto my-12 px-4 lg:px-14 max-w-screen-2xl">
-            <button onClick={onClose} className="bg-red-500 text-white font-bold py-2 px-4 rounded mb-4">Back</button>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div className="flex flex-col items-center">
-                    {blog.images.map((image, index) => (
+        <div>
+            <div className='w-24 h-24'>
+                <img src={productBgImg} alt="" />
+            </div>
+            <div className="container mx-auto my-12 px-4 lg:px-14 max-w-screen-2xl">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    {/* Left Column - Thumbnails */}
+                    <div className="flex flex-col items-center">
+                        {blog.images.map((image, index) => (
+                            <img
+                                key={index}
+                                src={image}
+                                alt={`Image ${index + 1}`}
+                                className="cursor-pointer mb-4 w-32 h-32 object-cover hover:opacity-75 transition-all rounded-full border-4 border-brandSecondary shadow-lg"
+                                onClick={() => setSelectedImage(image)}
+                            />
+                        ))}
+                    </div>
+
+                    {/* Middle Column - Selected Image */}
+                    <div className="flex justify-center items-center">
                         <img
-                            key={index}
-                            src={image}
-                            alt={`Image ${index + 1}`}
-                            className="cursor-pointer mb-4 w-48 h-48 object-cover hover:opacity-75 transition-all"
-                            onClick={() => handleImageClick(image)}
+                            src={selectedImage}
+                            alt="Selected"
+                            className="w-96 h-96 object-cover mb-4 rounded-lg border-4 border-brandSecondary shadow-xl transform hover:scale-105 transition-all"
                         />
-                    ))}
-                </div>
-                <div className="flex flex-col items-center">
-                    <img
-                        src={selectedImage}
-                        alt="Selected"
-                        className="w-74 h-74 object-cover mb-4"
-                    />
-                    <div className="text-left px-4 py-4 bg-white shadow-lg rounded-md w-full">
-                        <h3 className="text-neutralGrey font-semibold mb-2">{blog.title}</h3>
-                        <p className="mb-4">{blog.description}</p>
-                        <button className="bg-brandPrimary text-white font-bold py-2 px-4 rounded">
+                    </div>
+
+                    {/* Right Column - Blog Details */}
+                    <div className="flex flex-col justify-center">
+                        <h3 className="text-2xl text-neutralGrey font-semibold mb-2">{blog.title}</h3>
+                        <h4 className="text-xl text-neutralGrey font-medium mb-4">{blog.subtitle}</h4>
+                        <p className="mb-8 text-lg leading-relaxed">{blog.description}</p>
+                        <button className="bg-brandSecondary text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-green-700 transition-all">
                             Contact Sales Representative
                         </button>
                     </div>
                 </div>
-            </div>
-            <div className="flex justify-between mt-8">
-                <button
-                    onClick={() => setShowFeatures(!showFeatures)}
-                    className="bg-brandPrimary text-white font-bold py-2 px-4 rounded"
-                >
-                    Features & Benefits
-                </button>
-                <button
-                    onClick={() => setShowResources(!showResources)}
-                    className="bg-brandPrimary text-white font-bold py-2 px-4 rounded"
-                >
-                    Customer Resources
-                </button>
-            </div>
-            {showFeatures && (
-                <div className="mt-8 p-4 bg-white shadow-lg rounded-md">
-                    <h3 className="font-semibold mb-2">Features & Benefits</h3>
-                    <p>{blog.featuresAndBenefits}</p>
+
+                {/* Accordion Panels */}
+                <div className="mt-12 space-y-4">
+                    {/* Features & Benefits Accordion */}
+                    <div className="border border-gray-300 rounded-lg">
+                        <button
+                            onClick={() => setShowFeatures(!showFeatures)}
+                            className="flex justify-between items-center w-full bg-brandSecondary text-white py-3 px-6 rounded-t-lg"
+                        >
+                            <span className="text-lg font-semibold">Features & Benefits</span>
+                            <span className="text-2xl">{showFeatures ? '-' : '+'}</span>
+                        </button>
+                        {showFeatures && (
+                            <div className="p-6 bg-gray-50">
+                                <p>{blog.featuresAndBenefits}</p>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Customer Resources Accordion */}
+                    <div className="border border-gray-300 rounded-lg">
+                        <button
+                            onClick={() => setShowResources(!showResources)}
+                            className="flex justify-between items-center w-full bg-brandSecondary text-white py-3 px-6 rounded-t-lg"
+                        >
+                            <span className="text-lg font-semibold">Customer Resources</span>
+                            <span className="text-2xl">{showResources ? '-' : '+'}</span>
+                        </button>
+                        {showResources && (
+                            <div className="p-6 bg-gray-50">
+                                <a
+                                    href={blog.resourcePdf}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-brandSecondary underline"
+                                >
+                                    Download PDF
+                                </a>
+                            </div>
+                        )}
+                    </div>
                 </div>
-            )}
-            {showResources && (
-                <div className="mt-8 p-4 bg-white shadow-lg rounded-md">
-                    <h3 className="font-semibold mb-2">Customer Resources</h3>
-                    <a
-                        href={blog.resourcePdf}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-brandPrimary font-bold underline"
-                    >
-                        Download PDF
-                    </a>
-                </div>
-            )}
+            </div>
         </div>
     );
 };

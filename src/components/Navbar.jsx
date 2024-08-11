@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import logo from '../assets/logo.png';
 import { Link as ScrollLink } from 'react-scroll';
 import { FaXmark, FaBars } from "react-icons/fa6";
@@ -7,7 +7,8 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
     const [isSticky, setIsSticky] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(null);
+    const navbarRef = useRef(null);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -17,21 +18,28 @@ const Navbar = () => {
         const handleResize = () => {
             if (window.innerWidth >= 768) {
                 setIsMenuOpen(false);
-                setIsDropdownOpen(false);
+                setDropdownOpen(null);
             }
         };
 
         const handleScroll = () => {
             setIsSticky(window.scrollY > 100);
         };
-        
+
+        const handleClickOutside = (event) => {
+            if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+                setDropdownOpen(null);
+            }
+        };
 
         window.addEventListener('resize', handleResize);
         window.addEventListener('scroll', handleScroll);
+        document.addEventListener('mousedown', handleClickOutside);
 
         return () => {
             window.removeEventListener('resize', handleResize);
             window.removeEventListener('scroll', handleScroll);
+            document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
 
@@ -65,13 +73,13 @@ const Navbar = () => {
                 { link: 'Careers', path: '/Careers' },
             ],
         },
-        { link: "Testimonial", path: "testimonial" },
-        { link: "Blog", path: "Blog" },
+        { link: "Testimonial", path: "/Testimonial" },
+        { link: "Blog", path: "/Blog" }
     ];
 
     return (
         <header className='w-full bg-white fixed top-0 left-0 right-0'>
-            <nav className={`py-10 lg:px-14 px-4 ${isSticky ? "sticky top-0 left-0 right-0 border-b bg-white shadow-md duration-300" : ""}`}>
+            <nav className={`py-10 lg:px-14 px-4 ${isSticky ? "sticky top-0 left-0 right-0 border-b bg-white shadow-md duration-300" : ""}`} ref={navbarRef}>
                 <div className='flex justify-between items-center text-base gap-8'>
                     <NavLink to="/" className='text-2xl font-semibold flex items-center space-x-3'>
                         <img src={logo} className='w-24 inline-block items-center' alt="Logo" />
@@ -81,25 +89,22 @@ const Navbar = () => {
                             dropdown ? (
                                 <li key={link} className='relative group'>
                                     <span
-                                        onClick={() => setIsDropdownOpen(prev => prev === link ? false : link)}
                                         className='block cursor-pointer text-base text-gray900 hover:text-brandPrimary first:font-medium'>
                                         {link}
                                     </span>
-                                    {isDropdownOpen === link && (
-                                        <ul className='absolute bg-white shadow-lg mt-2 p-2 flex flex-col space-y-2'>
-                                            {dropdown.map(({ link, path }) => (
-                                                <li key={path}>
-                                                    <NavLink
-                                                        to={path}
-                                                        className='block px-8 py-2 text-base text-gray900 hover:text-brandPrimary whitespace-nowrap'
-                                                        onClick={() => setIsDropdownOpen(false)} 
-                                                        >                                                        
-                                                        {link}
-                                                    </NavLink>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )}
+                                    <ul className={`absolute bg-white shadow-lg mt-2 p-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out ${dropdownOpen === link ? "opacity-100" : ""}`}>
+                                        {dropdown.map(({ link, path }) => (
+                                            <li key={path}>
+                                                <NavLink
+                                                    to={path}
+                                                    className='block px-8 py-2 text-base text-gray900 hover:text-brandPrimary whitespace-nowrap'
+                                                    onClick={() => setDropdownOpen(null)} 
+                                                    >                                                        
+                                                    {link}
+                                                </NavLink>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </li>
                             ) : (
                                 <li key={path}>
@@ -110,14 +115,14 @@ const Navbar = () => {
                                             {link}
                                         </NavLink>
                                     ) : (
-                                        <ScrollLink
+                                        <NavLink
                                             to={path}
                                             spy={true}
                                             smooth={true}
                                             offset={-100}
                                             className='block cursor-pointer text-base text-gray900 hover:text-brandPrimary first:font-medium'>
                                             {link}
-                                        </ScrollLink>
+                                        </NavLink>
                                     )}
                                 </li>
                             )
@@ -131,8 +136,6 @@ const Navbar = () => {
                             </svg>
                             03 9115 7464
                         </a>
-                        {/* <a href="/" className='hidden lg:flex items-center text-brandPrimary hover:text-gray900'>Login</a> */}
-                        {/* <button className='bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey'>Sign up</button> */}
                     </div>
 
                     <div className='md:hidden'>
@@ -144,23 +147,23 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className={`space-y-4 px-4 mt-16 py-7 bg-brandPrimary ${isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"}`}>
+                <div className={`space-y-4 px-4 mt-16 py-7 bg-brandPrimary ${isMenuOpen ? "block fixed top-0 left-0 right-0" : "hidden"}`}>
                     {navItems.map(({ link, path, dropdown }) => (
                         dropdown ? (
                             <div key={link} className='relative'>
                                 <span
-                                    onClick={() => setIsDropdownOpen(prev => prev === link ? false : link)}
+                                    onClick={() => setDropdownOpen(prev => prev === link ? null : link)}
                                     className='block cursor-pointer text-base text-white hover:text-brandPrimary first:font-medium'>
                                     {link}
                                 </span>
-                                {isDropdownOpen === link && (
+                                {dropdownOpen === link && (
                                     <ul className='mt-2 flex flex-col space-y-2'>
                                         {dropdown.map(({ link, path }) => (
                                             <li key={path}>
                                                 <NavLink
                                                     to={path}
                                                     className='block px-4 py-2 text-base text-white hover:text-brandPrimary'
-                                                    onClick={() => setIsDropdownOpen(false)} 
+                                                    onClick={() => setIsMenuOpen(false)} 
                                                     >
                                                     {link}
                                                 </NavLink>
@@ -178,6 +181,11 @@ const Navbar = () => {
                             </NavLink>
                         )
                     ))}
+                    <button
+                        onClick={toggleMenu}
+                        className='text-white'>
+                        <FaXmark className='h-6 w-6' />
+                    </button>
                 </div>
             </nav>
         </header>
