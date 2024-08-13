@@ -16,6 +16,7 @@ import BlogDetail from './components/BlogDetail';
 import CarefusionBlogDetailView from './components/CarefusionBlogDetailView';
 import FAQ from './components/FAQ';
 import OurTeam from './components/OurTeam';
+import VyaireBlogDetailView from './components/VyaireBlogDetailView';
 
 
 function AppWrapper() {
@@ -31,6 +32,7 @@ function AppWrapper() {
         <Route path="/Carefusionbirdblender" element={<Carefusionbirdblender />} />
         <Route path="/Siemensultrasound" element={<Siemensultrasound />} />
         
+        <Route path="/Yyaireventilator/:id" element={<VyaireBlogDetailView />} />
         <Route path="/Carefusionbirdblender/:id" element={<CarefusionBlogDetailView />} />
 
         <Route path="/About" element={<About />} />

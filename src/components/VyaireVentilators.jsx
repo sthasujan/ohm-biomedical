@@ -19,9 +19,12 @@ const YyaireVentilator = () => {
     return (
         <div>
             <div className='container'>
+                <span className="inline-block bg-black text-white font-bold rounded-full px-3 py-1 mb-2">
+                    Ventilator
+                </span>
                 <img src={productBgImg} alt="" className='' />
                 <h1 className='whitespace-nowrap 
-                absolute top-[70%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl text-center w-full'>Products: Vyaire Ventilator</h1>
+                absolute top-[70%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl text-center w-full'>Products: Vyaire Ventilators</h1>
             </div>
             <div className='px-4 lg:px-14 max-w-screen-2xl mx-auto my-12'>
                 {/* all Blogs */}
@@ -31,7 +34,10 @@ const YyaireVentilator = () => {
                             <div key={blog.id} className='mx-auto relative mb-12 cursor-pointer'>
                                 <img src={blog.image} alt="" className='hover:scale-95 transition-all duration-300' />
                                 <div className='text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto
-                                absolute left-0 right-0 -bottom-24'>
+                                                absolute left-0 right-0 -bottom-24'>
+                                    <span className="inline-block bg-black text-white font-bold rounded-full px-3 py-1 mb-2">
+                                        Ventilator
+                                    </span>
                                     <h3 className='mb-3 text-neutralGrey font-semibold'>{blog.title}</h3>
                                     <p>{blog.description}</p>
                                     <div className='flex items-center justify-center gap-8'>
@@ -48,7 +54,7 @@ const YyaireVentilator = () => {
                                             >
                                                 <path
                                                     d="M12 9.39905L15.2929 6.10615C15.6834 5.71563 15.6834 5.08246 15.2929 4.69194L12 
-                                    1.39905M15 5.39905L1 5.39905"
+                                                        1.39905M15 5.39905L1 5.39905"
                                                     stroke="#4CAF4F"
                                                 />
                                             </svg>

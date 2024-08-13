@@ -1,79 +1,88 @@
 import React, { useState } from "react";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa"; // Import icons
 import productBgImg from "../assets/products.webp";
+import team1 from "../assets/Ourteam/sovit.png";
+import team2 from "../assets/Ourteam/suman.jpeg";
+import team3 from "../assets/Ourteam/subash.jpg";
+// import team4 from "../assets/Ourteam/anupam.png";
+import team5 from "../assets/Ourteam/soyuz.png";
+import team6 from "../assets/Ourteam/sitesh.jpg";
+import team7 from "../assets/Ourteam/abhiske.png";
+import team8 from "../assets/Ourteam/sujata.webp";
+import team9 from "../assets/Ourteam/abhishekk.png";
 
 const teamMembers = [
     {
         name: "Sovit Baral",
         post: "Founder",
-        image: "path-to-image-1.jpg",
-        description: "Sovit is the CEO with over 20 years of experience in the industry.",
-        email: "sovit.baral@example.com",
-        linkedin: "https://www.linkedin.com/in/sovitbaral",
+        image: team1,
+        description: "Sovit Baral, a seasoned healthcare business professional, brings over a decade of expertise in managing critical medical devices. As the Managing Director of OHM Biomedical, Sovit is dedicated to delivering quality services with a focus on compliance and integrity.",
+        email: "Sovit@ohmBiomedical.com.au",
+        linkedin: "https://www.linkedin.com/in/sovitbaral/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app",
     },
     {
         name: "Suman Kharel",
         post: "Co Founder",
-        image: "path-to-image-2.jpg",
-        description: "Suman leads the technology team with a focus on innovation.",
-        email: "suman.kharel@example.com",
-        linkedin: "https://www.linkedin.com/in/sumankharel",
+        image: team2,
+        description: "Suman Kharel is a Swinburne University graduate and former GE Healthcare professional, now leading as Workshop Manager at OHM Biomedical. He oversees the service and maintenance of critical Biomedical devices, ensuring high standards and operational excellence. Known for his meticulous approach and dedication to continuous improvement, Suman has enhanced the company’s reputation by focusing on advanced training and strict compliance. His leadership not only uplifts his team but also solidifies OHM Biomedical’s role as a trusted partner in the healthcare industry.",
+        email: "Suman@ohmBiomedical.com.au",
+        linkedin: "https://www.linkedin.com/in/kBiomedical/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app",
     },
     {
-        name: "Samuel Green",
-        post: "CFO",
-        image: "path-to-image-3.jpg",
-        description: "Samuel manages the financial operations with a strategic vision.",
-        email: "samuel.green@example.com",
-        linkedin: "https://www.linkedin.com/in/samuelgreen",
+        name: "Subash Basnet",
+        post: "Co Founder",
+        image: team3,
+        description: "Subash Basnet: Senior Biomedical Engineer with 10+ years' experience, excels in optimizing and repairing critical medical equipment, specializing in Anaesthesia, Patient Monitors, Central Monitors, Telemetry, Ventilators, and more.",
+        email: "Subash@ohmBiomedical.com.au",
+        linkedin: "https://www.linkedin.com/in/subas1/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app",
     },
     {
-        name: "Emily White",
-        post: "COO",
+        name: "Anupam Acharya",
+        post: "Co Founder",
         image: "path-to-image-4.jpg",
-        description: "Emily oversees the company's operations and ensures efficiency.",
-        email: "emily.white@example.com",
-        linkedin: "https://www.linkedin.com/in/emilywhite",
+        description: "",
+        email: "anupam@ohmBiomedical.com.au",
+        linkedin: "https://www.linkedin.com/in/anupam-acharya-a121b356/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app",
     },
     {
-        name: "Michael Brown",
-        post: "Head of Marketing",
-        image: "path-to-image-5.jpg",
-        description: "Michael is responsible for all marketing initiatives and strategies.",
-        email: "michael.brown@example.com",
-        linkedin: "https://www.linkedin.com/in/michaelbrown",
+        name: "Soyuz Baral",
+        post: "Social Media & Back Office Manager",
+        image: team5,
+        description: "Soyuz Baral, OHM Bio's Back Office & Social Media Manager, uses a Microbiology degree and sales background for effective marketing. Skilled in creative design and customer service, Soyuz blends science and sales for a seamless back-office role.",
+        email: "soyuz@ohmBiomedical.com.au",
+        linkedin: "https://www.linkedin.com",
     },
     {
-        name: "Sophia Wilson",
-        post: "HR Manager",
-        image: "path-to-image-6.jpg",
-        description: "Sophia manages human resources and talent acquisition.",
-        email: "sophia.wilson@example.com",
-        linkedin: "https://www.linkedin.com/in/sophiawilson",
+        name: "Sitesh Sharan Shah",
+        post: "Service Engineer",
+        image: team6,
+        description: "Sitesh, a skilled Biomedical Technician, joins OHM Biomedical with expertise in dental and general Biomedical devices. His proficiency in maintenance aligns with our to high-quality services. Sitesh is a valuable asset, bringing a positive attitude and dedication to patient care.",
+        email: "Sitesh@ohmbiomedial.com.au",
+        linkedin: "https://www.linkedin.com/in/sitesh-sharan-shah-472370191/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app",
     },
     {
-        name: "David Clark",
-        post: "Lead Developer",
-        image: "path-to-image-7.jpg",
-        description: "David is the lead developer with expertise in full-stack development.",
-        email: "david.clark@example.com",
-        linkedin: "https://www.linkedin.com/in/davidclark",
+        name: "Abhishek Prasai",
+        post: "Account/Admin Officer",
+        image: team7,
+        description: "With an undergraduate degree in Commerce/Accounting, Abhishek has been important part of OHM Biomedical. With his knowledge in Accounting and Admin field Abhishek looks after stocks, reports, orders, accounts, shipments etc. He has passion for his job and is always on a positive sides.",
+        email: "support@ohmBiomedical.com.au",
+        linkedin: "https://www.linkedin.com/in/abhishek-prasai-2405b4195/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app",
     },
     {
-        name: "Olivia Johnson",
-        post: "Product Manager",
-        image: "path-to-image-8.jpg",
-        description: "Olivia ensures product development aligns with market needs.",
-        email: "olivia.johnson@example.com",
-        linkedin: "https://www.linkedin.com/in/oliviajohnson",
+        name: "Sujata Kafley",
+        post: "Biomedical Engineer",
+        image: team8,
+        description: "Sujata is a Biomedical Engineer with a Master's in Electronic Engineering, specializing in Biomedical. Registered with Engineers Australia, she brings over 5 years of experience in customer-facing roles, excelling in understanding and meeting customer needs. Known for her empathy, active listening, and problem-solving skills, Sujata always looks forward towards contributing her expertise at Ohm Biomedical.",
+        email: "sujata@ohmbiomedial.com.au",
+        linkedin: "https://www.linkedin.com",
     },
     {
-        name: "William Taylor",
-        post: "Customer Support Lead",
-        image: "path-to-image-9.jpg",
-        description: "William leads the customer support team, ensuring client satisfaction.",
-        email: "william.taylor@example.com",
-        linkedin: "https://www.linkedin.com/in/williamtaylor",
+        name: "Rameshwor Khadka",
+        post: "Technical Officer",
+        image: team9,
+        description: "Rameshwor is currently in his final year of studying cybersecurity and working as a Blender Technician at OHM Biomedical Company. Rameshwor specializes in following strict protocols to guarantee that medical blenders are well-maintained and ready for reuse. At OHM Biomedical Company, Rameshwor is committed to quickly solving concerns and ensuring that products are returned to clients in excellent shape.",
+        email: "admin_ws@ohmBiomedical.com.au",
+        linkedin: "https://www.linkedin.com/in/rk201221/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app",
     },
 ];
 
@@ -101,7 +110,7 @@ const OurTeam = () => {
                 <div className="team-grid">
                     {teamMembers.map((member, index) => (
                         <div className="team-member" key={index}>
-                            <img src={member.image} alt={member.name} />
+                            <img src={member.image} alt={member.name}/>
                             <h3 className="team-name" onClick={() => openPopup(member)}>
                                 {member.name}
                             </h3>

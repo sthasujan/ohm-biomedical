@@ -70,7 +70,7 @@ const Navbar = () => {
                 { link: 'About', path: '/About' },
                 { link: 'Our Team', path: '/Ourteam' },
                 { link: 'FAQ', path: '/Faq' },
-                { link: 'Careers', path: '/Careers' },
+                // { link: 'Careers', path: '/Careers' },
             ],
         },
         { link: "Testimonial", path: "/Testimonial" },
