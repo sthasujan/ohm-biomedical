@@ -279,7 +279,7 @@ header{
 .team-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 80px;
 }
 
 .team-member {

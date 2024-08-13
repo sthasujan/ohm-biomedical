@@ -55,7 +55,7 @@ const Navbar = () => {
                 { link: 'Consumables Sales', path: '/Consumablessales' },
             ],
         },
-        { 
+        {
             link: "Service",
             path: "#",
             dropdown: [
@@ -63,7 +63,7 @@ const Navbar = () => {
                 { link: 'Biomedical Service', path: '/Biomedicalservice' },
             ],
         },
-        { 
+        {
             link: "Who We Are?",
             path: "#",
             dropdown: [
@@ -79,32 +79,34 @@ const Navbar = () => {
 
     return (
         <header className='w-full bg-white fixed top-0 left-0 right-0'>
-            <nav className={`py-10 lg:px-14 px-4 ${isSticky ? "sticky top-0 left-0 right-0 border-b bg-white shadow-md duration-300" : ""}`} ref={navbarRef}>
+            <nav className={`py-6 lg:px-14 px-4 ${isSticky ? "sticky top-0 left-0 right-0 border-b bg-white shadow-md duration-300" : ""}`} ref={navbarRef}>
                 <div className='flex justify-between items-center text-base gap-8'>
                     <NavLink to="/" className='text-2xl font-semibold flex items-center space-x-3'>
-                        <img src={logo} className='w-24 inline-block items-center' alt="Logo" />
+                        <img src={logo} className='w-28 inline-block items-center' alt="Logo" />
                     </NavLink>
                     <ul className='md:flex space-x-12 hidden'>
                         {navItems.map(({ link, path, dropdown }) => (
                             dropdown ? (
-                                <li key={link} className='relative group'>
-                                    <span
-                                        className='block cursor-pointer text-base text-gray900 hover:text-brandPrimary first:font-medium'>
+                                <li
+                                    key={link}
+                                    onMouseEnter={() => setDropdownOpen(link)}
+                                    onMouseLeave={() => setDropdownOpen(null)}
+                                    className="relative"
+                                >
+                                    <span className="cursor-pointer">
                                         {link}
                                     </span>
-                                    <ul className={`absolute bg-white shadow-lg mt-2 p-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out ${dropdownOpen === link ? "opacity-100" : ""}`}>
-                                        {dropdown.map(({ link, path }) => (
-                                            <li key={path}>
-                                                <NavLink
-                                                    to={path}
-                                                    className='block px-8 py-2 text-base text-gray900 hover:text-brandPrimary whitespace-nowrap'
-                                                    onClick={() => setDropdownOpen(null)} 
-                                                    >                                                        
-                                                    {link}
-                                                </NavLink>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                    {dropdownOpen === link && (
+                                        <ul className="absolute bg-white shadow-lg p-2 flex flex-col">
+                                            {dropdown.map(({ link, path }) => (
+                                                <li key={path}>
+                                                    <NavLink to={path} className="block px-8 py-2 text-base text-gray900 hover:text-brandPrimary whitespace-nowrap">
+                                                        {link}
+                                                    </NavLink>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
                                 </li>
                             ) : (
                                 <li key={path}>
@@ -128,7 +130,6 @@ const Navbar = () => {
                             )
                         ))}
                     </ul>
-
                     <div className='space-x-12 hidden lg:flex items-center'>
                         <a href="/" className='hidden lg:flex items-center text-brandSecondary hover:text-brandPrimary'>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -163,8 +164,8 @@ const Navbar = () => {
                                                 <NavLink
                                                     to={path}
                                                     className='block px-4 py-2 text-base text-white hover:text-brandPrimary'
-                                                    onClick={() => setIsMenuOpen(false)} 
-                                                    >
+                                                    onClick={() => setIsMenuOpen(false)}
+                                                >
                                                     {link}
                                                 </NavLink>
                                             </li>
