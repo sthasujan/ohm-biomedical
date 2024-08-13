@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 import img1 from "../assets/products/Vyaireventilators/blog2.png";
 import img2 from "../assets/products/Carefusionbirdblenders/flow_meter.png";
 import img3 from "../assets/services/ohm.webp";
@@ -12,7 +13,8 @@ const Products = () => {
       description: "Comprehensive Sales & Support",
       description1: "Expert Maintenance Services",
       description2: "Training and Education",
-      image: img1
+      image: img1,
+      link: "/Yyaireventilator" // Add a link for the product
     },
     {
       id: 2,
@@ -20,7 +22,8 @@ const Products = () => {
       description: "New Blender Sales",
       description1: "Blender Replacement",
       description2: "2-Year PM Overhaul",
-      image: img2
+      image: img2,
+      link: "/Carefusionbirdblender" // Add a link for the product
     },
     {
       id: 3,
@@ -28,13 +31,14 @@ const Products = () => {
       description: "Preventative Maintenance & Repair",
       description1: "Compliance with AS3551 Standards",
       description2: "Rapid Response Guarantee",
-      image: img3
+      image: img3,
+      link: "/Biomedicalservice" // Add a link for the product
     },
   ];
 
   return (
     <div className='md:px-14 px-4 py-8 max-w-screen-2xl mx-auto'>
-      <div className='mt-15 mx-auto text-left w-full sm:w-11/12 md:w-4/5 lg:w-3/4 xl:w-2/3 p-6 bg-white shadow-lg rounded-lg flex flex-col md:flex-row items-center transition-all duration-300 ease-in-out'>
+      <div className='mt-15 mx-auto text-left w-full sm:w-11/12 md:w-4/5 p-6 bg-white shadow-lg rounded-lg flex flex-col md:flex-row items-center transition-all duration-300 ease-in-out'>
         <div className='md:w-1/2'>
           <h2 className='text-xl text-black font-serif mb-3'>
             OHM Biomedical is the exclusive distributor for Vyaire ventilators and CareFusion Bird blenders in Australia and New Zealand, providing expert sales and service. <br />
@@ -52,15 +56,14 @@ const Products = () => {
         </div>
       </div>
 
-
       <div className='text-center my-8'>
         {/* cards */}
         <div className='mt-14 grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 md:w-11/12 mx-auto gap-12'>
           {
             services.map(service => (
-              <div key={service.id} className='flex flex-col items-center'>
+              <Link key={service.id} to={service.link} className='flex flex-col items-center'>
                 <div className='md-4 h-60 w-64 mx-auto rounded-tl-3xl rounded-br-3xl'>
-                  <img src={service.image} alt="" className='-ml-5' />
+                  <img src={service.image} alt={service.title} className='-ml-5' />
                 </div>
                 <h4 className='text-2xl font-bold text-neutralDGrey mb-2 px-2'>{service.title}</h4>
                 <ul className='text-sm text-neutralGrey flex flex-col items-start list-disc pl-5'>
@@ -68,7 +71,7 @@ const Products = () => {
                   <li>{service.description1}</li>
                   <li>{service.description2}</li>
                 </ul>
-              </div>
+              </Link>
             ))
           }
         </div>
