@@ -33,8 +33,17 @@ const testimonials = [
 const Testimonial = () => {
   return (
     <div>
-      <div className='w-24 h-24'>
-        <img src={productBgImg} alt="" />
+      <div className='container relative pt-24 md:pt-0'>
+        <img
+          src={productBgImg}
+          alt="Product Background"
+          className='w-full h-[20vh] md:h-[40vh] object-cover mx-auto'
+        />
+        <div className='absolute top-[50%] md:top-[60%] w-full flex justify-center'>
+          <h1 className='font-semibold mb-4 leading-snug text-white text-2xl text-center w-full md:w-3/4'>
+          Testimonial <br />
+          </h1>
+        </div>
       </div>
       <div className="testimonials-container">
         {testimonials.map((testimonial, index) => (

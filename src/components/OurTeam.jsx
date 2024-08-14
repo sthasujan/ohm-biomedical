@@ -99,14 +99,26 @@ const OurTeam = () => {
 
     return (
         <div>
-            <div className='w-28 h-28'>
-                <img src={productBgImg} alt="" />
+            <div className='container relative pt-24 md:pt-0'>
+                <img
+                    src={productBgImg}
+                    alt="Product Background"
+                    className='w-full h-[20vh] md:h-[40vh] object-cover mx-auto'
+                />
+                <div className='absolute top-[50%] md:top-[60%] w-full flex justify-center'>
+                    <h1 className='font-semibold mb-4 leading-snug text-white text-2xl text-center w-full md:w-3/4'>
+                    Our Team <br />
+                    <span className='text-xl md:text-3xl text-brandPrimary leading-snug'>
+                    Meet the dedicated professionals who make everything possible.
+                    </span>
+                    </h1>
+                </div>
             </div>
             <div className="team-container">
-                <h2 className="team-header">Our Team</h2>
+                {/* <h2 className="team-header">Our Team</h2>
                 <p className="team-description">
                     Meet the dedicated professionals who make everything possible.
-                </p>
+                </p> */}
                 <div className="team-grid">
                     {teamMembers.map((member, index) => (
                         <div className="team-member" key={index}>

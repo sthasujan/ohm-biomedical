@@ -1,68 +1,104 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import productBgImg from "../assets/products.webp";
 import Blog1 from "../assets/products/Siemensultrasound/acusion500.webp";
 import Blog2 from "../assets/products/Siemensultrasound/freestyle.jpeg";
 import Blog3 from "../assets/products/Siemensultrasound/maple.png";
 
 const blogs = [
-    { id: 1, title: "ACUSON P500", description: "", image: Blog1 },
-    { id: 2, title: "ACUSON Freestyle", description: "", image: Blog2 },
-    { id: 3, title: "ACUSON Maple Ultrasound System", description: "", image: Blog3 },
+    {
+        id: 1,
+        title: "ACUSON P500",
+        subtitle: "",
+        description: "",
+        image: Blog1,
+        images: [Blog1, Blog2, Blog3],
+        featuresAndBenefits: 'Features and benefits details...',
+        resourcePdf: 'resource.pdf'
+    },
+    {
+        id: 2,
+        title: "ACUSON Freestyle",
+        subtitle: "",
+        description: "",
+        image: Blog2,
+        images: [Blog1, Blog2, Blog3],
+        featuresAndBenefits: 'Features and benefits details...',
+        resourcePdf: 'resource.pdf'
+    },
+    {
+        id: 3,
+        title: "ACUSON Maple Ultrasound System",
+        subtitle: "",
+        description: "",
+        image: Blog3,
+        images: [Blog1, Blog2, Blog3],
+        featuresAndBenefits: 'Features and benefits details...',
+        resourcePdf: 'resource.pdf'
+    },
 ];
 
 const Siemensultrasound = () => {
+    const navigate = useNavigate();
+
+    const handleReadMore = (blog) => {
+        navigate(`/Siemensultrasound/${blog.id}`);
+    };
+
     return (
         <div>
-            <div className='container'>
-                <span className="inline-block bg-black text-white font-bold rounded-full px-3 py-1 mb-2">
-                    Ultrasound
-                </span>
-                <img src={productBgImg} alt="" className='' />
-                <h1 className='whitespace-nowrap 
-                absolute top-[70%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl text-center w-full'>Products: Siemens Ultrasound</h1>
+            <div className='container relative pt-24 md:pt-0'>
+                <img
+                    src={productBgImg}
+                    alt="Product Background"
+                    className='w-full h-[20vh] md:h-[40vh] object-cover mx-auto'
+                />
+                <div className='absolute top-[50%] md:top-[60%] w-full flex justify-center'>
+                    <h1 className='font-semibold mb-4 leading-snug text-white text-2xl text-center w-full md:w-3/4'>
+                        Products: Siemens Ultrasound <br />
+                    </h1>
+                </div>
             </div>
-            <div className='px-4 lg:px-14 max-w-screen-2xl mx-auto my-12'>
-                {/* all Blogs */}
-                <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between'>
-                    {
-                        blogs.map(blog =>
-                            <div key={blog.id} className='mx-auto relative mb-12 cursor-pointer'>
-                                <img src={blog.image} alt="" className='hover:scale-95 transition-all duration-300' />
-                                <div className='text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto
-                                                absolute left-0 right-0 -bottom-24'>
-                                    <span className="inline-block bg-black text-white font-bold rounded-full px-3 py-1 mb-2">
-                                        Ultrasound
-                                    </span>
-                                    <h3 className='mb-3 text-neutralGrey font-semibold'>{blog.title}</h3>
-                                    <p>{blog.description}</p>
-                                    <div className='flex items-center justify-center gap-8'>
-                                        <a href="/"
-                                            className='font-bold text-brandPrimary hover:text-neutral-700' >
-                                            Readmore
-                                            <svg
-                                                xmlns="http://www.w3.org/2000.svg"
-                                                width="17"
-                                                height="11"
-                                                viewBox="0 0 17 11"
-                                                fill="none"
-                                                className="inline-block ml-2"
-                                            >
-                                                <path
-                                                    d="M12 9.39905L15.2929 6.10615C15.6834 5.71563 15.6834 5.08246 15.2929 4.69194L12 
+            <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-12">
+                <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between">
+                    {blogs.map((blog) => (
+                        <div key={blog.id} className="mx-auto relative mb-12 cursor-pointer">
+                            <img src={blog.image} alt="" className="hover:scale-95 transition-all duration-300 rounded-lg" />
+                            {/* title card for image */}
+                            <div className="text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto absolute left-0 right-0 -bottom-28">
+                                <span className="inline-block bg-black text-white font-bold rounded-full px-3 py-1 mb-2">
+                                Ultrasound
+                                </span>
+                                <h3 className="mb-3 text-neutralGrey font-semibold">{blog.title}</h3>
+                                <div className="flex items-center justify-center gap-8">
+                                    <button
+                                        onClick={() => handleReadMore(blog)}
+                                        className="font-bold text-brandPrimary hover:text-neutral-700"
+                                    >
+                                        Read more
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="17"
+                                            height="11"
+                                            viewBox="0 0 17 11"
+                                            fill="none"
+                                            className="inline-block ml-2"
+                                        >
+                                            <path
+                                                d="M12 9.39905L15.2929 6.10615C15.6834 5.71563 15.6834 5.08246 15.2929 4.69194L12 
                                                         1.39905M15 5.39905L1 5.39905"
-                                                    stroke="#4CAF4F"
-                                                />
-                                            </svg>
-                                        </a>
-                                    </div>
+                                                stroke="#4CAF4F"
+                                            />
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
-                        )
-                    }
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Siemensultrasound

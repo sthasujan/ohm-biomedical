@@ -4,6 +4,7 @@ import Blog1 from "../assets/blog1.jpg";
 import Blog2 from "../assets/blog2.webp";
 import productBgImg from "../assets/products.webp";
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
+import { motion } from 'framer-motion';  // Import framer-motion
 
 const blogData = [
     {
@@ -50,27 +51,45 @@ const BlogDetail = () => {
 
     return (
         <div>
-            <div className='w-32 h-32'>
-                <img src={productBgImg} alt="" />
+            <div className='relative pt-24 md:pt-0'>
+                <img
+                    src={productBgImg}
+                    alt="Product Background"
+                    className='w-full h-[20vh] md:h-[40vh] object-cover mx-auto'
+                />
+                <div className='absolute top-[50%] md:top-[60%] w-full flex justify-center'>
+                    <h1 className='font-semibold mb-4 leading-snug text-white text-2xl text-center w-full md:w-3/4'>
+                        {blog.title}
+                    </h1>
+                </div>
             </div>
-            <div className='px-4 lg:px-14 max-w-screen-xl mx-auto my-12'>
-                <h1 className='text-3xl font-bold text-center mb-6'>{blog.title}</h1>
-                <div className='text-center mb-8'>
-                    <img src={blog.image} alt={blog.title} className='rounded-lg mx-auto' style={{ width: '100%', maxWidth: '800px' }} />
-                </div>
-                <p className='text-lg text-neutralDGrey mb-8'>{blog.description}</p>
+            <div className="container mx-auto px-4 lg:px-14 my-12">
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+                    <div className='relative'>
+                        <img src={blog.image} alt={blog.title} className='w-full rounded-lg' />
+                    </div>
+                    <motion.div
+                        className='bg-white p-6 rounded-lg shadow-lg transition-transform duration-500 ease-in-out relative'
+                        whileHover={{ scale: 1.02 }}
+                    >
+                        <div className='mb-4 flex flex-col items-start'>
+                            <div className='flex items-center space-x-4 mb-2'>
+                                <p className='text-sm text-gray-600'>Share:</p>
+                                <a href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`} target="_blank" rel="noopener noreferrer" className='text-blue-600'>
+                                    <FaFacebookF className='h-6 w-6' />
+                                </a>
+                                <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}`} target="_blank" rel="noopener noreferrer" className='text-blue-700'>
+                                    <FaLinkedinIn className='h-6 w-6' />
+                                </a>
+                            </div>
+                        </div>
 
-                <div className='flex justify-center space-x-4 mb-8'>
-                    <a>Share on</a>
-                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`} target="_blank" rel="noopener noreferrer" className='text-blue-600'>
-                        <FaFacebookF className='h-6 w-6' />
-                    </a>
-                    <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}`} target="_blank" rel="noopener noreferrer" className='text-blue-700'>
-                        <FaLinkedinIn className='h-6 w-6' />
-                    </a>
+                        <p className='text-sm text-gray-600 mb-4'>{blog.date}</p>
+                        <p className='text-lg text-neutralDGrey'>{blog.description}</p>
+                    </motion.div>
                 </div>
 
-                <div className='bg-white p-6 rounded-lg shadow-lg'>
+                <div className='bg-white p-6 rounded-lg shadow-lg mt-8'>
                     <h2 className='text-xl font-semibold mb-4'>Leave a Reply</h2>
                     <form onSubmit={handleSubmit}>
                         <div className='mb-4'>

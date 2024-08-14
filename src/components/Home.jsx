@@ -20,7 +20,6 @@ const Home = () => {
                 </h1>
             </div>
         </div>
-
     )
 }
 

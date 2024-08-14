@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import logo from '../assets/logo.png';
-import { Link as ScrollLink } from 'react-scroll';
+// import { Link as ScrollLink } from 'react-scroll';
 import { FaXmark, FaBars } from "react-icons/fa6";
 import { NavLink } from 'react-router-dom';
 

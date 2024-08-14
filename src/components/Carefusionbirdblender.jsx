@@ -47,10 +47,17 @@ const Carefusionbirdblender = () => {
 
     return (
         <div>
-            <div className="container">
-                <img src={productBgImg} alt="" className="" />
-                <h1 className='whitespace-nowrap 
-                absolute top-[70%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl text-center w-full'>Products: Carefusion bird blenders</h1>
+            <div className='container relative pt-24 md:pt-0'>
+                <img
+                    src={productBgImg}
+                    alt="Product Background"
+                    className='w-full h-[20vh] md:h-[40vh] object-cover mx-auto'
+                />
+                <div className='absolute top-[50%] md:top-[60%] w-full flex justify-center'>
+                    <h1 className='font-semibold mb-4 leading-snug text-white text-2xl text-center w-full md:w-3/4'>
+                    Products: Carefusion Bird Blenders <br />
+                    </h1>
+                </div>
             </div>
             <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-12">
                 <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between">

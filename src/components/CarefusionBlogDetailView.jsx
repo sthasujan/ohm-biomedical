@@ -48,8 +48,17 @@ const CarefusionBlogDetailView = () => {
 
     return (
         <div>
-            <div className='w-24 h-24'>
-                <img src={productBgImg} alt="" />
+            <div className='container relative pt-24 md:pt-0'>
+                <img
+                    src={productBgImg}
+                    alt="Product Background"
+                    className='w-full h-[20vh] md:h-[40vh] object-cover mx-auto'
+                />
+                <div className='absolute top-[50%] md:top-[60%] w-full flex justify-center'>
+                    <h1 className='font-semibold mb-4 leading-snug text-white text-2xl text-center w-full md:w-3/4'>
+                    Products: Carefusion Bird Blenders <br />
+                    </h1>
+                </div>
             </div>
             <div className="container mx-auto my-12 px-4 lg:px-14 max-w-screen-2xl">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
