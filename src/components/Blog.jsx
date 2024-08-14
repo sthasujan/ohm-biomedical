@@ -47,7 +47,7 @@ const Blog = () => {
                                 <p className='mb-6 text-sm text-neutralDGrey'>{blog.description}</p>
                                 <div className='flex items-center justify-center gap-8'>
                                     <a
-                                        href={`/blog/${blog.id}`}
+                                        href={`/Blog/${blog.id}`}
                                         className='font-bold text-brandPrimary hover:text-neutral-700'>
                                         Read More
                                         <svg
