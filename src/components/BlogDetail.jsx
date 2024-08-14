@@ -1,4 +1,3 @@
-// src/components/BlogDetail.js
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Blog1 from "../assets/blog1.jpg";
@@ -45,94 +44,88 @@ const BlogDetail = () => {
         setComment('');
     };
 
+    if (!blog) {
+        return <p className='text-center'>Blog not found</p>;
+    }
+
     return (
         <div>
             <div className='w-32 h-32'>
                 <img src={productBgImg} alt="" />
             </div>
             <div className='px-4 lg:px-14 max-w-screen-xl mx-auto my-12'>
-                {blog ? (
-                    <>
-                        <h1 className='text-3xl font-bold text-center mb-6'>{blog.title}</h1>
-                        <div className='text-center mb-8'>
-                            <img src={blog.image} alt={blog.title} className='rounded-lg mx-auto' style={{ width: '100%', maxWidth: '800px' }} />
-                        </div>
-                        <p className='text-lg text-neutralDGrey mb-8'>{blog.description}</p>
+                <h1 className='text-3xl font-bold text-center mb-6'>{blog.title}</h1>
+                <div className='text-center mb-8'>
+                    <img src={blog.image} alt={blog.title} className='rounded-lg mx-auto' style={{ width: '100%', maxWidth: '800px' }} />
+                </div>
+                <p className='text-lg text-neutralDGrey mb-8'>{blog.description}</p>
 
-                        <div className='flex justify-center space-x-4 mb-8'>
-                            <a>Share on</a>
-                            <a href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`} target="_blank" rel="noopener noreferrer" className='text-blue-600'>
-                                <FaFacebookF className='h-6 w-6' />
-                            </a>
-                            <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}`} target="_blank" rel="noopener noreferrer" className='text-blue-700'>
-                                <FaLinkedinIn className='h-6 w-6' />
-                            </a>
-                        </div>
+                <div className='flex justify-center space-x-4 mb-8'>
+                    <a>Share on</a>
+                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`} target="_blank" rel="noopener noreferrer" className='text-blue-600'>
+                        <FaFacebookF className='h-6 w-6' />
+                    </a>
+                    <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}`} target="_blank" rel="noopener noreferrer" className='text-blue-700'>
+                        <FaLinkedinIn className='h-6 w-6' />
+                    </a>
+                </div>
 
-                        <div className='bg-white p-6 rounded-lg shadow-lg'>
-                            <h2 className='text-xl font-semibold mb-4'>Leave a Reply</h2>
-                            <form onSubmit={handleSubmit}>
-                                <div className='mb-4'>
-                                    <label htmlFor='name' className='block text-sm font-medium text-gray-700 mb-1'>Name</label>
-                                    <input
-                                        type='text'
-                                        id='name'
-                                        value={name}
-                                        onChange={(e) => setName(e.target.value)}
-                                        className='w-full p-2 border border-gray-300 rounded-md'
-                                        required
-                                    />
-                                </div>
-                                <div className='mb-4'>
-                                    <label htmlFor='email' className='block text-sm font-medium text-gray-700 mb-1'>Email</label>
-                                    <input
-                                        type='email'
-                                        id='email'
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        className='w-full p-2 border border-gray-300 rounded-md'
-                                        required
-                                    />
-                                </div>
-                                <div className='mb-4'>
-                                    <label htmlFor='comment' className='block text-sm font-medium text-gray-700 mb-1'>Comment</label>
-                                    <textarea
-                                        id='comment'
-                                        value={comment}
-                                        onChange={(e) => setComment(e.target.value)}
-                                        className='w-full p-2 border border-gray-300 rounded-md'
-                                        rows='4'
-                                        required
-                                    />
-                                </div>
-                                <button
-                                    type='submit'
-                                    className='bg-brandPrimary text-white px-4 py-2 rounded-md shadow-md hover:bg-brandSecondary'>
-                                    Submit
-                                </button>
-                            </form>
+                <div className='bg-white p-6 rounded-lg shadow-lg'>
+                    <h2 className='text-xl font-semibold mb-4'>Leave a Reply</h2>
+                    <form onSubmit={handleSubmit}>
+                        <div className='mb-4'>
+                            <label htmlFor='name' className='block text-sm font-medium text-gray-700 mb-1'>Name</label>
+                            <input
+                                type='text'
+                                id='name'
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                className='w-full p-2 border border-gray-300 rounded-md'
+                                required
+                            />
                         </div>
-
-                        <div className='mt-8'>
-                            <h2 className='text-xl font-semibold mb-4'>Comments</h2>
-                            {comments.length === 0 ? (
-                                <p>No comments yet.</p>
-                            ) : (
-                                comments.map((c, index) => (
-                                    <div key={index} className='border-t pt-4'>
-                                        <p className='font-semibold'>{c.name}</p>
+                        <div className='mb-4'>
+                            <label htmlFor='email' className='block text-sm font-medium text-gray-700 mb-1'>Email</label>
+                            <input
+                                type='email'
+                                id='email'
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                className='w-full p-2 border border-gray-300 rounded-md'
+                                required
+                            />
+                        </div>
+                        <div className='mb-4'>
+                            <label htmlFor='comment' className='block text-sm font-medium text-gray-700 mb-1'>Comment</label>
+                            <textarea
+                                id='comment'
+                                value={comment}
+                                onChange={(e) => setComment(e.target.value)}
+                                className='w-full p-2 border border-gray-300 rounded-md'
+                                rows='4'
+                                required
+                            ></textarea>
+                        </div>
+                        <button type='submit' className='bg-brandPrimary text-white px-4 py-2 rounded-md hover:bg-brandPrimaryDark'>
+                            Submit
+                        </button>
+                    </form>
+                    <div className='mt-6'>
+                        <h3 className='text-lg font-semibold'>Comments ({comments.length})</h3>
+                        {comments.length > 0 && (
+                            <ul className='mt-4 space-y-4'>
+                                {comments.map((c, index) => (
+                                    <li key={index} className='p-4 bg-gray-100 rounded-md'>
+                                        <p className='text-sm text-gray-800'><strong>{c.name}</strong></p>
                                         <p className='text-sm text-gray-600'>{c.comment}</p>
-                                    </div>
-                                ))
-                            )}
-                        </div>
-                    </>
-                ) : (
-                    <p className='text-center'>Blog not found</p>
-                )}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </div>
+                </div>
             </div>
         </div>
-
     );
 };
 

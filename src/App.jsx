@@ -40,6 +40,7 @@ function AppWrapper() {
         <Route path="/Faq" element={<FAQ />} />
 
         <Route path="/Testimonial" element={<Testimonial />} />
+        
         <Route path="/Blog" element={<Blog />} />
         <Route path='/blog/:id' element={<BlogDetail />} />
         {/* Add other routes as needed */}

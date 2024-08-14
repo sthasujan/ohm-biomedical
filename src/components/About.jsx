@@ -45,8 +45,8 @@ const About = () => {
                             </p>
                         </div>
                         {/* stats */}
-                        <div className='md:w-1/2 mx-auto flex sm:flex-row flex-col sm:items-center justify-around
-                gap-12'>
+                        {/* <div className='md:w-1/2 mx-auto flex sm:flex-row flex-col sm:items-center justify-around
+                                        gap-12'>
                             <div className='space-y-8'>
                                 <div className='flex items-center gap-4'>
                                     <img src={customerIcon} alt="" />
@@ -79,13 +79,11 @@ const About = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
-
         </div>
-
     )
 }
 
