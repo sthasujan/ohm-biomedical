@@ -1,9 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Blog1 from "../assets/blog1.jpg";
 import Blog2 from "../assets/blog2.webp";
 import productBgImg from "../assets/products.webp";
 
 const Blog = () => {
+    const navigate = useNavigate();
+
+    const handleReadMore = (blog) => {
+        navigate(`/Blog/${blog.id}`);
+    };
+
     const blogs = [
         {
             id: 1,
@@ -46,9 +53,14 @@ const Blog = () => {
                                 <p className='mb-4 text-sm text-neutralDGrey'>{blog.date}</p>
                                 <p className='mb-6 text-sm text-neutralDGrey'>{blog.description}</p>
                                 <div className='flex items-center justify-center gap-8'>
-                                    <a
+                                    {/* <a
                                         href={`/Blog/${blog.id}`}
-                                        className='font-bold text-brandPrimary hover:text-neutral-700'>
+                                        className='font-bold text-brandPrimary hover:text-neutral-700'
+                                    > */}
+                                    <button
+                                        onClick={() => handleReadMore(blog)}
+                                        className="font-bold text-brandPrimary hover:text-neutral-700"
+                                    >
                                         Read More
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +75,7 @@ const Blog = () => {
                                                 stroke="#4CAF4F"
                                             />
                                         </svg>
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
