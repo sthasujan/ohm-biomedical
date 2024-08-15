@@ -54,9 +54,9 @@ const Birdblenderservice = () => {
                 <div className='absolute top-[50%] md:top-[60%] w-full flex justify-center'>
                     <h1 className='font-semibold mb-4 leading-snug text-white text-2xl text-center w-full md:w-3/4'>
                         Bird Blender Service <br />
-                        <span className='text-xl md:text-3xl text-brandPrimary leading-snug'>
+                        {/* <span className='text-xl md:text-3xl text-brandPrimary leading-snug'>
                         Explore our comprehensive service offerings.
-                        </span>
+                        </span> */}
                     </h1>
                 </div>
             </div>
