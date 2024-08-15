@@ -39,13 +39,13 @@ const Blog = () => {
                 <div className='absolute top-[50%] md:top-[60%] w-full flex justify-center'>
                     <h1 className='font-semibold mb-4 leading-snug text-white text-2xl text-center w-full md:w-3/4'>
                     Blogs <br />
-                    <span className='text-xl md:text-2xl text-brandPrimary leading-snug'>
+                    {/* <span className='text-xl md:text-2xl text-brandPrimary leading-snug'>
                     Explore our latest blog posts to stay informed and updated with the latest industry trends.
-                    </span>
+                    </span> */}
                     </h1>
                 </div>
             </div>
-            <div className='px-4 lg:px-14 max-w-screen-2xl mx-auto my-12'>
+            <div className='px-4 lg:px-14 max-w-screen-2xl mx-auto my-12 mb-28'>
                 {/* <div className='text-center md:w-1/2 mx-auto'>
                     <h2 className='text-4xl text-neutralDGrey font-semibold mb-4'>
                         Blog
@@ -60,10 +60,10 @@ const Blog = () => {
                     {blogs.map(blog => (
                         <div key={blog.id} className='mx-auto relative mb-12 cursor-pointer'>
                             <img src={blog.image} alt={blog.title} className='hover:scale-95 transition-all duration-300' />
-                            <div className='text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto absolute left-0 right-0 -bottom-12'>
+                            <div className='text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto absolute left-0 right-0 -bottom-36'>
                                 <h3 className='mb-3 text-neutralGrey font-semibold'>{blog.title}</h3>
                                 <p className='mb-4 text-sm text-neutralDGrey'>{blog.date}</p>
-                                <p className='mb-6 text-sm text-neutralDGrey'>{blog.description}</p>
+                                {/* <p className='mb-6 text-sm text-neutralDGrey'>{blog.description}</p> */}
                                 <div className='flex items-center justify-center gap-8'>
                                     {/* <a
                                         href={`/Blog/${blog.id}`}

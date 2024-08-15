@@ -278,11 +278,14 @@ header{
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
 }
 
 .team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the image horizontally */
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -293,8 +296,8 @@ header{
 }
 
 .team-member img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 3px solid #fff;
   object-fit: cover;
@@ -327,13 +330,45 @@ header{
 }
 
 .popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  max-width: 400px;
-  width: 90%;
+  width: 100%; /* Ensure it adapts to smaller screens */
+  max-width: 90%; /* Start with a flexible max-width */
   position: relative;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Adjustments for small screens */
+@media (max-width: 480px) {
+  .popup-content {
+    max-width: 95%; /* Increase flexibility for very small screens */
+    padding: 15px; /* Reduce padding to make more room */
+  }
+}
+
+/* Adjustments for medium screens */
+@media (min-width: 768px) {
+  .popup-content {
+    max-width: 600px;
+  }
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 1024px) {
+  .popup-content {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .popup-content {
+    max-width: 900px;
+  }
 }
 
 .popup-content img {
@@ -342,12 +377,11 @@ header{
   border-radius: 50%;
   border: 3px solid #007bff;
   object-fit: cover;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .popup h3 {
   font-size: 1.5rem;
-  margin-bottom: 10px;
 }
 
 .popup-post {
@@ -359,6 +393,7 @@ header{
   font-size: 1rem;
   color: #666;
   margin-top: 10px;
+  text-align: justify;
 }
 
 .popup-icons {

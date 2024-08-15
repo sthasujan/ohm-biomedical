@@ -46,7 +46,7 @@ const teamMembers = [
     },
     {
         name: "Soyuz Baral",
-        post: "Social Media & Back Office Manager",
+        post: "Back Office Manager",
         image: team5,
         description: "Soyuz Baral, OHM Bio's Back Office & Social Media Manager, uses a Microbiology degree and sales background for effective marketing. Skilled in creative design and customer service, Soyuz blends science and sales for a seamless back-office role.",
         email: "soyuz@ohmBiomedical.com.au",
@@ -108,9 +108,9 @@ const OurTeam = () => {
                 <div className='absolute top-[50%] md:top-[60%] w-full flex justify-center'>
                     <h1 className='font-semibold mb-4 leading-snug text-white text-2xl text-center w-full md:w-3/4'>
                     Our Team <br />
-                    <span className='text-xl md:text-3xl text-brandPrimary leading-snug'>
+                    {/* <span className='text-xl md:text-3xl text-brandPrimary leading-snug'>
                     Meet the dedicated professionals who make everything possible.
-                    </span>
+                    </span> */}
                     </h1>
                 </div>
             </div>

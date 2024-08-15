@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import img1 from "../assets/products/Vyaireventilators/blog2.png";
 import img2 from "../assets/products/Carefusionbirdblenders/flow_meter.png";
-import img3 from "../assets/services/ohm.webp";
+import img3 from "../assets/products/Anesthesia.jpeg";
 import Blog1 from "../assets/products/Vyaireventilators/blog6.png";
 
 const Products = () => {

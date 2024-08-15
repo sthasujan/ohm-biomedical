@@ -59,13 +59,13 @@ const Siemensultrasound = () => {
                     </h1>
                 </div>
             </div>
-            <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-12">
+            <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-12 mb-28">
                 <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between">
                     {blogs.map((blog) => (
                         <div key={blog.id} className="mx-auto relative mb-12 cursor-pointer">
                             <img src={blog.image} alt="" className="hover:scale-95 transition-all duration-300 rounded-lg" />
                             {/* title card for image */}
-                            <div className="text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto absolute left-0 right-0 -bottom-28">
+                            <div className="text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto absolute left-0 right-0 -bottom-36">
                                 <span className="inline-block bg-black text-white font-bold rounded-full px-3 py-1 mb-2">
                                 Ultrasound
                                 </span>
