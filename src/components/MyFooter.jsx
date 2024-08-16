@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-brandSecondary text-white">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20 text-center md:text-left">
           {/* <div>
             <h3 className="font-semibold text-lg mb-3 underline">Features</h3>
             <ul>
@@ -16,7 +16,7 @@ const Footer = () => {
               <li className="hover:underline"><a href="/">Services</a></li>
             </ul>
           </div> */}
-          <div>
+          <div className="flex justify-center md:justify-start">
             {/* <h3 className="font-semibold text-lg mb-3 underline">Contact</h3> */}
             <address>
               <strong>OHM Biomedical</strong><br />
@@ -34,19 +34,22 @@ const Footer = () => {
               <p className="text-center md:text-center">OHM Biomedical is an <br />ISO-9001 certified company.</p>
             </div>
           </div>
-          <div className="flex flex-col items-end">
+          <div className="flex flex-col items-center md:items-end">
             {/* <h3 className="font-semibold text-lg mb-3 underline">About</h3> */}
-            <a href="https://www.linkedin.com/company/ohmbiomedical/" className="hover:text-gray-200 mb-3 p-1 border border-white rounded-full flex items-center justify-center w-8 h-8">
+            <a href="https://www.linkedin.com/company/ohmbiomedical/"
+              className="hover:text-gray-200 mb-3 p-1 border border-white rounded-full flex items-center justify-center w-8 h-8">
               <FaLinkedinIn />
             </a>
             {/* <ul>
               <li className="hover:underline mt-3"><a href="/">Company Overview</a></li>
             </ul> */}
-            <div className="flex flex-col items-center">
+            {/* <div className="flex flex-col items-center">
               <img src={logo} alt="OHM Biomedical Logo" className="h-20" />
-            </div>
-            <div className="flex flex-col items-end text-sm mt-4">
-              &copy; Copyright 2024 OHM Biomedical
+            </div> */}
+            <div className="flex flex-col md:flex-row md:items-end items-center space-y-2 md:space-y-0 md:space-x-4 mt-4 md:mt-20">
+              <div className="text-sm text-center md:text-right">
+                &copy; Copyright 2024 OHM Biomedical
+              </div>
             </div>
           </div>
         </div>

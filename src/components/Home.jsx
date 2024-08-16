@@ -5,18 +5,24 @@ import productBgImg from "../assets/products.webp";
 
 const Home = () => {
     return (
-        <div className='container relative pt-24 md:pt-0'>
+        <div className='container relative pt-16 md:pt-0'>
             <img
                 src={productBgImg}
                 alt="Product Background"
-                className='w-full h-[20vh] md:h-[40vh] object-cover mx-auto'
+                className='w-full h-[30vh] md:h-[40vh] object-cover'
             />
-            <div className='absolute top-[50%] md:top-[60%] w-full flex justify-center'>
-                <h1 className='font-semibold mb-4 leading-snug text-white text-2xl text-center w-full md:w-3/4'>
-                    Authorized Distributor of Vyaire Ventilation <br />
-                    <span className='text-xl md:text-3xl text-brandPrimary leading-snug'>
+
+            {/* Adjust positioning for mobile and larger screens */}
+            <div
+                className='absolute bottom-[15%] md:top-[65%] w-full flex justify-center px-4'
+            >
+                <h1
+                    className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
+                >
+                    Authorized Distributor of Vyaire Ventilation in ANZ <br />
+                    {/* <span className='text-xl md:text-3xl text-brandPrimary leading-snug'>
                         For Australia & New Zealand
-                    </span>
+                    </span> */}
                 </h1>
             </div>
         </div>
