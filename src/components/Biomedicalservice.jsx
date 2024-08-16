@@ -213,7 +213,7 @@ const Biomedicalservice = () => {
                             {tabData.map(tab => (
                                 <div
                                     key={tab.id}
-                                    className={`p-4 cursor-pointer rounded-lg transition-colors duration-300 ${selectedTab === tab.id ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-blue-200'
+                                    className={`p-4 cursor-pointer rounded-lg transition-colors duration-300 ${selectedTab === tab.id ? 'bg-blue-950 text-white' : 'bg-gray-100 text-gray-700 hover:bg-blue-200'
                                         }`}
                                     onClick={() => handleTabClick(tab.id)}
                                 >

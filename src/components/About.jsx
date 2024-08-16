@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutImg from '../assets/aboutImg.jpg';
+import aboutImg from '../assets/AboutSection.jpg';
 import customerIcon from "../assets/icons/customerIcon.png";
 import memberIcon from "../assets/icons/memberIcon.png";
 import serviceIcon from "../assets/icons/serviceIcon.png";
@@ -31,25 +31,26 @@ const About = () => {
                 {/* about text */}
                 <div className='px-4 lg:px-14 max-w-screen-2xl mx-auto my-8' id='about'>
                     <div className='md:w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-12'>
-                        <div className='md:w-1/2 lg-2/5'>
+                        <div className='flex justify-start items-start md:w-1/2 lg-2/5'>
                             <img src={aboutImg} alt="" />
                         </div>
                         <div className='md:w-3/5 mx-auto'>
                             <h2 className='text-4xl text-neutralDGrey font-semibold mb-4 md-w-4/5'>
-                                Biomedical Excellence with Integrity
+                                Welcome to OHM Biomedical Engineering, where passion meets precision in patient care.
                             </h2>
                             <p className='md:w-3/4 text-sm text-neutralGrey mb-8'>
-                                Welcome to OHM Biomedical, your trusted partner for all your Biomedical needs. We are a team of experienced and
-                                passionate Biomedical engineers and technicians dedicated to delivering the highest quality service and support
-                                to the healthcare industry in Australia.
+                                Our story began in 2022 when four clinical engineers, driven by a shared dedication to quality compliance and exceptional customer experience, recognized that the service standards they were delivering needed to evolve. United by these values, they founded OHM Biomedical, determined to set a new benchmark in the biomedical industry.
+                                Today, OHM Biomedical has grown beyond its original team of four into a robust, experienced collective of professionals. Our expertise spans critical medical devices, including ventilators, anaesthesia machines, and dialysis equipment, ensuring they perform flawlessly when lives depend on them. <br />
+                                At OHM Biomedical, we are more than just a service provider—we are partners in your patient care. Our unwavering commitment to excellence and our extensive industry knowledge make us the trusted choice for all your medical equipment needs. We care about your equipment, the quality of care you provide to your patients, and your experience working with us. That's why our value is simple: “I DO CARE.”
+                                Explore our website to discover more about our services and how we can support you in delivering the best possible patient care.
                             </p>
-                            <button className='btn-primary'>Learn More</button>
+                            {/* <button className='btn-primary'>Learn More</button> */}
                         </div>
                     </div>
                 </div>
 
                 {/* company stat */}
-                <div className='px-4 lg:px-14 max-w-screen-2xl mx-auto bg-neutralSilver py-16'>
+                {/* <div className='px-4 lg:px-14 max-w-screen-2xl mx-auto bg-neutralSilver py-16'>
                     <div className='flex flex-col md:flex-row justify-between items-center gap-8'>
                         <div className='md:w-1/2'>
                             <h2 className='text-4xl text-brandSecondary font-semibold mb-4 md:w-4/5'>Trusted partner for all your medical device sales and after sales support. <br />
@@ -58,8 +59,7 @@ const About = () => {
                                 Delivering innovative and reliable Biomedical solutions, we advance healthcare technology and enhance patient outcomes with our expertise and commitment to excellence.
                             </p>
                         </div>
-                        {/* stats */}
-                        {/* <div className='md:w-1/2 mx-auto flex sm:flex-row flex-col sm:items-center justify-around
+                        <div className='md:w-1/2 mx-auto flex sm:flex-row flex-col sm:items-center justify-around
                                         gap-12'>
                             <div className='space-y-8'>
                                 <div className='flex items-center gap-4'>
@@ -93,9 +93,9 @@ const About = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div> */}
+                        </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

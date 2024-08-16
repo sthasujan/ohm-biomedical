@@ -21,7 +21,7 @@ const Blog = () => {
         },
         {
             id: 2,
-            title: "Ensuring Reliability with Mandatory 2-Year OEM Preventive Maintenance for Bird Air/Oxygen Blenders",
+            title: "Ensuring Reliability with Mandatory 2-Year OEM Preventive Maintenance",
             image: Blog2,
             date: "2024-08-10",
             description: "A brief description about the mandatory 2-year OEM preventive maintenance for Bird Air/Oxygen Blenders.",
@@ -60,7 +60,7 @@ const Blog = () => {
                 {/* All Blogs */}
                 <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between'>
                     {blogs.map(blog => (
-                        <div key={blog.id} className='mx-auto relative mb-12 cursor-pointer'>
+                        <div key={blog.id}  onClick={() => handleReadMore(blog)} className='mx-auto relative mb-12 cursor-pointer'>
                             <img src={blog.image} alt={blog.title} className='hover:scale-95 transition-all duration-300' />
                             <div className='text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto absolute left-0 right-0 -bottom-36'>
                                 <h3 className='mb-3 text-neutralGrey font-semibold'>{blog.title}</h3>
@@ -72,7 +72,6 @@ const Blog = () => {
                                         className='font-bold text-brandPrimary hover:text-neutral-700'
                                     > */}
                                     <button
-                                        onClick={() => handleReadMore(blog)}
                                         className="font-bold text-brandPrimary hover:text-neutral-700"
                                     >
                                         Read More

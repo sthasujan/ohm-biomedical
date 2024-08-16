@@ -62,7 +62,7 @@ const Birdblenderservice = () => {
                     </h1>
                 </div>
             </div>
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 mt-2">
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 mt-4 mb-4">
                 {services.map((service, index) => (
                     <motion.div
                         key={index}
@@ -76,7 +76,7 @@ const Birdblenderservice = () => {
                     </motion.div>
                 ))}
             </div>
-            <div className="text-center mt-4 mb-2">
+            {/* <div className="text-center mt-4 mb-2">
                 <motion.a 
                     href="#"
                     className="inline-block px-8 py-3 border-2 border-brandSecondary text-brandSecondary font-semibold rounded-lg"
@@ -86,7 +86,7 @@ const Birdblenderservice = () => {
                 >
                     Learn More
                 </motion.a>
-            </div>
+            </div> */}
         </section>
     );
 };
