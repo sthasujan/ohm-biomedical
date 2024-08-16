@@ -96,8 +96,8 @@ const YyaireVentilator = () => {
                     </h1>
                 </div>
             </div>
-            <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-12">
-                <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between">
+            <div className="mt-0 px-4 lg:px-14 max-w-screen-2xl mx-auto my-14">
+                <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 gap-y-16 items-center justify-between">
                     {blogs.map((blog) => (
                         <div key={blog.id} className="mx-auto relative mb-12 cursor-pointer">
                             <img src={blog.image} alt="" className="hover:scale-95 transition-all duration-300 rounded-lg" />

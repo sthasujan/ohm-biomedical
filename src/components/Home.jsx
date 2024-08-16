@@ -1,7 +1,11 @@
 import { Carousel } from 'flowbite-react';
 import React from 'react';
 import productBgImg from "../assets/products.webp";
-import Blog1 from "../assets/products/Vyaireventilators/blog6.png";
+import Blog1 from "../assets/products/Vyaireventilators/blog1.png";
+import Blog2 from "../assets/products/Vyaireventilators/blog2.png";
+import Blog3 from "../assets/products/Vyaireventilators/blog5.png";
+import Blog4 from "../assets/products/Vyaireventilators/blog6.png";
+import Blog5 from "../assets/blog/blog2.webp";
 
 const Home = () => {
     return (
@@ -23,7 +27,7 @@ const Home = () => {
                 </div>
             </div>
             <div className='mt-0 mx-auto text-left w-full sm:w-11/12 md:w-4/5 p-6 bg-white shadow-lg rounded-lg 
-            flex flex-col md:flex-row  transition-all duration-300 ease-in-out'>
+            flex flex-col md:flex-row  transition-all duration-300 ease-in-out items-center'>
                 {/* Left Text Section */}
                 <div className='md:w-1/2'>
                     <h2 className='text-xl text-black font-serif mb-3'>
@@ -31,10 +35,9 @@ const Home = () => {
                         <br />In addition to these specific products, we offer a wide range of biomedical services to leading healthcare companies in the industry.
                     </h2>
                 </div>
-
                 {/* Right Image Section */}
                 <div className='md:w-1/2 flex justify-center md:justify-end'>
-                    <div className='w-full h-[300px] md:w-full md:h-[400px] lg:w-full lg:h-[500px]'>
+                    <div className='w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px]'>
                         {/* Carousel for images */}
                         <Carousel>
                             <img
@@ -43,18 +46,23 @@ const Home = () => {
                                 className='w-full h-full object-cover transition-transform duration-300 transform hover:scale-105'
                             />
                             <img
-                                src={Blog1}
+                                src={Blog2}
                                 alt="Biomedical Image 2"
                                 className='w-full h-full object-cover transition-transform duration-300 transform hover:scale-105'
                             />
                             <img
-                                src={Blog1}
+                                src={Blog3}
                                 alt="Biomedical Image 3"
                                 className='w-full h-full object-cover transition-transform duration-300 transform hover:scale-105'
                             />
                             <img
-                                src={Blog1}
+                                src={Blog4}
                                 alt="Biomedical Image 4"
+                                className='w-full h-full object-cover transition-transform duration-300 transform hover:scale-105'
+                            />
+                            <img
+                                src={Blog5}
+                                alt="Biomedical Image 5"
                                 className='w-full h-full object-cover transition-transform duration-300 transform hover:scale-105'
                             />
                         </Carousel>
