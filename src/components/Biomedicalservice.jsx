@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faHeartbeat, faSyringe, faPills, faBandAid, faVirus, faShieldAlt, faFlask } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faHeartbeat, faSyringe, faPills, faBandAid, faVirus, faShieldAlt, faFlask, faBookOpen, faFileContract, 
+    faHeadset, faLaptopCode, faVials, faFileAlt, faBolt, faChartLine, faChartBar, faTools, faCogs, faDollarSign, faFileSignature,
+    faUserMd, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import productBgImg from "../assets/products.webp";
 
 // Sample data for the tabs
@@ -50,17 +52,17 @@ const tabData = [
             desc: '' 
         },
         { 
-            icon: faPills, 
+            icon: faBookOpen, 
             name: 'Training on Proper Usage and Maintenance', 
             desc: '' 
         },
         { 
-            icon: faPills, 
+            icon: faFileContract, 
             name: 'Documentation and Compliance Reporting: ARTG Number Verification', 
             desc: '' 
         },
         { 
-            icon: faPills, 
+            icon: faHeadset, 
             name: 'Post-Installation Support and Maintenance Services', 
             desc: '' 
         }
@@ -88,17 +90,17 @@ const tabData = [
             desc: '' 
         }, 
         { 
-            icon: faBandAid, 
+            icon: faLaptopCode, 
             name: 'Installation of software/hardware upgrades and performing necessary UAT.', 
             desc: '' 
         }, 
         { 
-            icon: faBandAid, 
+            icon: faVials, 
             name: 'Comprehensive testing and validation of upgraded equipment to ensure compliance and safety.', 
             desc: '' 
         }, 
         { 
-            icon: faBandAid, 
+            icon: faFileAlt, 
             name: 'Documentation of the entire process for TGA compliance purposes.', 
             desc: '' 
         }, 
@@ -111,17 +113,17 @@ const tabData = [
         description: 'OHM Biomedical is committed to ensuring that your medical equipment meets the highest safety standards. We offer AS3551 testing services to verify the electrical safety and performance of your medical devices. Our team of experienced Engineers are trained and certified to perform these tests in accordance with Australian and New Zealand standards.', 
         services: 
         [{ 
-            icon: faBandAid, 
+            icon: faBolt, 
             name: 'Electrical safety testing', 
             desc: 'We perform a range of tests to ensure that your equipment is electrically safe for use. This includes insulation resistance testing, earth continuity testing, and leakage current testing.' 
         }, 
         { 
-            icon: faVirus, 
+            icon: faChartLine, 
             name: 'Performance verification', 
             desc: 'We also perform tests to verify the performance of your equipment. This includes accuracy and calibration testing, as well as functionality testing to ensure that your equipment is operating as it should.' 
         },
         { 
-            icon: faBandAid, 
+            icon: faChartBar, 
             name: 'Comprehensive reporting', 
             desc: 'We provide you with a detailed report outlining the results of our testing, including any recommended actions to address any issues we identify.' 
         }, 
@@ -134,32 +136,32 @@ const tabData = [
         description: 'Looking to bring innovative Biomedical equipment to Australia, but don`t want to set up your own workshop? Look no further than OHM Biomedical`s WAAS (Workshop as a Service) offering. Our Virtual Workshop is here to help, providing instant access to trained engineers and technicians who can maintain a wide range of medical devices. With our expert Biomedical consultants guiding you through the repair process, you can rest assured that your equipment is in good hands. Our Virtual Workshop offers a range of services to help you stay focused on bringing new and innovative equipment to Australia:', 
         services: 
         [{ 
-            icon: faBandAid, 
+            icon: faTools, 
             name: 'Workshop Repair and Maintenance for Your Biomedical Equipment', 
             desc: '' 
         }, 
         { 
-            icon: faVirus, 
+            icon: faCogs, 
             name: 'Customized Maintenance and Service Plans to Fit Customer Needs', 
             desc: '' 
         },
         { 
-            icon: faBandAid, 
+            icon: faDollarSign, 
             name: 'Cost-Effective Solutions to Reduce Operational Expenses', 
             desc: '' 
         }, 
         { 
-            icon: faBandAid, 
+            icon: faFileSignature,
             name: 'Develop Maintenance Service Agreements for Your Equipment', 
             desc: '' 
         }, 
         { 
-            icon: faBandAid, 
+            icon: faUserMd, 
             name: 'Expert Biomedical Consultants for Service Strategy and Lifecycle Management', 
             desc: '' 
         }, 
         { 
-            icon: faBandAid, 
+            icon: faPhoneAlt, 
             name: 'Remote Diagnostics and Troubleshooting Support', 
             desc: '' 
         }, 
