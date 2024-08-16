@@ -28,7 +28,7 @@ const blogs = [
     },
     {
         id: 3,
-        title: "ACUSON Maple Ultrasound System",
+        title: "ACUSON Maple",
         subtitle: "",
         description: "",
         image: Blog3,

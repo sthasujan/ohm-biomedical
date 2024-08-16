@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faHeartbeat, faSyringe, faPills, faBandAid, faVirus } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faHeartbeat, faSyringe, faPills, faBandAid, faVirus, faShieldAlt, faFlask } from '@fortawesome/free-solid-svg-icons';
 import productBgImg from "../assets/products.webp";
 
 // Sample data for the tabs
@@ -22,7 +22,7 @@ const tabData = [
             desc: 'Prompt and reliable service for repairing, calibrating, and replacing components of your medical equipment. Our skilled engineers ensure your equipment is up and running quickly.'
         }, 
         { 
-            icon: faHeartbeat, 
+            icon: faShieldAlt, 
             name: 'Compliance Verify', 
             desc: 'Comprehensive documentation of our services, including equipment status, maintenance history, and compliance with AS3551 standards.'
         }
@@ -45,7 +45,7 @@ const tabData = [
             desc: '' 
         },
         { 
-            icon: faPills, 
+            icon: faFlask, 
             name: 'Onsite Electrical Safety Testing and Calibration', 
             desc: '' 
         },
@@ -237,7 +237,7 @@ const Biomedicalservice = () => {
                                             className="bg-white shadow-lg rounded-lg p-4 transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                                         >
                                             <div className="flex flex-col items-center mb-4">
-                                                <FontAwesomeIcon icon={service.icon} className="text-blue-500 text-4xl mb-4" />
+                                                <FontAwesomeIcon icon={service.icon} className="text-blue-950 text-4xl mb-4" />
                                                 <div className="text-center">
                                                     <h4 className="font-semibold text-lg text-gray-800 mb-2">{service.name}</h4>
                                                     <p className="text-gray-600">{service.desc}</p>

@@ -35,14 +35,15 @@ const About = () => {
                             <img src={aboutImg} alt="" />
                         </div>
                         <div className='md:w-3/5 mx-auto'>
-                            <h2 className='text-4xl text-neutralDGrey font-semibold mb-4 md-w-4/5'>
-                                Welcome to OHM Biomedical Engineering, where passion meets precision in patient care.
+                            <h2 className='text-3xl text-neutralDGrey font-semibold mb-4 md-w-4/5'>
+                                OHM Biomedical: Our Story
                             </h2>
                             <p className='md:w-3/4 text-sm text-neutralGrey mb-8'>
-                                Our story began in 2022 when four clinical engineers, driven by a shared dedication to quality compliance and exceptional customer experience, recognized that the service standards they were delivering needed to evolve. United by these values, they founded OHM Biomedical, determined to set a new benchmark in the biomedical industry.
-                                Today, OHM Biomedical has grown beyond its original team of four into a robust, experienced collective of professionals. Our expertise spans critical medical devices, including ventilators, anaesthesia machines, and dialysis equipment, ensuring they perform flawlessly when lives depend on them. <br />
-                                At OHM Biomedical, we are more than just a service provider—we are partners in your patient care. Our unwavering commitment to excellence and our extensive industry knowledge make us the trusted choice for all your medical equipment needs. We care about your equipment, the quality of care you provide to your patients, and your experience working with us. That's why our value is simple: “I DO CARE.”
-                                Explore our website to discover more about our services and how we can support you in delivering the best possible patient care.
+                                Our story began in 2022 when four clinical engineers, driven by a shared dedication to quality compliance and exceptional customer experience, recognized that the service standards they were delivering needed to evolve. United by these values, they founded OHM Biomedical, determined to set a new benchmark in the biomedical industry. 
+                                <br /> <br />
+                                Today, OHM Biomedical has grown beyond its original team of four into a robust, experienced collective of professionals. Our expertise spans critical medical devices, including ventilators, anesthesia machines, and dialysis equipment, ensuring they perform flawlessly when lives depend on them.
+                                <br /> <br />
+                                At OHM Biomedical, we are more than just a service provider—we are partners in your patient care. Our unwavering commitment to excellence and our extensive industry knowledge makes us the trusted choice for all your medical equipment needs. We care about your equipment, the quality of care you provide to your patients, and your experience working with us. That's why our value is simple: “I DO CARE.”                                
                             </p>
                             {/* <button className='btn-primary'>Learn More</button> */}
                         </div>
