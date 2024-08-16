@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import img1 from "../assets/products/Vyaireventilators/blog2.png";
-import img2 from "../assets/products/Carefusionbirdblenders/flow_meter.png";
+import img2 from "../assets/products/Carefusionbirdblenders/flow_meter.jpg";
 import img3 from "../assets/products/Anesthesia.jpeg";
 import Blog1 from "../assets/products/Vyaireventilators/blog6.png";
 
@@ -38,27 +38,6 @@ const Products = () => {
 
   return (
     <div className='md:px-14 px-4 py-8 max-w-screen-2xl mx-auto'>
-      <div className='mt-0 mx-auto text-left w-full sm:w-11/12 md:w-4/5 p-6 bg-white shadow-lg rounded-lg flex flex-col md:flex-row items-center transition-all duration-300 ease-in-out'>
-        {/* Left Text Section */}
-        <div className='md:w-1/2'>
-          <h2 className='text-base text-black font-serif mb-3'>
-            OHM Biomedical is the exclusive distributor for Vyaire ventilators and CareFusion Bird blenders in Australia and New Zealand, providing expert sales and service. <br />
-            <br />In addition to these specific products, we offer a wide range of biomedical services to leading healthcare companies in the industry.
-          </h2>
-        </div>
-
-        {/* Right Image Section */}
-        <div className='md:w-1/2 flex justify-center md:justify-end'>
-          <div className='w-40 h-40 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-80 xl:h-80 bg-gray-200 rounded-md shadow-lg overflow-hidden'>
-            <img
-              src={Blog1}
-              alt="Stylish Biomedical Image"
-              className='w-full h-full object-cover transition-transform duration-300 transform hover:scale-105'
-            />
-          </div>
-        </div>
-      </div>
-
       {/* Service Cards Section */}
       <div className='text-center my-8'>
         <h2 className='text-4xl text-brandPrimary font-bold mb-2'>Our Products</h2>

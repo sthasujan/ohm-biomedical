@@ -4,7 +4,7 @@ import productBgImg from "../assets/products.webp";
 import team1 from "../assets/Ourteam/sovit.png";
 import team2 from "../assets/Ourteam/suman.jpeg";
 import team3 from "../assets/Ourteam/subash.jpg";
-// import team4 from "../assets/Ourteam/anupam.png";
+import team4 from "../assets/Ourteam/anupam.png";
 import team5 from "../assets/Ourteam/soyuz.png";
 import team6 from "../assets/Ourteam/sitesh.jpg";
 import team7 from "../assets/Ourteam/abhiske.png";
@@ -39,7 +39,7 @@ const teamMembers = [
     {
         name: "Anupam Acharya",
         post: "Co Founder",
-        image: "path-to-image-4.jpg",
+        image: team4,
         description: "",
         email: "anupam@ohmBiomedical.com.au",
         linkedin: "https://www.linkedin.com/in/anupam-acharya-a121b356/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app",

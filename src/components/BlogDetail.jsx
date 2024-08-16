@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Blog1 from "../assets/blog1.jpg";
-import Blog2 from "../assets/blog2.webp";
+import Blog1 from "../assets/blog/blog1.jpg";
+import Blog2 from "../assets/blog/blog2.webp";
 import productBgImg from "../assets/products.webp";
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { motion } from 'framer-motion';  // Import framer-motion

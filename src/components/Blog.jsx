@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Blog1 from "../assets/blog1.jpg";
-import Blog2 from "../assets/blog2.webp";
+import Blog1 from "../assets/blog/blog1.jpg";
+import Blog2 from "../assets/blog/blog2.webp";
 import productBgImg from "../assets/products.webp";
 
 const Blog = () => {
