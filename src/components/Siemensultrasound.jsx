@@ -40,7 +40,6 @@ const blogs = [
 
 const Siemensultrasound = () => {
     const navigate = useNavigate();
-
     const handleReadMore = (blog) => {
         navigate(`/Siemensultrasound/${blog.id}`);
     };
@@ -53,7 +52,6 @@ const Siemensultrasound = () => {
                     alt="Product Background"
                     className='w-full h-[30vh] md:h-[40vh] object-cover'
                 />
-
                 {/* Adjust positioning for mobile and larger screens */}
                 <div
                     className='absolute bottom-[22%] md:top-[65%] w-full flex justify-center px-4'
@@ -65,10 +63,14 @@ const Siemensultrasound = () => {
                     </h1>
                 </div>
             </div>
-            <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-12 mb-28">
+            <div className="mt-2 px-4 lg:px-14 max-w-screen-2xl mx-auto my-12 mb-28">
                 <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between">
                     {blogs.map((blog) => (
-                        <div key={blog.id} className="mx-auto relative mb-12 cursor-pointer">
+                        <div 
+                            key={blog.id} 
+                            onClick={() => handleReadMore(blog)}
+                            className="mx-auto relative mb-12 cursor-pointer"
+                        >
                             <img src={blog.image} alt="" className="hover:scale-95 transition-all duration-300 rounded-lg" />
                             {/* title card for image */}
                             <div className="text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto absolute left-0 right-0 -bottom-36">
@@ -78,7 +80,6 @@ const Siemensultrasound = () => {
                                 <h3 className="mb-3 text-neutralGrey font-semibold">{blog.title}</h3>
                                 <div className="flex items-center justify-center gap-8">
                                     <button
-                                        onClick={() => handleReadMore(blog)}
                                         className="font-bold text-brandPrimary hover:text-neutral-700"
                                     >
                                         Read more

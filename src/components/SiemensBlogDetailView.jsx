@@ -9,32 +9,56 @@ const blogs = [
     {
         id: 1,
         title: "ACUSON P500",
-        subtitle: "",
-        description: "",
+        subtitle: "Carefusion",
+        description: "Portable ultrasound system for high-quality imaging. The ACUSON P500 by Siemens Healthineers provides high-quality care and ultrasound imaging anywhere, anytime. It enhances image quality with motion correction and various applications tailored to your needs, ensuring paramount image quality.",
         image: Blog1,
-        images: [Blog1, Blog2, Blog3],
+        images: [Blog1],
         featuresAndBenefits: 'Features and benefits details...',
-        resourcePdf: 'resource.pdf'
+        resourcePdf: 'resource.pdf',
+        descriptions: [
+            "Dynamic Persistence and Auto Flash Artifact Suppression: Reduce motion artifacts and noise while enhancing color sensitivity.",
+            "Dynamic TCE™ tissue contrast enhancement: Visualize subtle tissue variations.",
+            "Advanced SieClear™ spatial compounding: Enhance anatomical detail.",
+            "TEQ™ ultrasound technology: Optimize images with one button.",
+            "Stress Echo application: Perform a wide range of exams with user-defined protocols.",
+            "eSie Measure™ workflow acceleration: Provides automated measurements for routine echo exams.",
+            "eSieScan™ Protocol: Semi-automated guided workflow to reduce training time and errors.",
+        ]
     },
     {
         id: 2,
         title: "ACUSON Freestyle",
-        subtitle: "",
-        description: "",
+        subtitle: "Siemens",
+        description: "Wireless ultrasound solution for interventional suites. The ACUSON Freestyle Series is the world’s first wireless ultrasound solution, redefining ultrasound access in interventional suites and at the point of care. It offers scalable configurations for automated workflow, clear visualization, and faster access.",
         image: Blog2,
-        images: [Blog1, Blog2, Blog3],
+        images: [Blog2],
         featuresAndBenefits: 'Features and benefits details...',
-        resourcePdf: 'resource.pdf'
+        resourcePdf: 'resource.pdf',
+        descriptions: [
+            "Pixelformer Image Processing Architecture: Computational focusing for uniformly sharp images.",
+            "Enhanced Needle Visualization: Sophisticated synthetic focusing technique for improved needle visibility.",
+            "Anesthesiology: Enhances efficiency and effectiveness in ultrasound-guided nerve blocks.",
+            "Interventional Radiology: Provides mobility and tools for vascular access and procedural guidance.",
+            "MSK: Promotes precise, needle-guided injections and quick diagnosis of soft tissue structures.",
+            "Wireless Transducers: High data rate transmission with excellent image quality and high frame rates.",
+            "Integrated Controls: Operate imaging parameters from up to 3 meters away.",
+            "Removable Battery: Up to 90 minutes of continuous scan time.",
+        ]
     },
     {
         id: 3,
         title: "ACUSON Maple Ultrasound System",
-        subtitle: "",
-        description: "",
+        subtitle: "Siemens",
+        description: "Ultrasound system for high-quality imaging. The ACUSON Maple provides powerful imaging, ready for virtually every patient regardless of physical characteristics or condition. Its intuitive design minimizes manual optimization and still delivers high-quality images with excellent penetration and resolution.",
         image: Blog3,
-        images: [Blog1, Blog2, Blog3],
+        images: [Blog3],
         featuresAndBenefits: 'Features and benefits details...',
-        resourcePdf: 'resource.pdf'
+        resourcePdf: 'resource.pdf',
+        descriptions: [
+            "Intuitive Design: Less need for manual optimization, increasing efficiency.",
+            "High-Quality Imaging: Excellent penetration and resolution for all patients.",
+            "Increased Efficiency: Simplified usability helpful for clinicians with less training."
+        ]
     },
 ];
 
@@ -81,7 +105,7 @@ const SiemensBlogDetailView = () => {
                     </div>
 
                     {/* Middle Column - Selected Image */}
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-start items-start">
                         <img
                             src={selectedImage}
                             alt="Selected"
@@ -91,9 +115,16 @@ const SiemensBlogDetailView = () => {
 
                     {/* Right Column - Blog Details */}
                     <div className="flex flex-col justify-center">
+                        <h4 className="text-base text-neutralGrey font-medium mb-4">{blog.subtitle}</h4>
                         <h3 className="text-2xl text-neutralGrey font-semibold mb-2">{blog.title}</h3>
-                        <h4 className="text-xl text-neutralGrey font-medium mb-4">{blog.subtitle}</h4>
-                        <p className="mb-8 text-lg leading-relaxed">{blog.description}</p>
+                        <p className="mb-2 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: blog.description }}></p>
+
+                        {/* Descriptions List */}
+                        <ul className="list-disc mb-4 text-lg text-neutralGrey pl-6">
+                            {blog.descriptions.map((desc, index) => (
+                                <li key={index}>{desc}</li>
+                            ))}
+                        </ul>
                         <button className="bg-brandSecondary text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-green-700 transition-all">
                             Contact Sales Representative
                         </button>

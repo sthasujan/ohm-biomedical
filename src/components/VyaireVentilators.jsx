@@ -99,7 +99,11 @@ const YyaireVentilator = () => {
             <div className="mt-0 px-4 lg:px-14 max-w-screen-2xl mx-auto my-14">
                 <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 gap-y-16 items-center justify-between">
                     {blogs.map((blog) => (
-                        <div key={blog.id} className="mx-auto relative mb-12 cursor-pointer">
+                        <div 
+                            key={blog.id} 
+                            onClick={() => handleReadMore(blog)}
+                            className="mx-auto relative mb-12 cursor-pointer"
+                        >
                             <img src={blog.image} alt="" className="hover:scale-95 transition-all duration-300 rounded-lg" />
                             <div className="text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto absolute left-0 right-0 -bottom-24">
                                 <span className="inline-block bg-black text-white font-bold rounded-full px-3 py-1 mb-2">
@@ -108,7 +112,6 @@ const YyaireVentilator = () => {
                                 <h3 className="mb-3 text-neutralGrey font-semibold">{blog.title}</h3>
                                 <div className="flex items-center justify-center gap-8">
                                     <button
-                                        onClick={() => handleReadMore(blog)}
                                         className="font-bold text-brandPrimary hover:text-neutral-700"
                                     >
                                         Read more

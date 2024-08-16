@@ -2,76 +2,158 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import productBgImg from "../assets/products.webp";
 import Blog1 from "../assets/products/Vyaireventilators/blog1.png";
+import Blog11 from "../assets/products/Vyaireventilators/blog11.png";
+import Blog111 from "../assets/products/Vyaireventilators/blog111.png";
 import Blog2 from "../assets/products/Vyaireventilators/blog2.png";
+import Blog22 from "../assets/products/Vyaireventilators/blog22.png";
+import Blog222 from "../assets/products/Vyaireventilators/blog222.png";
 import Blog3 from "../assets/products/Vyaireventilators/blog3.png";
+import Blog33 from "../assets/products/Vyaireventilators/blog33.png";
+import Blog333 from "../assets/products/Vyaireventilators/blog333.png";
 import Blog4 from "../assets/products/Vyaireventilators/blog4.png";
+import Blog44 from "../assets/products/Vyaireventilators/blog44.png";
 import Blog5 from "../assets/products/Vyaireventilators/blog5.png";
+import Blog55 from "../assets/products/Vyaireventilators/blog55.png";
+import Blog555 from "../assets/products/Vyaireventilators/blog555.png";
 import Blog6 from "../assets/products/Vyaireventilators/blog6.png";
 
 const blogs = [
-    { 
-        id: 1, 
-        title: "bellavista™ 1000e Ventilator", 
-        subtitle: '',
-        description: "Ventilation support for your patient's respiratory needs.", 
-        image: Blog1, 
-        images: [Blog1, Blog2, Blog3], 
-        featuresAndBenefits: 'Features and benefits details...', 
-        resourcePdf: 'resource.pdf' 
+    {
+        id: 1,
+        title: "bellavista™ 1000e Ventilator",
+        subtitle: 'High Flow Oxygen Therapy | Mechanical Ventilation',
+        description: "The bellavista™ 1000e offers a full spectrum of high performance features in a compact size including: ",
+        image: Blog1,
+        images: [Blog1, Blog11, Blog111],
+        featuresAndBenefits: [
+            'Neonatal to Adult ICU ventilator with high definition 17.3” touchscreen',
+            'Intuitive user interface',
+            'Adaptive Ventilation Mode',
+            'High Flow Oxygen Therapy',
+            'Advanced NIV features',
+            'Lung Recruitment Tool',
+            'Minimum of 3 hours battery capacity'
+        ],
+        resourcePdf: 'resource.pdf',
+        descriptions: [
+            "Adaptive Ventilation Mode - A smart ventilation mode faster weaning and a reduction of manual settings",
+            "High Flow Oxygen Therapy improves the oxygenation of patients while enhancing patient comfort",
+            "Lung Recruitment Tool provides an automated recruitment maneuver that is reliable and reproducible.",
+            "Synchrony tools - Improved patient synchrony with auto.sync, auto.rise and auto.leak",
+            "SettingAssist - Foresee all ventilation settings with a comfortable and easy to use display "
+        ]
     },
-    { 
-        id: 2, 
-        title: "fabian™ HFO Ventilator", 
-        subtitle: '',
-        description: "4-in-1 device, flexible from the delivery room to the NICU", 
-        image: Blog2, 
-        images: [Blog2, Blog2, Blog3], 
-        featuresAndBenefits: 'Features and benefits details...', 
-        resourcePdf: 'resource.pdf' 
+    {
+        id: 2,
+        title: "fabian™ HFO Ventilator",
+        subtitle: 'Mechanical Ventilation',
+        description: "The fabian™  HFO with a 10.4' touch screen is our most comprehensive ventilator. This model has a true single membrane high-frequency oscillation (HFO) with active inspiration and expiration in addition to all modern noninvaisve and conventional modes. Other enhancements include Forced Oscillation Technique (FOT), a precise and intelligent lung recruitment tool.",
+        image: Blog2,
+        images: [Blog2, Blog22, Blog222],
+        featuresAndBenefits: [
+            'HFO designed with the same working principles as the 3100A oscillator',
+            'Designed with hotwire anemometer flow sensor for low sensitivity to gas composition and humidity',
+            'Volume, flow, and pressure trigger to meet the neonates varying needs',
+            'Lung recruitment can be used during HFO',
+            'PRICO protects babies from out of target oxygen ranges',
+            'Volume guarantee ranges are ideal for extremely low birth weight babies',
+            'Supports 3 different etCO2 module types: microstream, mainstream and sidestream',
+            'FOT* is an effective measurement for safe lung recruitment'
+        ],
+        resourcePdf: 'resource.pdf',
+        descriptions: [
+            "*FOT may not be available in your region. Please inquire with your local Vyaire representative.",
+        ]
     },
-    { 
-        id: 3, 
+    {
+        id: 3,
         title: "fabian™ Therapy evolution",
-        subtitle: '', 
-        description: "2-in-1 device, ideal for NICU, PICU & transport applications", 
-        image: Blog3, 
-        images: [Blog3, Blog2, Blog3], 
-        featuresAndBenefits: 'Features and benefits details...', 
-        resourcePdf: 'resource.pdf' 
+        subtitle: 'High Flow Oxygen Therapy | Mechanical Ventilation',
+        description: "The fabian™ Therapy evolution is a complete and highly advanced non-invasive ventilator featuring all classic and modern NIV modes, including HFNC, nCPAP, duoPAP, and triggered duoPAP. The next generation of closed-loop oxygenation, PRICO is available in this model.",
+        image: Blog3,
+        images: [Blog3, Blog33, Blog333],
+        featuresAndBenefits: [
+            'Easy to Use',
+            'Weighs even less. Does even more.',
+            'Automates selection of proper NIV trigger sensor depending on flow and pressure sensors used',
+            'SPO2 with Masimo SPO2 sensor technology',
+            'PRICO adapts and maintains the SpO2 within the desired set range.'
+        ],
+        resourcePdf: 'resource.pdf',
+        descriptions: [
+            
+        ]
     },
-    { 
-        id: 4, 
-        title: "fabian™ +nCPAP Ventilator", 
+    {
+        id: 4,
+        title: "fabian™ +nCPAP Ventilator",
         subtitle: '',
-        description: "Our 3-in-1 device for NICU, PICU and transport applications", 
-        image: Blog4, 
-        images: [Blog4, Blog2, Blog3], 
-        featuresAndBenefits: 'Features and benefits details...', 
-        resourcePdf: 'resource.pdf' 
+        description: "The fabian™ +nCPAP evolution has the full scope all non-invasive modes with modern invasive ventilation capabilities. The next generation of closed-loop oxygenation, PRICO is available in this model. PRICO reduces manual adjustment of FIO2 by up to 60%.",
+        image: Blog4,
+        images: [Blog4, Blog44],
+        featuresAndBenefits: [
+            'Patient Safety',
+            'Modularity',
+            'Ease of Use',
+            'Easy Access'
+        ],        
+        resourcePdf: 'resource.pdf',
+        descriptions: [
+            
+        ]
     },
-    { 
-        id: 5, 
-        title: "LTV2™ Series Ventilators", 
-        subtitle: '',
-        description: "The LTV2™ series ventilator is now part of Vyaire Medical.", 
-        image: Blog5, 
-        images: [Blog5, Blog2, Blog3], 
-        featuresAndBenefits: 'Features and benefits details...', 
-        resourcePdf: 'resource.pdf' 
+    {
+        id: 5,
+        title: "LTV2™ Series Ventilators",
+        subtitle: 'Mechanical Ventilation',
+        description: "Over the years, we have enhanced our LTV™ ventilators with a series of line extensions and improvements. Decades later, the LTV has established a reputation of reliability, versatility, and durability. With our new LTV2™ 2200 and LTV2™ 2150 models, we continue to innovate by providing more capabilities, higher performance, and greater portability. Our LTV2™ ventilators have an easy-to-use interface, making them simple for clinicians.",
+        image: Blog5,
+        images: [Blog5, Blog55, Blog555],
+        featuresAndBenefits: [
+            'Turbine technology eliminates the need for a high-pressure air source',
+            'Oxygen resource management tool reduces oxygen consumption * 2200 model only',
+            'Enhanced patient comfort and care with flow trigger and internal PEEP compensation',
+            'Optimization trial settings',
+            'Versatility with highly customizable settings to support patient success',
+            'Hot swappable battery',
+            'Low cost of ownership',
+            'Data output capabilities',
+            'NPPV enhancements',
+            'Sigh breath for more natural breathing',
+            'Improved power capabilities',
+            'Institutional use and for intra-hospital transport',
+            'Easy to read displays',
+            'Comprehensive monitoring',
+            'Supports invasive and non-invasive applications The LTV2™ is available in Japan. Please contact your local representative for additional information.'
+        ],
+        resourcePdf: 'resource.pdf',
+        descriptions: [
+            
+        ]
     },
-    { 
-        id: 6, 
-        title: "3100A/B HFOV Ventilators", 
+    {
+        id: 6,
+        title: "3100A/B HFOV Ventilators",
         subtitle: '',
-        description: "High Frequency Oscillatory Ventilators (HFOV, Adult/Pediatric Ventilation Solutions).", 
-        image: Blog6, 
-        images: [Blog6, Blog2, Blog3], 
-        featuresAndBenefits: 'Features and benefits details...', 
-        resourcePdf: 'resource.pdf' 
+        description: "The 3100A High Frequency Oscillatory Ventilator (HFOV) by Vyaire is designed for ventilatory support in neonates and pediatric patients who are failing conventional ventilation. It utilizes high-frequency oscillatory ventilation strategies to provide gentle and effective ventilation, minimizing the risk of ventilator-induced lung injury.",
+        image: Blog6,
+        images: [Blog6],
+        featuresAndBenefits: [
+            'High-Frequency Oscillation: Delivers small tidal volumes at rapid frequencies, reducing alveolar over-distention and shear stress.',
+            'Active Exhalation: Aids in CO2 removal by enhancing expiratory flow.',
+            'Comprehensive Alarm System: Ensures patient safety with various alarms for pressure, power, and system performance issues.',
+            'Lung Protective Strategy: Reduces the risk of barotrauma and volutrauma by maintaining lung volumes close to the anatomical dead space.',
+            'Improved Gas Exchange: Facilitates efficient oxygenation and CO2 removal even in patients with severe respiratory distress.',
+            'Versatility: Suitable for use in a range of conditions from neonatal respiratory distress syndrome to pediatric respiratory failure.'
+       ],
+        resourcePdf: 'resource.pdf',
+        descriptions: [
+            
+        ]
     },
 ];
 
- 
+
 const VyaireBlogDetailView = () => {
     const { id } = useParams();
     const blog = blogs.find(blog => blog.id === parseInt(id));
@@ -87,21 +169,14 @@ const VyaireBlogDetailView = () => {
                     alt="Product Background"
                     className='w-full h-[30vh] md:h-[40vh] object-cover'
                 />
-
-                {/* Adjust positioning for mobile and larger screens */}
-                <div
-                    className='absolute bottom-[22%] md:top-[65%] w-full flex justify-center px-4'
-                >
-                    <h1
-                        className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
-                    >
+                <div className='absolute bottom-[22%] md:top-[65%] w-full flex justify-center px-4'>
+                    <h1 className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'>
                         Products: Vyaire Ventilators <br />
                     </h1>
                 </div>
             </div>
             <div className="container mx-auto my-12 px-4 lg:px-14 max-w-screen-2xl">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    {/* Left Column - Thumbnails */}
                     <div className="flex flex-col items-center">
                         {blog.images.map((image, index) => (
                             <img
@@ -114,8 +189,7 @@ const VyaireBlogDetailView = () => {
                         ))}
                     </div>
 
-                    {/* Middle Column - Selected Image */}
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-start items-start">
                         <img
                             src={selectedImage}
                             alt="Selected"
@@ -123,20 +197,25 @@ const VyaireBlogDetailView = () => {
                         />
                     </div>
 
-                    {/* Right Column - Blog Details */}
                     <div className="flex flex-col justify-center">
+                        <h4 className="text-base text-neutralGrey font-medium mb-4">{blog.subtitle}</h4>
                         <h3 className="text-2xl text-neutralGrey font-semibold mb-2">{blog.title}</h3>
-                        <h4 className="text-xl text-neutralGrey font-medium mb-4">{blog.subtitle}</h4>
-                        <p className="mb-8 text-lg leading-relaxed">{blog.description}</p>
+                        <p className="mb-2 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: blog.description }}></p>
+
+                        {/* Descriptions List */}
+                        <ul className="list-disc mb-4 text-lg text-neutralGrey pl-6">
+                            {blog.descriptions.map((desc, index) => (
+                                <li key={index}>{desc}</li>
+                            ))}
+                        </ul>
+
                         <button className="bg-brandSecondary text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-green-700 transition-all">
                             Contact Sales Representative
                         </button>
                     </div>
                 </div>
 
-                {/* Accordion Panels */}
                 <div className="mt-12 space-y-4">
-                    {/* Features & Benefits Accordion */}
                     <div className="border border-gray-300 rounded-lg">
                         <button
                             onClick={() => setShowFeatures(!showFeatures)}
@@ -146,13 +225,17 @@ const VyaireBlogDetailView = () => {
                             <span className="text-2xl">{showFeatures ? '-' : '+'}</span>
                         </button>
                         {showFeatures && (
-                            <div className="p-6 bg-gray-50">
-                                <p>{blog.featuresAndBenefits}</p>
-                            </div>
+                            // <div className="p-6 bg-gray-50">
+                            //     <p>{blog.featuresAndBenefits}</p>
+                            // </div>
+                            <ul className="list-disc mb-4 text-lg text-neutralGrey pl-6">
+                                {blog.featuresAndBenefits.map((desc, index) => (
+                                    <li key={index}>{desc}</li>
+                                ))}
+                            </ul>
                         )}
                     </div>
 
-                    {/* Customer Resources Accordion */}
                     <div className="border border-gray-300 rounded-lg">
                         <button
                             onClick={() => setShowResources(!showResources)}

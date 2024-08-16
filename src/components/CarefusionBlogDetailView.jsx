@@ -10,31 +10,53 @@ const blogs = [
         id: 1,
         title: 'High Flow Bird Blender',
         subtitle: 'High flow, high pressure blender for ventilators and CPAP.',
+        topic: 'carefusion',
         description: 'The High Flow Bird Blender is a high flow, high pressure blender that is ideal for use with ventilators, CPAP, and high flow oxygen therapy devices. It is designed to provide accurate FiO2 mixtures from two outlet ports and has an overall flow range of 2-120 LPM. The High Flow Bird Blender is perfect for use in hospitals, clinics, and other healthcare facilities where high flow oxygen therapy is required.',
         image: Blog1,
-        images: [Blog1, Blog2, Blog3],
-        featuresAndBenefits: 'Features and benefits details...',
-        resourcePdf: 'resource.pdf'
+        images: [Blog1],
+        featuresAndBenefits: [
+            
+        ],
+        resourcePdf: 'resource.pdf',
+        descriptions: [
+            "Accurately delivers FiO2 mixtures",
+            "High Flow range of 2-120 lpm",
+            "Discount when purchased with a BlenderBuddy",
+            "24 month warranty"
+        ]
     },
     {
         id: 2,
         title: 'Low Flow Bird Blender',
         subtitle: 'Low flow, high pressure blender for ventilators and CPAP.',
+        topic: 'carefusion',
         description: 'The Low Flow Bird Blender is a low flow, high pressure blender that is ideal for use with ventilators, CPAP, and high flow oxygen therapy devices. It is designed to provide accurate FiO2 mixtures from two outlet ports and has an overall flow range of 2-120 LPM. The Low Flow Bird Blender is perfect for use in hospitals, clinics, and other healthcare facilities where low flow oxygen therapy is required.',
         image: Blog2,
-        images: [Blog1, Blog2, Blog3],
-        featuresAndBenefits: 'Features and benefits details...',
-        resourcePdf: 'resource.pdf'
+        images: [Blog2],
+        featuresAndBenefits: [
+           
+        ],
+        resourcePdf: 'resource.pdf',
+        descriptions: [
+            "Accurately delivers FiO2 mixtures",
+            "Low Flow range of 3-30 lpm (0-30 w/bleed)",
+            "Discount when purchased with a BlenderBuddy",
+            "24 month warranty"
+        ]
     },
     {
         id: 3,
         title: 'Flow Meter Bird MicroBlenders',
         subtitle: 'Experience Precision in Every Breath with the Bird Blender',
+        topic: 'vyaire',
         description: 'At OHM Biomedical, we proudly present the Bird Blender, a cornerstone in respiratory care technology.Designed with precision and reliability in mind, the Bird Blender offers unparalleled control over oxygen concentration, ensuring optimal therapy outcomes for patients of all ages.',
         image: Blog3,
-        images: [Blog1, Blog2, Blog3],
-        featuresAndBenefits: 'Features and benefits details...',
-        resourcePdf: 'resource.pdf'
+        images: [Blog3],
+        featuresAndBenefits: [
+        ],
+        resourcePdf: 'resource.pdf',
+        descriptions: [
+        ]
     },
 
 ];
@@ -81,7 +103,7 @@ const CarefusionBlogDetailView = () => {
                     </div>
 
                     {/* Middle Column - Selected Image */}
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-start items-start">
                         <img
                             src={selectedImage}
                             alt="Selected"
@@ -91,9 +113,17 @@ const CarefusionBlogDetailView = () => {
 
                     {/* Right Column - Blog Details */}
                     <div className="flex flex-col justify-center">
+                        <h4 className="text-base text-neutralGrey font-medium mb-4">{blog.topic}</h4>
                         <h3 className="text-2xl text-neutralGrey font-semibold mb-2">{blog.title}</h3>
                         <h4 className="text-xl text-neutralGrey font-medium mb-4">{blog.subtitle}</h4>
-                        <p className="mb-8 text-lg leading-relaxed">{blog.description}</p>
+                        <p className="mb-2 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: blog.description }}></p>
+
+                        {/* Descriptions List */}
+                        <ul className="list-disc mb-4 text-lg text-neutralGrey pl-6">
+                            {blog.descriptions.map((desc, index) => (
+                                <li key={index}>{desc}</li>
+                            ))}
+                        </ul>
                         <button className="bg-brandSecondary text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-green-700 transition-all">
                             Contact Sales Representative
                         </button>

@@ -36,33 +36,33 @@ const tabData = [
         services: 
         [{ 
             icon: faSyringe, 
-            name: 'Service C', 
-            desc: 'Service C description' 
+            name: 'Pre-Installation Check: Site Survey, Planning, and IT Requirements', 
+            desc: '' 
         }, 
         { 
             icon: faPills, 
-            name: 'Service D', 
-            desc: 'Service D description' 
+            name: 'Equipment Installation and Setup', 
+            desc: '' 
         },
         { 
             icon: faPills, 
-            name: 'Service D', 
-            desc: 'Service D description' 
+            name: 'Onsite Electrical Safety Testing and Calibration', 
+            desc: '' 
         },
         { 
             icon: faPills, 
-            name: 'Service D', 
-            desc: 'Service D description' 
+            name: 'Training on Proper Usage and Maintenance', 
+            desc: '' 
         },
         { 
             icon: faPills, 
-            name: 'Service D', 
-            desc: 'Service D description' 
+            name: 'Documentation and Compliance Reporting: ARTG Number Verification', 
+            desc: '' 
         },
         { 
             icon: faPills, 
-            name: 'Service D', 
-            desc: 'Service D description' 
+            name: 'Post-Installation Support and Maintenance Services', 
+            desc: '' 
         }
         ] 
     },
@@ -70,38 +70,108 @@ const tabData = [
         id: 3, 
         name: 'TGA Recalls', 
         title: 'SLeading in healthcare equipment sales', 
-        description: 'Description for Service 3', 
+        description: 'Facing TGA recalls is stressful and poses risks to your organization`s reputation. At OHM Biomedical, we prioritize timely and effective TGA Recall remediation. Our skilled Biomedical Engineers upgrade your software/hardware, conduct user acceptance testing (UAT), ensuring compliance with TGA regulations. We guarantee minimal equipment downtime, offering comprehensive project management from start to finish. Trust OHM Biomedical for TGA standards compliance, ensuring the highest level of patient care.', 
         services: 
         [{ 
             icon: faBandAid, 
-            name: 'Service E', 
-            desc: 'Service E description' 
+            name: 'Identification of affected equipment and documentation of the recall notice.', 
+            desc: '' 
         }, 
         { 
             icon: faVirus, 
-            name: 'Service F', 
-            desc: 'Service F description' 
+            name: 'Development and implementation of remediation plans in line with TGA regulations and standards.', 
+            desc: '' 
         },
         { 
             icon: faBandAid, 
-            name: 'Service E', 
-            desc: 'Service E description' 
+            name: 'Coordinating with equipment manufacturers and the end users to ensure timely availability of necessary parts and upgrades.', 
+            desc: '' 
         }, 
         { 
             icon: faBandAid, 
-            name: 'Service E', 
-            desc: 'Service E description' 
+            name: 'Installation of software/hardware upgrades and performing necessary UAT.', 
+            desc: '' 
         }, 
         { 
             icon: faBandAid, 
-            name: 'Service E', 
-            desc: 'Service E description' 
+            name: 'Comprehensive testing and validation of upgraded equipment to ensure compliance and safety.', 
+            desc: '' 
         }, 
         { 
             icon: faBandAid, 
-            name: 'Service E', 
-            desc: 'Service E description' 
+            name: 'Documentation of the entire process for TGA compliance purposes.', 
+            desc: '' 
         }, 
+        ] 
+    },
+    { 
+        id: 4, 
+        name: 'AS3551 Testing Electrical Safety and Performance Verifications', 
+        title: 'Ensuring timely payments and support', 
+        description: 'OHM Biomedical is committed to ensuring that your medical equipment meets the highest safety standards. We offer AS3551 testing services to verify the electrical safety and performance of your medical devices. Our team of experienced Engineers are trained and certified to perform these tests in accordance with Australian and New Zealand standards.', 
+        services: 
+        [{ 
+            icon: faBandAid, 
+            name: 'Electrical safety testing', 
+            desc: 'We perform a range of tests to ensure that your equipment is electrically safe for use. This includes insulation resistance testing, earth continuity testing, and leakage current testing.' 
+        }, 
+        { 
+            icon: faVirus, 
+            name: 'Performance verification', 
+            desc: 'We also perform tests to verify the performance of your equipment. This includes accuracy and calibration testing, as well as functionality testing to ensure that your equipment is operating as it should.' 
+        },
+        { 
+            icon: faBandAid, 
+            name: 'Comprehensive reporting', 
+            desc: 'We provide you with a detailed report outlining the results of our testing, including any recommended actions to address any issues we identify.' 
+        }, 
+        ] 
+    },
+    { 
+        id: 5, 
+        name: 'Virtual Workshop', 
+        title: 'Virtual Workshop for Biomedical Engineers', 
+        description: 'Looking to bring innovative Biomedical equipment to Australia, but don`t want to set up your own workshop? Look no further than OHM Biomedical`s WAAS (Workshop as a Service) offering. Our Virtual Workshop is here to help, providing instant access to trained engineers and technicians who can maintain a wide range of medical devices. With our expert Biomedical consultants guiding you through the repair process, you can rest assured that your equipment is in good hands. Our Virtual Workshop offers a range of services to help you stay focused on bringing new and innovative equipment to Australia:', 
+        services: 
+        [{ 
+            icon: faBandAid, 
+            name: 'Workshop Repair and Maintenance for Your Biomedical Equipment', 
+            desc: '' 
+        }, 
+        { 
+            icon: faVirus, 
+            name: 'Customized Maintenance and Service Plans to Fit Customer Needs', 
+            desc: '' 
+        },
+        { 
+            icon: faBandAid, 
+            name: 'Cost-Effective Solutions to Reduce Operational Expenses', 
+            desc: '' 
+        }, 
+        { 
+            icon: faBandAid, 
+            name: 'Develop Maintenance Service Agreements for Your Equipment', 
+            desc: '' 
+        }, 
+        { 
+            icon: faBandAid, 
+            name: 'Expert Biomedical Consultants for Service Strategy and Lifecycle Management', 
+            desc: '' 
+        }, 
+        { 
+            icon: faBandAid, 
+            name: 'Remote Diagnostics and Troubleshooting Support', 
+            desc: '' 
+        }, 
+        ] 
+    },
+    { 
+        id: 6, 
+        name: 'Test and Tag', 
+        title: 'Test and Tag Services for Biomedical Engineers', 
+        description: 'Our team of highly skilled technicians can provide comprehensive test and tag services to ensure your medical equipment is compliant with AS/NZS 3760 regulations. Our services include electrical safety testing, visual inspections, and tagging of all equipment with clear identification labels to indicate compliance. We use state-of-the-art testing equipment to ensure accurate and efficient testing and provide detailed reports and recommendations for any necessary repairs or replacements. Our team can work around your schedule to minimize downtime and ensure minimal disruption to your operations.', 
+        services: 
+        [
         ] 
     },
     // Add more tabs if needed
