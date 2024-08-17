@@ -105,7 +105,6 @@ const OurTeam = () => {
                     alt="Product Background"
                     className='w-full h-[30vh] md:h-[40vh] object-cover'
                 />
-
                 {/* Adjust positioning for mobile and larger screens */}
                 <div
                     className='absolute bottom-[22%] md:top-[65%] w-full flex justify-center px-4'

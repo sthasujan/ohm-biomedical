@@ -131,7 +131,7 @@ const CarefusionBlogDetailView = () => {
                 </div>
 
                 {/* Accordion Panels */}
-                <div className="mt-12 space-y-4">
+                <div className="mt-12 space-y-4 hidden">
                     {/* Features & Benefits Accordion */}
                     <div className="border border-gray-300 rounded-lg">
                         <button

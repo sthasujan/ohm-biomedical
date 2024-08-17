@@ -49,7 +49,7 @@ const salesItems = [
         partNo: 'Part Number: 301.328.020',
         title: 'FLOW, ADVANCED, PAEDIATRIC/ADULT, 200 S PROXIMAL, FOR BELLAVISTA 1000e VENTILATOR, SINGLE PATIENT USE',
         sizes: ['Extra Small', 'Small', 'Medium', 'Large', 'Extra Large'],
-        image: pic7 ,
+        image: pic7,
     },
     {
         partNo: '12345',
@@ -115,37 +115,30 @@ const Consumablessales = () => {
                 </div>
 
                 {showPopup && selectedItem && (
-                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                        <div className="bg-white rounded-lg p-6 relative max-w-lg w-auto mx-4 lg:mx-0">
-                            <button
-                                className="absolute top-4 right-4 bg-gray-700 text-white rounded-full p-2"
-                                onClick={handlePopupClose}
-                            >
-                                X
-                            </button>
-                            <img
-                                src={selectedItem.image}
-                                alt={selectedItem.title}
-                                className="w-full h-auto max-h-60 object-cover mb-4"
-                            />
-                            <p className="font-bold text-gray-700 text-center">{selectedItem.partNo}</p>
-                            <p className="text-gray-800 text-center mb-4">{selectedItem.title}</p>
-                            <p className="text-gray-600 text-center mb-2">Available in:</p>
-                            <div className="flex flex-wrap justify-center gap-2">
-                                {selectedItem.sizes.map((size, index) => (
-                                    <span
-                                        key={index}
-                                        className="bg-gray-200 text-gray-700 rounded-full px-3 py-1 text-sm"
-                                    >
-                                        {size}
-                                    </span>
-                                ))}
-                            </div>
+                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">< div className="bg-white rounded-lg p-6 relative max-w-lg w-auto mx-4 lg:mx-0"><button
+                        className="absolute top-4 right-4 bg-gray-700 text-white rounded-full p-2 hover:bg-red-500 transition-colors duration-300"
+                        onClick={handlePopupClose}
+                    >
+                        X
+                    </button><img
+                            src={selectedItem.image}
+                            alt={selectedItem.title}
+                            className="w-full h-auto max-h-60 object-cover mb-4"
+                        /><p className="font-bold text-gray-700 text-center">{selectedItem.partNo}</p><p className="text-gray-800 text-center mb-4">{selectedItem.title}</p><p className="text-gray-600 text-center mb-2">Available in:</p><div className="flex flex-wrap justify-center gap-2">
+                            {selectedItem.sizes.map((size, index) => (
+                                <span key={index} className="bg-gray-200 text-gray-700 rounded-full px-3 py-1 text-sm"
+                                >
+                                    {size}
+                                </span>
+                            ))}
                         </div>
                     </div>
-                )}
-            </div>
-        </div>
+                    </div>
+                )
+                }
+
+            </div >
+        </div >
 
     );
 };

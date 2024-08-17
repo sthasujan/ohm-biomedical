@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import productBgImg from "../assets/products.webp";
 import Blog1 from "../assets/products/Siemensultrasound/acusion500.webp";
-import Blog2 from "../assets/products/Siemensultrasound/freestyle.jpeg";
+import Blog2 from "../assets/products/Siemensultrasound/freestyle1.jpeg";
 import Blog3 from "../assets/products/Siemensultrasound/maple.png";
 
 const blogs = [
@@ -94,23 +94,23 @@ const SiemensBlogDetailView = () => {
                     {/* Left Column - Thumbnails */}
                     <div className="flex flex-col items-center">
                         {blog.images.map((image, index) => (
-                            <img
-                                key={index}
+                            <div key={index} className="mb-4">< div className="relative w-40 aspect-w-1 aspect-h-1 border-4 border-brandSecondary rounded-full overflow-hidden shadow-lg cursor-pointer hover:opacity-75 transition-opacity" > <img
                                 src={image}
                                 alt={`Image ${index + 1}`}
-                                className="cursor-pointer mb-4 w-32 h-32 object-cover hover:opacity-75 transition-all rounded-full border-4 border-brandSecondary shadow-lg"
+                                className="w-full h-full object-cover"
                                 onClick={() => setSelectedImage(image)}
                             />
+                            </div></div>
                         ))}
                     </div>
-
                     {/* Middle Column - Selected Image */}
                     <div className="flex justify-start items-start">
-                        <img
+                        <div className="relative w-full aspect-w-1 aspect-h-1 border-4 border-brandSecondary rounded-lg overflow-hidden shadow-xl"><img
                             src={selectedImage}
                             alt="Selected"
-                            className="w-96 h-96 object-cover mb-4 rounded-lg border-4 border-brandSecondary shadow-xl transform hover:scale-105 transition-all"
+                            className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
                         />
+                        </div>
                     </div>
 
                     {/* Right Column - Blog Details */}
@@ -132,7 +132,7 @@ const SiemensBlogDetailView = () => {
                 </div>
 
                 {/* Accordion Panels */}
-                <div className="mt-12 space-y-4">
+                <div className="mt-12 space-y-4 hidden">
                     {/* Features & Benefits Accordion */}
                     <div className="border border-gray-300 rounded-lg">
                         <button
@@ -172,8 +172,8 @@ const SiemensBlogDetailView = () => {
                         )}
                     </div>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 

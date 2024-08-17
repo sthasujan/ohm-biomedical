@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faHeartbeat, faSyringe, faPills, faBandAid, faVirus, faShieldAlt, faFlask, faBookOpen, faFileContract, 
-    faHeadset, faLaptopCode, faVials, faFileAlt, faBolt, faChartLine, faChartBar, faTools, faCogs, faDollarSign, faFileSignature,
+    faHeadset, faHandshake , faLaptopCode, faVials, faFileAlt, faBolt, faChartLine, faChartBar, faTools, faCogs, faDollarSign, faFileSignature,
     faUserMd, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import productBgImg from "../assets/products.webp";
 
@@ -85,7 +85,7 @@ const tabData = [
             desc: '' 
         },
         { 
-            icon: faBandAid, 
+            icon: faHandshake, 
             name: 'Coordinating with equipment manufacturers and the end users to ensure timely availability of necessary parts and upgrades.', 
             desc: '' 
         }, 

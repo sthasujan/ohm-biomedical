@@ -1,6 +1,6 @@
 import React from 'react';
 import productBgImg from "../assets/products.webp";
-import img1 from "../assets/Testimonials/Carol.jpg";
+import img1 from "../assets/Testimonials/Aldo.png";
 import img2 from "../assets/Testimonials/Lee.jpg";
 import img3 from "../assets/Testimonials/Jordan.jpg";
 import img4 from "../assets/Testimonials/Fran.jpg";
@@ -8,11 +8,11 @@ import img4 from "../assets/Testimonials/Fran.jpg";
 // Testimonial data constant
 const testimonials = [
   {
-    name: "Carol",
-    company: "EVP Sales & Operations, Beacon International",
-    title: "Project management",
-    subtitle: "Imaging Systems re-sales",
-    description: "I have had the pleasure of engaging MELmed Electrical to ramp down and deinstall several MRI systems I have had come out of Australia.  The project management team pays attention to the details, tracks the project timelines, MELmed knows and works with all the key players, OEM’s, Riggers, Logistics, which creates a seamless transition.  David and his team are very knowledgeable in multiple diagnostic imaging modalities.  David is a true professional that oversees a job from system inspection to completion of the deinstallation.  I look forward to working with MELmed on all future projects.",
+    name: "Aldo Perdomo",
+    company: "Neonatal Intensive Care Unit | Westmead Hospital",
+    title: "Senior Biomedical Officer",
+    subtitle: "",
+    description: "I greatly appreciate the exceptional service provided by the team at Ohm Biomedical. Their professionalism, expertise, rapid response, and dedication have been instrumental in keeping our critical ventilation equipment functional at all times.",
     image: img1,
   },
   {
