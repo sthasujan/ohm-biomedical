@@ -10,7 +10,7 @@ import Blog5 from "../assets/blog/blog2.webp";
 const Home = () => {
     return (
         <div>
-            <div className='container relative pt-16 md:pt-0'>
+            <div className='relative pt-16 md:pt-0'>
                 <img
                     src={productBgImg}
                     alt="Product Background"

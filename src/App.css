@@ -40,12 +40,6 @@ header{
   color: white;
 }
 
-.container {
-  position: relative;
-  width: 100%;
-  max-width: fit-content; /* Adjust as needed */
-}
-
 /* Add this CSS to your component's stylesheet */
 
 .company-logos {

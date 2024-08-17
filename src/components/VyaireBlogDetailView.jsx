@@ -16,6 +16,13 @@ import Blog5 from "../assets/products/Vyaireventilators/blog5.png";
 import Blog55 from "../assets/products/Vyaireventilators/blog55.png";
 import Blog555 from "../assets/products/Vyaireventilators/blog555.png";
 import Blog6 from "../assets/products/Vyaireventilators/blog6.png";
+import pdf1 from "../assets/products/Vyaireventilators/VyairePdf/bellavistabrochure.pdf";
+import pdf2 from "../assets/products/Vyaireventilators/VyairePdf/fabianbrochure.pdf";
+import pdf3 from "../assets/products/Vyaireventilators/VyairePdf/fabiantherapybrochure.pdf";
+import pdf4 from "../assets/products/Vyaireventilators/VyairePdf/fabianventilatorbrochure.pdf";
+import pdf5 from "../assets/products/Vyaireventilators/VyairePdf/ltv2brochure.pdf";
+import pdf6 from "../assets/products/Vyaireventilators/VyairePdf/3100Ventilator.pdf";
+import emailjs from 'emailjs-com';
 
 const blogs = [
     {
@@ -34,7 +41,7 @@ const blogs = [
             'Lung Recruitment Tool',
             'Minimum of 3 hours battery capacity'
         ],
-        resourcePdf: 'resource.pdf',
+        resourcePdf: pdf1,
         descriptions: [
             "Adaptive Ventilation Mode - A smart ventilation mode faster weaning and a reduction of manual settings",
             "High Flow Oxygen Therapy improves the oxygenation of patients while enhancing patient comfort",
@@ -60,7 +67,7 @@ const blogs = [
             'Supports 3 different etCO2 module types: microstream, mainstream and sidestream',
             'FOT* is an effective measurement for safe lung recruitment'
         ],
-        resourcePdf: 'resource.pdf',
+        resourcePdf: pdf2,
         descriptions: [
             "*FOT may not be available in your region. Please inquire with your local Vyaire representative.",
         ]
@@ -79,9 +86,9 @@ const blogs = [
             'SPO2 with Masimo SPO2 sensor technology',
             'PRICO adapts and maintains the SpO2 within the desired set range.'
         ],
-        resourcePdf: 'resource.pdf',
+        resourcePdf: pdf3,
         descriptions: [
-            
+
         ]
     },
     {
@@ -96,10 +103,10 @@ const blogs = [
             'Modularity',
             'Ease of Use',
             'Easy Access'
-        ],        
-        resourcePdf: 'resource.pdf',
+        ],
+        resourcePdf: pdf4,
         descriptions: [
-            
+
         ]
     },
     {
@@ -126,9 +133,9 @@ const blogs = [
             'Comprehensive monitoring',
             'Supports invasive and non-invasive applications The LTV2™ is available in Japan. Please contact your local representative for additional information.'
         ],
-        resourcePdf: 'resource.pdf',
+        resourcePdf: pdf5,
         descriptions: [
-            
+
         ]
     },
     {
@@ -145,14 +152,13 @@ const blogs = [
             'Lung Protective Strategy: Reduces the risk of barotrauma and volutrauma by maintaining lung volumes close to the anatomical dead space.',
             'Improved Gas Exchange: Facilitates efficient oxygenation and CO2 removal even in patients with severe respiratory distress.',
             'Versatility: Suitable for use in a range of conditions from neonatal respiratory distress syndrome to pediatric respiratory failure.'
-       ],
-        resourcePdf: 'resource.pdf',
+        ],
+        resourcePdf: pdf6,
         descriptions: [
-            
+
         ]
     },
 ];
-
 
 const VyaireBlogDetailView = () => {
     const { id } = useParams();
@@ -160,10 +166,82 @@ const VyaireBlogDetailView = () => {
     const [selectedImage, setSelectedImage] = useState(blog.images[0]);
     const [showFeatures, setShowFeatures] = useState(false);
     const [showResources, setShowResources] = useState(false);
+    const [showPopup, setShowPopup] = useState(false);
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        agreeToTerms: false,
+    });
+
+    const handleInputChange = (e) => {
+        const { name, value, type, checked } = e.target;
+        setFormData({
+            ...formData,
+            [name]: type === 'checkbox' ? checked : value,
+        });
+    };
+
+    const openPopup = () => {
+        setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            agreeToTerms: false,
+        });
+        setShowPopup(false);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (!formData.email.includes('@') || formData.email.length < 5) {
+            alert('Please enter a valid email.');
+            return;
+        }
+        if (!formData.phone || formData.phone.length < 10 || formData.phone.length > 15 || !/^\+?\d+$/.test(formData.phone)) {
+            alert('Please enter a valid phone number (10-15 digits).');
+            return;
+        }
+        if (!/^[A-Za-z\s'-]+$/.test(formData.firstName)) {
+            alert('Please enter a valid name');
+            return;
+        }
+        if (!/^[A-Za-z\s'-]+$/.test(formData.lastName)) {
+            alert('Please enter a valid last name');
+            return;
+        }
+
+        if (formData.firstName && formData.lastName && formData.phone && formData.agreeToTerms) {
+            emailjs.send(
+                'service_tekatlj', // Replace with your EmailJS service ID
+                'template_f1mpkg5', // Replace with your EmailJS template ID
+                {
+                    firstName: formData.firstName,
+                    lastName: formData.lastName,
+                    email: formData.email,
+                    phone: formData.phone,
+                },
+                'c3bmZ1zMFpUeSz1Ym' // Replace with your EmailJS user ID (found in account settings)
+            )
+                .then(() => {
+                    alert('Your message has been sent!');
+                    setShowPopup(false);
+                })
+                .catch((error) => {
+                    alert('There was an error sending your message. Please try again.');
+                    console.error(error);
+                });
+        } else {
+            alert('Please fill out all fields and agree to the terms.');
+        }
+    };
 
     return (
         <div>
-            <div className='container relative pt-16 md:pt-0'>
+            <div className='relative pt-16 md:pt-0'>
                 <img
                     src={productBgImg}
                     alt="Product Background"
@@ -175,7 +253,7 @@ const VyaireBlogDetailView = () => {
                     </h1>
                 </div>
             </div>
-            <div className="container mx-auto my-12 px-4 lg:px-14 max-w-screen-2xl">
+            <div className="mx-auto my-12 px-4 lg:px-14 max-w-screen-2xl">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div className="flex flex-col items-center">
                         {blog.images.map((image, index) => (
@@ -188,7 +266,6 @@ const VyaireBlogDetailView = () => {
                             />
                         ))}
                     </div>
-
                     <div className="flex justify-start items-start">
                         <img
                             src={selectedImage}
@@ -196,25 +273,96 @@ const VyaireBlogDetailView = () => {
                             className="w-96 h-96 object-cover mb-4 rounded-lg border-4 border-brandSecondary shadow-xl transform hover:scale-105 transition-all"
                         />
                     </div>
-
                     <div className="flex flex-col justify-center">
                         <h4 className="text-base text-neutralGrey font-medium mb-4">{blog.subtitle}</h4>
                         <h3 className="text-2xl text-neutralGrey font-semibold mb-2">{blog.title}</h3>
                         <p className="mb-2 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: blog.description }}></p>
-
                         {/* Descriptions List */}
                         <ul className="list-disc mb-4 text-lg text-neutralGrey pl-6">
                             {blog.descriptions.map((desc, index) => (
                                 <li key={index}>{desc}</li>
                             ))}
                         </ul>
-
-                        <button className="bg-brandSecondary text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-green-700 transition-all">
+                        <button
+                            onClick={() => setShowPopup(true)}
+                            className="bg-brandSecondary text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-green-700 transition-all"
+                        >
                             Contact Sales Representative
                         </button>
+                        {showPopup && (
+                            <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                                <div className="bg-white rounded-lg w-11/12 md:w-1/2 p-8 relative shadow-lg">
+                                    <h2 className="text-red-600 text-center font-bold text-2xl mb-4">
+                                        Contact a Sales Representative
+                                    </h2>
+                                    <button
+                                        onClick={openPopup}
+                                        className="absolute top-4 right-4 text-white bg-blue-900 border rounded-full p-2 hover:bg-red-600"
+                                    >
+                                        X
+                                    </button>
+                                    <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <input
+                                            type="text"
+                                            name="firstName"
+                                            placeholder="First Name"
+                                            value={formData.firstName}
+                                            onChange={handleInputChange}
+                                            className="border p-2 rounded"
+                                            required
+                                        />
+                                        <input
+                                            type="text"
+                                            name="lastName"
+                                            placeholder="Last Name"
+                                            value={formData.lastName}
+                                            onChange={handleInputChange}
+                                            className="border p-2 rounded"
+                                            required
+                                        />
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            placeholder="Email"
+                                            value={formData.email}
+                                            onChange={handleInputChange}
+                                            className="border p-2 rounded"
+                                            required
+                                        />
+                                        <input
+                                            type="text"
+                                            name="phone"
+                                            placeholder="Phone Number"
+                                            value={formData.phone}
+                                            onChange={handleInputChange}
+                                            className="border p-2 rounded"
+                                            required
+                                        />
+                                        <div className="col-span-2 flex items-center">
+                                            <input
+                                                type="checkbox"
+                                                name="agreeToTerms"
+                                                checked={formData.agreeToTerms}
+                                                onChange={handleInputChange}
+                                                className="mr-2"
+                                                required
+                                            />
+                                            <span>I have read and agree to OHM's Terms and Conditions</span>
+                                        </div>
+                                        <div className="col-span-2">
+                                            <button
+                                                type="submit"
+                                                className="bg-blue-900 text-white font-bold py-2 px-6 rounded-lg hover:bg-red-600 transition-all"
+                                            >
+                                                Get In Touch
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
-
                 <div className="mt-12 space-y-4">
                     <div className="border border-gray-300 rounded-lg">
                         <button
@@ -235,7 +383,6 @@ const VyaireBlogDetailView = () => {
                             </ul>
                         )}
                     </div>
-
                     <div className="border border-gray-300 rounded-lg">
                         <button
                             onClick={() => setShowResources(!showResources)}

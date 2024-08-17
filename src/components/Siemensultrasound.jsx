@@ -46,7 +46,7 @@ const Siemensultrasound = () => {
 
     return (
         <div>
-            <div className='container relative pt-16 md:pt-0'>
+            <div className='relative pt-16 md:pt-0'>
                 <img
                     src={productBgImg}
                     alt="Product Background"

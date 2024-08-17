@@ -4,6 +4,7 @@ import productBgImg from "../assets/products.webp";
 import Blog1 from "../assets/products/Siemensultrasound/acusion500.webp";
 import Blog2 from "../assets/products/Siemensultrasound/freestyle1.jpeg";
 import Blog3 from "../assets/products/Siemensultrasound/maple.png";
+import emailjs from 'emailjs-com';
 
 const blogs = [
     {
@@ -68,10 +69,81 @@ const SiemensBlogDetailView = () => {
     const [selectedImage, setSelectedImage] = useState(blog.images[0]);
     const [showFeatures, setShowFeatures] = useState(false);
     const [showResources, setShowResources] = useState(false);
+    const [showPopup, setShowPopup] = useState(false);
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        agreeToTerms: false,
+    });
+
+    const handleInputChange = (e) => {
+        const { name, value, type, checked } = e.target;
+        setFormData({
+            ...formData,
+            [name]: type === 'checkbox' ? checked : value,
+        });
+    };
+
+    const openPopup = () => {
+        setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            agreeToTerms: false,
+        });
+        setShowPopup(false);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (!formData.email.includes('@') || formData.email.length < 5) {
+            alert('Please enter a valid email.');
+            return;
+        }
+        if (!formData.phone || formData.phone.length < 10 || formData.phone.length > 15 || !/^\+?\d+$/.test(formData.phone)) {
+            alert('Please enter a valid phone number (10-15 digits).');
+            return;
+        }
+        if (!/^[A-Za-z\s'-]+$/.test(formData.firstName)) {
+            alert('Please enter a valid name');
+            return;
+        }
+        if (!/^[A-Za-z\s'-]+$/.test(formData.lastName)) {
+            alert('Please enter a valid last name');
+            return;
+        }
+        if (formData.firstName && formData.lastName && formData.phone && formData.agreeToTerms) {
+            emailjs.send(
+                'service_tekatlj', // Replace with your EmailJS service ID
+                'template_f1mpkg5', // Replace with your EmailJS template ID
+                {
+                    firstName: formData.firstName,
+                    lastName: formData.lastName,
+                    email: formData.email,
+                    phone: formData.phone,
+                },
+                'c3bmZ1zMFpUeSz1Ym' // Replace with your EmailJS user ID (found in account settings)
+            )
+                .then(() => {
+                    alert('Your message has been sent!');
+                    setShowPopup(false);
+                })
+                .catch((error) => {
+                    alert('There was an error sending your message. Please try again.');
+                    console.error(error);
+                });
+        } else {
+            alert('Please fill out all fields and agree to the terms.');
+        }
+    };
 
     return (
         <div>
-            <div className='container relative pt-16 md:pt-0'>
+            <div className='relative pt-16 md:pt-0'>
                 <img
                     src={productBgImg}
                     alt="Product Background"
@@ -89,7 +161,7 @@ const SiemensBlogDetailView = () => {
                     </h1>
                 </div>
             </div>
-            <div className="container mx-auto my-12 px-4 lg:px-14 max-w-screen-2xl">
+            <div className="mx-auto my-12 px-4 lg:px-14 max-w-screen-2xl">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Left Column - Thumbnails */}
                     <div className="flex flex-col items-center">
@@ -125,9 +197,83 @@ const SiemensBlogDetailView = () => {
                                 <li key={index}>{desc}</li>
                             ))}
                         </ul>
-                        <button className="bg-brandSecondary text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-green-700 transition-all">
+                        <button
+                            onClick={() => setShowPopup(true)}
+                            className="bg-brandSecondary text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-green-700 transition-all">
                             Contact Sales Representative
                         </button>
+                        {showPopup && (
+                            <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                                <div className="bg-white rounded-lg w-11/12 md:w-1/2 p-8 relative shadow-lg">
+                                    <h2 className="text-red-600 text-center font-bold text-2xl mb-4">
+                                        Contact a Sales Representative
+                                    </h2>
+                                    <button
+                                        onClick={openPopup}
+                                        className="absolute top-4 right-4 text-white bg-blue-900 border rounded-full p-2 hover:bg-red-600"
+                                    >
+                                        X
+                                    </button>
+                                    <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <input
+                                            type="text"
+                                            name="firstName"
+                                            placeholder="First Name"
+                                            value={formData.firstName}
+                                            onChange={handleInputChange}
+                                            className="border p-2 rounded"
+                                            required
+                                        />
+                                        <input
+                                            type="text"
+                                            name="lastName"
+                                            placeholder="Last Name"
+                                            value={formData.lastName}
+                                            onChange={handleInputChange}
+                                            className="border p-2 rounded"
+                                            required
+                                        />
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            placeholder="Email"
+                                            value={formData.email}
+                                            onChange={handleInputChange}
+                                            className="border p-2 rounded"
+                                            required
+                                        />
+                                        <input
+                                            type="text"
+                                            name="phone"
+                                            placeholder="Phone Number"
+                                            value={formData.phone}
+                                            onChange={handleInputChange}
+                                            className="border p-2 rounded"
+                                            required
+                                        />
+                                        <div className="col-span-2 flex items-center">
+                                            <input
+                                                type="checkbox"
+                                                name="agreeToTerms"
+                                                checked={formData.agreeToTerms}
+                                                onChange={handleInputChange}
+                                                className="mr-2"
+                                                required
+                                            />
+                                            <span>I have read and agree to OHM's Terms and Conditions</span>
+                                        </div>
+                                        <div className="col-span-2">
+                                            <button
+                                                type="submit"
+                                                className="bg-blue-900 text-white font-bold py-2 px-6 rounded-lg hover:bg-red-600 transition-all"
+                                            >
+                                                Get In Touch
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
 

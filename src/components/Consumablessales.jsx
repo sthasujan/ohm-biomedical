@@ -51,12 +51,12 @@ const salesItems = [
         sizes: ['Extra Small', 'Small', 'Medium', 'Large', 'Extra Large'],
         image: pic7,
     },
-    {
-        partNo: '12345',
-        title: 'High-Quality Consumable Item',
-        sizes: ['Extra Small', 'Small', 'Medium', 'Large', 'Extra Large'],
-        image: 'path/to/image1.jpg',
-    },
+    // {
+    //     partNo: '12345',
+    //     title: 'High-Quality Consumable Item',
+    //     sizes: ['Extra Small', 'Small', 'Medium', 'Large', 'Extra Large'],
+    //     image: 'path/to/image1.jpg',
+    // },
     // Add more items here
 ];
 
@@ -76,7 +76,7 @@ const Consumablessales = () => {
 
     return (
         <div>
-            <div className='container relative pt-16 md:pt-0'>
+            <div className='relative pt-16 md:pt-0'>
                 <img
                     src={productBgImg}
                     alt="Product Background"

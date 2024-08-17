@@ -36,10 +36,15 @@ const Footer = () => {
           </div>
           <div className="flex flex-col items-center md:items-end">
             {/* <h3 className="font-semibold text-lg mb-3 underline">About</h3> */}
-            <a href="https://www.linkedin.com/company/ohmbiomedical/"
-              className="hover:text-gray-200 mb-3 p-1 border border-white rounded-full flex items-center justify-center w-8 h-8">
+            <a
+              href="https://www.linkedin.com/company/ohmbiomedical/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-200 mb-3 p-1 border border-white rounded-full flex items-center justify-center w-8 h-8"
+            >
               <FaLinkedinIn />
             </a>
+
             {/* <ul>
               <li className="hover:underline mt-3"><a href="/">Company Overview</a></li>
             </ul> */}
