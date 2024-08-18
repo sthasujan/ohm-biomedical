@@ -56,17 +56,8 @@ const Blog = () => {
                 </div>
             </div>
             <div className='px-4 lg:px-14 max-w-screen-2xl mx-auto my-12 mb-28'>
-                {/* <div className='text-center md:w-1/2 mx-auto'>
-                    <h2 className='text-4xl text-neutralDGrey font-semibold mb-4'>
-                        Blog
-                    </h2>
-                    <p className='text-sm text-neutralDGrey mb-8 md:w-3/4 mx-auto'>
-                        Explore our latest blog posts to stay informed and updated with the latest industry trends.
-                    </p>
-                </div> */}
-
                 {/* All Blogs */}
-                <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between'>
+                <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-8 sm:gap-20 gap-24 items-center justify-between'>
                     {blogs.map(blog => (
                         <div key={blog.id}  onClick={() => handleReadMore(blog)} className='mx-auto relative mb-12 cursor-pointer'>
                             <img src={blog.image} alt={blog.title} className='hover:scale-95 transition-all duration-300' />
@@ -75,10 +66,6 @@ const Blog = () => {
                                 <p className='mb-4 text-sm text-neutralDGrey'>{blog.date}</p>
                                 {/* <p className='mb-6 text-sm text-neutralDGrey'>{blog.description}</p> */}
                                 <div className='flex items-center justify-center gap-8'>
-                                    {/* <a
-                                        href={`/Blog/${blog.id}`}
-                                        className='font-bold text-brandPrimary hover:text-neutral-700'
-                                    > */}
                                     <button
                                         className="font-bold text-brandPrimary hover:text-neutral-700"
                                     >
