@@ -38,9 +38,9 @@ const Products = () => {
   return (
     <div className='md:px-14 px-4 py-8 max-w-screen-2xl mx-auto'>
       {/* Service Cards Section */}
-      <div className='text-center my-2'>
-        <h2 className='text-4xl text-brandPrimary font-bold mb-2'>Our Products</h2>
-        <div className='mt-6 grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 md:w-11/12 mx-auto gap-12'>
+      <div className='text-center'>
+        <h2 className='text-4xl text-brandPrimary font-bold'>Our Products</h2>
+        <div className='mt-2 grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 md:w-11/12 mx-auto gap-12'>
           {
             services.map(service => (
               <Link key={service.id} to={service.link} className='flex flex-col items-center'>
