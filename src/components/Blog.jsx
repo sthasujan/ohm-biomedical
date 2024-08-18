@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Blog1 from "../assets/blog/blog1.jpg";
 import Blog2 from "../assets/blog/blog2.webp";
+import Blog3 from "../assets/blog/blog3.jpg";
 import productBgImg from "../assets/products.webp";
 
 const Blog = () => {
@@ -24,6 +25,13 @@ const Blog = () => {
             title: "Ensuring Reliability with Mandatory 2-Year OEM Preventive Maintenance",
             image: Blog2,
             date: "2024-08-10",
+            description: "A brief description about the mandatory 2-year OEM preventive maintenance for Bird Air/Oxygen Blenders.",
+        },
+        {
+            id: 3,
+            title: "Choosing the Right Ventilator Supplier",
+            image: Blog3,
+            date: "2024-08-18",
             description: "A brief description about the mandatory 2-year OEM preventive maintenance for Bird Air/Oxygen Blenders.",
         },
     ];

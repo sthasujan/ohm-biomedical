@@ -118,15 +118,15 @@ const SiemensBlogDetailView = () => {
         }
         if (formData.firstName && formData.lastName && formData.phone && formData.agreeToTerms) {
             emailjs.send(
-                'service_tekatlj', // Replace with your EmailJS service ID
-                'template_f1mpkg5', // Replace with your EmailJS template ID
+                'service_wck61fq', // Replace with your EmailJS service ID
+                'template_mn3et1q', // Replace with your EmailJS template ID
                 {
                     firstName: formData.firstName,
                     lastName: formData.lastName,
                     email: formData.email,
                     phone: formData.phone,
                 },
-                'c3bmZ1zMFpUeSz1Ym' // Replace with your EmailJS user ID (found in account settings)
+                'axf9xXZ07UFk3Vs7Z' // Replace with your EmailJS user ID (found in account settings)
             )
                 .then(() => {
                     alert('Your message has been sent!');

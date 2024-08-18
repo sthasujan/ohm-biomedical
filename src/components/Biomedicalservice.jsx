@@ -167,15 +167,15 @@ const tabData = [
         }, 
         ] 
     },
-    { 
-        id: 6, 
-        name: 'Test and Tag', 
-        title: 'Test and Tag Services for Biomedical Engineers', 
-        description: 'Our team of highly skilled technicians can provide comprehensive test and tag services to ensure your medical equipment is compliant with AS/NZS 3760 regulations. Our services include electrical safety testing, visual inspections, and tagging of all equipment with clear identification labels to indicate compliance. We use state-of-the-art testing equipment to ensure accurate and efficient testing and provide detailed reports and recommendations for any necessary repairs or replacements. Our team can work around your schedule to minimize downtime and ensure minimal disruption to your operations.', 
-        services: 
-        [
-        ] 
-    },
+    // { 
+    //     id: 6, 
+    //     name: 'Test and Tag', 
+    //     title: 'Test and Tag Services for Biomedical Engineers', 
+    //     description: 'Our team of highly skilled technicians can provide comprehensive test and tag services to ensure your medical equipment is compliant with AS/NZS 3760 regulations. Our services include electrical safety testing, visual inspections, and tagging of all equipment with clear identification labels to indicate compliance. We use state-of-the-art testing equipment to ensure accurate and efficient testing and provide detailed reports and recommendations for any necessary repairs or replacements. Our team can work around your schedule to minimize downtime and ensure minimal disruption to your operations.', 
+    //     services: 
+    //     [
+    //     ] 
+    // },
     // Add more tabs if needed
 ];
 

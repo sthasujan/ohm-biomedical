@@ -76,7 +76,7 @@ const Testimonial = () => {
                   className="w-3/4 rounded-md shadow-lg"
                 />
               </div>
-              <div className="w-full md:w-1/2 p-4">
+              <div className="w-full md:w-1/2 p-4 self-start">
                 <h3 className="text-2xl font-semibold">{testimonial.name}</h3>
                 <h4 className="text-lg font-light text-gray-500">
                   {testimonial.subtitle}
