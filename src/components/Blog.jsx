@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Blog1 from "../assets/blog/blog1.jpg";
 import Blog2 from "../assets/blog/blog2.webp";
 import Blog3 from "../assets/blog/blog3.jpg";
+import Blog4 from "../assets/blog/blog4.png";
 import productBgImg from "../assets/products.webp";
 
 const Blog = () => {
@@ -34,6 +35,13 @@ const Blog = () => {
             date: "2024-08-18",
             description: "A brief description about the mandatory 2-year OEM preventive maintenance for Bird Air/Oxygen Blenders.",
         },
+        {
+            id: 4,
+            title: "Why Choose OHM Biomedical",
+            image: Blog4,
+            date: "2024-08-18",
+            description: "A brief description about the mandatory 2-year OEM preventive maintenance for Bird Air/Oxygen Blenders.",
+        },
     ];
 
     return (
@@ -57,7 +65,7 @@ const Blog = () => {
             </div>
             <div className='px-4 lg:px-14 max-w-screen-2xl mx-auto my-12 mb-28'>
                 {/* All Blogs */}
-                <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-8 sm:gap-20 gap-24 items-center justify-between'>
+                <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-24 sm:gap-20 gap-24 items-center justify-between'>
                     {blogs.map(blog => (
                         <div key={blog.id}  onClick={() => handleReadMore(blog)} className='mx-auto relative mb-12 cursor-pointer'>
                             <img src={blog.image} alt={blog.title} className='hover:scale-95 transition-all duration-300' />

@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+// Import the necessary libraries and assets
+import { useState, useEffect, useRef } from 'react';
 import logo from '../assets/logo.png';
 import { FaXmark, FaBars, FaPhone } from "react-icons/fa6";
 import { NavLink } from 'react-router-dom';
@@ -135,7 +136,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu */}
-                <div className={`space-y-5 px-6 mt-24 py-7 bg-brandSecondary ${isMenuOpen ? "block fixed top-0 left-0 right-0" : "hidden"}`}>
+                <div className={`transition-transform transform ${isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"} space-y-5 px-6 mt-24 py-7 bg-brandSecondary fixed top-0 right-0 w-full md:hidden`} >
                     {navItems.map(({ link, path, dropdown }) => (
                         dropdown ? (
                             <div key={link} className='relative'>
@@ -186,7 +187,7 @@ const Navbar = () => {
             <div className="fixed bottom-4 right-4 z-50 md:hidden">
                 <a
                     href="tel:0391157464"
-                    className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-brandPrimary text-brandPrimary hover:text-red-500 hover:border-red-500 transition-colors"
+                    className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-brandPrimary text-brandPrimary hover:text-red-500 hover:border-red-500 transition-colors vibrate"
                 >
                     <FaPhone className="w-6 h-6" />
                 </a>

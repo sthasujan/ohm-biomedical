@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Blog1 from "../assets/blog/blog1.jpg";
 import Blog2 from "../assets/blog/blog2.webp";
 import Blog3 from "../assets/blog/blog3.jpg";
+import Blog4 from "../assets/blog/blog4.png";
 import productBgImg from "../assets/products.webp";
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { motion } from 'framer-motion';  // Import framer-motion
@@ -108,6 +109,36 @@ const blogData = [
                 "#NIV",
                 "#adultventilation",
             ]
+    },
+    {
+        id: 4,
+        title: "Why Choose OHM Biomedical as Your Service Partner",
+        image: Blog4,
+        date: "2024-08-18",
+        description:
+            [
+                "At OHM Biomedical, our commitment to service excellence is unmatched, driven by a core principle: we only service devices for which our engineers have received specialized training directly from the original equipment manufacturers (OEMs). This rigorous approach ensures that every piece of equipment we handle is maintained and repaired by experts with the highest level of training and knowledge. Managing critical medical devices requires specialized skills, and through OEM training and support, we are dedicated to providing superior services to our partners. This commitment guarantees our full compliance with AS/NZS 3551:2012, the gold standard for medical equipment management in Australia and New Zealand."
+            ],
+        descriptionTitle: "",
+        descriptionTitleContent:
+            [
+                {
+                    ques: [
+                        "Specialized Expertise and Compliance",
+                        "Ensuring Safety and Reliability",
+                        "Building Trust Through Certification",
+                    ],
+                    ans: [
+                        "Our engineers undergo intensive training directly from the manufacturers, equipping them with the same skills and certifications as OEM engineers. This specialized expertise allows them to understand the intricate details of each device and ensures they adhere to the highest standards of service. This level of proficiency is essential for maintaining operational efficiency and compliance with stringent health regulations.",
+                        "The focused training our team receives enables them to handle complex medical devices with exceptional precision and care. This targeted approach not only minimizes the risk of errors but also enhances our ability to proactively maintain and repair equipment, ensuring it operates at optimal levels—a critical requirement in healthcare environments.",
+                        "Healthcare providers trust OHM Biomedical because they know that every engineer we deploy is manufacturer-trained and certified. Whether it’s a dialysis machine, a medical laser, an anesthesia machine, an ultrasound, or any other sophisticated equipment, our certifications provide assurance of the reliability and quality of our services.",        
+                    ],
+                }
+            ],
+        conclusion:
+            [
+                "OHM Biomedical`s policy of servicing only those devices for which we have OEM-specific training guarantees the highest standards of safety, efficiency, and reliability, all while ensuring compliance with AS/NZS 3551:2012. By upholding this strict standard, we position ourselves not just as engineers, but as trusted partners in patient care.",
+            ]   
     },
 ];
 
