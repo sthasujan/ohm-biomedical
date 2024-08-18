@@ -126,7 +126,7 @@ const CarefusionBlogDetailView = () => {
                     email: formData.email,
                     phone: formData.phone,
                 },
-                'c3bmZ1zMFpUeSz1Ym' // Replace with your EmailJS user ID (found in account settings)
+                'axf9xXZ07UFk3Vs7Z' // Replace with your EmailJS user ID (found in account settings)
             )
                 .then(() => {
                     alert('Your message has been sent!');

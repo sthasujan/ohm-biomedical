@@ -147,8 +147,7 @@ const Navbar = () => {
                         </button>
                     </div>
                 </div>
-
-                <div className={`space-y-4 px-4 mt-16 py-7 bg-brandPrimary ${isMenuOpen ? "block fixed top-0 left-0 right-0" : "hidden"}`}>
+                <div className={`space-y-5 px-6 mt-24 py-7 bg-brandSecondary ${isMenuOpen ? "block fixed top-0 left-0 right-0" : "hidden"}`}>
                     {navItems.map(({ link, path, dropdown }) => (
                         dropdown ? (
                             <div key={link} className='relative'>
@@ -164,7 +163,11 @@ const Navbar = () => {
                                                 <NavLink
                                                     to={path}
                                                     className='block px-4 py-2 text-base text-white hover:text-brandPrimary'
-                                                    onClick={() => setIsMenuOpen(false)}
+                                                    onClick={() => {    
+                                                        setIsMenuOpen(false);
+                                                        setDropdownOpen(null);
+                                                    }                                                        
+                                                    }
                                                 >
                                                     {link}
                                                 </NavLink>
@@ -177,7 +180,9 @@ const Navbar = () => {
                             <NavLink
                                 key={path}
                                 to={path}
-                                className='block text-base text-white hover:text-brandPrimary first:font-medium'>
+                                className='block text-base text-white hover:text-brandPrimary first:font-medium'
+                                onClick={() => setIsMenuOpen(false)}
+                                >
                                 {link}
                             </NavLink>
                         )
