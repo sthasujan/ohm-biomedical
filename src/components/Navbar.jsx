@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import logo from '../assets/logo.png';
-// import { Link as ScrollLink } from 'react-scroll';
-import { FaXmark, FaBars } from "react-icons/fa6";
+import { FaXmark, FaBars, FaPhone } from "react-icons/fa6";
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
@@ -70,7 +69,6 @@ const Navbar = () => {
                 { link: 'About', path: '/About' },
                 { link: 'Our Team', path: '/Ourteam' },
                 { link: 'FAQ', path: '/Faq' },
-                // { link: 'Careers', path: '/Careers' },
             ],
         },
         { link: "Testimonial", path: "/Testimonial" },
@@ -110,22 +108,11 @@ const Navbar = () => {
                                 </li>
                             ) : (
                                 <li key={path}>
-                                    {link === "Home" ? (
-                                        <NavLink
-                                            to={path}
-                                            className='block cursor-pointer text-base text-gray900 hover:text-brandPrimary first:font-medium'>
-                                            {link}
-                                        </NavLink>
-                                    ) : (
-                                        <NavLink
-                                            to={path}
-                                            spy={true}
-                                            smooth={true}
-                                            offset={-100}
-                                            className='block cursor-pointer text-base text-gray900 hover:text-brandPrimary first:font-medium'>
-                                            {link}
-                                        </NavLink>
-                                    )}
+                                    <NavLink
+                                        to={path}
+                                        className='block cursor-pointer text-base text-gray900 hover:text-brandPrimary first:font-medium'>
+                                        {link}
+                                    </NavLink>
                                 </li>
                             )
                         ))}
@@ -138,7 +125,6 @@ const Navbar = () => {
                             03 9115 7464
                         </a>
                     </div>
-
                     <div className='md:hidden'>
                         <button
                             onClick={toggleMenu}
@@ -147,6 +133,8 @@ const Navbar = () => {
                         </button>
                     </div>
                 </div>
+
+                {/* Mobile Menu */}
                 <div className={`space-y-5 px-6 mt-24 py-7 bg-brandSecondary ${isMenuOpen ? "block fixed top-0 left-0 right-0" : "hidden"}`}>
                     {navItems.map(({ link, path, dropdown }) => (
                         dropdown ? (
@@ -166,8 +154,7 @@ const Navbar = () => {
                                                     onClick={() => {    
                                                         setIsMenuOpen(false);
                                                         setDropdownOpen(null);
-                                                    }                                                        
-                                                    }
+                                                    }}
                                                 >
                                                     {link}
                                                 </NavLink>
@@ -182,7 +169,7 @@ const Navbar = () => {
                                 to={path}
                                 className='block text-base text-white hover:text-brandPrimary first:font-medium'
                                 onClick={() => setIsMenuOpen(false)}
-                                >
+                            >
                                 {link}
                             </NavLink>
                         )
@@ -194,6 +181,16 @@ const Navbar = () => {
                     </button>
                 </div>
             </nav>
+
+            {/* Mobile Call Icon */}
+            <div className="fixed bottom-4 right-4 z-50 md:hidden">
+                <a
+                    href="tel:0391157464"
+                    className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-brandPrimary text-brandPrimary hover:text-red-500 hover:border-red-500 transition-colors"
+                >
+                    <FaPhone className="w-6 h-6" />
+                </a>
+            </div>
         </header>
     );
 };
