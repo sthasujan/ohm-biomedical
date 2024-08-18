@@ -43,27 +43,27 @@ const Home = () => {
                             <img
                                 src={Blog1}
                                 alt="Biomedical Image 1"
-                                className='w-full h-full object-cover transition-transform duration-300 transform hover:scale-105'
+                                className='w-full h-full object-cover transition-transform duration-100 transform hover:scale-105'
                             />
                             <img
                                 src={Blog2}
                                 alt="Biomedical Image 2"
-                                className='w-full h-full object-cover transition-transform duration-300 transform hover:scale-105'
+                                className='w-full h-full object-cover transition-transform duration-100 transform hover:scale-105'
                             />
                             <img
                                 src={Blog3}
                                 alt="Biomedical Image 3"
-                                className='w-full h-full object-cover transition-transform duration-300 transform hover:scale-105'
+                                className='w-full h-full object-cover transition-transform duration-100 transform hover:scale-105'
                             />
                             <img
                                 src={Blog4}
                                 alt="Biomedical Image 4"
-                                className='w-full h-full object-cover transition-transform duration-300 transform hover:scale-105'
+                                className='w-full h-full object-cover transition-transform duration-100 transform hover:scale-105'
                             />
                             <img
                                 src={Blog5}
                                 alt="Biomedical Image 5"
-                                className='w-full h-full object-cover transition-transform duration-300 transform hover:scale-105'
+                                className='w-full h-full object-cover transition-transform duration-200 transform hover:scale-105'
                             />
                         </Carousel>
                     </div>
