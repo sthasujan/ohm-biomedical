@@ -17,7 +17,7 @@ const Products = () => {
     },
     {
       id: 2,
-      title: "CareFusion Bird Blender",
+      title: "CareFusion Bird Air/Oxygen Blender",
       description: "New Blender Sales",
       description1: "Blender Replacement",
       description2: "2-Year PM Overhaul",

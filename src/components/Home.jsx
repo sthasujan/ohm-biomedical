@@ -29,10 +29,14 @@ const Home = () => {
             <div className='mt-0 mx-auto text-left w-full sm:w-11/12 md:w-4/5 p-6 bg-white shadow-lg rounded-lg 
             flex flex-col md:flex-row  transition-all duration-200 ease-in-out items-center mb-2'>
                 {/* Left Text Section */}
-                <div className='md:w-1/2'>
-                    <h2 className='text-xl text-black font-serif mb-3'>
-                        OHM Biomedical is the exclusive distributor for Vyaire ventilators and CareFusion Bird blenders in Australia and New Zealand, providing expert sales and service. <br />
-                        <br />In addition to these specific products, we offer a wide range of biomedical services to leading healthcare companies in the industry.
+                <div className="w-full sm:w-3/4 md:w-1/2">
+                    <h2
+                        className="text-base sm:text-lg md:text-xl text-black font-serif mb-3 text-justify"
+                        style={{ hyphens: 'auto', wordSpacing: '-0.05em' }}
+                    >
+                        OHM Biomedical is the exclusive distributor for Vyaire Ventilators and CareFusion Bird Air/Oxygen Blenders in Australia and New Zealand, providing expert sales and service. <br />
+                        <br />
+                        In addition to these specific products, we offer a wide range of biomedical services to leading healthcare companies in the industry.
                     </h2>
                 </div>
                 {/* Right Image Section */}

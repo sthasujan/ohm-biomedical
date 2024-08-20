@@ -1,9 +1,6 @@
 import React from 'react';
 import productBgImg from "../assets/products.webp";
 import img1 from "../assets/Testimonials/Aldo.png";
-import img2 from "../assets/Testimonials/Lee.jpg";
-import img3 from "../assets/Testimonials/Jordan.jpg";
-import img4 from "../assets/Testimonials/Fran.jpg";
 
 // Testimonial data constant
 const testimonials = [

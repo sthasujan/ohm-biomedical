@@ -7,6 +7,7 @@ import pic4 from "../assets/ConsumableItems/pic4.png";
 import pic5 from "../assets/ConsumableItems/pic5.png";
 import pic6 from "../assets/ConsumableItems/pic6.png";
 import pic7 from "../assets/ConsumableItems/pic7.png";
+import pic8 from "../assets/ConsumableItems/pic8.jpg";
 
 const salesItems = [
     {
@@ -51,12 +52,12 @@ const salesItems = [
         sizes: ['Extra Small', 'Small', 'Medium', 'Large', 'Extra Large'],
         image: pic7,
     },
-    // {
-    //     partNo: '12345',
-    //     title: 'High-Quality Consumable Item',
-    //     sizes: ['Extra Small', 'Small', 'Medium', 'Large', 'Extra Large'],
-    //     image: 'path/to/image1.jpg',
-    // },
+    {
+        partNo: 'Part Number: 03864L',
+        title: 'Oxygen Inlet Fitting Assembly',
+        sizes: ['Extra Small', 'Small', 'Medium', 'Large', 'Extra Large'],
+        image: pic8,
+    },
     // Add more items here
 ];
 
@@ -123,7 +124,7 @@ const Consumablessales = () => {
                     </button><img
                             src={selectedItem.image}
                             alt={selectedItem.title}
-                            className="w-full h-auto max-h-60 object-cover mb-4"
+                            className="w-full h-auto max-h-60 object-contain mb-4"
                         /><p className="font-bold text-gray-700 text-center">{selectedItem.partNo}</p><p className="text-gray-800 text-center mb-4">{selectedItem.title}</p><p className="text-gray-600 text-center mb-2">Available in:</p><div className="flex flex-wrap justify-center gap-2">
                             {selectedItem.sizes.map((size, index) => (
                                 <span key={index} className="bg-gray-200 text-gray-700 rounded-full px-3 py-1 text-sm"

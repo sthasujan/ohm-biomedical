@@ -58,7 +58,7 @@ const Birdblenderservice = () => {
                     <h1
                         className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
                     >
-                        Bird Blender Service <br />
+                        Bird Air/Oxygen Blender Service <br />
                     </h1>
                 </div>
             </div>

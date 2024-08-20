@@ -50,7 +50,7 @@ const Navbar = () => {
             path: "#",
             dropdown: [
                 { link: 'Vyaire Ventilator', path: '/Yyaireventilator' },
-                { link: 'Carefusion Bird Blender', path: '/Carefusionbirdblender' },
+                { link: 'Carefusion Bird Air/Oxygen Blender', path: '/Carefusionbirdblender' },
                 { link: 'Siemens Ultrasound', path: '/Siemensultrasound' },
                 { link: 'Consumables Sales', path: '/Consumablessales' },
             ],
@@ -59,7 +59,7 @@ const Navbar = () => {
             link: "Service",
             path: "#",
             dropdown: [
-                { link: 'Bird Blender Service', path: '/Birdblenderservice' },
+                { link: 'Bird Air/Oxygen Blender Service', path: '/Birdblenderservice' },
                 { link: 'Biomedical Service', path: '/Biomedicalservice' },
             ],
         },

@@ -8,9 +8,9 @@ import Blog3 from '../assets/products/Carefusionbirdblenders/flow_meter.png';
 const blogs = [
     {
         id: 1,
-        title: 'High Flow Bird Blender',
+        title: 'High Flow Bird Air/Oxygen Blender',
         subtitle: 'High flow, high pressure blender for ventilators and CPAP.',
-        description: 'The High Flow Bird Blender is a high flow, high pressure blender that is ideal for use with ventilators, CPAP, and high flow oxygen therapy devices. It is designed to provide accurate FiO2 mixtures from two outlet ports and has an overall flow range of 2-120 LPM. The High Flow Bird Blender is perfect for use in hospitals, clinics, and other healthcare facilities where high flow oxygen therapy is required.',
+        description: 'The High Flow Bird Air/Oxygen Blender is a high flow, high pressure blender that is ideal for use with ventilators, CPAP, and high flow oxygen therapy devices. It is designed to provide accurate FiO2 mixtures from two outlet ports and has an overall flow range of 2-120 LPM. The High Flow Bird Blender is perfect for use in hospitals, clinics, and other healthcare facilities where high flow oxygen therapy is required.',
         image: Blog1, 
         images: [Blog1, Blog2, Blog3], 
         featuresAndBenefits: 'Features and benefits details...', 
@@ -18,9 +18,9 @@ const blogs = [
     },
     {
         id: 2, 
-        title: 'Low Flow Bird Blender',
+        title: 'Low Flow Bird Air/Oxygen Blender',
         subtitle: 'Low flow, high pressure blender for ventilators and CPAP.',
-        description: 'The Low Flow Bird Blender is a low flow, high pressure blender that is ideal for use with ventilators, CPAP, and high flow oxygen therapy devices. It is designed to provide accurate FiO2 mixtures from two outlet ports and has an overall flow range of 2-120 LPM. The Low Flow Bird Blender is perfect for use in hospitals, clinics, and other healthcare facilities where low flow oxygen therapy is required.', 
+        description: 'The Low Flow Bird Air/Oxygen Blender is a low flow, high pressure blender that is ideal for use with ventilators, CPAP, and high flow oxygen therapy devices. It is designed to provide accurate FiO2 mixtures from two outlet ports and has an overall flow range of 2-120 LPM. The Low Flow Bird Blender is perfect for use in hospitals, clinics, and other healthcare facilities where low flow oxygen therapy is required.', 
         image: Blog2, 
         images: [Blog1, Blog2, Blog3], 
         featuresAndBenefits: 'Features and benefits details...', 
@@ -28,9 +28,9 @@ const blogs = [
     },
     {
         id: 3, 
-        title: 'Flow Meter Bird MicroBlenders',
+        title: 'Flow Meter Bird Air/Oxygen MicroBlenders',
         subtitle: 'Experience Precision in Every Breath with the Bird Blender',
-        description: 'At OHM Biomedical, we proudly present the Bird Blender, a cornerstone in respiratory care technology.Designed with precision and reliability in mind, the Bird Blender offers unparalleled control over oxygen concentration, ensuring optimal therapy outcomes for patients of all ages.', 
+        description: 'At OHM Biomedical, we proudly present the Bird Air/Oxygen Blender, a cornerstone in respiratory care technology.Designed with precision and reliability in mind, the Bird Blender offers unparalleled control over oxygen concentration, ensuring optimal therapy outcomes for patients of all ages.', 
         image: Blog3, 
         images: [Blog1, Blog2, Blog3], 
         featuresAndBenefits: 'Features and benefits details...', 
@@ -60,7 +60,7 @@ const Carefusionbirdblender = () => {
                     <h1
                         className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
                     >
-                        Products: Carefusion Bird Blenders <br />
+                        Products: Carefusion Bird Air/Oxygen Blenders <br />
                     </h1>
                 </div>
             </div>
