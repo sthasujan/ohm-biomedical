@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Blog1 from "../assets/blog/blog1.jpg";
 import Blog2 from "../assets/blog/blog2.webp";
-import Blog3 from "../assets/blog/blog3.jpg";
+import Blog3 from "../assets/blog/blog3.png";
 import Blog4 from "../assets/blog/blog4.png";
 import productBgImg from "../assets/products.webp";
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
