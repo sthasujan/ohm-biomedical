@@ -22,6 +22,7 @@ import SiemensBlogDetailView from './components/SiemensBlogDetailView';
 import ScrollToTop from './components/ScrollToTop';
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import NotFound from './components/NotFound';
 
 function AppWrapper() {
   const location = useLocation();
@@ -57,6 +58,9 @@ function AppWrapper() {
         {/* Blogs Section */}
         <Route path="/Blog" element={<Blog />} />
         <Route path="/Blog/:id" element={<BlogDetail />} />
+
+         {/* Catch-all route for 404 Not Found */}
+         <Route path="*" element={<NotFound />} />
       </Routes>
 
       {isHomePage && (

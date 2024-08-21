@@ -63,24 +63,23 @@ const Siemensultrasound = () => {
                     </h1>
                 </div>
             </div>
-            <div className="mt-2 px-4 lg:px-14 max-w-screen-2xl mx-auto my-12 mb-28">
-                <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between">
+            <div className="mt-2 px-4 lg:px-14 max-w-screen-2xl mx-auto my-28">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-center justify-between">
                     {blogs.map((blog) => (
                         <div 
                             key={blog.id} 
                             onClick={() => handleReadMore(blog)}
-                            className="mx-auto relative mb-12 cursor-pointer"
+                            className="relative mb-12 cursor-pointer"
                         >
-                            <img src={blog.image} alt="" className="hover:scale-95 transition-all duration-300 rounded-lg" />
-                            {/* title card for image */}
-                            <div className="text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto absolute left-0 right-0 -bottom-36">
-                                <span className="inline-block bg-black text-white font-bold rounded-full px-3 py-1 mb-2">
-                                Ultrasound
+                            <img src={blog.image} loading="lazy" alt={blog.title} className="w-full h-auto rounded-lg hover:scale-95 transition-all duration-300" />
+                            <div className="text-center px-4 py-6 bg-white shadow-lg rounded-md md:w-3/4 mx-auto absolute left-0 right-0">
+                                <span className="inline-block bg-black text-white font-bold rounded-full px-3 py-1 mb-2 text-xs sm:text-sm">
+                                    Ultrasound
                                 </span>
-                                <h3 className="mb-3 text-neutralGrey font-semibold">{blog.title}</h3>
+                                <h3 className="mb-3 text-neutralGrey font-semibold text-sm sm:text-base">{blog.title}</h3>
                                 <div className="flex items-center justify-center gap-8">
                                     <button
-                                        className="font-bold text-brandPrimary hover:text-neutral-700"
+                                        className="font-bold text-brandPrimary hover:text-neutral-700 text-sm sm:text-base"
                                     >
                                         Read more
                                         <svg
@@ -92,8 +91,7 @@ const Siemensultrasound = () => {
                                             className="inline-block ml-2"
                                         >
                                             <path
-                                                d="M12 9.39905L15.2929 6.10615C15.6834 5.71563 15.6834 5.08246 15.2929 4.69194L12 
-                                                        1.39905M15 5.39905L1 5.39905"
+                                                d="M12 9.39905L15.2929 6.10615C15.6834 5.71563 15.6834 5.08246 15.2929 4.69194L12 1.39905M15 5.39905L1 5.39905"
                                                 stroke="#4CAF4F"
                                             />
                                         </svg>
@@ -108,4 +106,4 @@ const Siemensultrasound = () => {
     );
 }
 
-export default Siemensultrasound
+export default Siemensultrasound;

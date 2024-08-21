@@ -52,7 +52,7 @@ const Navbar = () => {
                 { link: 'Vyaire Ventilator', path: '/Yyaireventilator' },
                 { link: 'Carefusion Bird Air/Oxygen Blender', path: '/Carefusionbirdblender' },
                 { link: 'Siemens Ultrasound', path: '/Siemensultrasound' },
-                { link: 'Consumables Sales', path: '/Consumablessales' },
+                { link: 'Consumables', path: '/Consumablessales' },
             ],
         },
         {

@@ -72,7 +72,7 @@ const Carefusionbirdblender = () => {
                             onClick={() => handleReadMore(blog)}
                             className="mx-auto relative mb-12 cursor-pointer"
                         >
-                            <img src={blog.image} alt="" className="hover:scale-95 transition-all duration-300 rounded-lg" />
+                            <img src={blog.image} loading="lazy" alt="Lazy Loaded Image" className="hover:scale-95 transition-all duration-300 rounded-lg" />
                             <div className="text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto absolute left-0 right-0 -bottom-24">
                                 <span className="inline-block bg-black text-white font-bold rounded-full px-3 py-1 mb-2">
                                     Blenders

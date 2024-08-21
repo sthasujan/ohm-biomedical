@@ -4,6 +4,8 @@ import Blog1 from "../assets/blog/blog1.jpg";
 import Blog2 from "../assets/blog/blog2.webp";
 import Blog3 from "../assets/blog/blog3.png";
 import Blog4 from "../assets/blog/blog4.png";
+import Blog5 from "../assets/blog/blog5.png";
+
 import productBgImg from "../assets/products.webp";
 
 const Blog = () => {
@@ -19,28 +21,35 @@ const Blog = () => {
             title: "The Importance of AS3551 in the Biomedical Industry",
             image: Blog1,
             date: "2024-08-11",
-            description: "A brief description about the importance of AS3551 in the biomedical industry.",
+            description: "",
         },
         {
             id: 2,
             title: "Ensuring Reliability with Mandatory 2-Year OEM Preventive Maintenance",
             image: Blog2,
             date: "2024-08-10",
-            description: "A brief description about the mandatory 2-year OEM preventive maintenance for Bird Air/Oxygen Blenders.",
+            description: "",
         },
         {
             id: 3,
             title: "Choosing the Right Ventilator Supplier",
             image: Blog3,
             date: "2024-08-18",
-            description: "A brief description about the mandatory 2-year OEM preventive maintenance for Bird Air/Oxygen Blenders.",
+            description: "",
         },
         {
             id: 4,
             title: "Why Choose OHM Biomedical",
             image: Blog4,
             date: "2024-08-18",
-            description: "A brief description about the mandatory 2-year OEM preventive maintenance for Bird Air/Oxygen Blenders.",
+            description: "",
+        },
+        {
+            id: 5,
+            title: "ZOLL Acquires Vyaire Medical's ",
+            image: Blog5,
+            date: "2024-08-21",
+            description: "",
         },
     ];
 

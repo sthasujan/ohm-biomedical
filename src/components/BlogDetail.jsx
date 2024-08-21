@@ -4,6 +4,7 @@ import Blog1 from "../assets/blog/blog1.jpg";
 import Blog2 from "../assets/blog/blog2.webp";
 import Blog3 from "../assets/blog/blog3.png";
 import Blog4 from "../assets/blog/blog4.png";
+import Blog5 from "../assets/blog/blog5.png";
 import productBgImg from "../assets/products.webp";
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { motion } from 'framer-motion';  // Import framer-motion
@@ -140,6 +141,47 @@ const blogData = [
                 "OHM Biomedical`s policy of servicing only those devices for which we have OEM-specific training guarantees the highest standards of safety, efficiency, and reliability, all while ensuring compliance with AS/NZS 3551:2012. By upholding this strict standard, we position ourselves not just as engineers, but as trusted partners in patient care.",
             ]   
     },
+    {
+        id: 5,
+        title: "ZOLL Acquires Vyaire Medical's Ventilator Business",
+        image: Blog5,
+        date: "2024-08-21",
+        description:
+            [
+                "Dear OHM Biomedical Community"
+            ],
+        descriptionTitle: "",
+        descriptionTitleContent:
+            [
+                {
+                    ques: [
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    ans: [
+                        "Over the past few weeks, many of you have expressed concerns about the future of our trusted devices such as the 3100A/B, Fabian HFO, Bellavista 1000e, and Bird Air/Oxygen Blenders following the news of Vyaire`s Chapter 11 bankruptcy filing in the U.S. on June 10, 2024. Despite the uncertainties, we've remained optimistic about the future and are committed to keeping you informed and supported.",
+                        "We are thrilled to announce a significant development that marks a promising new chapter in respiratory care: ZOLL, an Asahi Kasei company known for its innovative medical devices and software solutions, has emerged as the winning bidder in the auction to acquire Vyaire Medical's ventilator business. This announcement came on August 19, and the acquisition is pending court approval at a forthcoming sale hearing, with the final closing expected to occur in the next few weeks.",
+                        "ZOLL has been a leader in acute critical care and respiratory solutions globally since 2014, developing devices and accessories specifically designed for transporting critically ill patients. Their commitment to enhancing respiratory care aligns perfectly with the needs of our clientele.",    
+                        "Jon Rennert, CEO of ZOLL, emphasized that respiratory care has always been a core component of their business strategy. \"Adding Vyaire`s ventilators to our product portfolio will significantly enhance our ability to serve a broader range of clinicians and patients\", he stated. This integration promises to boost the capabilities and reach of our ventilation solutions, bringing advanced technology to healthcare providers across Australia and New Zealand.",
+                        "We at OHM Biomedical are enthusiastic about the future and our ongoing partnership with you, our valued customers. The support from the Vyaire Management team during this transition has been instrumental in ensuring smooth operations, thus minimizing any impact on our service and commitments to you."
+                    ],
+                }
+            ],
+        conclusion:
+            [
+                "As we move forward, we are confident that this new relationship with ZOLL will not only maintain but enhance the quality and innovation you expect from us. We look forward to continuing to support your critical care needs with even more advanced and reliable ventilation technology.",
+                "For more detailed information on this acquisition and what it means for our products and services, please visit ZOLL's announcement <a href='https://www.zoll.com' target='_blank' rel='noopener noreferrer' class='hover:text-blue-500 hover:underline'>page here</a>..",
+                "Thank you for your continued trust in OHM Biomedical. We are excited to step into this new era of respiratory care with you.",
+                "#OHMBiomedical #Ventilation",
+                "Sincerely,",
+                "Sovit Baral",
+                "Managing Director",
+                "OHM Biomedical Engineering"
+            ]   
+    },
 ];
 
 const BlogDetail = () => {
@@ -242,9 +284,10 @@ const BlogDetail = () => {
                         <br />
                         <p className='text-lg text-gray'>
                             {blog.conclusion.map((desc, index) => (
-                                <p key={index}>
-                                    {desc}
-                                </p>
+                                // <p key={index}>
+                                //     {desc}
+                                // </p>
+                                <p key={index} dangerouslySetInnerHTML={{ __html: desc }} />
                             ))}
                         </p>
                     </motion.div>

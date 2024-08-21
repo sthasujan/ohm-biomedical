@@ -53,8 +53,8 @@ const salesItems = [
         image: pic7,
     },
     {
-        partNo: 'Part Number: 03864L',
-        title: 'Oxygen Inlet Fitting Assembly',
+        partNo: 'Part Number: 10003',
+        title: 'Microblender High and Low Flow Maintenance Kit',
         sizes: ['Extra Small', 'Small', 'Medium', 'Large', 'Extra Large'],
         image: pic8,
     },
@@ -90,7 +90,7 @@ const Consumablessales = () => {
                     <h1
                         className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
                     >
-                        Consumables Sales <br />
+                        Consumables<br />
                     </h1>
                 </div>
             </div>
