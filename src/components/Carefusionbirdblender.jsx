@@ -1,9 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import productBgImg from '../assets/products.webp';
-import Blog1 from '../assets/products/Carefusionbirdblenders/high_flow.png';
-import Blog2 from '../assets/products/Carefusionbirdblenders/low_flow.png';
-import Blog3 from '../assets/products/Carefusionbirdblenders/flow_meter.png';
+import Blog1 from '../assets/products/Carefusionbirdblenders/high_flow.webp';
+import Blog2 from '../assets/products/Carefusionbirdblenders/low_flow.webp';
+import Blog3 from '../assets/products/Carefusionbirdblenders/flow_meter.webp';
+
+import LazyLoad from 'react-lazyload';
 
 const blogs = [
     {
@@ -11,29 +13,29 @@ const blogs = [
         title: 'High Flow Bird Air/Oxygen Blender',
         subtitle: 'High flow, high pressure blender for ventilators and CPAP.',
         description: 'The High Flow Bird Air/Oxygen Blender is a high flow, high pressure blender that is ideal for use with ventilators, CPAP, and high flow oxygen therapy devices. It is designed to provide accurate FiO2 mixtures from two outlet ports and has an overall flow range of 2-120 LPM. The High Flow Bird Blender is perfect for use in hospitals, clinics, and other healthcare facilities where high flow oxygen therapy is required.',
-        image: Blog1, 
-        images: [Blog1, Blog2, Blog3], 
-        featuresAndBenefits: 'Features and benefits details...', 
+        image: Blog1,
+        images: [Blog1, Blog2, Blog3],
+        featuresAndBenefits: 'Features and benefits details...',
         resourcePdf: 'resource.pdf'
     },
     {
-        id: 2, 
+        id: 2,
         title: 'Low Flow Bird Air/Oxygen Blender',
         subtitle: 'Low flow, high pressure blender for ventilators and CPAP.',
-        description: 'The Low Flow Bird Air/Oxygen Blender is a low flow, high pressure blender that is ideal for use with ventilators, CPAP, and high flow oxygen therapy devices. It is designed to provide accurate FiO2 mixtures from two outlet ports and has an overall flow range of 2-120 LPM. The Low Flow Bird Blender is perfect for use in hospitals, clinics, and other healthcare facilities where low flow oxygen therapy is required.', 
-        image: Blog2, 
-        images: [Blog1, Blog2, Blog3], 
-        featuresAndBenefits: 'Features and benefits details...', 
+        description: 'The Low Flow Bird Air/Oxygen Blender is a low flow, high pressure blender that is ideal for use with ventilators, CPAP, and high flow oxygen therapy devices. It is designed to provide accurate FiO2 mixtures from two outlet ports and has an overall flow range of 2-120 LPM. The Low Flow Bird Blender is perfect for use in hospitals, clinics, and other healthcare facilities where low flow oxygen therapy is required.',
+        image: Blog2,
+        images: [Blog1, Blog2, Blog3],
+        featuresAndBenefits: 'Features and benefits details...',
         resourcePdf: 'resource.pdf'
     },
     {
-        id: 3, 
+        id: 3,
         title: 'Flow Meter Bird Air/Oxygen MicroBlenders',
         subtitle: 'Experience Precision in Every Breath with the Bird Blender',
-        description: 'At OHM Biomedical, we proudly present the Bird Air/Oxygen Blender, a cornerstone in respiratory care technology.Designed with precision and reliability in mind, the Bird Blender offers unparalleled control over oxygen concentration, ensuring optimal therapy outcomes for patients of all ages.', 
-        image: Blog3, 
-        images: [Blog1, Blog2, Blog3], 
-        featuresAndBenefits: 'Features and benefits details...', 
+        description: 'At OHM Biomedical, we proudly present the Bird Air/Oxygen Blender, a cornerstone in respiratory care technology.Designed with precision and reliability in mind, the Bird Blender offers unparalleled control over oxygen concentration, ensuring optimal therapy outcomes for patients of all ages.',
+        image: Blog3,
+        images: [Blog1, Blog2, Blog3],
+        featuresAndBenefits: 'Features and benefits details...',
         resourcePdf: 'resource.pdf'
     },
 ];
@@ -67,12 +69,15 @@ const Carefusionbirdblender = () => {
             <div className="mt-2 px-4 lg:px-14 max-w-screen-2xl mx-auto my-14">
                 <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between">
                     {blogs.map((blog) => (
-                        <div 
-                            key={blog.id} 
+                        <div
+                            key={blog.id}
                             onClick={() => handleReadMore(blog)}
                             className="mx-auto relative mb-12 cursor-pointer"
                         >
-                            <img src={blog.image} loading="lazy" alt="Lazy Loaded Image" className="hover:scale-95 transition-all duration-300 rounded-lg" />
+                            <LazyLoad height={200} offset={100} once>
+                                <img src={blog.image} loading="lazy" alt="Lazy Loaded Image" className="hover:scale-95 transition-all duration-300 rounded-lg" />
+                            </LazyLoad>
+
                             <div className="text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto absolute left-0 right-0 -bottom-24">
                                 <span className="inline-block bg-black text-white font-bold rounded-full px-3 py-1 mb-2">
                                     Blenders

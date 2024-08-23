@@ -23,6 +23,8 @@ import ScrollToTop from './components/ScrollToTop';
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import NotFound from './components/NotFound';
+import HomeNavigation from './components/HomeNavigation';
+import Hero from './components/Hero';
 
 function AppWrapper() {
   const location = useLocation();
@@ -31,8 +33,9 @@ function AppWrapper() {
   return (
     <>
       <Navbar />
+      {isHomePage && <HomeNavigation />} {/* Display navigation on home page only */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Hero />} />
         {/* Product Section */}
         <Route path="/Yyaireventilator" element={<YyaireVentilator />} />
         <Route path="/Carefusionbirdblender" element={<Carefusionbirdblender />} />
@@ -63,12 +66,13 @@ function AppWrapper() {
          <Route path="*" element={<NotFound />} />
       </Routes>
 
-      {isHomePage && (
+      {/* {isHomePage && (
         <>
           <Products />
           <Trustedpartners />
         </>
-      )}
+      )} */}
+      
       <MyFooter />
     </>
   );
