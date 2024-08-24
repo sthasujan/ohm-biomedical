@@ -11,6 +11,8 @@ const HomeNavigation = () => {
     { id: 'trustedpartners', label: 'Trusted Partners' },
   ];
 
+  const navbarHeight = 60; // Adjust this value based on your navbar height
+
   useEffect(() => {
     const handleScroll = () => {
       const homeSection = document.getElementById('home');
@@ -47,7 +49,7 @@ const HomeNavigation = () => {
         >
           {hoveredSection === section.id && (
             <span
-              className="absolute right-5 whitespace-nowrap  text-brandSecondary text-sm py-1 px-3 rounded-md opacity-0 transition-opacity duration-300 transform -translate-x-2"
+              className="absolute right-5 whitespace-nowrap text-brandSecondary text-sm py-1 px-3 rounded-md opacity-0 transition-opacity duration-300 transform -translate-x-2"
               style={{ opacity: 1 }}
             >
               {section.label}
@@ -57,6 +59,7 @@ const HomeNavigation = () => {
             to={section.id}
             smooth={true}
             duration={500}
+            offset={-navbarHeight} // Apply the offset here
             className={`w-4 h-4 rounded-full cursor-pointer transition-all duration-300 ${
               activeSection === section.id ? 'bg-blue-600 scale-125' : 'bg-gray-400'
             }`}
