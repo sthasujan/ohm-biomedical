@@ -10,12 +10,12 @@ const Hero = () => {
             <section id="home" className="min-h-screen">
                     <Home /> 
             </section>
-            <section id="products" className="min-h-screen flex items-center justify-center mt-10 lg:mt-36">
+            <section id="products" className="min-h-screen flex items-center justify-center">
                 <div className="w-full">                    
                     <Products />
                 </div>
             </section>
-            <section id="trustedpartners" className="min-h-min flex items-center justify-center mt-10 lg:mt-10">
+            <section id="trustedpartners" className="min-h-min flex items-center justify-center">
                 <div className="w-full">
                     <Trustedpartners />
                 </div>
