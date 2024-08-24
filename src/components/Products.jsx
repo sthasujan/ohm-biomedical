@@ -44,7 +44,12 @@ const Products = () => {
           {services.map((service) => (
             <Link key={service.id} to={service.link} className='flex justify-center'>
               <div className='h-auto w-full max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg rounded-xl shadow-2xl bg-white p-4'>
-                <img src={service.image} alt={service.title} className='w-full h-56 object-cover rounded-t-xl' />
+                {/* Dynamic Image Height */}
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className='w-full object-cover rounded-t-xl h-56 md:h-64 lg:h-72 xl:h-80'
+                />
                 <div className='flex flex-col items-center'>
                   <h4 className='text-xl font-bold text-neutralDGrey mb-2 mt-1'>{service.title}</h4>
                   <ul className='text-sm text-neutralGrey flex flex-col items-start list-disc pl-5'>
