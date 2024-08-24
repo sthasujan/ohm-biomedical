@@ -65,14 +65,12 @@ function AppWrapper() {
          {/* Catch-all route for 404 Not Found */}
          <Route path="*" element={<NotFound />} />
       </Routes>
-
       {/* {isHomePage && (
         <>
           <Products />
           <Trustedpartners />
         </>
-      )} */}
-      
+      )} */}      
       <MyFooter />
     </>
   );
