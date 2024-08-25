@@ -7,7 +7,7 @@ import Home from './Home';
 const Hero = () => {
     return (
         <>
-            <section id="home" className="min-h-screen">
+            <section id="home" className="min-h-min sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] flex flex-col justify-center items-center">
                     <Home /> 
             </section>
             <section id="products" className="min-h-screen flex items-center justify-center">

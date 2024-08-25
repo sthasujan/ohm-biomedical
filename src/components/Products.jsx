@@ -17,7 +17,7 @@ const Products = () => {
     },
     {
       id: 2,
-      title: "CareFusion Bird Air/Oxygen Blender",
+      title: "CareFusion Bird Blender",
       description: "New Blender Sales",
       description1: "Blender Replacement",
       description2: "2-Year PM Overhaul",
@@ -42,7 +42,7 @@ const Products = () => {
         <div className='grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
           {services.map((service) => (
             <Link key={service.id} to={service.link} className='flex justify-center'>
-              <div className='w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-xl shadow-lg bg-white p-4'>
+              <div className='h-auto w-full max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg rounded-xl shadow-2xl bg-white p-4'>
                 {/* Dynamic Image Height */}
                 <img
                   src={service.image}
