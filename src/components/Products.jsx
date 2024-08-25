@@ -36,19 +36,18 @@ const Products = () => {
   ];
 
   return (
-    <div className='md:px-14 px-4 py-8 max-w-screen-2xl mx-auto'>
+    <div className='px-4 py-6 md:px-6 max-w-screen-xl mx-auto text-center'>
       {/* Service Cards Section */}
-      <div className='text-center'>
-        <h2 className='text-4xl text-brandPrimary font-bold mb-8'>Our Products</h2>
-        <div className='grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+      <h2 className='text-3xl md:text-4xl lg:text-5xl text-brandPrimary font-bold mb-6 md:md-8'>Our Products</h2>
+        <div className='grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
           {services.map((service) => (
             <Link key={service.id} to={service.link} className='flex justify-center'>
-              <div className='h-auto w-full max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg rounded-xl shadow-2xl bg-white p-4'>
+              <div className='w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-xl shadow-lg bg-white p-4'>
                 {/* Dynamic Image Height */}
                 <img
                   src={service.image}
                   alt={service.title}
-                  className='w-full object-cover rounded-t-xl h-56 md:h-64 lg:h-72 xl:h-80'
+                  className='w-full h-56 md:h-64 lg:h-72 xl:h-80 object-cover rounded-t-xl'
                 />
                 <div className='flex flex-col items-center'>
                   <h4 className='text-xl font-bold text-neutralDGrey mb-2 mt-1'>{service.title}</h4>
@@ -62,7 +61,6 @@ const Products = () => {
             </Link>
           ))}
         </div>
-      </div>
     </div>
   );
 };

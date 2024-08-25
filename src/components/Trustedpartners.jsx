@@ -10,7 +10,7 @@ const Trustedpartners = () => {
     return (
         <div className='md:px-14 px-4 max-w-screen-2xl mx-auto' id="service">
             <div className='text-center my-2'>
-                <h2 className='text-4xl text-brandPrimary font-bold mb-2'>Our Trusted Partners</h2>
+                <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brandPrimary font-bold mb-2'>Our Trusted Partners</h2>
                 <div className='company-logos'>
                     <div className='scroll-container'>
                         <img src={alpha_click} alt="Alpha Click" className='company-logo' />
