@@ -38,7 +38,7 @@ const Products = () => {
   return (
     <div className='px-4 py-6 md:px-6 max-w-screen-xl mx-auto text-center'>
       {/* Service Cards Section */}
-      <h2 className='text-2xl md:text-3xl lg:text-4xl text-brandPrimary font-bold mb-6 md:md-8'>Our Products</h2>
+      <h2 className='text-2xl md:text-3xl lg:text-4xl text-brandPrimary font-bold mb-1 md:md-8'>Our Products</h2>
         <div className='grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
           {services.map((service) => (
             <Link key={service.id} to={service.link} className='flex justify-center'>

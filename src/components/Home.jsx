@@ -41,7 +41,7 @@ const Home = () => {
                 </div>
                 {/* Right Image Section */}
                 <div className='w-full md:w-1/2 flex justify-center md:justify-end mt-4 md:mt-0'>
-                    <div className='w-[50vw] h-[50vw] max-w-[200px] max-h-[200px] md:max-w-[300px] md:max-h-[300px] lg:max-w-[400px] lg:max-h-[400px]'>
+                    <div className='w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px]'>
                         {/* Carousel for images */}
                         <Carousel>
                             <img
@@ -67,7 +67,7 @@ const Home = () => {
                             <img
                                 src={Blog5}
                                 alt="Biomedical Image 5"
-                                className='w-full h-full object-cover transition-transform duration-200 transform hover:scale-105'
+                                className='w-full h-full object-cover transition-transform duration-100 transform hover:scale-105'
                             />
                         </Carousel>
                     </div>
