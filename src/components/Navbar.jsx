@@ -81,7 +81,7 @@ const Navbar = () => {
             <nav className={`py-6 lg:px-14 px-4 ${isSticky ? "sticky top-0 left-0 right-0 border-b bg-white shadow-md duration-300" : ""}`} ref={navbarRef}>
                 <div className='flex justify-between items-center text-base gap-8'>
                     <NavLink to="/" className='text-2xl font-semibold flex items-center space-x-3'>
-                        <img src={logo} className='w-28 inline-block items-center' alt="Logo" />
+                        <img src={logo} className='w-24 inline-block items-center' alt="Logo" />
                     </NavLink>
                     <ul className='md:flex space-x-12 hidden'>
                         {navItems.map(({ link, path, dropdown }) => (
