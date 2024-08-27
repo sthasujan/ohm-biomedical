@@ -31,7 +31,7 @@ const Home = () => {
                 {/* Left Text Section */}
                 <div className="w-full sm:w-3/4 md:w-1/2">
                     <h2
-                        className="text-base sm:text-lg md:text-xl lg:text-2xl text-black font-serif mb-3 text-justify leading-relaxed"
+                        className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-serif mb-3 text-justify leading-relaxed"
                         style={{ hyphens: 'auto', wordSpacing: '-0.05em' }}
                     >
                         OHM Biomedical is the exclusive distributor for Vyaire Ventilators and CareFusion Bird Air/Oxygen Blenders in Australia and New Zealand, providing expert sales and service. <br />
@@ -41,7 +41,7 @@ const Home = () => {
                 </div>
                 {/* Right Image Section */}
                 <div className='w-full md:w-1/2 flex justify-center md:justify-end mt-4 md:mt-0'>
-                    <div className='w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px]'>
+                    <div className='w-[50vw] h-[50vw] max-w-[200px] max-h-[200px] md:max-w-[300px] md:max-h-[300px] lg:max-w-[400px] lg:max-h-[400px]'>
                         {/* Carousel for images */}
                         <Carousel>
                             <img
