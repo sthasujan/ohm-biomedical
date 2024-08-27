@@ -38,7 +38,7 @@ const Products = () => {
   return (
     <div className='px-4 py-6 md:px-6 max-w-screen-xl mx-auto text-center'>
       {/* Service Cards Section */}
-      <h2 className='text-2xl md:text-3xl lg:text-4xl text-brandPrimary font-bold mb-1'>Our Products</h2>
+      <h2 className='text-2xl md:text-3xl lg:text-3xl text-brandPrimary font-bold mb-1'>Our Products</h2>
         <div className='grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
           {services.map((service) => (
             <Link key={service.id} to={service.link} className='flex justify-center'>
@@ -47,10 +47,10 @@ const Products = () => {
                 <img
                   src={service.image}
                   alt={service.title}
-                  className='w-full h-auto max-h-64 object-cover rounded-t-xl'
+                  className='w-full h-auto max-h-56 object-cover rounded-t-xl'
                 />
-                <div className='flex flex-col items-center mt-4'>
-                  <h4 className='text-lg md:text-xl font-bold text-neutralDGrey mb-2'>{service.title}</h4>
+                <div className='flex flex-col items-center'>
+                  <h4 className='text-lg md:text-lg font-bold text-neutralDGrey mb-2'>{service.title}</h4>
                   <ul className='text-sm text-neutralGrey flex flex-col items-start list-disc pl-4'>
                     <li>{service.description}</li>
                     <li>{service.description1}</li>
