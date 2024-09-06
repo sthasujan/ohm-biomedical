@@ -17,7 +17,8 @@ const blogs = [
         image: Blog1, 
         images: [Blog1, Blog2, Blog3], 
         featuresAndBenefits: 'Features and benefits details...', 
-        resourcePdf: 'resource.pdf' 
+        resourcePdf: 'resource.pdf',
+        category: "Adult Ventilator"
     },
     { 
         id: 2, 
@@ -27,7 +28,8 @@ const blogs = [
         image: Blog2, 
         images: [Blog1, Blog2, Blog3], 
         featuresAndBenefits: 'Features and benefits details...', 
-        resourcePdf: 'resource.pdf' 
+        resourcePdf: 'resource.pdf',
+        category: "Neonate Ventilator"
     },
     { 
         id: 3, 
@@ -37,7 +39,8 @@ const blogs = [
         image: Blog3, 
         images: [Blog1, Blog2, Blog3], 
         featuresAndBenefits: 'Features and benefits details...', 
-        resourcePdf: 'resource.pdf' 
+        resourcePdf: 'resource.pdf',
+        category: "Neonate Ventilator"
     },
     { 
         id: 4, 
@@ -47,7 +50,8 @@ const blogs = [
         image: Blog4, 
         images: [Blog1, Blog2, Blog3], 
         featuresAndBenefits: 'Features and benefits details...', 
-        resourcePdf: 'resource.pdf' 
+        resourcePdf: 'resource.pdf',
+        category: "Neonate Ventilator" 
     },
     { 
         id: 5, 
@@ -57,7 +61,8 @@ const blogs = [
         image: Blog5, 
         images: [Blog1, Blog2, Blog3], 
         featuresAndBenefits: 'Features and benefits details...', 
-        resourcePdf: 'resource.pdf' 
+        resourcePdf: 'resource.pdf',
+        category: "Transport Ventilator" 
     },
     { 
         id: 6, 
@@ -67,7 +72,8 @@ const blogs = [
         image: Blog6, 
         images: [Blog1, Blog2, Blog3], 
         featuresAndBenefits: 'Features and benefits details...', 
-        resourcePdf: 'resource.pdf' 
+        resourcePdf: 'resource.pdf',
+        category: "HFO Ventilator"
     },
 ];
 const YyaireVentilator = () => {
@@ -96,7 +102,7 @@ const YyaireVentilator = () => {
                     </h1>
                 </div>
             </div>
-            <div className="mt-0 px-4 lg:px-14 max-w-screen-2xl mx-auto my-14">
+            <div className="mt-0 px-4 lg:px-14 max-w-screen-xl mx-auto my-14">
                 <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 gap-y-16 items-center justify-between">
                     {blogs.map((blog) => (
                         <div 
@@ -107,7 +113,7 @@ const YyaireVentilator = () => {
                             <img src={blog.image} alt="" className="hover:scale-95 transition-all duration-300 rounded-lg" />
                             <div className="text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto absolute left-0 right-0 -bottom-24">
                                 <span className="inline-block bg-black text-white font-bold rounded-full px-3 py-1 mb-2">
-                                    Ventilator
+                                    {blog.category}
                                 </span>
                                 <h3 className="mb-3 text-neutralGrey font-semibold">{blog.title}</h3>
                                 <div className="flex items-center justify-center gap-8">

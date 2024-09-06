@@ -10,7 +10,7 @@ const tabData = [
     { 
         id: 1, 
         name: 'Preventive Maintainance and Repairs', 
-        title: 'Optimizing Biomedical processes', 
+        title: '', 
         description: 'At OHM Biomedical Services, we understand the critical role that medical equipment plays in patient care, and we are committed to ensuring that your equipment meets the highest standards of safety and effectiveness. Our AS3551-compliant Preventative Maintenance & Repair service is designed to provide regular maintenance and repair services for your medical equipment, in accordance with the AS3551 standards.', 
         services: 
         [{ 
@@ -33,7 +33,7 @@ const tabData = [
     { 
         id: 2, 
         name: 'System Installation and Upgrades', 
-        title: 'Boosting approvals in biomed sales', 
+        title: '', 
         description: 'At OHM Biomedical, we offer professional equipment installation and upgrades meeting AS3551 standards. Our experienced engineers ensure safe and efficient installation, minimizing downtime. We provide comprehensive project management, handling planning, scheduling, installation, and testing for a hassle-free experience.', 
         services: 
         [{ 
@@ -71,7 +71,7 @@ const tabData = [
     { 
         id: 3, 
         name: 'TGA Recalls', 
-        title: 'SLeading in healthcare equipment sales', 
+        title: '', 
         description: 'Facing TGA recalls is stressful and poses risks to your organization`s reputation. At OHM Biomedical, we prioritize timely and effective TGA Recall remediation. Our skilled Biomedical Engineers upgrade your software/hardware, conduct user acceptance testing (UAT), ensuring compliance with TGA regulations. We guarantee minimal equipment downtime, offering comprehensive project management from start to finish. Trust OHM Biomedical for TGA standards compliance, ensuring the highest level of patient care.', 
         services: 
         [{ 
@@ -109,7 +109,7 @@ const tabData = [
     { 
         id: 4, 
         name: 'AS3551 Testing Electrical Safety and Performance Verifications', 
-        title: 'Ensuring timely payments and support', 
+        title: '', 
         description: 'OHM Biomedical is committed to ensuring that your medical equipment meets the highest safety standards. We offer AS3551 testing services to verify the electrical safety and performance of your medical devices. Our team of experienced Engineers are trained and certified to perform these tests in accordance with Australian and New Zealand standards.', 
         services: 
         [{ 
@@ -132,7 +132,7 @@ const tabData = [
     { 
         id: 5, 
         name: 'Virtual Workshop', 
-        title: 'Virtual Workshop for Biomedical Engineers', 
+        title: '', 
         description: 'Looking to bring innovative Biomedical equipment to Australia, but don`t want to set up your own workshop? Look no further than OHM Biomedical`s WAAS (Workshop as a Service) offering. Our Virtual Workshop is here to help, providing instant access to trained engineers and technicians who can maintain a wide range of medical devices. With our expert Biomedical consultants guiding you through the repair process, you can rest assured that your equipment is in good hands. Our Virtual Workshop offers a range of services to help you stay focused on bringing new and innovative equipment to Australia:', 
         services: 
         [{ 
@@ -231,7 +231,7 @@ const Biomedicalservice = () => {
                         {currentTab && (
                             <div>
                                 <h2 className="text-2xl font-bold mb-4">{currentTab.name}</h2>
-                                <p className="text-gray-700 mb-6">{currentTab.description}</p>
+                                <p className="text-gray-700 mb-6 text-justify">{currentTab.description}</p>
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                                     {currentTab.services.map((service, index) => (
                                         <div
@@ -242,7 +242,7 @@ const Biomedicalservice = () => {
                                                 <FontAwesomeIcon icon={service.icon} className="text-blue-950 text-4xl mb-4" />
                                                 <div className="text-center">
                                                     <h4 className="font-semibold text-lg text-gray-800 mb-2">{service.name}</h4>
-                                                    <p className="text-gray-600">{service.desc}</p>
+                                                    <p className="text-gray-600 text-justify">{service.desc}</p>
                                                 </div>
                                             </div>
                                         </div>

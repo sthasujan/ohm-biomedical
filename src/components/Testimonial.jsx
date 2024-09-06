@@ -59,7 +59,7 @@ const Testimonial = () => {
           </h1>
         </div>
       </div>
-      <div className="px-4 py-8 md:px-16 md:py-16">
+      <div className="px-4 py-8 md:px-20 md:py-2">
         {testimonials.map((testimonial, index) => (
           <div key={index}>
             <div
@@ -70,7 +70,7 @@ const Testimonial = () => {
                 <img
                   src={testimonial.image}
                   alt={`${testimonial.name}`}
-                  className="w-3/4 rounded-md shadow-lg"
+                  className="w-2/3 rounded-md shadow-lg"
                 />
               </div>
               <div className="w-full md:w-1/2 p-4 self-start">
@@ -78,7 +78,7 @@ const Testimonial = () => {
                 <h4 className="text-lg font-light text-gray-500">
                   {testimonial.subtitle}
                 </h4>
-                <p className="mt-4 text-gray-600">{testimonial.description}</p>
+                <p className="mt-4 text-gray-600 text-justify">{testimonial.description}</p>
                 <p className="mt-6 font-medium">{testimonial.title}</p>
                 <p className="text-gray-500">{testimonial.company}</p>
               </div>

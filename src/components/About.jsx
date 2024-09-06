@@ -27,25 +27,29 @@ const About = () => {
                     </h1>
                 </div>
             </div>
-            <div className='mt'>
+            <div>
                 {/* about text */}
-                <div className='px-4 lg:px-14 max-w-screen-2xl mx-auto my-8' id='about'>
-                    <div className='md:w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-12'>
-                        <div className='flex justify-start items-start md:w-1/2 lg-2/5'>
-                            <img src={aboutImg} alt="" />
+                <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-8" id="about">
+                    <div className="md:w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-6 md:gap-12">
+                        <div className="flex justify-center items-center md:w-1/2 lg:w-2/5">
+                            <img
+                                src={aboutImg}
+                                alt=""
+                                className="h-auto max-w-full rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                            />
                         </div>
-                        <div className='md:w-3/5 mx-auto'>
-                            <h2 className='text-3xl text-neutralDGrey font-semibold mb-4 md-w-4/5'>
+                        <div className="md:w-1/2 mx-auto">
+                            <h2 className="text-xl md:text-2xl lg:text-3xl text-neutralDGrey font-bold leading-tight mb-6 md:mb-2 md:w-4/5">
                                 OHM Biomedical: Our Story
                             </h2>
-                            <p className='md:w-3/4 text-sm text-neutralGrey mb-8'>
-                                Our story began in 2022 when four clinical engineers, driven by a shared dedication to quality compliance and exceptional customer experience, recognized that the service standards they were delivering needed to evolve. United by these values, they founded OHM Biomedical, determined to set a new benchmark in the biomedical industry. 
+                            <p className="md:w-full text-base md:text-sm text-neutralGrey text-justify leading-relaxed">
+                                Our story began in 2022 when four clinical engineers, driven by a shared dedication to quality compliance and exceptional customer experience, recognized that the service standards they were delivering needed to evolve. United by these values, they founded OHM Biomedical, determined to set a new benchmark in the biomedical industry.
                                 <br /> <br />
                                 Today, OHM Biomedical has grown beyond its original team of four into a robust, experienced collective of professionals. Our expertise spans critical medical devices, including ventilators, anesthesia machines, and dialysis equipment, ensuring they perform flawlessly when lives depend on them.
                                 <br /> <br />
-                                At OHM Biomedical, we are more than just a service provider—we are partners in your patient care. Our unwavering commitment to excellence and our extensive industry knowledge makes us the trusted choice for all your medical equipment needs. We care about your equipment, the quality of care you provide to your patients, and your experience working with us. That's why our value is simple: “I DO CARE.”                                
+                                At OHM Biomedical, we are more than just a service provider—we are partners in your patient care. Our unwavering commitment to excellence and our extensive industry knowledge make us the trusted choice for all your medical equipment needs. We care about your equipment, the quality of care you provide to your patients, and your experience working with us. That's why our value is simple: “I DO CARE.”
                             </p>
-                            {/* <button className='btn-primary'>Learn More</button> */}
+                            {/* <button className="btn-primary mt-6">Learn More</button> */}
                         </div>
                     </div>
                 </div>

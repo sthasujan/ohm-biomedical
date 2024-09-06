@@ -251,7 +251,7 @@ const BlogDetail = () => {
                         </div>
 
                         <p className='text-sm text-gray-600 mb-4'>{blog.date}</p>
-                        <p className='text-lg text-neutralDGrey'>
+                        <p className='text-lg text-neutralDGrey text-justify'>
                             {/* {blog.description} */}
                             {blog.description.map((desc, index) => (
                                 <p key={index}>
@@ -272,7 +272,7 @@ const BlogDetail = () => {
                                                 {question}
                                             </p>
                                             {/* Render the corresponding answer */}
-                                            <p className='text-gray-700'>
+                                            <p className='text-gray-700 text-justify'>
                                                 {desc.ans[quesIndex]}
                                             </p>
                                         </div>
@@ -282,7 +282,7 @@ const BlogDetail = () => {
                         </p>
                         <h4 className='text-2xl text-black'>Conclusion</h4>
                         <br />
-                        <p className='text-lg text-gray'>
+                        <p className='text-lg text-gray text-justify'>
                             {blog.conclusion.map((desc, index) => (
                                 // <p key={index}>
                                 //     {desc}

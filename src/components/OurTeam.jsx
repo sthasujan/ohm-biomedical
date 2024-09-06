@@ -4,7 +4,7 @@ import productBgImg from "../assets/products.webp";
 import team1 from "../assets/Ourteam/sovit.png";
 import team2 from "../assets/Ourteam/suman.jpeg";
 import team3 from "../assets/Ourteam/subash.jpg";
-import team4 from "../assets/Ourteam/anupam.png";
+import team4 from "../assets/Ourteam/anupam.jpg";
 import team5 from "../assets/Ourteam/soyuz.png";
 import team6 from "../assets/Ourteam/sitesh.jpg";
 import team7 from "../assets/Ourteam/abhiske.png";

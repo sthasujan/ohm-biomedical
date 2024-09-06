@@ -4,6 +4,9 @@ import productBgImg from "../assets/products.webp";
 import Blog1 from '../assets/products/Carefusionbirdblenders/high_flow.png';
 import Blog2 from '../assets/products/Carefusionbirdblenders/low_flow.png';
 import Blog3 from '../assets/products/Carefusionbirdblenders/flow_meter.png';
+import Blog33 from '../assets/products/Carefusionbirdblenders/low_flow_back.png';
+import Blog333 from '../assets/products/Carefusionbirdblenders/low_flow_left.png';
+import Blog3333 from '../assets/products/Carefusionbirdblenders/low_flow_right.png';
 import emailjs from 'emailjs-com';
 
 const blogs = [
@@ -14,7 +17,7 @@ const blogs = [
         topic: 'carefusion',
         description: 'The High Flow Bird Air/Oxygen Blender is a high flow, high pressure blender that is ideal for use with ventilators, CPAP, and high flow oxygen therapy devices. It is designed to provide accurate FiO2 mixtures from two outlet ports and has an overall flow range of 2-120 LPM. The High Flow Bird Blender is perfect for use in hospitals, clinics, and other healthcare facilities where high flow oxygen therapy is required.',
         image: Blog1,
-        images: [Blog1],
+        images: [Blog1, Blog33, Blog3333],
         featuresAndBenefits: [
 
         ],
@@ -33,7 +36,7 @@ const blogs = [
         topic: 'carefusion',
         description: 'The Low Flow Bird Air/Oxygen Blender is a low flow, high pressure blender that is ideal for use with ventilators, CPAP, and high flow oxygen therapy devices. It is designed to provide accurate FiO2 mixtures from two outlet ports and has an overall flow range of 2-120 LPM. The Low Flow Bird Blender is perfect for use in hospitals, clinics, and other healthcare facilities where low flow oxygen therapy is required.',
         image: Blog2,
-        images: [Blog2],
+        images: [Blog2, Blog3333, Blog33],
         featuresAndBenefits: [
 
         ],
@@ -52,7 +55,7 @@ const blogs = [
         topic: 'vyaire',
         description: 'At OHM Biomedical, we proudly present the Bird Blender, a cornerstone in respiratory care technology.Designed with precision and reliability in mind, the Bird Blender offers unparalleled control over oxygen concentration, ensuring optimal therapy outcomes for patients of all ages.',
         image: Blog3,
-        images: [Blog3],
+        images: [Blog3, Blog33, Blog333],
         featuresAndBenefits: [
         ],
         resourcePdf: 'resource.pdf',
@@ -189,7 +192,7 @@ const CarefusionBlogDetailView = () => {
                         <h4 className="text-base text-neutralGrey font-medium mb-4">{blog.topic}</h4>
                         <h3 className="text-2xl text-neutralGrey font-semibold mb-2">{blog.title}</h3>
                         <h4 className="text-xl text-neutralGrey font-medium mb-4">{blog.subtitle}</h4>
-                        <p className="mb-2 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: blog.description }}></p>
+                        <p className="mb-2 text-lg leading-relaxed text-justify" dangerouslySetInnerHTML={{ __html: blog.description }}></p>
 
                         {/* Descriptions List */}
                         <ul className="list-disc mb-4 text-lg text-neutralGrey pl-6">

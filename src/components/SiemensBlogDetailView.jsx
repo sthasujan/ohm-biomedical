@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import productBgImg from "../assets/products.webp";
 import Blog1 from "../assets/products/Siemensultrasound/acusion500.webp";
+import Blog11 from "../assets/products/Siemensultrasound/Acuson1.webp";
 import Blog2 from "../assets/products/Siemensultrasound/freestyle1.jpeg";
+import Blog22 from "../assets/products/Siemensultrasound/AcusonFreestyle1.webp";
 import Blog3 from "../assets/products/Siemensultrasound/maple.png";
+import Blog33 from "../assets/products/Siemensultrasound/maple2.webp";
 import emailjs from 'emailjs-com';
 
 const blogs = [
@@ -13,7 +16,7 @@ const blogs = [
         subtitle: "Carefusion",
         description: "Portable ultrasound system for high-quality imaging. The ACUSON P500 by Siemens Healthineers provides high-quality care and ultrasound imaging anywhere, anytime. It enhances image quality with motion correction and various applications tailored to your needs, ensuring paramount image quality.",
         image: Blog1,
-        images: [Blog1],
+        images: [Blog1, Blog11],
         featuresAndBenefits: 'Features and benefits details...',
         resourcePdf: 'resource.pdf',
         descriptions: [
@@ -32,7 +35,7 @@ const blogs = [
         subtitle: "Siemens",
         description: "Wireless ultrasound solution for interventional suites. The ACUSON Freestyle Series is the world’s first wireless ultrasound solution, redefining ultrasound access in interventional suites and at the point of care. It offers scalable configurations for automated workflow, clear visualization, and faster access.",
         image: Blog2,
-        images: [Blog2],
+        images: [Blog2, Blog22],
         featuresAndBenefits: 'Features and benefits details...',
         resourcePdf: 'resource.pdf',
         descriptions: [
@@ -52,7 +55,7 @@ const blogs = [
         subtitle: "Siemens",
         description: "Ultrasound system for high-quality imaging. The ACUSON Maple provides powerful imaging, ready for virtually every patient regardless of physical characteristics or condition. Its intuitive design minimizes manual optimization and still delivers high-quality images with excellent penetration and resolution.",
         image: Blog3,
-        images: [Blog3],
+        images: [Blog3, Blog33],
         featuresAndBenefits: 'Features and benefits details...',
         resourcePdf: 'resource.pdf',
         descriptions: [
@@ -189,7 +192,7 @@ const SiemensBlogDetailView = () => {
                     <div className="flex flex-col justify-center">
                         <h4 className="text-base text-neutralGrey font-medium mb-4">{blog.subtitle}</h4>
                         <h3 className="text-2xl text-neutralGrey font-semibold mb-2">{blog.title}</h3>
-                        <p className="mb-2 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: blog.description }}></p>
+                        <p className="mb-2 text-lg leading-relaxed text-justify" dangerouslySetInnerHTML={{ __html: blog.description }}></p>
 
                         {/* Descriptions List */}
                         <ul className="list-disc mb-4 text-lg text-neutralGrey pl-6">

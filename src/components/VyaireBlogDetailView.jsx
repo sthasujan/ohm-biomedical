@@ -16,13 +16,20 @@ import Blog5 from "../assets/products/Vyaireventilators/blog5.png";
 import Blog55 from "../assets/products/Vyaireventilators/blog55.png";
 import Blog555 from "../assets/products/Vyaireventilators/blog555.png";
 import Blog6 from "../assets/products/Vyaireventilators/blog6.png";
+import Blog66 from "../assets/products/Vyaireventilators/3100A.webp";
+import Blog666 from "../assets/products/Vyaireventilators/3100A1.webp";
 import pdf1 from "../assets/products/Vyaireventilators/VyairePdf/bellavistabrochure.pdf";
+import pdf11 from "../assets/products/Vyaireventilators/VyairePdf/bellavista1000e.pdf";
+import pdf111 from "../assets/products/Vyaireventilators/VyairePdf/bellavistahfot.pdf";
 import pdf2 from "../assets/products/Vyaireventilators/VyairePdf/fabianbrochure.pdf";
-import pdf3 from "../assets/products/Vyaireventilators/VyairePdf/fabiantherapybrochure.pdf";
-import pdf4 from "../assets/products/Vyaireventilators/VyairePdf/fabianventilatorbrochure.pdf";
+import pdf22 from "../assets/products/Vyaireventilators/VyairePdf/fabiande.pdf";
+import pdf222 from "../assets/products/Vyaireventilators/VyairePdf/fabianit.pdf";
+import pdf2222 from "../assets/products/Vyaireventilators/VyairePdf/fabiancn.pdf";
 import pdf5 from "../assets/products/Vyaireventilators/VyairePdf/ltv2brochure.pdf";
+import pdf55 from "../assets/products/Vyaireventilators/VyairePdf/vyrltv2.pdf";
 import pdf6 from "../assets/products/Vyaireventilators/VyairePdf/3100Ventilator.pdf";
 import emailjs from 'emailjs-com';
+import { FaFilePdf, FaDownload } from 'react-icons/fa';
 
 const blogs = [
     {
@@ -41,7 +48,20 @@ const blogs = [
             'Lung Recruitment Tool',
             'Minimum of 3 hours battery capacity'
         ],
-        resourcePdf: pdf1,
+        resourcePdf: [
+            {
+                name: "bellavista™ - The complete family of ICU ventilators",
+                url: pdf1
+            },
+            {
+                name: "bellavista™ 1000e Technical Specification",
+                url: pdf11
+            },
+            {
+                name: "bellavista™ HFOT Flyer",
+                url: pdf111
+            }
+        ],
         descriptions: [
             "Adaptive Ventilation Mode - A smart ventilation mode faster weaning and a reduction of manual settings",
             "High Flow Oxygen Therapy improves the oxygenation of patients while enhancing patient comfort",
@@ -67,7 +87,24 @@ const blogs = [
             'Supports 3 different etCO2 module types: microstream, mainstream and sidestream',
             'FOT* is an effective measurement for safe lung recruitment'
         ],
-        resourcePdf: pdf2,
+        resourcePdf: [
+            {
+                name: "fabian™ Brochure, EN",
+                url: pdf2
+            },
+            {
+                name: "fabian™ Brochure, DE",
+                url: pdf22
+            },
+            {
+                name: "fabian™ Brochure, IT",
+                url: pdf222
+            },
+            {
+                name: "fabian™ Brochure, CN",
+                url: pdf2222
+            }
+        ],
         descriptions: [
             "*FOT may not be available in your region. Please inquire with your local Vyaire representative.",
         ]
@@ -86,7 +123,24 @@ const blogs = [
             'SPO2 with Masimo SPO2 sensor technology',
             'PRICO adapts and maintains the SpO2 within the desired set range.'
         ],
-        resourcePdf: pdf3,
+        resourcePdf: [
+            {
+                name: "fabian™ Brochure, EN",
+                url: pdf2
+            },
+            {
+                name: "fabian™ Brochure, DE",
+                url: pdf22
+            },
+            {
+                name: "fabian™ Brochure, IT",
+                url: pdf222
+            },
+            {
+                name: "fabian™ Brochure, CN",
+                url: pdf2222
+            }
+        ],
         descriptions: [
 
         ]
@@ -104,7 +158,24 @@ const blogs = [
             'Ease of Use',
             'Easy Access'
         ],
-        resourcePdf: pdf4,
+        resourcePdf: [
+            {
+                name: "fabian™ Brochure, EN",
+                url: pdf2
+            },
+            {
+                name: "fabian™ Brochure, DE",
+                url: pdf22
+            },
+            {
+                name: "fabian™ Brochure, IT",
+                url: pdf222
+            },
+            {
+                name: "fabian™ Brochure, CN",
+                url: pdf2222
+            }
+        ],
         descriptions: [
 
         ]
@@ -133,7 +204,16 @@ const blogs = [
             'Comprehensive monitoring',
             'Supports invasive and non-invasive applications The LTV2™ is available in Japan. Please contact your local representative for additional information.'
         ],
-        resourcePdf: pdf5,
+        resourcePdf: [
+            {
+                name: "LTV2™ Institution Brochure",
+                url: pdf5
+            },
+            {
+                name: "LTV2™ Spec Sheet",
+                url: pdf55
+            }
+        ],
         descriptions: [
 
         ]
@@ -144,7 +224,7 @@ const blogs = [
         subtitle: '',
         description: "The 3100A High Frequency Oscillatory Ventilator (HFOV) by Vyaire is designed for ventilatory support in neonates and pediatric patients who are failing conventional ventilation. It utilizes high-frequency oscillatory ventilation strategies to provide gentle and effective ventilation, minimizing the risk of ventilator-induced lung injury.",
         image: Blog6,
-        images: [Blog6],
+        images: [Blog6, Blog66, Blog666],
         featuresAndBenefits: [
             'High-Frequency Oscillation: Delivers small tidal volumes at rapid frequencies, reducing alveolar over-distention and shear stress.',
             'Active Exhalation: Aids in CO2 removal by enhancing expiratory flow.',
@@ -153,7 +233,12 @@ const blogs = [
             'Improved Gas Exchange: Facilitates efficient oxygenation and CO2 removal even in patients with severe respiratory distress.',
             'Versatility: Suitable for use in a range of conditions from neonatal respiratory distress syndrome to pediatric respiratory failure.'
         ],
-        resourcePdf: pdf6,
+        resourcePdf: [
+            {
+                name: "3100A/B HFOV Ventilator Guide",
+                url: pdf6
+            }
+        ],
         descriptions: [
 
         ]
@@ -276,7 +361,7 @@ const VyaireBlogDetailView = () => {
                     <div className="flex flex-col justify-center">
                         <h4 className="text-base text-neutralGrey font-medium mb-4">{blog.subtitle}</h4>
                         <h3 className="text-2xl text-neutralGrey font-semibold mb-2">{blog.title}</h3>
-                        <p className="mb-2 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: blog.description }}></p>
+                        <p className="mb-2 text-lg leading-relaxed text-justify" dangerouslySetInnerHTML={{ __html: blog.description }}></p>
                         {/* Descriptions List */}
                         <ul className="list-disc mb-4 text-lg text-neutralGrey pl-6">
                             {blog.descriptions.map((desc, index) => (
@@ -393,14 +478,27 @@ const VyaireBlogDetailView = () => {
                         </button>
                         {showResources && (
                             <div className="p-6 bg-gray-50">
-                                <a
-                                    href={blog.resourcePdf}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-brandSecondary underline"
-                                >
-                                    Download PDF
-                                </a>
+                                <div className="space-y-4">
+                                    {blog.resourcePdf.map((service, index) => (
+                                        <div
+                                            key={index}
+                                            className="flex items-center p-4 bg-white shadow rounded-lg hover:bg-gray-100 transition"
+                                        >
+                                            <FaFilePdf size={30} className="text-brandSecondary mr-2" />
+                                            <span className="flex-grow text-brandSecondary text-base font-medium">
+                                                {service.name}
+                                            </span>
+                                            <a
+                                                href={service.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-brandPrimary flex items-center"
+                                            >
+                                               <FaDownload size={24} className="text-brandSecondary" />
+                                            </a>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         )}
                     </div>

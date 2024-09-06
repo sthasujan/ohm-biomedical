@@ -66,7 +66,7 @@ const Carefusionbirdblender = () => {
                     </h1>
                 </div>
             </div>
-            <div className="mt-2 px-4 lg:px-14 max-w-screen-2xl mx-auto my-14">
+            <div className="mt-2 px-4 lg:px-14 max-w-screen-xl mx-auto my-14">
                 <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between">
                     {blogs.map((blog) => (
                         <div

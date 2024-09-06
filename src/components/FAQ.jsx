@@ -66,7 +66,7 @@ const FAQ = () => {
                             </span>
                         </div>
                         {activeIndex === index && (
-                            <div className="faq-answer">
+                            <div className="faq-answer text-justify">
                                 <p>{faq.answer}</p>
                             </div>
                         )}

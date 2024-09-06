@@ -25,6 +25,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import NotFound from './components/NotFound';
 import HomeNavigation from './components/HomeNavigation';
 import Hero from './components/Hero';
+import Gallery from './components/Gallery';
 
 function AppWrapper() {
   const location = useLocation();
@@ -54,6 +55,7 @@ function AppWrapper() {
         <Route path="/About" element={<About />} />
         <Route path="/Ourteam" element={<OurTeam />} />
         <Route path="/Faq" element={<FAQ />} />
+        <Route path="/Gallery" element={<Gallery />} />
 
         {/* Testimonial Section */}
         <Route path="/Testimonial" element={<Testimonial />} />

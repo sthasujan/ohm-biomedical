@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  assetsInclude: ['**/*.jpeg', '**/*.JPEG', '**/*.jpg', '**/*.JPG', '**/*.png', '**/*.webp'], // Add JPEG formats to assetsInclude
   build: {
     rollupOptions: {
       output: {
