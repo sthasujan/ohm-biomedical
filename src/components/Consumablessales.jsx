@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import productBgImg from "../assets/products.webp";
-import pic1 from "../assets/ConsumableItems/pic1.png";
-import pic2 from "../assets/ConsumableItems/pic2.png";
+import pic1 from "../assets/ConsumableItems/pic1.jpeg";
+import pic2 from "../assets/ConsumableItems/pic2.jpeg";
 import pic3 from "../assets/ConsumableItems/pic3.png";
-import pic4 from "../assets/ConsumableItems/pic4.png";
-import pic5 from "../assets/ConsumableItems/pic5.png";
-import pic6 from "../assets/ConsumableItems/pic6.png";
-import pic7 from "../assets/ConsumableItems/pic7.png";
+import pic4 from "../assets/ConsumableItems/pic44.jpeg";
+import pic5 from "../assets/ConsumableItems/pic5.jpg";
+import pic6 from "../assets/ConsumableItems/pic6.jpg";
+import pic7 from "../assets/ConsumableItems/pic77.jpg";
 import pic8 from "../assets/ConsumableItems/pic8.jpg";
+import pic9 from "../assets/ConsumableItems/pic9.png";
+import pic10 from "../assets/ConsumableItems/pic10.jpeg";
 import pdf from "../assets/ConsumablePdf/consumablesPdf.pdf";
 import emailjs from 'emailjs-com';
 
@@ -59,6 +61,18 @@ const salesItems = [
         title: 'Microblender High and Low Flow Maintenance Kit',
         sizes: [],
         image: pic8,
+    },
+    {
+        partNo: 'Part Number: 301.470.010',
+        title: 'iFLOW 40 S Neonatal/Infant Proximal Flow Sensor',
+        sizes: [],
+        image: pic9,
+    },
+    {
+        partNo: 'Part Number: 04322',
+        title: 'VYAIRE BRKT, POST, DOVETAIL ASY',
+        sizes: [],
+        image: pic10,
     },
     // Add more items here
 ];
@@ -183,13 +197,13 @@ const Consumablessales = () => {
                 </button>
                 {showContactPopup && (
                     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-                        <div className="bg-white rounded-lg w-11/12 md:w-1/2 p-8 relative shadow-lg">
-                            <h2 className="text-red-600 text-center font-bold text-2xl mb-4">
+                        <div className="bg-white rounded-lg w-11/12 md:w-1/2 p-6 md:p-8 relative shadow-lg">
+                            <h2 className="text-red-600 text-center font-bold text-xl md:text-2xl mb-4">
                                 Contact a Sales Representative
                             </h2>
                             <button
                                 onClick={openPopup}
-                                className="absolute top-4 right-4 text-white bg-blue-900 border rounded-full p-2 hover:bg-red-600"
+                                className="absolute top-3 right-3 text-white bg-blue-900 border rounded-full p-2 hover:bg-red-600"
                             >
                                 X
                             </button>
@@ -200,7 +214,7 @@ const Consumablessales = () => {
                                     placeholder="First Name"
                                     value={formData.firstName}
                                     onChange={handleInputChange}
-                                    className="border p-2 rounded"
+                                    className="border p-2 rounded w-full"
                                     required
                                 />
                                 <input
@@ -209,7 +223,7 @@ const Consumablessales = () => {
                                     placeholder="Last Name"
                                     value={formData.lastName}
                                     onChange={handleInputChange}
-                                    className="border p-2 rounded"
+                                    className="border p-2 rounded w-full"
                                     required
                                 />
                                 <input
@@ -218,7 +232,7 @@ const Consumablessales = () => {
                                     placeholder="Email"
                                     value={formData.email}
                                     onChange={handleInputChange}
-                                    className="border p-2 rounded"
+                                    className="border p-2 rounded w-full"
                                     required
                                 />
                                 <input
@@ -227,11 +241,11 @@ const Consumablessales = () => {
                                     placeholder="Phone Number"
                                     value={formData.phone}
                                     onChange={handleInputChange}
-                                    className="border p-2 rounded"
+                                    className="border p-2 rounded w-full"
                                     required
                                 />
                                 {/* Comment Section */}
-                                <div className="col-span-2">
+                                <div className="col-span-1 md:col-span-2">
                                     <textarea
                                         name="comments"
                                         placeholder="Your comments or questions..."
@@ -241,7 +255,7 @@ const Consumablessales = () => {
                                     ></textarea>
                                 </div>
 
-                                <div className="col-span-2 flex items-center">
+                                <div className="col-span-1 md:col-span-2 flex items-center">
                                     <input
                                         type="checkbox"
                                         name="agreeToTerms"
@@ -250,12 +264,12 @@ const Consumablessales = () => {
                                         className="mr-2"
                                         required
                                     />
-                                    <span>I have read and agree to OHM's Terms and Conditions</span>
+                                    <span className='text-sm md:text-base'>I have read and agree to OHM's Terms and Conditions</span>
                                 </div>
-                                <div className="col-span-2">
+                                <div className="col-span-1 md:col-span-2">
                                     <button
                                         type="submit"
-                                        className="bg-blue-900 text-white font-bold py-2 px-6 rounded-lg hover:bg-red-600 transition-all"
+                                        className="bg-blue-900 text-white font-bold py-2 px-4 rounded-lg w-full hover:bg-red-600 transition-all"
                                     >
                                         Get In Touch
                                     </button>

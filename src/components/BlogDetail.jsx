@@ -200,7 +200,6 @@ const BlogDetail = () => {
             alert("All fields are required");
             return;
         } else {
-            alert(2)
             emailjs.send(
                 'service_wck61fq', // Replace with your EmailJS service ID
                 'template_g0yu38f', // Replace with your EmailJS template ID

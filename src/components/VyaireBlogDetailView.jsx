@@ -376,13 +376,13 @@ const VyaireBlogDetailView = () => {
                         </button>
                         {showPopup && (
                             <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-                                <div className="bg-white rounded-lg w-11/12 md:w-1/2 p-8 relative shadow-lg">
-                                    <h2 className="text-red-600 text-center font-bold text-2xl mb-4">
+                                <div className="bg-white rounded-lg w-11/12 md:w-1/2 p-6 md:p-8 relative shadow-lg">
+                                    <h2 className="text-red-600 text-center font-bold text-xl md:text-2xl mb-4">
                                         Contact a Sales Representative
                                     </h2>
                                     <button
                                         onClick={openPopup}
-                                        className="absolute top-4 right-4 text-white bg-blue-900 border rounded-full p-2 hover:bg-red-600"
+                                        className="absolute top-3 right-3 text-white bg-blue-900 border rounded-full p-2 hover:bg-red-600"
                                     >
                                         X
                                     </button>
@@ -393,7 +393,7 @@ const VyaireBlogDetailView = () => {
                                             placeholder="First Name"
                                             value={formData.firstName}
                                             onChange={handleInputChange}
-                                            className="border p-2 rounded"
+                                            className="border p-2 rounded w-full"
                                             required
                                         />
                                         <input
@@ -402,7 +402,7 @@ const VyaireBlogDetailView = () => {
                                             placeholder="Last Name"
                                             value={formData.lastName}
                                             onChange={handleInputChange}
-                                            className="border p-2 rounded"
+                                            className="border p-2 rounded w-full"
                                             required
                                         />
                                         <input
@@ -411,7 +411,7 @@ const VyaireBlogDetailView = () => {
                                             placeholder="Email"
                                             value={formData.email}
                                             onChange={handleInputChange}
-                                            className="border p-2 rounded"
+                                            className="border p-2 rounded w-full"
                                             required
                                         />
                                         <input
@@ -420,10 +420,10 @@ const VyaireBlogDetailView = () => {
                                             placeholder="Phone Number"
                                             value={formData.phone}
                                             onChange={handleInputChange}
-                                            className="border p-2 rounded"
+                                            className="border p-2 rounded w-full"
                                             required
                                         />
-                                        <div className="col-span-2 flex items-center">
+                                        <div className="flex items-center col-span-1 md:col-span-2">
                                             <input
                                                 type="checkbox"
                                                 name="agreeToTerms"
@@ -432,12 +432,12 @@ const VyaireBlogDetailView = () => {
                                                 className="mr-2"
                                                 required
                                             />
-                                            <span>I have read and agree to OHM's Terms and Conditions</span>
+                                            <span className="text-sm md:text-base">I have read and agree to OHM's Terms and Conditions</span>
                                         </div>
-                                        <div className="col-span-2">
+                                        <div className="col-span-1 md:col-span-2">
                                             <button
                                                 type="submit"
-                                                className="bg-blue-900 text-white font-bold py-2 px-6 rounded-lg hover:bg-red-600 transition-all"
+                                                className="bg-blue-900 text-white font-bold py-2 px-4 rounded-lg w-full hover:bg-red-600 transition-all"
                                             >
                                                 Get In Touch
                                             </button>
@@ -494,7 +494,7 @@ const VyaireBlogDetailView = () => {
                                                 rel="noopener noreferrer"
                                                 className="text-brandPrimary flex items-center"
                                             >
-                                               <FaDownload size={24} className="text-brandSecondary" />
+                                                <FaDownload size={24} className="text-brandSecondary" />
                                             </a>
                                         </div>
                                     ))}

@@ -4,6 +4,8 @@ import img1 from "../assets/Pictures/img1.JPEG";
 import img2 from "../assets/Pictures/img2.JPEG";
 import img3 from "../assets/Pictures/img3.JPEG";
 import img4 from "../assets/Pictures/img4.JPEG";
+import img5 from "../assets/Pictures/img5.jpg";
+
 
 const Gallery = () => {
     return (
@@ -28,7 +30,7 @@ const Gallery = () => {
             <div className="flex items-center justify-center py-4 md:py-8 flex-wrap">
                 <button type="button" className="text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">All Gallery</button>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 ml-2 mr-2">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 ml-2 mr-2 mb-2">
                 <div>
                     <img className="h-auto max-w-full rounded-lg" src={img1} alt="OHM_Biomedical_Team_Dinner_2024" />
                 </div>
@@ -40,6 +42,9 @@ const Gallery = () => {
                 </div>
                 <div>
                     <img className="h-auto max-w-full rounded-lg" src={img4} alt="Anupam_Technician_Blender_Repair_OHM_Biomedical" />
+                </div>
+                <div>
+                    <img className="h-auto max-w-full rounded-lg" src={img5} alt="OHM_Biomedical_Training" />
                 </div>
             </div>
 
