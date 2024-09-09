@@ -3,12 +3,21 @@ import { useState, useEffect, useRef } from 'react';
 import logo from '../assets/logo.png';
 import { FaXmark, FaBars, FaPhone } from "react-icons/fa6";
 import { NavLink } from 'react-router-dom';
+import ContactPopup from './ContactPopup';
 
 const Navbar = () => {
     const [isSticky, setIsSticky] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(null);
     const navbarRef = useRef(null);
+    const [showPopup, setShowPopup] = useState(false);
+
+    const handleShowPopup = (e) => {
+        e.preventDefault();  // Prevent default anchor navigation
+        setShowPopup(true);
+    };
+
+    const handleClosePopup = () => setShowPopup(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -120,12 +129,17 @@ const Navbar = () => {
                         ))}
                     </ul>
                     <div className='space-x-12 hidden lg:flex items-center'>
-                        <a href="/" className='hidden lg:flex items-center text-brandSecondary hover:text-brandPrimary'>
+                        <a 
+                            href="/" 
+                            onClick={handleShowPopup}
+                            className='hidden lg:flex items-center text-brandSecondary hover:text-brandPrimary'>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M2.05 4.55a2.5 2.5 0 011.986-1.986l2.282-.457a1 1 0 011.18.737l1.007 4.03a1 1 0 01-.57 1.126l-1.515.757a7.002 7.002 0 003.317 3.317l.757-1.515a1 1 0 011.126-.57l4.03 1.008a1 1 0 01.737 1.18l-.457 2.282a2.5 2.5 0 01-2.514 2.057A15.969 15.969 0 012.05 4.55z" />
                             </svg>
-                            03 9115 7464
+                                03 9115 7464
                         </a>
+                         {/* Popup Modal */}
+                        <ContactPopup show={showPopup} handleClose={handleClosePopup} />
                     </div>
                     <div className='md:hidden'>
                         <button
@@ -153,7 +167,7 @@ const Navbar = () => {
                                                 <NavLink
                                                     to={path}
                                                     className='block px-4 py-2 text-base text-white hover:text-brandPrimary'
-                                                    onClick={() => {    
+                                                    onClick={() => {
                                                         setIsMenuOpen(false);
                                                         setDropdownOpen(null);
                                                     }}

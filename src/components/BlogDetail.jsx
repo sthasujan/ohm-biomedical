@@ -8,6 +8,7 @@ import Blog5 from "../assets/blog/blog5.png";
 import productBgImg from "../assets/products.webp";
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { motion } from 'framer-motion';  // Import framer-motion
+import emailjs from 'emailjs-com';
 
 const blogData = [
     {
@@ -132,14 +133,14 @@ const blogData = [
                     ans: [
                         "Our engineers undergo intensive training directly from the manufacturers, equipping them with the same skills and certifications as OEM engineers. This specialized expertise allows them to understand the intricate details of each device and ensures they adhere to the highest standards of service. This level of proficiency is essential for maintaining operational efficiency and compliance with stringent health regulations.",
                         "The focused training our team receives enables them to handle complex medical devices with exceptional precision and care. This targeted approach not only minimizes the risk of errors but also enhances our ability to proactively maintain and repair equipment, ensuring it operates at optimal levels—a critical requirement in healthcare environments.",
-                        "Healthcare providers trust OHM Biomedical because they know that every engineer we deploy is manufacturer-trained and certified. Whether it’s a dialysis machine, a medical laser, an anesthesia machine, an ultrasound, or any other sophisticated equipment, our certifications provide assurance of the reliability and quality of our services.",        
+                        "Healthcare providers trust OHM Biomedical because they know that every engineer we deploy is manufacturer-trained and certified. Whether it’s a dialysis machine, a medical laser, an anesthesia machine, an ultrasound, or any other sophisticated equipment, our certifications provide assurance of the reliability and quality of our services.",
                     ],
                 }
             ],
         conclusion:
             [
                 "OHM Biomedical`s policy of servicing only those devices for which we have OEM-specific training guarantees the highest standards of safety, efficiency, and reliability, all while ensuring compliance with AS/NZS 3551:2012. By upholding this strict standard, we position ourselves not just as engineers, but as trusted partners in patient care.",
-            ]   
+            ]
     },
     {
         id: 5,
@@ -164,7 +165,7 @@ const blogData = [
                     ans: [
                         "Over the past few weeks, many of you have expressed concerns about the future of our trusted devices such as the 3100A/B, Fabian HFO, Bellavista 1000e, and Bird Air/Oxygen Blenders following the news of Vyaire`s Chapter 11 bankruptcy filing in the U.S. on June 10, 2024. Despite the uncertainties, we've remained optimistic about the future and are committed to keeping you informed and supported.",
                         "We are thrilled to announce a significant development that marks a promising new chapter in respiratory care: ZOLL, an Asahi Kasei company known for its innovative medical devices and software solutions, has emerged as the winning bidder in the auction to acquire Vyaire Medical's ventilator business. This announcement came on August 19, and the acquisition is pending court approval at a forthcoming sale hearing, with the final closing expected to occur in the next few weeks.",
-                        "ZOLL has been a leader in acute critical care and respiratory solutions globally since 2014, developing devices and accessories specifically designed for transporting critically ill patients. Their commitment to enhancing respiratory care aligns perfectly with the needs of our clientele.",    
+                        "ZOLL has been a leader in acute critical care and respiratory solutions globally since 2014, developing devices and accessories specifically designed for transporting critically ill patients. Their commitment to enhancing respiratory care aligns perfectly with the needs of our clientele.",
                         "Jon Rennert, CEO of ZOLL, emphasized that respiratory care has always been a core component of their business strategy. \"Adding Vyaire`s ventilators to our product portfolio will significantly enhance our ability to serve a broader range of clinicians and patients\", he stated. This integration promises to boost the capabilities and reach of our ventilation solutions, bringing advanced technology to healthcare providers across Australia and New Zealand.",
                         "We at OHM Biomedical are enthusiastic about the future and our ongoing partnership with you, our valued customers. The support from the Vyaire Management team during this transition has been instrumental in ensuring smooth operations, thus minimizing any impact on our service and commitments to you."
                     ],
@@ -180,7 +181,7 @@ const blogData = [
                 "Sovit Baral",
                 "Managing Director",
                 "OHM Biomedical Engineering"
-            ]   
+            ]
     },
 ];
 
@@ -198,12 +199,32 @@ const BlogDetail = () => {
         if (!name || !email || !comment) {
             alert("All fields are required");
             return;
+        } else {
+            alert(2)
+            emailjs.send(
+                'service_wck61fq', // Replace with your EmailJS service ID
+                'template_g0yu38f', // Replace with your EmailJS template ID
+                {
+                    firstName: name,
+                    email: email,
+                    comments: comment,
+                },
+                'axf9xXZ07UFk3Vs7Z' // Replace with your EmailJS user ID (found in account settings)
+            )
+                .then(() => {
+                    alert('Your message has been sent!');
+                })
+                .catch((error) => {
+                    alert('There was an error sending your message. Please try again.');
+                    console.error(error);
+                });
+            // Send comment via email or API
+            setComments([...comments, { name, comment }]);
+            setName('');
+            setEmail('');
+            setComment('');
         }
-        // Send comment via email or API
-        setComments([...comments, { name, comment }]);
-        setName('');
-        setEmail('');
-        setComment('');
+
     };
 
     if (!blog) {

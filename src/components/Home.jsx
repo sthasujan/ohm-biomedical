@@ -41,7 +41,7 @@ const Home = () => {
                 </div>
                 {/* Right Image Section */}
                 <div className='w-full md:w-1/2 flex justify-center md:justify-end mt-4 md:mt-0'>
-                    <div className='w-[200px] h-[20px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[275px]'>
+                    <div className='w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[275px]'>
                         {/* Carousel for images */}
                         <Carousel>
                             <img
