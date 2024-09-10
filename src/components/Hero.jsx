@@ -13,7 +13,7 @@ const Hero = () => {
             <section id="products" className="min-h-min sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] flex flex-col justify-center items-center">
                 <Products />
             </section>
-            <section id="trustedpartners" className="min-h-min flex items-center justify-center">
+            <section id="trustedpartners" className="min-h-min lg:min-h-[40vh] flex items-center justify-center">
                 <div className="w-full">
                     <Trustedpartners />
                 </div>

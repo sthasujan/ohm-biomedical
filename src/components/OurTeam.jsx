@@ -40,7 +40,7 @@ const teamMembers = [
         name: "Anupam Acharya",
         post: "Co Founder",
         image: team4,
-        description: "",
+        description: "A highly accomplished professional with over 10 years of experience in the biomedical field, holding a Master of Biomedical Engineering and an MBA. Demonstrates a proven track record in managing diverse projects and leading crossfunctional teams to achieve strategic objectives. Adept at integrating technical expertise with business acumen to drive innovation, optimize processes, and deliver exceptional results. Recognized for strong leadership, project management skills, and the ability to cultivate collaborative environments. Committed to advancing biomedical solutions through strategic planning and effective team management.",
         email: "anupam@ohmBiomedical.com.au",
         linkedin: "https://www.linkedin.com/in/anupam-acharya-a121b356/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app",
     },
