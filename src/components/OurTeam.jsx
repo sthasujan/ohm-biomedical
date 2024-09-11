@@ -22,7 +22,7 @@ const teamMembers = [
     },
     {
         name: "Suman Kharel",
-        post: "Co Founder",
+        post: "Operation Manager",
         image: team2,
         description: "Suman Kharel is a Swinburne University graduate and former GE Healthcare professional, now leading as Workshop Manager at OHM Biomedical. He oversees the service and maintenance of critical Biomedical devices, ensuring high standards and operational excellence. Known for his meticulous approach and dedication to continuous improvement, Suman has enhanced the company’s reputation by focusing on advanced training and strict compliance. His leadership not only uplifts his team but also solidifies OHM Biomedical’s role as a trusted partner in the healthcare industry.",
         email: "Suman@ohmBiomedical.com.au",
