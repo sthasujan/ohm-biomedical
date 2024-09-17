@@ -5,6 +5,7 @@ import Blog2 from "../assets/blog/blog2.webp";
 import Blog3 from "../assets/blog/blog3.png";
 import Blog4 from "../assets/blog/blog4.png";
 import Blog5 from "../assets/blog/blog5.png";
+import Blog6 from "../assets/blog/blog6.JPEG";
 import productBgImg from "../assets/products.webp";
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { motion } from 'framer-motion';  // Import framer-motion
@@ -183,6 +184,40 @@ const blogData = [
                 "OHM Biomedical Engineering"
             ]
     },
+    {
+        id: 6,
+        title: "OHM Biomedical Sets a New Standard for Bird™ Blender Service Training in ANZ",
+        image: Blog6,
+        date: "2024-09-17",
+        description:
+            [
+                ""
+            ],
+        descriptionTitle: "",
+        descriptionTitleContent:
+            [
+                {
+                    ques: [
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    ans: [
+                        "At OHM Biomedical, we are proud to establish a new benchmark in the servicing of Bird™ Air/Oxygen Blenders across Australia and New Zealand. Through our close partnership with Vyaire Medical, we are now offering OEM-certified online training, specifically designed for biomedical engineers responsible for maintaining Bird™ blenders.",
+                        "Historically, Vyaire Medical limited this specialized training to distributors and OEM service providers, leaving end-users without access to this critical knowledge. After extensive discussions, OHM Biomedical has successfully negotiated to extend this OEM-certified training to biomedical engineers, allowing those directly maintaining Bird™ Air/Oxygen Blenders to develop the necessary expertise.",
+                        "Delivered online from Vyaire`s facility in Germany, this training offers engineers hands-on experience to ensure top-tier service and equipment reliability. Although all current training sessions are fully booked, we encourage engineers in Australia and New Zealand to contact us for upcoming training opportunities.",
+                        "In addition to training, OHM Biomedical provides a full range of OEM parts and tools for servicing Bird™ blenders. This includes genuine preventative maintenance kits directly sourced from Vyaire Medical, ensuring full traceability through the supply chain.",
+                        "If you are a biomedical engineer interested in Bird™ blender training or purchasing OEM-certified parts and tools, reach out to us today to secure your spot in future training sessions."
+                    ],
+                }
+            ],
+        conclusion:
+            [
+                
+            ]
+    },
 ];
 
 const BlogDetail = () => {
@@ -300,19 +335,19 @@ const BlogDetail = () => {
                                 </div>
                             ))}
                         </p>
-                        <h4 className='text-2xl text-black'>Conclusion</h4>
-                        <br />
-                        <p className='text-lg text-gray text-justify'>
-                            {blog.conclusion.map((desc, index) => (
-                                // <p key={index}>
-                                //     {desc}
-                                // </p>
-                                <p key={index} dangerouslySetInnerHTML={{ __html: desc }} />
-                            ))}
-                        </p>
+                        {blog.conclusion && blog.conclusion.length > 0 && (
+                            <>
+                                <h4 className="text-2xl text-black">Conclusion</h4>
+                                <br />
+                                <p className="text-lg text-gray text-justify">
+                                    {blog.conclusion.map((desc, index) => (
+                                        <p key={index} dangerouslySetInnerHTML={{ __html: desc }} />
+                                    ))}
+                                </p>
+                            </>
+                        )}
                     </motion.div>
                 </div>
-
                 <div className='bg-white p-6 rounded-lg shadow-lg mt-8'>
                     <h2 className='text-xl font-semibold mb-4'>Leave a Reply</h2>
                     <form onSubmit={handleSubmit}>

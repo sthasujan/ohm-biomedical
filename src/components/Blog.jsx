@@ -5,6 +5,7 @@ import Blog2 from "../assets/blog/blog2.webp";
 import Blog3 from "../assets/blog/blog3.png";
 import Blog4 from "../assets/blog/blog4.png";
 import Blog5 from "../assets/blog/blog5.png";
+import Blog6 from "../assets/blog/blog6.JPEG";
 
 import productBgImg from "../assets/products.webp";
 
@@ -51,6 +52,14 @@ const Blog = () => {
             date: "2024-08-21",
             description: "",
         },
+        {
+            id: 6,
+            title: "Blender Service Training ANZ",
+            image: Blog6,
+            date: "2024-09-17",
+            description: "",
+        },
+
     ];
 
     return (
