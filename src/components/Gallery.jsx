@@ -8,8 +8,7 @@ import img5 from "../assets/Pictures/img5.jpg";
 import img6 from "../assets/Pictures/img6.JPEG";
 import img7 from "../assets/Pictures/img7.JPEG";
 import img8 from "../assets/Pictures/img8.png";
-
-
+import img9 from "../assets/Pictures/img9.jpg";
 
 const Gallery = () => {
     return (
@@ -44,10 +43,11 @@ const Gallery = () => {
                     { src: img6, alt: "OHM_Biomedical_Training" },
                     { src: img7, alt: "OHM_Biomedical_Training" },
                     { src: img8, alt: "OHM_Biomedical_Training" },
+                    { src: img9, alt: "OHM_Biomedical_Office"},
                 ].map((image, index) => (
                     <div key={index} className="relative w-full h-auto">
                         <img
-                            className="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-110"
+                            className="w-full h-full object-contain rounded-lg transition-transform duration-300 hover:scale-110"
                             src={image.src}
                             alt={image.alt}
                             loading="lazy"
