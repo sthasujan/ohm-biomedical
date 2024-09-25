@@ -11,6 +11,7 @@ import img8 from "../assets/Pictures/img8.png";
 import img9 from "../assets/Pictures/img9.jpg";
 import img10 from "../assets/Pictures/img10.jpg";
 import img11 from "../assets/Pictures/img11.JPG";
+import img12 from "../assets/Pictures/img12.jpg";
 
 const Gallery = () => {
     return (
@@ -40,7 +41,7 @@ const Gallery = () => {
                     { src: img1, alt: "OHM_Biomedical_Team_Dinner_2024" },
                     { src: img2, alt: "Anupam_Engineering_3100_Ventilator_OHM" },
                     { src: img3, alt: "Technician_Blender_Repair_OHM_Biomedical" },
-                    { src: img4, alt: "Anupam_Technician_Blender_Repair_OHM_Biomedical" },
+                    // { src: img4, alt: "Anupam_Technician_Blender_Repair_OHM_Biomedical" },
                     { src: img5, alt: "OHM_Biomedical_Training" },
                     { src: img6, alt: "OHM_Biomedical_Training" },
                     { src: img7, alt: "OHM_Biomedical_Training" },
@@ -48,6 +49,7 @@ const Gallery = () => {
                     { src: img9, alt: "OHM_Biomedical_Office"},
                     { src: img10, alt: "OHM_Biomedical_Servicing"},
                     { src: img11, alt: "OHM_Biomedical_Servicing"},
+                    { src: img12, alt: "OHM_Biomedical_Servicing"},
                 ].map((image, index) => (
                     <div key={index} className="relative w-full h-auto">
                         <img
