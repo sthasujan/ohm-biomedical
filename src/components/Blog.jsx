@@ -6,6 +6,7 @@ import Blog3 from "../assets/blog/blog3.png";
 import Blog4 from "../assets/blog/blog4.png";
 import Blog5 from "../assets/blog/blog5.png";
 import Blog6 from "../assets/blog/blog6.JPEG";
+import Blog7 from "../assets/blog/blog7.jpg";
 
 import productBgImg from "../assets/products.webp";
 
@@ -57,6 +58,13 @@ const Blog = () => {
             title: "Blender Service Training ANZ",
             image: Blog6,
             date: "2024-09-17",
+            description: "",
+        },
+        {
+            id: 7,
+            title: "Our Success with the 3100A/B, Sensormedics HFO",
+            image: Blog7,
+            date: "2024-10-10",
             description: "",
         },
 

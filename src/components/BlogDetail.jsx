@@ -6,6 +6,7 @@ import Blog3 from "../assets/blog/blog3.png";
 import Blog4 from "../assets/blog/blog4.png";
 import Blog5 from "../assets/blog/blog5.png";
 import Blog6 from "../assets/blog/blog6.JPEG";
+import Blog7 from "../assets/blog/blog7.jpg";
 import productBgImg from "../assets/products.webp";
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { motion } from 'framer-motion';  // Import framer-motion
@@ -218,6 +219,43 @@ const blogData = [
                 
             ]
     },
+    {
+        id: 7,
+        title: "Our Success with the 3100A/B, Sensormedics HFO",
+        image: Blog7,
+        date: "2024-10-10",
+        description:
+            [
+                "At <strong>OHM Biomedical</strong>, we are proud to announce the successful completion of one of the largest installations of the 3100A/B High-Frequency Oscillatory Ventilator (HFO) (also known as Sensormedics) in partnership with Vyaire Medical. This project saw the installation of <strong>11 ventilators</strong> at the prestigious <strong>Royal Children's Hospital</strong> in Melbourne, a key healthcare provider for critically ill children. ",
+                "This project showcased the strength of collaboration between Vyaire Medical and our highly skilled clinical engineers and technical team. It was a significant milestone for OHM Biomedical, reinforcing our commitment to delivering exceptional service and innovative solutions across Australia and New Zealand."
+            ],
+        descriptionTitle: "",
+        descriptionTitleContent:
+            [
+                {
+                    ques: [
+                        "Why Regular PM is Critical for 3100 HFO Ventilators",
+                        "Dedicated Training and Support from Vyaire Medical",
+                        "Feedback from Our Early Experience with the 3100 HFO",
+                        "Ensuring Ongoing Reliability",
+                        "Get in Touch",
+                        "",
+                    ],
+                    ans: [
+                        "The <strong>3100A/B HFO</strong> has earned its reputation as the <strong>gold standard</strong> in High-Frequency Oscillatory Ventilation. It plays a critical role in managing patients with severe respiratory issues, particularly in neonatal intensive care units (NICU). To ensure these life-saving devices continue to perform at their peak, annual preventive maintenance (PM) is essential. This includes sensor calibration, filter replacements, and electrical safety checks, which are crucial for extending the equipment’s lifespan and maintaining compliance with medical standards.",
+                        "A special thanks goes to Pankaj Sharma and James Ang, Senior Service Leaders at Vyaire Medical, for their in-depth technical training provided to our team at our Melbourne workshop. Their support ensures that OHM Biomedical can deliver outstanding maintenance and support for the 11 installed 3100A/B devices.",
+                        "The 3100 HFO has been widely praised by clinical teams. In fact, during our early experience with the device in the NICU at Sydney, the feedback was clear—“Oldie but Goldie.” Its reputation as a reliable and efficient ventilator remains strong, and we are proud to support this exceptional piece of equipment.",
+                        "Regular maintenance and calibration are key to the 3100 HFO performing at its best. If your facility uses these devices and requires servicing, consumables, or in-service training, we’re here to help. Our expert team is equipped to handle the ongoing needs of these machines, ensuring your facility can continue to provide top-tier care.",
+                        "If your facility has 3100A/B HFO ventilators that need service or maintenance, reach out to our clinical engineering team. We are always ready to provide the support your team needs.",
+                        "Contact us at <strong>support@ohmbiomedical.com.au</strong> we're just an email away!",
+                    ],
+                }
+            ],
+        conclusion:
+            [
+                
+            ]
+    },
 ];
 
 const BlogDetail = () => {
@@ -309,9 +347,10 @@ const BlogDetail = () => {
                         <p className='text-lg text-neutralDGrey text-justify'>
                             {/* {blog.description} */}
                             {blog.description.map((desc, index) => (
-                                <p key={index}>
-                                    {desc}
-                                </p>
+                                <p 
+                                    key={index}
+                                    dangerouslySetInnerHTML={{ __html: desc }} 
+                                />
                             ))}
                         </p>
                         <h4 className='text-2xl text-black'>{blog.descriptionTitle}</h4>
@@ -327,9 +366,10 @@ const BlogDetail = () => {
                                                 {question}
                                             </p>
                                             {/* Render the corresponding answer */}
-                                            <p className='text-gray-700 text-justify'>
-                                                {desc.ans[quesIndex]}
-                                            </p>
+                                            <p 
+                                                className='text-gray-700 text-justify'
+                                                dangerouslySetInnerHTML={{ __html: desc.ans[quesIndex] }} 
+                                            />
                                         </div>
                                     ))}
                                 </div>
