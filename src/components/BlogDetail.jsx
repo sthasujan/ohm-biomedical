@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Blog1 from "../assets/blog/blog1.jpg";
+import Blog1 from "../assets/blog/blog1.webp";
 import Blog2 from "../assets/blog/blog2.webp";
-import Blog3 from "../assets/blog/blog3.png";
-import Blog4 from "../assets/blog/blog4.png";
-import Blog5 from "../assets/blog/blog5.png";
-import Blog6 from "../assets/blog/blog6.JPEG";
-import Blog7 from "../assets/blog/blog7.jpg";
+import Blog3 from "../assets/blog/blog3.webp";
+import Blog4 from "../assets/blog/blog4.webp";
+import Blog5 from "../assets/blog/blog5.webp";
+import Blog6 from "../assets/blog/blog6.webp";
+import Blog7 from "../assets/blog/blog7.webp";
+import Blog8 from "../assets/blog/blog8.webp";
 import productBgImg from "../assets/products.webp";
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { motion } from 'framer-motion';  // Import framer-motion
@@ -248,6 +249,42 @@ const blogData = [
                         "Regular maintenance and calibration are key to the 3100 HFO performing at its best. If your facility uses these devices and requires servicing, consumables, or in-service training, we’re here to help. Our expert team is equipped to handle the ongoing needs of these machines, ensuring your facility can continue to provide top-tier care.",
                         "If your facility has 3100A/B HFO ventilators that need service or maintenance, reach out to our clinical engineering team. We are always ready to provide the support your team needs.",
                         "Contact us at <strong>support@ohmbiomedical.com.au</strong> we're just an email away!",
+                    ],
+                }
+            ],
+        conclusion:
+            [
+                
+            ]
+    },
+    {
+        id: 8,
+        title: "OHM Biomedical at the EPSM-ABEC 2024 Conference: Innovation, Collaboration, and a Cuppa!",
+        image: Blog8,
+        date: "2024-11-28",
+        description:
+            [
+                "From November 17-20, 2024, OHM Biomedical proudly participated in the <strong>joint Engineering and Physical Sciences in Medicine (EPSM) Conference &amp; Australian Biomedical Engineering Conference (ABEC)</strong> at the Grand Hyatt, Naarm, Melbourne. As a leading name in biomedical engineering, we were thrilled to engage with healthcare professionals, researchers, and engineers during this prestigious event.",
+            ],
+        descriptionTitle: "",
+        descriptionTitleContent:
+            [
+                {
+                    ques: [
+                        "Showcasing Excellence in Biomedical Engineering",
+                        "A Cup of Coffee and a Chat",
+                        "A Special Thanks",
+                        "Looking Ahead",
+                        "",
+                        "",
+                    ],
+                    ans: [
+                        "At <strong>Booth 9</strong>, right across from the buzzing coffee station, we had the opportunity to connect with attendees, discuss ventilation solutions, and highlight how our specialist biomedical engineering services can support facilities across Australia. The exchange of ideas and feedback from industry peers was both inspiring and invaluable in shaping the future of our products and services.",
+                        "OHM Biomedical was honored to sponsor coffee at the conference, providing attendees with a perfect chance to recharge and engage in meaningful conversations. Our team enjoyed meeting new faces, sharing insights, and learning about the challenges and advancements shaping biomedical engineering today.",
+                        "We extend our heartfelt gratitude to everyone who visited our booth, explored our solutions, and shared their insights. Your feedback is the driving force behind our commitment to innovation and excellence in biomedical engineering.",
+                        "As we reflect on the success of EPSM-ABEC 2024, we are more committed than ever to supporting healthcare facilities with reliable biomedical engineering expertise and cutting-edge solutions. Stay connected with OHM Biomedical as we continue to innovate and collaborate for a healthier future.",
+                        "Let’s keep the conversation going—whether it’s over coffee or a shared commitment to advancing healthcare technology!",
+                        "Thank you for being part of our journey at EPSM-ABEC 2024. We look forward to seeing you at future conferences!",
                     ],
                 }
             ],

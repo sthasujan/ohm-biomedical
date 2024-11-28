@@ -1,12 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Blog1 from "../assets/blog/blog1.jpg";
+import Blog1 from "../assets/blog/blog1.webp";
 import Blog2 from "../assets/blog/blog2.webp";
-import Blog3 from "../assets/blog/blog3.png";
-import Blog4 from "../assets/blog/blog4.png";
-import Blog5 from "../assets/blog/blog5.png";
-import Blog6 from "../assets/blog/blog6.JPEG";
-import Blog7 from "../assets/blog/blog7.jpg";
+import Blog3 from "../assets/blog/blog3.webp";
+import Blog4 from "../assets/blog/blog4.webp";
+import Blog5 from "../assets/blog/blog5.webp";
+import Blog6 from "../assets/blog/blog6.webp";
+import Blog7 from "../assets/blog/blog7.webp";
+import Blog8 from "../assets/blog/blog8.webp";
 
 import productBgImg from "../assets/products.webp";
 
@@ -67,7 +68,13 @@ const Blog = () => {
             date: "2024-10-10",
             description: "",
         },
-
+        {
+            id: 8,
+            title: "OHM Biomedical at the EPSM-ABEC 2024 Conference: Innovation, Collaboration, and a Cuppa!",
+            image: Blog8,
+            date: "2024-11-28",
+            description: "",
+        },
     ];
 
     return (
