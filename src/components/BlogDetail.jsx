@@ -8,16 +8,24 @@ import Blog5 from "../assets/blog/blog5.webp";
 import Blog6 from "../assets/blog/blog6.webp";
 import Blog7 from "../assets/blog/blog7.webp";
 import Blog8 from "../assets/blog/blog8.webp";
+import Blog88 from "../assets/blog/blog88.webp";
 import productBgImg from "../assets/products.webp";
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { motion } from 'framer-motion';  // Import framer-motion
 import emailjs from 'emailjs-com';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Navigation, Pagination } from 'swiper/modules';
+
+
 const blogData = [
     {
         id: 1,
         title: "The Importance of AS3551 in the Biomedical Industry",
-        image: Blog1,
+        image: [Blog1],
         date: "2024-08-11",
         description:
             [
@@ -52,7 +60,7 @@ const blogData = [
     {
         id: 2,
         title: "Ensuring Reliability with Mandatory 2-Year OEM Preventive Maintenance for Bird Air/Oxygen Blenders",
-        image: Blog2,
+        image: [Blog2],
         date: "2024-08-10",
         description:
             [
@@ -87,7 +95,7 @@ const blogData = [
     {
         id: 3,
         title: "Choosing the Right Ventilator Supplier: The Critical Importance of After-Sales Support",
-        image: Blog3,
+        image: [Blog3],
         date: "2024-08-18",
         description:
             [
@@ -118,7 +126,7 @@ const blogData = [
     {
         id: 4,
         title: "Why Choose OHM Biomedical as Your Service Partner",
-        image: Blog4,
+        image: [Blog4],
         date: "2024-08-18",
         description:
             [
@@ -148,7 +156,7 @@ const blogData = [
     {
         id: 5,
         title: "ZOLL Acquires Vyaire Medical's Ventilator Business",
-        image: Blog5,
+        image: [Blog5],
         date: "2024-08-21",
         description:
             [
@@ -189,7 +197,7 @@ const blogData = [
     {
         id: 6,
         title: "OHM Biomedical Sets a New Standard for Bird™ Blender Service Training in ANZ",
-        image: Blog6,
+        image: [Blog6],
         date: "2024-09-17",
         description:
             [
@@ -217,13 +225,13 @@ const blogData = [
             ],
         conclusion:
             [
-                
+
             ]
     },
     {
         id: 7,
         title: "Our Success with the 3100A/B, Sensormedics HFO",
-        image: Blog7,
+        image: [Blog7],
         date: "2024-10-10",
         description:
             [
@@ -254,13 +262,13 @@ const blogData = [
             ],
         conclusion:
             [
-                
+
             ]
     },
     {
         id: 8,
         title: "OHM Biomedical at the EPSM-ABEC 2024 Conference: Innovation, Collaboration, and a Cuppa!",
-        image: Blog8,
+        image: [Blog8,Blog88],
         date: "2024-11-28",
         description:
             [
@@ -290,7 +298,7 @@ const blogData = [
             ],
         conclusion:
             [
-                
+
             ]
     },
 ];
@@ -361,8 +369,25 @@ const BlogDetail = () => {
             </div>
             <div className="container mx-auto px-4 lg:px-14 my-12">
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-                    <div className='relative'>
-                        <img src={blog.image} alt={blog.title} className='w-full rounded-lg' />
+                    <div className="relative">
+                        <Swiper
+                            modules={[Navigation, Pagination]}
+                            spaceBetween={30}
+                            slidesPerView={1}
+                            navigation
+                            pagination={{ clickable: true }}
+                            className="w-full rounded-lg"
+                        >
+                            {blog.image.map((image, index) => (
+                                <SwiperSlide key={index}>
+                                    <img
+                                        src={image}
+                                        alt={`${blog.title} - Image ${index + 1}`}
+                                        className="w-full rounded-lg"
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                     <motion.div
                         className='bg-white p-6 rounded-lg shadow-lg transition-transform duration-500 ease-in-out relative'
@@ -384,9 +409,9 @@ const BlogDetail = () => {
                         <p className='text-lg text-neutralDGrey text-justify'>
                             {/* {blog.description} */}
                             {blog.description.map((desc, index) => (
-                                <p 
+                                <p
                                     key={index}
-                                    dangerouslySetInnerHTML={{ __html: desc }} 
+                                    dangerouslySetInnerHTML={{ __html: desc }}
                                 />
                             ))}
                         </p>
@@ -403,9 +428,9 @@ const BlogDetail = () => {
                                                 {question}
                                             </p>
                                             {/* Render the corresponding answer */}
-                                            <p 
+                                            <p
                                                 className='text-gray-700 text-justify'
-                                                dangerouslySetInnerHTML={{ __html: desc.ans[quesIndex] }} 
+                                                dangerouslySetInnerHTML={{ __html: desc.ans[quesIndex] }}
                                             />
                                         </div>
                                     ))}
