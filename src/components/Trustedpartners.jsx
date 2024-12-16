@@ -6,6 +6,7 @@ import medilaze from "../assets/partners/medilaze.png";
 import mindray from "../assets/partners/mindray.png";
 import seimens from "../assets/partners/seimens.svg";
 import bayside from "../assets/partners/bayside.png";
+import maxtec from "../assets/partners/maxtec.svg";
 
 const Trustedpartners = () => {
     return (
@@ -21,6 +22,7 @@ const Trustedpartners = () => {
                         <img src={mindray} alt="Mindray" className='company-logo' />
                         <img src={seimens} alt="Siemens" className='company-logo' />
                         <img src={bayside} alt="bayside" className='company-logo' />
+                        <img src={maxtec} alt="maxtec" className='company-logo' />
 
                         {/* Duplicate images for seamless looping */}
                         <img src={alpha_click} alt="Alpha Click" className='company-logo' />
