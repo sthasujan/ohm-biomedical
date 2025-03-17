@@ -58,7 +58,7 @@ const Navbar = () => {
             link: "Products",
             path: "#",
             dropdown: [
-                { link: 'Zoll Medical Ventilator', path: '/Yyaireventilator' },
+                { link: 'Zoll Medical Ventilator', path: '/ZollYyaireventilator' },
                 { link: 'Carefusion Bird Air/Oxygen Blender', path: '/Carefusionbirdblender' },
                 { link: 'Siemens Ultrasound', path: '/Siemensultrasound' },
                 { link: 'Consumables', path: '/Consumablessales' },
@@ -71,7 +71,7 @@ const Navbar = () => {
                 { link: 'Bird Air/Oxygen Blender Service', path: '/Birdblenderservice' },
                 { link: 'Biomedical Service', path: '/Biomedicalservice' },
                 { link: 'Sechrest Blender Service', path: '/Sechrestblenderservice' },
-                { link: 'GE Anaesthetic Machine Service', path: '/GEAnaestheticmachineservice' },
+                { link: 'Anaesthetic Machine Service', path: '/Anaestheticmachineservice' },
             ],
         },
         {

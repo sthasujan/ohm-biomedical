@@ -19,7 +19,7 @@ import Birdblenderservice from './components/Birdblenderservice';
 import Consumablessales from './components/Consumablessales';
 import Biomedicalservice from './components/Biomedicalservice';
 import SiemensBlogDetailView from './components/SiemensBlogDetailView';
-import GEAnaestheticmachineservice from './components/GEAnaestheticmachineservice'
+import Anaestheticmachineservice from './components/Anaestheticmachineservice'
 import Sechrestblenderservice from './components/Sechrestblenderservice'
 import ScrollToTop from './components/ScrollToTop';
 
@@ -40,12 +40,12 @@ function AppWrapper() {
       <Routes>
         <Route path="/" element={<Hero />} />
         {/* Product Section */}
-        <Route path="/Yyaireventilator" element={<YyaireVentilator />} />
+        <Route path="/ZollYyaireventilator" element={<YyaireVentilator />} />
         <Route path="/Carefusionbirdblender" element={<Carefusionbirdblender />} />
         <Route path="/Siemensultrasound" element={<Siemensultrasound />} />
         <Route path="/Consumablessales" element={<Consumablessales />} />
         {/* Each Product ReadMore Section */}
-        <Route path="/Yyaireventilator/:id" element={<VyaireBlogDetailView />} />
+        <Route path="/ZollYyaireventilator/:id" element={<VyaireBlogDetailView />} />
         <Route path="/Carefusionbirdblender/:id" element={<CarefusionBlogDetailView />} />
         <Route path="/Siemensultrasound/:id" element={<SiemensBlogDetailView />} />
 
@@ -53,7 +53,7 @@ function AppWrapper() {
         <Route path="/Birdblenderservice" element={<Birdblenderservice />} />
         <Route path="/Biomedicalservice" element={<Biomedicalservice />} />
         <Route path="/Sechrestblenderservice" element={<Sechrestblenderservice />} />
-        <Route path="/GEAnaestheticmachineservice" element={<GEAnaestheticmachineservice />} />
+        <Route path="/Anaestheticmachineservice" element={<Anaestheticmachineservice />} />
 
         {/* Who We Are Section */}
         <Route path="/About" element={<About />} />

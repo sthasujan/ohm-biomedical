@@ -80,7 +80,7 @@ const YyaireVentilator = () => {
     const navigate = useNavigate();
 
     const handleReadMore = (blog) => {
-        navigate(`/YyaireVentilator/${blog.id}`);
+        navigate(`/ZollYyaireVentilator/${blog.id}`);
     };
     return (
         <div>
