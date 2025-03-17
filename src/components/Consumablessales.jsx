@@ -21,12 +21,6 @@ const salesItems = [
         image: pic1,
     },
     {
-        partNo: 'Part Number: 777040S',
-        title: 'INFANT FLOW LP HEADGEAR, SMALL',
-        sizes: ['Extra Small', 'Small', 'Medium', 'Large', 'Extra Large'],
-        image: pic2,
-    },
-    {
         partNo: 'Part Number: 777002S',
         title: 'Infant Flow LP nasal mask, single Patient use small',
         sizes: ['Extra Small', 'Small', 'Medium', 'Large', 'Extra Large'],
@@ -51,17 +45,24 @@ const salesItems = [
         image: pic6,
     },
     {
+        partNo: 'Part Number: 04322',
+        title: 'Zoll Medical BRKT, POST, DOVETAIL ASY',
+        sizes: [],
+        image: pic10,
+    },
+    
+    {
         partNo: 'Part Number: 301.328.020',
         title: 'FLOW, ADVANCED, PAEDIATRIC/ADULT, 200 S PROXIMAL, FOR BELLAVISTA 1000e VENTILATOR, SINGLE PATIENT USE',
         sizes: [],
         image: pic7,
     },
-    {
-        partNo: 'Part Number: 10003',
-        title: 'Microblender High and Low Flow Maintenance Kit',
-        sizes: [],
-        image: pic8,
-    },
+    // {
+    //     partNo: 'Part Number: 10003',
+    //     title: 'Microblender High and Low Flow Maintenance Kit',
+    //     sizes: [],
+    //     image: pic8,
+    // },
     {
         partNo: 'Part Number: 301.470.010',
         title: 'iFLOW 40 S Neonatal/Infant Proximal Flow Sensor',
@@ -69,11 +70,12 @@ const salesItems = [
         image: pic9,
     },
     {
-        partNo: 'Part Number: 04322',
-        title: 'Zoll Medical BRKT, POST, DOVETAIL ASY',
-        sizes: [],
-        image: pic10,
+        partNo: 'Part Number: 777040S',
+        title: 'INFANT FLOW LP HEADGEAR, SMALL',
+        sizes: ['Extra Small', 'Small', 'Medium', 'Large', 'Extra Large'],
+        image: pic2,
     },
+    
     // Add more items here
 ];
 

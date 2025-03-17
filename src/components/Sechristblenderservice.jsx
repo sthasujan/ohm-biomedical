@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import productBgImg from "../assets/products.webp";
 import { motion } from "framer-motion";
-import amimg from "../assets/services/Sechristblender.png";
+import amimg from "../assets/services/Sechrist.png";
 
 import emailjs from 'emailjs-com';
 
@@ -349,7 +349,7 @@ const Sechrestblenderservice = () => {
                     </div>
                 </section>
                 {/* Advert Section */}
-                <section className="py-16">
+                {/* <section className="py-16">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-3xl font-bold text-center mb-6">Reliable Service, Exceptional Value</h2>
                         <div className="grid md:grid-cols-1">
@@ -370,7 +370,7 @@ const Sechrestblenderservice = () => {
                             ))}
                         </div>
                     </div>
-                </section>
+                </section> */}
             </div >
         </div >
     );

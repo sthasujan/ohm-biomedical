@@ -7,7 +7,7 @@ import mindray from "../assets/partners/mindray.png";
 import seimens from "../assets/partners/seimens.svg";
 import bayside from "../assets/partners/bayside.png";
 import maxtec from "../assets/partners/maxtec.svg";
-import acl_logo from "../assets/partners/acl_logo.png";
+import acl_logo from "../assets/partners/acl_logo.jpg";
 import neotech from "../assets/partners/neotech.png";
 
 const Trustedpartners = () => {
