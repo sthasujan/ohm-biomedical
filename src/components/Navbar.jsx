@@ -70,7 +70,7 @@ const Navbar = () => {
             dropdown: [
                 { link: 'Bird Air/Oxygen Blender Service', path: '/Birdblenderservice' },
                 { link: 'Biomedical Service', path: '/Biomedicalservice' },
-                { link: 'Sechrest Blender Service', path: '/Sechrestblenderservice' },
+                { link: 'Sechrist Blender Service', path: '/Sechrestblenderservice' },
                 { link: 'Anaesthetic Machine Service', path: '/Anaestheticmachineservice' },
             ],
         },

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import productBgImg from "../assets/products.webp";
 import { motion } from "framer-motion";
+import amimg from "../assets/services/GEAnaesthetic.png";
 
 import emailjs from 'emailjs-com';
 
@@ -107,136 +108,201 @@ const Anaestheticmachineservice = () => {
                     <h1
                         className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
                     >
-                        Anaesthetic Machines Service <br />
+                        GE & Mindray Anaesthetic Machines Service <br />
                     </h1>
                 </div>
             </div>
             <div className="bg-gray-100 text-gray-900">
                 {/* Hero Section */}
-                <section className="relative text-black py-20 text-center bg-white">
-                    <div className="max-w-4xl mx-auto px-6">
-                        <motion.h1
-                            className="text-3xl font-bold mb-2"
-                            initial={{ opacity: 0, y: -20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
+                <section className="relative bg-gradient-to-br from-white to-blue-50 py-16 md:py-24">
+                    <div className="container mx-auto px-4 md:px-6">
+                        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+                        {/* Left Content */}
+                        <motion.div 
+                            className="md:col-span-7 space-y-6"
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6 }}
                         >
-                            Cost-Effective Servicing for <span className="text-red-700">GE & Mindray</span> Anaesthetic Machines
-                        </motion.h1>
-                        <motion.p
-                            className="text-center text-lg font-semibold text-white-600 mb-2"
-                            initial={{ opacity: 0, y: -20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                        >
-                            Vendor-Trained Engineers | OEM-Quality | Lower Cost
-                        </motion.p>
-                        <motion.p
-                            className="text-sm mb-4"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.7 }}
-                        >
-                            At OHM Biomedical, we specialize in servicing GE and Mindray anaesthetic machines with vendor-trained engineers, ensuring your equipment operates at peak performance while reducing maintenance costs.
-                        </motion.p>
-                        <motion.button
-                            className="bg-whit text-blue-900 font-bold py-3 px-6 rounded shadow-md hover:bg-gray-200"
-                            whileHover={{ scale: 1.05 }}
-                            onClick={() => setShowContactPopup(true)}
-                        >
-                            Get a Quote
-                        </motion.button>
-                        {showContactPopup && (
-                            <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-                                <div className="bg-white rounded-lg w-11/12 md:w-1/2 p-6 md:p-8 relative shadow-lg">
-                                    <h2 className="text-red-600 text-center font-bold text-xl md:text-2xl mb-4">
-                                        Contact a Sales Representative
-                                    </h2>
-                                    <button
-                                        onClick={openPopup}
-                                        className="absolute top-3 right-3 text-white bg-blue-900 border rounded-full p-2 hover:bg-red-600"
-                                    >
-                                        X
-                                    </button>
-                                    <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        <input
-                                            type="text"
-                                            name="firstName"
-                                            placeholder="First Name"
-                                            value={formData.firstName}
-                                            onChange={handleInputChange}
-                                            className="border p-2 rounded w-full"
-                                            required
-                                        />
-                                        <input
-                                            type="text"
-                                            name="lastName"
-                                            placeholder="Last Name"
-                                            value={formData.lastName}
-                                            onChange={handleInputChange}
-                                            className="border p-2 rounded w-full"
-                                            required
-                                        />
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            placeholder="Email"
-                                            value={formData.email}
-                                            onChange={handleInputChange}
-                                            className="border p-2 rounded w-full"
-                                            required
-                                        />
-                                        <input
-                                            type="text"
-                                            name="phone"
-                                            placeholder="Phone Number"
-                                            value={formData.phone}
-                                            onChange={handleInputChange}
-                                            className="border p-2 rounded w-full"
-                                            required
-                                        />
-                                        {/* Comment Section */}
-                                        <div className="col-span-1 md:col-span-2">
-                                            <textarea
-                                                name="comments"
-                                                placeholder="Your comments or questions..."
-                                                value={formData.comments}
-                                                onChange={handleInputChange}
-                                                className="border p-2 rounded w-full h-32 resize-none focus:outline-none focus:ring-2 focus:ring-blue-600"
-                                            ></textarea>
-                                        </div>
+                            <div className="space-y-4">
+                            <motion.p
+                                className="text-center text-lg md:text-xl font-semibold text-blue-900 mb-4"
+                                initial={{ opacity: 0, y: -20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.2 }}
+                            >
+                                Vendor-Trained Engineers | OEM-Quality | Lower Cost
+                            </motion.p>
 
-                                        <div className="col-span-1 md:col-span-2 flex items-center">
-                                            <input
-                                                type="checkbox"
-                                                name="agreeToTerms"
-                                                checked={formData.agreeToTerms}
-                                                onChange={handleInputChange}
-                                                className="mr-2"
-                                                required
-                                            />
-                                            <span className='text-sm md:text-base'>I have read and agree to OHM's Terms and Conditions</span>
-                                        </div>
-                                        <div className="col-span-1 md:col-span-2">
-                                            <button
-                                                type="submit"
-                                                className="bg-blue-900 text-white font-bold py-2 px-4 rounded-lg w-full hover:bg-red-600 transition-all"
-                                            >
-                                                Get In Touch
-                                            </button>
-                                        </div>
-                                    </form>
+                            <motion.p
+                                className="text-gray-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7 }}
+                            >
+                                At OHM Biomedical, we specialize in servicing GE and Mindray anaesthetic machines with vendor-trained engineers, ensuring your equipment operates at peak performance while reducing maintenance costs.
+                            </motion.p>
+
+                            <motion.div
+                                className="flex justify-center"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.4 }}
+                            >
+                                <motion.button
+                                className="bg-blue-900 text-white font-semibold py-3 px-8 rounded-lg
+                                    shadow-lg hover:shadow-xl transition-shadow
+                                    hover:scale-[1.02] active:scale-95"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                onClick={() => setShowContactPopup(true)}
+                                >
+                                Get a Quote
+                                </motion.button>
+                            </motion.div>
+
+                            <motion.p 
+                                className="text-gray-600 text-sm md:text-base mt-6 px-4 md:px-0"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.6 }}
+                            >
+                                💰 Why pay more for the same service? Get OEM-level maintenance at a fraction of the cost with our expert team.
+                            </motion.p>
+                            </div>
+                        </motion.div>
+
+                        {/* Right Card */}
+                        <motion.div 
+                            className="md:col-span-5"
+                            initial={{ opacity: 0, x: 50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.3 }}
+                        >
+                            <div className="relative bg-white rounded-2xl shadow-xl p-6 overflow-hidden
+                            hover:shadow-2xl transition-shadow duration-300 group">
+                            {/* Animated Decorative Elements */}
+                            <motion.div 
+                                className="absolute -right-8 -top-8 w-24 h-24 bg-blue-100 rounded-full"
+                                initial={{ scale: 0 }}
+                                animate={{ scale: 1 }}
+                                transition={{ delay: 0.5 }}
+                            />
+                            <motion.div 
+                                className="absolute -left-4 -bottom-4 w-16 h-16 bg-blue-50 rounded-full"
+                                initial={{ scale: 0 }}
+                                animate={{ scale: 1 }}
+                                transition={{ delay: 0.7 }}
+                            />
+
+                            <div className="relative">
+                                <img
+                                src={amimg}
+                                alt="Anaesthetic Machine"
+                                className="w-full rounded-xl object-cover aspect-[4/3]
+                                    transform group-hover:scale-105 transition-transform duration-300"
+                                loading="lazy"
+                                />
+
+                                <div className="mt-6 space-y-3">
+                                <h3 className="text-xl md:text-2xl font-bold text-gray-900">
+                                    Expert Service. Lower Cost.
+                                </h3>
+                                <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                                    Our vendor-trained engineers deliver OEM-level service at significantly reduced rates.
+                                </p>
                                 </div>
                             </div>
-                        )}
-                        <motion.p 
-                            className="text-white-600 font-medium mt-4"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.7 }}
+                            </div>
+                        </motion.div>
+                        </div>
+
+                        {/* Contact Popup */}
+                        {showContactPopup && (
+                        <motion.div
+                            className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-[9999]"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            style={{ position: 'fixed', top: '0', left: '0' }}
                         >
-                            💰 Why pay more for the same service? Get OEM-level maintenance at a fraction of the cost with our expert team.
-                        </motion.p>
+                            <motion.div
+                            className="bg-white rounded-xl shadow-2xl max-w-2xl w-full overflow-hidden"
+                            initial={{ scale: 0.95 }}
+                            animate={{ scale: 1 }}
+                            >
+                            <div className="p-6 md:p-8 relative">
+                                <button
+                                onClick={() => setShowContactPopup(false)}
+                                className="absolute top-4 right-4 text-gray-500 hover:text-red-600
+                                    transition-colors p-1 rounded-full"
+                                >
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                                </button>
+
+                                <h2 className="text-2xl font-bold text-blue-900 mb-6 text-center">
+                                Contact a Sales Representative
+                                </h2>
+
+                                <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                                {/* Form Fields */}
+                                {['First Name', 'Last Name', 'Email', 'Phone Number'].map((label, idx) => (
+                                    <div key={label} className={idx > 1 ? 'md:col-span-2' : ''}>
+                                    <input
+                                        type={idx === 2 ? 'email' : idx === 3 ? 'tel' : 'text'}
+                                        name={label.toLowerCase().replace(' ', '')}
+                                        placeholder={label}
+                                        value={formData[label.toLowerCase().replace(' ', '')]}
+                                        onChange={handleInputChange}
+                                        className="w-full px-4 py-2.5 border border-gray-200 rounded-lg
+                                        focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                                        transition-all"
+                                        required
+                                    />
+                                    </div>
+                                ))}
+
+                                <div className="md:col-span-2">
+                                    <textarea
+                                    name="comments"
+                                    placeholder="Your comments or questions..."
+                                    value={formData.comments}
+                                    onChange={handleInputChange}
+                                    className="w-full px-4 py-2.5 border border-gray-200 rounded-lg
+                                        focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                                        h-32 resize-none transition-all"
+                                    />
+                                </div>
+
+                                <div className="md:col-span-2 flex items-center">
+                                    <input
+                                    type="checkbox"
+                                    name="agreeToTerms"
+                                    checked={formData.agreeToTerms}
+                                    onChange={handleInputChange}
+                                    className="w-4 h-4 mr-3 accent-blue-900"
+                                    required
+                                    />
+                                    <span className="text-sm text-gray-600">
+                                    I agree to OHM's Terms and Conditions
+                                    </span>
+                                </div>
+
+                                <div className="md:col-span-2">
+                                    <button
+                                    type="submit"
+                                    className="w-full bg-blue-900 text-white py-3 px-6 rounded-lg
+                                        font-semibold hover:bg-blue-800 transition-colors"
+                                    >
+                                    Get In Touch
+                                    </button>
+                                </div>
+                                </form>
+                            </div>
+                            </motion.div>
+                        </motion.div>
+                        )}
                     </div>
                 </section>
 

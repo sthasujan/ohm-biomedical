@@ -59,7 +59,7 @@ const Siemensultrasound = () => {
                     <h1
                         className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
                     >
-                        Products: Siemens Bird Blenders <br />
+                        Products: Siemens Ultrasound <br />
                     </h1>
                 </div>
             </div>

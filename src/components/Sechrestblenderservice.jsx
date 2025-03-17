@@ -116,14 +116,14 @@ const Sechrestblenderservice = () => {
                 {/* Hero Section */}
                 <section className="relative text-black py-20 text-center bg-white">
                     <div className="max-w-4xl mx-auto px-6">
-                        <motion.h1
+                        {/* <motion.h1
                             className="text-3xl font-bold mb-2"
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
                         >
                             Ensure Your Sechrist Blender’s Performance with OHM Biomedical
-                        </motion.h1>
+                        </motion.h1> */}
                         <motion.p
                             className="text-center text-lg font-semibold text-white-600 mb-2"
                             initial={{ opacity: 0, y: -20 }}
