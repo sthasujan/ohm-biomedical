@@ -4,10 +4,27 @@ import { motion } from "framer-motion";
 
 const Anaestheticmachineservice = () => {
     return (
-        <div className="pt-20 lg:pt-24">
+        <div>
+            <div className='relative pt-16 md:pt-0'>
+                <img
+                    src={productBgImg}
+                    alt="Product Background"
+                    className='w-full h-[30vh] md:h-[40vh] object-cover'
+                />
+                {/* Adjust positioning for mobile and larger screens */}
+                <div
+                    className='absolute bottom-[22%] md:top-[65%] w-full flex justify-center px-4'
+                >
+                    <h1
+                        className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
+                    >
+                        Anaesthetic Machines Service <br />
+                    </h1>
+                </div>
+            </div>
             <div className="bg-gray-100 text-gray-900">
                 {/* Hero Section */}
-                <section className="relative text-white py-20 text-center" style={{ backgroundImage: `url(${productBgImg})` }}>
+                <section className="relative text-black py-20 text-center bg-white">
                     <div className="max-w-4xl mx-auto px-6">
                         <motion.h1
                             className="text-3xl font-bold mb-2"
