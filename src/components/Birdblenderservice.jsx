@@ -13,7 +13,7 @@ const Birdblenderservice = () => {
         },
         {
             title: "Certified and Trained Engineers",
-            description: "All service procedures are performed by Vyaire-certified engineers, ensuring adherence to the highest standards.",
+            description: "All service procedures are performed by Zoll Medical-certified engineers, ensuring adherence to the highest standards.",
             icon: faCertificate
         },
         {
@@ -28,12 +28,12 @@ const Birdblenderservice = () => {
         },
         {
             title: "Certification Renewal",
-            description: "Our engineers' certifications are renewed every two years as Vyaire Medical requires, reflecting our commitment to maintaining expert knowledge and skills.",
+            description: "Our engineers' certifications are renewed every two years as Zoll Medical requires, reflecting our commitment to maintaining expert knowledge and skills.",
             icon: faCheckCircle
         },
         {
             title: "Strict Protocols Adherence",
-            description: "We follow the protocols provided by Vyaire, ensuring that all work complies with Vyaire's testing requirements and meets the highest industry standards.",
+            description: "We follow the protocols provided by Zoll Medical, ensuring that all work complies with Zoll Medical's testing requirements and meets the highest industry standards.",
             icon: faClipboardList
         },
         {

@@ -22,7 +22,7 @@ const Home = () => {
                     <h1
                         className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
                     >
-                        Authorized Distributor of Vyaire Ventilation in ANZ <br />
+                        Authorized Distributor of Zoll Medical in ANZ <br />
                     </h1>
                 </div>
             </div>
@@ -34,7 +34,7 @@ const Home = () => {
                         className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-serif mb-3 text-justify leading-relaxed"
                         style={{ hyphens: 'auto', wordSpacing: '-0.05em' }}
                     >
-                        OHM Biomedical is the exclusive distributor for Vyaire Ventilators and CareFusion Bird Air/Oxygen Blenders in Australia and New Zealand, providing expert sales and service. <br />
+                        OHM Biomedical is the exclusive distributor for Zoll Medical Ventilators and CareFusion Bird Air/Oxygen Blenders in Australia and New Zealand, providing expert sales and service. <br />
                         <br />
                         In addition to these specific products, we offer a wide range of biomedical services to leading healthcare companies in the industry.
                     </h2>
@@ -54,11 +54,11 @@ const Home = () => {
                                 alt="Biomedical Image 2"
                                 className='w-full h-full object-contain transition-transform duration-75 transform hover:scale-105'
                             />
-                            <img
+                            {/* <img
                                 src={Blog3}
                                 alt="Biomedical Image 3"
                                 className='w-full h-full object-contain transition-transform duration-75 transform hover:scale-105'
-                            />
+                            /> */}
                             <img
                                 src={Blog4}
                                 alt="Biomedical Image 4"

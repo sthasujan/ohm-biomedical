@@ -53,17 +53,17 @@ const blogs = [
         resourcePdf: 'resource.pdf',
         category: "Neonate Ventilator" 
     },
-    { 
-        id: 5, 
-        title: "LTV2™ Series Ventilators", 
-        subtitle: '',
-        description: "The LTV2™ series ventilator is now part of Vyaire Medical.", 
-        image: Blog5, 
-        images: [Blog1, Blog2, Blog3], 
-        featuresAndBenefits: 'Features and benefits details...', 
-        resourcePdf: 'resource.pdf',
-        category: "Transport Ventilator" 
-    },
+    // { 
+    //     id: 5, 
+    //     title: "LTV2™ Series Ventilators", 
+    //     subtitle: '',
+    //     description: "The LTV2™ series ventilator is now part of Vyaire Medical.", 
+    //     image: Blog5, 
+    //     images: [Blog1, Blog2, Blog3], 
+    //     featuresAndBenefits: 'Features and benefits details...', 
+    //     resourcePdf: 'resource.pdf',
+    //     category: "Transport Ventilator" 
+    // },
     { 
         id: 6, 
         title: "3100A/B HFOV Ventilators", 
@@ -98,7 +98,7 @@ const YyaireVentilator = () => {
                     <h1
                         className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
                     >
-                        Products: Vyaire Ventilators <br />
+                        Products: Zoll Medical Ventilators <br />
                     </h1>
                 </div>
             </div>

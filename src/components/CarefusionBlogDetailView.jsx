@@ -52,7 +52,7 @@ const blogs = [
         id: 3,
         title: 'Flow Meter Bird Air/Oxygen MicroBlenders',
         subtitle: 'Experience Precision in Every Breath with the Bird Blender',
-        topic: 'vyaire',
+        topic: 'Zoll Medical',
         description: 'At OHM Biomedical, we proudly present the Bird Blender, a cornerstone in respiratory care technology.Designed with precision and reliability in mind, the Bird Blender offers unparalleled control over oxygen concentration, ensuring optimal therapy outcomes for patients of all ages.',
         image: Blog3,
         images: [Blog3, Blog33, Blog333],

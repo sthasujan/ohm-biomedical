@@ -8,7 +8,7 @@ const Products = () => {
   const services = [
     {
       id: 1,
-      title: "Vyaire Ventilator",
+      title: "Zoll Medical Ventilator",
       description: "Comprehensive Sales & Support",
       description1: "Expert Maintenance Services",
       description2: "Training and Education",

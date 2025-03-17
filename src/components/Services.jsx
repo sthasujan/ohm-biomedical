@@ -11,7 +11,9 @@ import seimens from "../assets/partners/seimens.svg";
 const Services = () => {
     const services = [
         {id: 1, title: "Bird Blender Service", description: "Need to add here!!!!", image:blender },
-        {id: 1, title: "Biomedical Service", description: "Need to add here!!!!", image:ohm},
+        {id: 2, title: "Biomedical Service", description: "Need to add here!!!!", image:ohm},
+        {id: 3, title: "Sechrest Blender Service", description: "Need to add here!!!!", image:sechrest},
+        {id: 4, title: "Anaesthetic Machine Service", description: "Need to add here!!!!", image:anaesthetic},
     ]
     return (
         <div className='md:px-14 px-4 py-16 max-w-screen-2xl mx-auto' id="service">

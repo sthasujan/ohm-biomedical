@@ -7,6 +7,8 @@ import mindray from "../assets/partners/mindray.png";
 import seimens from "../assets/partners/seimens.svg";
 import bayside from "../assets/partners/bayside.png";
 import maxtec from "../assets/partners/maxtec.svg";
+import acl_logo from "../assets/partners/acl_logo.png";
+import neotech from "../assets/partners/neotech.png";
 
 const Trustedpartners = () => {
     return (
@@ -23,6 +25,8 @@ const Trustedpartners = () => {
                         <img src={seimens} alt="Siemens" className='company-logo' />
                         <img src={bayside} alt="bayside" className='company-logo' />
                         <img src={maxtec} alt="maxtec" className='company-logo' />
+                        <img src={acl_logo} alt="acl_logo" className='company-logo' />
+                        <img src={neotech} alt="neotech" className='company-logo' />
 
                         {/* Duplicate images for seamless looping */}
                         <img src={alpha_click} alt="Alpha Click" className='company-logo' />
@@ -32,6 +36,8 @@ const Trustedpartners = () => {
                         <img src={mindray} alt="Mindray" className='company-logo' />
                         <img src={seimens} alt="Siemens" className='company-logo' />
                         <img src={bayside} alt="bayside" className='company-logo' />
+                        <img src={acl_logo} alt="acl_logo" className='company-logo' />
+                        <img src={neotech} alt="neotech" className='company-logo' />
                     </div>
                 </div>
             </div>

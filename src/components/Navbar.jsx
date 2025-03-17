@@ -58,7 +58,7 @@ const Navbar = () => {
             link: "Products",
             path: "#",
             dropdown: [
-                { link: 'Vyaire Ventilator', path: '/Yyaireventilator' },
+                { link: 'Zoll Medical Ventilator', path: '/Yyaireventilator' },
                 { link: 'Carefusion Bird Air/Oxygen Blender', path: '/Carefusionbirdblender' },
                 { link: 'Siemens Ultrasound', path: '/Siemensultrasound' },
                 { link: 'Consumables', path: '/Consumablessales' },
@@ -70,6 +70,8 @@ const Navbar = () => {
             dropdown: [
                 { link: 'Bird Air/Oxygen Blender Service', path: '/Birdblenderservice' },
                 { link: 'Biomedical Service', path: '/Biomedicalservice' },
+                { link: 'Sechrest Blender Service', path: '/Sechrestblenderservice' },
+                { link: 'GE Anaesthetic Machine Service', path: '/GEAnaestheticmachineservice' },
             ],
         },
         {
@@ -79,7 +81,7 @@ const Navbar = () => {
                 { link: 'About', path: '/About' },
                 { link: 'Our Team', path: '/Ourteam' },
                 { link: 'FAQ', path: '/Faq' },
-                { link: 'GALLERY', path: '/Gallery' },
+                { link: 'Gallery', path: '/Gallery' },
             ],
         },
         { link: "Testimonial", path: "/Testimonial" },
@@ -87,7 +89,7 @@ const Navbar = () => {
     ];
 
     return (
-        <header className='w-full bg-white fixed top-0 left-0 right-0'>
+        <header className='w-full bg-white fixed top-0 left-0 right-0 z-50'>
             <nav className={`py-6 lg:px-14 px-4 ${isSticky ? "sticky top-0 left-0 right-0 border-b bg-white shadow-md duration-300" : ""}`} ref={navbarRef}>
                 <div className='flex justify-between items-center text-base gap-8'>
                     <NavLink to="/" className='text-2xl font-semibold flex items-center space-x-3'>

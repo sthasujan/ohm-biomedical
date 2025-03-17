@@ -70,7 +70,7 @@ const salesItems = [
     },
     {
         partNo: 'Part Number: 04322',
-        title: 'VYAIRE BRKT, POST, DOVETAIL ASY',
+        title: 'Zoll Medical BRKT, POST, DOVETAIL ASY',
         sizes: [],
         image: pic10,
     },
