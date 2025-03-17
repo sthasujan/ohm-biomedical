@@ -20,7 +20,7 @@ import Consumablessales from './components/Consumablessales';
 import Biomedicalservice from './components/Biomedicalservice';
 import SiemensBlogDetailView from './components/SiemensBlogDetailView';
 import Anaestheticmachineservice from './components/Anaestheticmachineservice'
-import Sechrestblenderservice from './components/Sechrestblenderservice'
+import Sechristblenderservice from './components/Sechristblenderservice'
 import ScrollToTop from './components/ScrollToTop';
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
@@ -55,7 +55,7 @@ function AppWrapper() {
         {/* Service Section */}
         <Route path="/Birdblenderservice" element={<Birdblenderservice />} />
         <Route path="/Biomedicalservice" element={<Biomedicalservice />} />
-        <Route path="/Sechrestblenderservice" element={<Sechrestblenderservice />} />
+        <Route path="/Sechristblenderservice" element={<Sechristblenderservice />} />
         <Route path="/Anaestheticmachineservice" element={<Anaestheticmachineservice />} />
 
         {/* Who We Are Section */}

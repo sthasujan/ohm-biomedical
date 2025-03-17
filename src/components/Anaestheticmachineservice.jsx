@@ -114,19 +114,19 @@ const Anaestheticmachineservice = () => {
             </div>
             <div className="bg-gray-100 text-gray-900">
                 {/* Hero Section */}
-                <section className="relative bg-gradient-to-br from-white to-blue-50 py-16 md:py-24">
+                <section className="relative bg-gradient-to-br from-white to-blue-50">
                     <div className="container mx-auto px-4 md:px-6">
                         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
                         {/* Left Content */}
-                        <motion.div 
-                            className="md:col-span-7 space-y-6"
-                            initial={{ opacity: 0, x: -50 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6 }}
-                        >
+                            <motion.div 
+                                className="md:col-span-7 space-y-6"
+                                initial={{ opacity: 0, x: -50 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.6 }}
+                            >
                             <div className="space-y-4">
                             <motion.p
-                                className="text-center text-lg md:text-xl font-semibold text-blue-900 mb-4"
+                                className="text-center text-xl md:text-2xl font-semibold text-blue-900 mb-4"
                                 initial={{ opacity: 0, y: -20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -135,7 +135,7 @@ const Anaestheticmachineservice = () => {
                             </motion.p>
 
                             <motion.p
-                                className="text-gray-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto"
+                                className="text-center text-gray-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7 }}
@@ -162,7 +162,7 @@ const Anaestheticmachineservice = () => {
                             </motion.div>
 
                             <motion.p 
-                                className="text-gray-600 text-sm md:text-base mt-6 px-4 md:px-0"
+                                className="text-center text-gray-600 text-sm md:text-base mt-6 px-4 md:px-0"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.6 }}
@@ -203,15 +203,6 @@ const Anaestheticmachineservice = () => {
                                     transform group-hover:scale-105 transition-transform duration-300"
                                 loading="lazy"
                                 />
-
-                                <div className="mt-6 space-y-3">
-                                <h3 className="text-xl md:text-2xl font-bold text-gray-900">
-                                    Expert Service. Lower Cost.
-                                </h3>
-                                <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                                    Our vendor-trained engineers deliver OEM-level service at significantly reduced rates.
-                                </p>
-                                </div>
                             </div>
                             </div>
                         </motion.div>
@@ -220,7 +211,7 @@ const Anaestheticmachineservice = () => {
                         {/* Contact Popup */}
                         {showContactPopup && (
                         <motion.div
-                            className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-[9999]"
+                            className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-[1000]"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             style={{ position: 'fixed', top: '0', left: '0' }}

@@ -70,7 +70,7 @@ const Navbar = () => {
             dropdown: [
                 { link: 'Bird Air/Oxygen Blender Service', path: '/Birdblenderservice' },
                 { link: 'Biomedical Service', path: '/Biomedicalservice' },
-                { link: 'Sechrist Blender Service', path: '/Sechrestblenderservice' },
+                { link: 'Sechrist Blender Service', path: '/Sechristblenderservice' },
                 { link: 'Anaesthetic Machine Service', path: '/Anaestheticmachineservice' },
             ],
         },
@@ -90,7 +90,7 @@ const Navbar = () => {
 
     return (
         <header className='w-full bg-white fixed top-0 left-0 right-0 z-50'>
-            <nav className={`py-6 lg:px-14 px-4 ${isSticky ? "sticky top-0 left-0 right-0 border-b bg-white shadow-md duration-300" : ""}`} ref={navbarRef}>
+            <nav className={`py-6 lg:px-14 px-4 ${isSticky ? "sticky top-0 left-0 right-0 border-b bg-white shadow-md duration-300 z-[999]" : ""}`} ref={navbarRef}>
                 <div className='flex justify-between items-center text-base gap-8'>
                     <NavLink to="/" className='text-2xl font-semibold flex items-center space-x-3'>
                         <img src={logo} className='w-24 inline-block items-center' alt="Logo" />
