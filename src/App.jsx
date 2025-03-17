@@ -29,6 +29,9 @@ import HomeNavigation from './components/HomeNavigation';
 import Hero from './components/Hero';
 import Gallery from './components/Gallery';
 
+import { HelmetProvider } from "react-helmet-async";
+import GoogleTag from "./components/GoogleTag";
+
 function AppWrapper() {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
@@ -68,15 +71,15 @@ function AppWrapper() {
         <Route path="/Blog" element={<Blog />} />
         <Route path="/Blog/:id" element={<BlogDetail />} />
 
-         {/* Catch-all route for 404 Not Found */}
-         <Route path="*" element={<NotFound />} />
+        {/* Catch-all route for 404 Not Found */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
       {/* {isHomePage && (
         <>
           <Products />
           <Trustedpartners />
         </>
-      )} */}      
+      )} */}
       <MyFooter />
     </>
   );
@@ -84,10 +87,15 @@ function AppWrapper() {
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop /> {/* Add the ScrollToTop component here */}
-      <AppWrapper />
-    </Router>
+    <>
+      <HelmetProvider>
+        <GoogleTag /> {/* Google Ads Conversion Tracking */}
+        <Router>
+          <ScrollToTop /> {/* Ensures page resets to top when navigating */}
+          <AppWrapper />
+        </Router>
+      </HelmetProvider>
+    </>
   );
 }
 

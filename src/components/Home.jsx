@@ -31,7 +31,7 @@ const Home = () => {
                 {/* Left Text Section */}
                 <div className="w-full sm:w-3/4 md:w-1/2">
                     <h2
-                        className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-serif mb-3 text-justify leading-relaxed"
+                        className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-sans mb-3 text-justify leading-relaxed"
                         style={{ hyphens: 'auto', wordSpacing: '-0.05em' }}
                     >
                         OHM Biomedical is the exclusive distributor for Zoll Medical Ventilators and CareFusion Bird Air/Oxygen Blenders in Australia and New Zealand, providing expert sales and service. <br />
