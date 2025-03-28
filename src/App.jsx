@@ -32,6 +32,8 @@ import Gallery from './components/Gallery';
 import { HelmetProvider } from "react-helmet-async";
 import GoogleTag from "./components/GoogleTag";
 
+import ContactPopup from "./components/ContactPopup";
+
 function AppWrapper() {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
@@ -70,6 +72,8 @@ function AppWrapper() {
         {/* Blogs Section */}
         <Route path="/Blog" element={<Blog />} />
         <Route path="/Blog/:id" element={<BlogDetail />} />
+
+        <Route path="/ContactPopup" element={<ContactPopup />} />
 
         {/* Catch-all route for 404 Not Found */}
         <Route path="*" element={<NotFound />} />

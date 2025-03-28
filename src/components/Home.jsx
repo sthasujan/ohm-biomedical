@@ -34,7 +34,7 @@ const Home = () => {
                         className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-sans mb-3 text-justify leading-relaxed"
                         style={{ hyphens: 'auto', wordSpacing: '-0.05em' }}
                     >
-                        OHM Biomedical is the exclusive distributor for Zoll Medical Ventilators and CareFusion Bird Air/Oxygen Blenders in Australia and New Zealand, providing expert sales and service. <br />
+                        OHM Biomedical is the exclusive distributor for Zoll Medical Ventilators and CareFusion Bird Air/Oxygen Blenders in Australia and New Zealand, providing expert sales and service.<br />
                         <br />
                         In addition to these specific products, we offer a wide range of biomedical services to leading healthcare companies in the industry.
                     </h2>

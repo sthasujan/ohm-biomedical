@@ -1,5 +1,4 @@
-// Import the necessary libraries and assets
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import logo from '../assets/logo.png';
 import { FaXmark, FaBars, FaPhone } from "react-icons/fa6";
 import { NavLink } from 'react-router-dom';
@@ -10,13 +9,15 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(null);
     const navbarRef = useRef(null);
-    const [showPopup, setShowPopup] = useState(false);
+    const [showPopup, setShowPopup] = useState(false); // state to control popup visibility
 
-    const handleShowPopup = (e) => {
+    // Function to show popup
+    const handleShowPopup = useCallback((e) => {
         e.preventDefault();  // Prevent default anchor navigation
-        setShowPopup(true);
-    };
+        setShowPopup(true);  // Open the popup
+    }, []);
 
+    // Function to close the popup
     const handleClosePopup = () => setShowPopup(false);
 
     const toggleMenu = () => {
@@ -38,6 +39,9 @@ const Navbar = () => {
         const handleClickOutside = (event) => {
             if (navbarRef.current && !navbarRef.current.contains(event.target)) {
                 setDropdownOpen(null);
+                if (isMenuOpen) {
+                    setIsMenuOpen(false);  // Close mobile menu if clicked outside
+                }
             }
         };
 
@@ -50,7 +54,7 @@ const Navbar = () => {
             window.removeEventListener('scroll', handleScroll);
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, []);
+    }, [isMenuOpen]);
 
     const navItems = [
         { link: "Home", path: "/" },
@@ -85,7 +89,8 @@ const Navbar = () => {
             ],
         },
         { link: "Testimonial", path: "/Testimonial" },
-        { link: "Blog", path: "/Blog" }
+        { link: "Blog", path: "/Blog" },
+        { link: "Contact Us", path: "#", onClick: handleShowPopup },  // Open popup when clicked
     ];
 
     return (
@@ -96,7 +101,7 @@ const Navbar = () => {
                         <img src={logo} className='w-24 inline-block items-center' alt="Logo" />
                     </NavLink>
                     <ul className='md:flex space-x-12 hidden'>
-                        {navItems.map(({ link, path, dropdown }) => (
+                        {navItems.map(({ link, path, dropdown, onClick }) => (
                             dropdown ? (
                                 <li
                                     key={link}
@@ -104,7 +109,7 @@ const Navbar = () => {
                                     onMouseLeave={() => setDropdownOpen(null)}
                                     className="relative"
                                 >
-                                    <span className="cursor-pointer">
+                                    <span className="cursor-pointer" aria-expanded={dropdownOpen === link ? 'true' : 'false'}>
                                         {link}
                                     </span>
                                     {dropdownOpen === link && (
@@ -121,27 +126,37 @@ const Navbar = () => {
                                 </li>
                             ) : (
                                 <li key={path}>
-                                    <NavLink
-                                        to={path}
-                                        className='block cursor-pointer text-base text-gray900 hover:text-brandPrimary first:font-medium'>
-                                        {link}
-                                    </NavLink>
+                                    {onClick ? (
+                                        <span
+                                            onClick={onClick}  // Trigger popup on click
+                                            className="block cursor-pointer text-base text-gray900 hover:text-brandPrimary first:font-medium"
+                                        >
+                                            {link}
+                                        </span>
+                                    ) : (
+                                        <NavLink
+                                            to={path}
+                                            className="block cursor-pointer text-base text-gray900 hover:text-brandPrimary first:font-medium"
+                                        >
+                                            {link}
+                                        </NavLink>
+                                    )}
                                 </li>
                             )
                         ))}
                     </ul>
                     <div className='space-x-12 hidden lg:flex items-center'>
-                        <a 
-                            href="/" 
-                            onClick={handleShowPopup}
+                        <a
+                            href="/"
+                            onClick={handleShowPopup}  // Trigger popup when clicked
                             className='hidden lg:flex items-center text-brandSecondary hover:text-brandPrimary'>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M2.05 4.55a2.5 2.5 0 011.986-1.986l2.282-.457a1 1 0 011.18.737l1.007 4.03a1 1 0 01-.57 1.126l-1.515.757a7.002 7.002 0 003.317 3.317l.757-1.515a1 1 0 011.126-.57l4.03 1.008a1 1 0 01.737 1.18l-.457 2.282a2.5 2.5 0 01-2.514 2.057A15.969 15.969 0 012.05 4.55z" />
                             </svg>
-                                03 9115 7464
+                            03 9115 7464
                         </a>
-                         {/* Popup Modal */}
-                        <ContactPopup show={showPopup} handleClose={handleClosePopup} />
+                        {/* Popup Modal */}
+                        {showPopup && <ContactPopup show={showPopup} handleClose={handleClosePopup} />}
                     </div>
                     <div className='md:hidden'>
                         <button
@@ -153,7 +168,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu */}
-                <div className={`transition-transform transform ${isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"} space-y-5 px-6 mt-24 py-7 bg-brandSecondary fixed top-0 right-0 w-full md:hidden`} >
+                <div className={`transition-all ${isMenuOpen ? "block opacity-100" : "hidden opacity-0"} space-y-5 px-6 mt-24 py-7 bg-brandSecondary fixed top-0 right-0 w-full md:hidden`} >
                     {navItems.map(({ link, path, dropdown }) => (
                         dropdown ? (
                             <div key={link} className='relative'>

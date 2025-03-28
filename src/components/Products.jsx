@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom'; // Import Link for navigation
 import img1 from "../assets/products/Vyaireventilators/blog2.png";
 import img2 from "../assets/products/Carefusionbirdblenders/flow_meter1.png";
 import img3 from "../assets/products/Anesthesia.jpeg";
+import img4 from "../assets/Pictures/img3.JPEG";
+import img5 from "../assets/Pictures/img3.JPEG";
+import img6 from "../assets/services/Sechrist.png";
+import img7 from "../assets/services/GEAnaesthetic.png";
 
 const Products = () => {
   const services = [
@@ -26,11 +30,47 @@ const Products = () => {
     },
     {
       id: 3,
+      title: "Siemens Ultrasound",
+      description: "Motion correction & tissue enhancement",
+      description1: "Wireless transducers for procedures",
+      description2: "High-resolution imaging & easy use",
+      image: img3,
+      link: "/Biomedicalservice" // Add a link for the product
+    },
+    {
+      id: 4,
+      title: "Bird Air/Oxygen Blender Service",
+      description: "Genuine OEM kit, Zoll-certified engineers",
+      description1: "Loaner provided, certifications renewed",
+      description2: "Dual analyzers for precise testing",
+      image: img4,
+      link: "/Biomedicalservice" // Add a link for the product
+    },
+    {
+      id: 5,
       title: "Biomedical Service",
       description: "Preventative Maintenance & Repair",
       description1: "Compliance with AS3551 Standards",
       description2: "Rapid Response Guarantee",
-      image: img3,
+      image: img5,
+      link: "/Biomedicalservice" // Add a link for the product
+    },
+    {
+      id: 6,
+      title: "Sechrist Blender Service",
+      description: "Genuine parts, expert service",
+      description1: "Affordable, fast, and factory-trained engineers",
+      description2: "Servicing Sechrist 3500, 2000 ",
+      image: img6,
+      link: "/Biomedicalservice" // Add a link for the product
+    },
+    {
+      id: 7,
+      title: "Anaesthetic Machines Service",
+      description: "OEM-quality service at lower cost",
+      description1: "Fast maintenance with genuine parts",
+      description2: "Servicing all GE & Mindray models",
+      image: img7,
       link: "/Biomedicalservice" // Add a link for the product
     },
   ];
@@ -38,7 +78,7 @@ const Products = () => {
   return (
     <div className='px-4 py-6 md:px-6 max-w-screen-xl mx-auto text-center'>
       {/* Service Cards Section */}
-      <h2 className='text-2xl md:text-3xl lg:text-4xl text-brandPrimary font-bold mb-1'>Our Products</h2>
+      <h2 className='text-2xl md:text-3xl lg:text-4xl text-brandPrimary font-bold mb-1'>Our Products & Services</h2>
         <div className='grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
           {services.map((service) => (
             <Link key={service.id} to={service.link} className='flex justify-center'>
