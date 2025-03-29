@@ -7,51 +7,52 @@ import Blog3 from "../assets/products/Vyaireventilators/blog3.png";
 import Blog4 from "../assets/products/Vyaireventilators/blog4.png";
 import Blog5 from "../assets/products/Vyaireventilators/blog5.png";
 import Blog6 from "../assets/products/Vyaireventilators/blog6.png";
+import { motion } from "framer-motion";
 
 const blogs = [
-    { 
-        id: 1, 
-        title: "bellavista™ 1000e Ventilator", 
+    {
+        id: 1,
+        title: "bellavista™ 1000e Ventilator",
         subtitle: '',
-        description: "Ventilation support for your patient's respiratory needs.", 
-        image: Blog1, 
-        images: [Blog1, Blog2, Blog3], 
-        featuresAndBenefits: 'Features and benefits details...', 
+        description: "Ventilation support for your patient's respiratory needs.",
+        image: Blog1,
+        images: [Blog1, Blog2, Blog3],
+        featuresAndBenefits: 'Features and benefits details...',
         resourcePdf: 'resource.pdf',
         category: "Adult Ventilator"
     },
-    { 
-        id: 2, 
-        title: "fabian™ HFO Ventilator", 
+    {
+        id: 2,
+        title: "fabian™ HFO Ventilator",
         subtitle: '',
-        description: "4-in-1 device, flexible from the delivery room to the NICU", 
-        image: Blog2, 
-        images: [Blog1, Blog2, Blog3], 
-        featuresAndBenefits: 'Features and benefits details...', 
+        description: "4-in-1 device, flexible from the delivery room to the NICU",
+        image: Blog2,
+        images: [Blog1, Blog2, Blog3],
+        featuresAndBenefits: 'Features and benefits details...',
         resourcePdf: 'resource.pdf',
         category: "Neonate Ventilator"
     },
-    { 
-        id: 3, 
+    {
+        id: 3,
         title: "fabian™ Therapy evolution",
-        subtitle: '', 
-        description: "2-in-1 device, ideal for NICU, PICU & transport applications", 
-        image: Blog3, 
-        images: [Blog1, Blog2, Blog3], 
-        featuresAndBenefits: 'Features and benefits details...', 
+        subtitle: '',
+        description: "2-in-1 device, ideal for NICU, PICU & transport applications",
+        image: Blog3,
+        images: [Blog1, Blog2, Blog3],
+        featuresAndBenefits: 'Features and benefits details...',
         resourcePdf: 'resource.pdf',
         category: "Neonate Ventilator"
     },
-    { 
-        id: 4, 
-        title: "fabian™ +nCPAP Ventilator", 
+    {
+        id: 4,
+        title: "fabian™ +nCPAP Ventilator",
         subtitle: '',
-        description: "Our 3-in-1 device for NICU, PICU and transport applications", 
-        image: Blog4, 
-        images: [Blog1, Blog2, Blog3], 
-        featuresAndBenefits: 'Features and benefits details...', 
+        description: "Our 3-in-1 device for NICU, PICU and transport applications",
+        image: Blog4,
+        images: [Blog1, Blog2, Blog3],
+        featuresAndBenefits: 'Features and benefits details...',
         resourcePdf: 'resource.pdf',
-        category: "Neonate Ventilator" 
+        category: "Neonate Ventilator"
     },
     // { 
     //     id: 5, 
@@ -64,14 +65,14 @@ const blogs = [
     //     resourcePdf: 'resource.pdf',
     //     category: "Transport Ventilator" 
     // },
-    { 
-        id: 6, 
-        title: "3100A/B HFOV Ventilators", 
+    {
+        id: 6,
+        title: "3100A/B HFOV Ventilators",
         subtitle: '',
-        description: "High Frequency Oscillatory Ventilators (HFOV, Adult/Pediatric Ventilation Solutions).", 
-        image: Blog6, 
-        images: [Blog1, Blog2, Blog3], 
-        featuresAndBenefits: 'Features and benefits details...', 
+        description: "High Frequency Oscillatory Ventilators (HFOV, Adult/Pediatric Ventilation Solutions).",
+        image: Blog6,
+        images: [Blog1, Blog2, Blog3],
+        featuresAndBenefits: 'Features and benefits details...',
         resourcePdf: 'resource.pdf',
         category: "HFO Ventilator"
     },
@@ -84,29 +85,54 @@ const YyaireVentilator = () => {
     };
     return (
         <div>
-            <div className='relative pt-16 md:pt-0'>
-                <img
-                    src={productBgImg}
-                    alt="Product Background"
-                    className='w-full h-[30vh] md:h-[40vh] object-cover'
-                />
-
-                {/* Adjust positioning for mobile and larger screens */}
-                <div
-                    className='absolute bottom-[22%] md:top-[65%] w-full flex justify-center px-4'
-                >
-                    <h1
-                        className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
-                    >
-                        Products: Zoll Medical Ventilators <br />
-                    </h1>
+            <div className="relative w-full h-[120px] mb-4">
+                {/* Fixed Height Image Container */}
+                <div className="relative w-full h-full overflow-hidden">
+                    <img
+                        src={productBgImg}
+                        alt="Product Background"
+                        className="w-full h-full object-cover"
+                    />
                 </div>
+
+                {/* Animated Text Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center px-2">
+                    <motion.h1
+                        className="font-semibold text-white text-center mx-auto
+                text-sm xs:text-base sm:text-lg md:text-xl
+                px-3 py-1 bg-black bg-opacity-40 rounded-md
+                backdrop-blur-sm"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.8,
+                            delay: 0.2,
+                            ease: [0, 0.71, 0.2, 1.01]
+                        }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
+                        Products: Zoll Medical Ventilators
+                    </motion.h1>
+                </div>
+            </div>
+            {/* Consumables Button - Added at the top */}
+            <div className='flex justify-center mb-4'>
+                <button
+                    onClick={() => navigate('/Consumablessales')} // or your preferred navigation method
+                    className='bg-white border-2 text-brandSecondary text-brandSecondary px-8 py-3 rounded-full font-semibold 
+                       hover:bg-brandSecondary hover:text-white transition-all duration-300
+                       shadow-md hover:shadow-lg active:scale-95
+                       text-sm sm:text-base md:text-lg'
+                >
+                    Explore Consumables
+                </button>
             </div>
             <div className="mt-0 px-4 lg:px-14 max-w-screen-xl mx-auto my-14">
                 <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 gap-y-16 items-center justify-between">
                     {blogs.map((blog) => (
-                        <div 
-                            key={blog.id} 
+                        <div
+                            key={blog.id}
                             onClick={() => handleReadMore(blog)}
                             className="mx-auto relative mb-12 cursor-pointer"
                         >

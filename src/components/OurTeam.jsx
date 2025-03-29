@@ -10,6 +10,8 @@ import team6 from "../assets/Ourteam/sitesh.jpg";
 import team7 from "../assets/Ourteam/abhiske.png";
 import team8 from "../assets/Ourteam/sujata.webp";
 import team9 from "../assets/Ourteam/abhishekk.png";
+import team10 from "../assets/Ourteam/Ayusha.jpeg";
+import { motion, AnimatePresence } from "framer-motion";
 
 const teamMembers = [
     {
@@ -22,7 +24,7 @@ const teamMembers = [
     },
     {
         name: "Suman Kharel",
-        post: "Operation Manager",
+        post: "Co Founder",
         image: team2,
         description: "Suman Kharel is a Swinburne University graduate and former GE Healthcare professional, now leading as Workshop Manager at OHM Biomedical. He oversees the service and maintenance of critical Biomedical devices, ensuring high standards and operational excellence. Known for his meticulous approach and dedication to continuous improvement, Suman has enhanced the company’s reputation by focusing on advanced training and strict compliance. His leadership not only uplifts his team but also solidifies OHM Biomedical’s role as a trusted partner in the healthcare industry.",
         email: "Suman@ohmBiomedical.com.au",
@@ -84,79 +86,203 @@ const teamMembers = [
         email: "admin_ws@ohmBiomedical.com.au",
         linkedin: "https://www.linkedin.com/in/rk201221/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app",
     },
+    {
+        name: "Aayushi Koirala",
+        post: "Sales Consultant",
+        image: team10,
+        description: "Aayushi brings in vibrant energy, a strong background in customer service, and a passion for problem-solving and value-added selling. In her role, she supports both inbound and outbound sales inquiries, contributing to business development initiatives, and assisting with key account management. She plays a key role in expanding our advanced ventilation portfolio (Zoll Medical), engaging with OEM vendors and partners, and contributing to our specialist biomedical engineering programs as part of our ongoing collaboration with OEMs and industry stakeholders.",
+        email: "AAYUSHI.KOIRALA28@GMAIL.COM",
+        linkedin: "",
+    },
 ];
 
 const OurTeam = () => {
-    const [selectedMember, setSelectedMember] = useState(null);
+    const [selectedMember, setSelectedMember] = React.useState(null);
 
-    const openPopup = (member) => {
-        setSelectedMember(member);
+    const openPopup = (member) => setSelectedMember(member);
+    const closePopup = () => setSelectedMember(null);
+
+    // Animation variants
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+            },
+        },
     };
 
-    const closePopup = () => {
-        setSelectedMember(null);
+    const itemVariants = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.5,
+            },
+        },
+        hover: {
+            y: -5,
+            scale: 1.03,
+            transition: { duration: 0.2 },
+        },
+    };
+
+    const popupVariants = {
+        hidden: { opacity: 0, scale: 0.95 },
+        visible: { opacity: 1, scale: 1 },
+        exit: { opacity: 0, scale: 0.95 },
     };
 
     return (
         <div>
-            <div className='relative pt-16 md:pt-0'>
-                <img
-                    src={productBgImg}
-                    alt="Product Background"
-                    className='w-full h-[30vh] md:h-[40vh] object-cover'
-                />
-                {/* Adjust positioning for mobile and larger screens */}
-                <div
-                    className='absolute bottom-[22%] md:top-[65%] w-full flex justify-center px-4'
-                >
-                    <h1
-                        className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
-                    >
-                        Our Team <br />
-                    </h1>
-                </div>
-            </div>
-            <div className="team-container">
-                {/* <h2 className="team-header">Our Team</h2>
-                <p className="team-description">
-                    Meet the dedicated professionals who make everything possible.
-                </p> */}
-                <div className="team-grid">
-                    {teamMembers.map((member, index) => (
-                        <div className="team-member" key={index}>
-                            <img src={member.image} alt={member.name} />
-                            <h3 className="team-name" onClick={() => openPopup(member)}>
-                                {member.name}
-                            </h3>
-                            <p className="team-post">{member.post}</p>
-                        </div>
-                    ))}
+            <div className="relative w-full h-[120px]">
+                {/* Fixed Height Image Container */}
+                <div className="relative w-full h-full overflow-hidden">
+                    <img
+                        src={productBgImg}
+                        alt="Product Background"
+                        className="w-full h-full object-cover"
+                    />
                 </div>
 
-                {selectedMember && (
-                    <div className="popup">
-                        <div className="popup-content">
-                            <button className="close-button" onClick={closePopup}>
-                                &times;
-                            </button>
-                            <img src={selectedMember.image} alt={selectedMember.name} />
-                            <h3>{selectedMember.name}</h3>
-                            <p className="popup-post">{selectedMember.post}</p>
-                            <p className="popup-description">{selectedMember.description}</p>
-                            <div className="popup-icons">
-                                <a href={`mailto:${selectedMember.email}`} className="popup-icon" title="Email">
-                                    <FaEnvelope />
-                                </a>
-                                <a href={selectedMember.linkedin} target="_blank" rel="noopener noreferrer" className="popup-icon" title="LinkedIn">
-                                    <FaLinkedin />
-                                </a>
+                {/* Animated Text Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center px-2">
+                    <motion.h1
+                        className="font-semibold text-white text-center mx-auto
+                            text-sm xs:text-base sm:text-lg md:text-xl
+                            px-3 py-1 bg-black bg-opacity-40 rounded-md
+                            backdrop-blur-sm"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.8,
+                            delay: 0.2,
+                            ease: [0, 0.71, 0.2, 1.01]
+                        }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
+                        Our Team
+                    </motion.h1>
+                </div>
+            </div>
+            <div className="py-12 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-screen-2xl mx-auto">
+                {/* Team Grid */}
+                <motion.div
+                    className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 sm:gap-8 md:gap-10"
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+                >
+                    {teamMembers.map((member, index) => (
+                        <motion.div
+                            key={index}
+                            className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg"
+                            variants={itemVariants}
+                            whileHover="hover"
+                        >
+                            <div className="relative pt-[100%] overflow-hidden">
+                                <motion.img
+                                    src={member.image}
+                                    alt={member.name}
+                                    className="absolute top-0 left-0 w-full h-full object-cover"
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 0.3 }}
+                                />
                             </div>
-                        </div>
-                    </div>
-                )}
+                            <div className="p-4 text-center">
+                                <motion.h3
+                                    className="text-lg md:text-xl font-semibold text-gray-800 mb-1 cursor-pointer hover:text-brandPrimary transition-colors"
+                                    onClick={() => openPopup(member)}
+                                    whileHover={{ scale: 1.02 }}
+                                >
+                                    {member.name}
+                                </motion.h3>
+                                <p className="text-sm md:text-base text-gray-600">{member.post}</p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </motion.div>
+
+                {/* Popup Modal - Now Fully Responsive */}
+                <AnimatePresence>
+                    {selectedMember && (
+                        <motion.div
+                            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 overflow-y-auto"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                        >
+                            <motion.div
+                                className="bg-white rounded-xl w-full max-w-4xl mx-4 shadow-2xl relative max-h-[90vh] overflow-y-auto"
+                                variants={popupVariants}
+                                initial="hidden"
+                                animate="visible"
+                                exit="exit"
+                            >
+                                <button
+                                    className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl z-10 bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-sm"
+                                    onClick={closePopup}
+                                >
+                                    &times;
+                                </button>
+
+                                <div className="flex flex-col lg:flex-row">
+                                    {/* Image Section - Larger and properly sized */}
+                                    <div className="w-full lg:w-2/5 relative h-64 lg:h-auto lg:min-h-[400px]">
+                                        <img
+                                            src={selectedMember.image}
+                                            alt={selectedMember.name}
+                                            className="absolute top-0 left-0 w-full h-full object-cover object-center"
+                                        />
+                                    </div>
+
+                                    {/* Content Section - Perfectly aligned */}
+                                    <div className="w-full lg:w-3/5 p-6 md:p-8 flex flex-col">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+                                            {selectedMember.name}
+                                        </h3>
+                                        <p className="text-lg text-brandPrimary font-medium mb-4 md:mb-6">
+                                            {selectedMember.post}
+                                        </p>
+
+                                        {/* Description with proper alignment and scrolling */}
+                                        <div className="flex-grow overflow-y-auto pr-2 mb-6">
+                                            <p className="text-gray-600 leading-relaxed text-justify">
+                                                {selectedMember.description}
+                                            </p>
+                                        </div>
+
+                                        {/* Social Links */}
+                                        <div className="flex space-x-4 mt-auto">
+                                            <a
+                                                href={`mailto:${selectedMember.email}`}
+                                                className="text-gray-700 hover:text-brandPrimary text-xl transition-colors p-2"
+                                                title="Email"
+                                            >
+                                                <FaEnvelope />
+                                            </a>
+                                            <a
+                                                href={selectedMember.linkedin}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-gray-700 hover:text-brandPrimary text-xl transition-colors p-2"
+                                                title="LinkedIn"
+                                            >
+                                                <FaLinkedin />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </div>
-
     );
 };
 

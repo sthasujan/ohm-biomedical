@@ -6,68 +6,76 @@ import Blog2 from "../assets/products/Vyaireventilators/blog2.png";
 import Blog3 from "../assets/products/Vyaireventilators/blog5.png";
 import Blog4 from "../assets/products/Vyaireventilators/blog6.png";
 import Blog5 from '../assets/products/Carefusionbirdblenders/flow_meter.webp';
-
+import { motion } from "framer-motion";
 const Home = () => {
     return (
         <div>
-            <div className='relative pt-16 md:pt-0'>
-                <img
-                    src={productBgImg}
-                    alt="Product Background"
-                    className='w-full h-[30vh] md:h-[40vh] object-cover'
-                />
-                <div
-                    className='absolute bottom-[15%] md:top-[65%] w-full flex justify-center px-4'
-                >
-                    <h1
-                        className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
+            <div className="relative w-full h-[120px]">
+                {/* Fixed Height Image Container */}
+                <div className="relative w-full h-full overflow-hidden">
+                    <img
+                        src={productBgImg}
+                        alt="Product Background"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+
+                {/* Animated Text Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center px-2">
+                    <motion.h1
+                        className="font-semibold text-white text-center mx-auto
+                text-sm xs:text-base sm:text-lg md:text-xl
+                px-3 py-1 bg-black bg-opacity-40 rounded-md
+                backdrop-blur-sm"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.8,
+                            delay: 0.2,
+                            ease: [0, 0.71, 0.2, 1.01]
+                        }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                     >
-                        Authorized Distributor of Zoll Medical in ANZ <br />
-                    </h1>
+                        Welcome to OHM Biomedical – Your Ally in Patient Care
+                    </motion.h1>
                 </div>
             </div>
-            <div className='mt-0 mx-auto text-left w-full sm:w-11/12 md:w-4/5 lg:w-3/4 p-6 bg-white shadow-lg rounded-lg 
-            flex flex-col md:flex-row  transition-all duration-75 ease-in-out items-center mb-2'>
-                {/* Left Text Section */}
-                <div className="w-full sm:w-3/4 md:w-1/2">
-                    <h2
-                        className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-sans mb-3 text-justify leading-relaxed"
-                        style={{ hyphens: 'auto', wordSpacing: '-0.05em' }}
-                    >
-                        OHM Biomedical is the exclusive distributor for Zoll Medical Ventilators and CareFusion Bird Air/Oxygen Blenders in Australia and New Zealand, providing expert sales and service.<br />
-                        <br />
-                        In addition to these specific products, we offer a wide range of biomedical services to leading healthcare companies in the industry.
+            <div className='mt-0 mx-auto w-full max-w-[2000px] p-4 sm:p-6 bg-white shadow-lg rounded-lg 
+            flex flex-col lg:flex-row transition-all duration-300 ease-in-out items-center mb-2 gap-6'>
+                {/* Left Text Section - Takes 80% width on larger screens */}
+                <div className="w-full lg:w-[80%] xl:w-[75%] 2xl:w-[70%]">
+                    <h2 className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-sans mb-3 text-justify leading-relaxed md:leading-loose"
+                        style={{ hyphens: 'auto' }}>
+                        As an ISO 9001:2015 certified company we are your one-stop shop for medical device purchases and specialist Biomedical Engineering services across Australia and New Zealand (ANZ). OHM Biomedical is the exclusive distributor for ZOLL Medical Ventilators, including Bellavista® for adults, Fabian® HFO for neonates, and 3100 HFOV, delivering expert sales and service with full support for consumables, parts, and programs throughout ANZ.
+                        <br /><br />
+                        In addition to these specific products, we provide specialist biomedical engineering services for a wide range of medical devices across hospitals, clinics, and veterinary settings, including GE and Mindray anaesthesia, monitoring, ventilators, and AS3551 testing. Exclusively partnering with OEM vendors and distributors, we extend their service departments, offering tailored outsourcing for recalls, installations, projects, and preventative maintenance (PMS).
                     </h2>
                 </div>
-                {/* Right Image Section */}
-                <div className='w-full md:w-1/2 flex justify-center md:justify-end mt-4 md:mt-0'>
-                    <div className='w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[275px]'>
-                        {/* Carousel for images */}
+
+                {/* Right Image Section - Takes 20% width on larger screens */}
+                <div className='w-full lg:w-[20%] xl:w-[25%] 2xl:w-[30%] flex justify-center lg:justify-end'>
+                    <div className='w-full max-w-[400px] lg:w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px]'>
                         <Carousel>
                             <img
                                 src={Blog1}
                                 alt="Biomedical Image 1"
-                                className='w-full h-full object-contain transition-transform duration-75 transform hover:scale-105'
+                                className='w-full h-full object-contain transition-transform duration-300 hover:scale-105'
                             />
                             <img
                                 src={Blog2}
                                 alt="Biomedical Image 2"
-                                className='w-full h-full object-contain transition-transform duration-75 transform hover:scale-105'
+                                className='w-full h-full object-contain transition-transform duration-300 hover:scale-105'
                             />
-                            {/* <img
-                                src={Blog3}
-                                alt="Biomedical Image 3"
-                                className='w-full h-full object-contain transition-transform duration-75 transform hover:scale-105'
-                            /> */}
                             <img
                                 src={Blog4}
                                 alt="Biomedical Image 4"
-                                className='w-full h-full object-contain transition-transform duration-75 transform hover:scale-105'
+                                className='w-full h-full object-contain transition-transform duration-300 hover:scale-105'
                             />
                             <img
                                 src={Blog5}
                                 alt="Biomedical Image 5"
-                                className='w-full h-full object-contain transition-transform duration-75 transform hover:scale-105'
+                                className='w-full h-full object-contain transition-transform duration-300 hover:scale-105'
                             />
                         </Carousel>
                     </div>

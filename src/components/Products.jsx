@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link for navigation
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 import img1 from "../assets/products/Vyaireventilators/blog2.png";
 import img2 from "../assets/products/Carefusionbirdblenders/flow_meter1.png";
 import img3 from "../assets/products/Anesthesia.jpeg";
 import img4 from "../assets/Pictures/img3.JPEG";
-import img5 from "../assets/Pictures/img3.JPEG";
+import img5 from "../assets/products/Biomedicalservice.jpg"
 import img6 from "../assets/services/Sechrist.png";
 import img7 from "../assets/services/GEAnaesthetic.png";
 
@@ -17,7 +19,7 @@ const Products = () => {
       description1: "Expert Maintenance Services",
       description2: "Training and Education",
       image: img1,
-      link: "/Yyaireventilator" // Add a link for the product
+      link: "/ZollYyaireventilator" // Add a link for the product
     },
     {
       id: 2,
@@ -35,7 +37,7 @@ const Products = () => {
       description1: "Wireless transducers for procedures",
       description2: "High-resolution imaging & easy use",
       image: img3,
-      link: "/Biomedicalservice" // Add a link for the product
+      link: "/Siemensultrasound" // Add a link for the product
     },
     {
       id: 4,
@@ -44,7 +46,7 @@ const Products = () => {
       description1: "Loaner provided, certifications renewed",
       description2: "Dual analyzers for precise testing",
       image: img4,
-      link: "/Biomedicalservice" // Add a link for the product
+      link: "/Birdblenderservice" // Add a link for the product
     },
     {
       id: 5,
@@ -62,7 +64,7 @@ const Products = () => {
       description1: "Affordable, fast, and factory-trained engineers",
       description2: "Servicing Sechrist 3500, 2000 ",
       image: img6,
-      link: "/Biomedicalservice" // Add a link for the product
+      link: "/Sechristblenderservice" // Add a link for the product
     },
     {
       id: 7,
@@ -71,36 +73,73 @@ const Products = () => {
       description1: "Fast maintenance with genuine parts",
       description2: "Servicing all GE & Mindray models",
       image: img7,
-      link: "/Biomedicalservice" // Add a link for the product
+      link: "/Anaestheticmachineservice" // Add a link for the product
     },
+
   ];
 
   return (
-    <div className='px-4 py-6 md:px-6 max-w-screen-xl mx-auto text-center'>
-      {/* Service Cards Section */}
-      <h2 className='text-2xl md:text-3xl lg:text-4xl text-brandPrimary font-bold mb-1'>Our Products & Services</h2>
-        <div className='grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-          {services.map((service) => (
-            <Link key={service.id} to={service.link} className='flex justify-center'>
-              <div className='h-auto w-full max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg rounded-xl shadow-lg bg-white p-4'>
-                {/* Dynamic Image Height */}
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className='w-full h-auto max-h-56 object-cover rounded-t-xl'
-                />
-                <div className='flex flex-col items-center'>
-                  <h4 className='text-lg md:text-lg font-bold text-neutralDGrey mb-2'>{service.title}</h4>
-                  <ul className='text-sm text-neutralGrey flex flex-col items-start list-disc pl-4'>
-                    <li>{service.description}</li>
-                    <li>{service.description1}</li>
-                    <li>{service.description2}</li>
+    <div className='px-4 sm:px-6 py-6 sm:py-8 max-w-screen-2xl mx-auto'>
+      {/* Section Header */}
+      <motion.h2
+        className='text-3xl font-bold text-brandPrimary mb-6 text-center'
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        Our Products & Services
+      </motion.h2>
+
+      {/* Mobile-optimized Cards Grid */}
+      <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-6'>
+        {services.map((service) => (
+          <motion.div
+            key={service.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="w-full"
+          >
+            <Link to={service.link} className='block h-full'>
+              <div className='h-full bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden flex flex-col'>
+                {/* Image with fixed aspect ratio (3:2) */}
+                <div className='relative pt-[66.66%] overflow-hidden'>
+                  <motion.img
+                    src={service.image}
+                    alt={service.title}
+                    className='absolute top-0 left-0 w-full h-full object-cover'
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </div>
+
+                {/* Content optimized for mobile */}
+                <div className='p-4 flex flex-col flex-grow'>
+                  <h3 className='text-lg font-semibold text-gray-800 mb-2 text-center'>
+                    {service.title}
+                  </h3>
+                  <ul className='text-sm text-gray-600 space-y-1.5 flex-grow'>
+                    <li className='flex items-start'>
+                      <span className='inline-block w-1.5 h-1.5 rounded-full bg-brandPrimary mt-2 mr-2'></span>
+                      {service.description}
+                    </li>
+                    <li className='flex items-start'>
+                      <span className='inline-block w-1.5 h-1.5 rounded-full bg-brandPrimary mt-2 mr-2'></span>
+                      {service.description1}
+                    </li>
+                    <li className='flex items-start'>
+                      <span className='inline-block w-1.5 h-1.5 rounded-full bg-brandPrimary mt-2 mr-2'></span>
+                      {service.description2}
+                    </li>
                   </ul>
                 </div>
               </div>
             </Link>
-          ))}
-        </div>
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 };

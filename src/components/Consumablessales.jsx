@@ -12,7 +12,7 @@ import pic9 from "../assets/ConsumableItems/pic9.png";
 import pic10 from "../assets/ConsumableItems/pic10.jpeg";
 import pdf from "../assets/ConsumablePdf/consumablesPdf.pdf";
 import emailjs from 'emailjs-com';
-
+import { motion } from "framer-motion";
 const salesItems = [
     {
         partNo: 'Part Number: 777000S',
@@ -50,7 +50,7 @@ const salesItems = [
         sizes: [],
         image: pic10,
     },
-    
+
     {
         partNo: 'Part Number: 301.328.020',
         title: 'FLOW, ADVANCED, PAEDIATRIC/ADULT, 200 S PROXIMAL, FOR BELLAVISTA 1000e VENTILATOR, SINGLE PATIENT USE',
@@ -75,7 +75,7 @@ const salesItems = [
         sizes: ['Extra Small', 'Small', 'Medium', 'Large', 'Extra Large'],
         image: pic2,
     },
-    
+
     // Add more items here
 ];
 
@@ -172,21 +172,35 @@ const Consumablessales = () => {
 
     return (
         <div>
-            <div className='relative pt-16 md:pt-0'>
-                <img
-                    src={productBgImg}
-                    alt="Product Background"
-                    className='w-full h-[30vh] md:h-[40vh] object-cover'
-                />
-                {/* Adjust positioning for mobile and larger screens */}
-                <div
-                    className='absolute bottom-[22%] md:top-[65%] w-full flex justify-center px-4'
-                >
-                    <h1
-                        className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
+            <div className="relative w-full h-[120px]">
+                {/* Fixed Height Image Container */}
+                <div className="relative w-full h-full overflow-hidden">
+                    <img
+                        src={productBgImg}
+                        alt="Product Background"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+
+                {/* Animated Text Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center px-2">
+                    <motion.h1
+                        className="font-semibold text-white text-center mx-auto
+                            text-sm xs:text-base sm:text-lg md:text-xl
+                            px-3 py-1 bg-black bg-opacity-40 rounded-md
+                            backdrop-blur-sm"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.8,
+                            delay: 0.2,
+                            ease: [0, 0.71, 0.2, 1.01]
+                        }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                     >
-                        Consumables<br />
-                    </h1>
+                        Consumables
+                    </motion.h1>
                 </div>
             </div>
             <div className="flex items-center justify-center py-4 md:py-8 flex-wrap">

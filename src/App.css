@@ -4,6 +4,30 @@ body{
   font-family: 'Inter', sans-serif;
 }
 
+/* Ensure proper layout structure */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main content area */
+main {
+  flex: 1;
+  width: 100%;
+}
+
+/* For mobile menu transitions */
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* For navbar sticky transition */
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 header{
   z-index: 10001 !important;
 }

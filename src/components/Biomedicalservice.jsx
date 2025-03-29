@@ -1,171 +1,174 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faHeartbeat, faSyringe, faPills, faBandAid, faVirus, faShieldAlt, faFlask, faBookOpen, faFileContract, 
-    faHeadset, faHandshake , faLaptopCode, faVials, faFileAlt, faBolt, faChartLine, faChartBar, faTools, faCogs, faDollarSign, faFileSignature,
-    faUserMd, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+    faCog, faHeartbeat, faSyringe, faPills, faBandAid, faVirus, faShieldAlt, faFlask, faBookOpen, faFileContract,
+    faHeadset, faHandshake, faLaptopCode, faVials, faFileAlt, faBolt, faChartLine, faChartBar, faTools, faCogs, faDollarSign, faFileSignature,
+    faUserMd, faPhoneAlt
+} from '@fortawesome/free-solid-svg-icons';
 import productBgImg from "../assets/products.webp";
+import { motion } from "framer-motion";
 
 // Sample data for the tabs
 const tabData = [
-    { 
-        id: 1, 
-        name: 'Preventive Maintainance and Repairs', 
-        title: '', 
-        description: 'At OHM Biomedical Services, we understand the critical role that medical equipment plays in patient care, and we are committed to ensuring that your equipment meets the highest standards of safety and effectiveness. Our AS3551-compliant Preventative Maintenance & Repair service is designed to provide regular maintenance and repair services for your medical equipment, in accordance with the AS3551 standards.', 
-        services: 
-        [{ 
-            icon: faCog, 
-            name: 'Regular Maintenance', 
-            desc: 'Our Biomedical Engineers conduct routine checks on your medical equipment to ensure safe and efficient operation. We perform inspections, tests, and calibrations to address potential issues early.' 
-        }, 
-        { 
-            icon: faHeartbeat, 
-            name: 'Repairs and Calibration', 
-            desc: 'Prompt and reliable service for repairing, calibrating, and replacing components of your medical equipment. Our skilled engineers ensure your equipment is up and running quickly.'
-        }, 
-        { 
-            icon: faShieldAlt, 
-            name: 'Compliance Verify', 
-            desc: 'Comprehensive documentation of our services, including equipment status, maintenance history, and compliance with AS3551 standards.'
-        }
-        ]
+    {
+        id: 1,
+        name: 'Preventive Maintainance and Repairs',
+        title: '',
+        description: 'At OHM Biomedical Services, we understand the critical role that medical equipment plays in patient care, and we are committed to ensuring that your equipment meets the highest standards of safety and effectiveness. Our AS3551-compliant Preventative Maintenance & Repair service is designed to provide regular maintenance and repair services for your medical equipment, in accordance with the AS3551 standards.',
+        services:
+            [{
+                icon: faCog,
+                name: 'Regular Maintenance',
+                desc: 'Our Biomedical Engineers conduct routine checks on your medical equipment to ensure safe and efficient operation. We perform inspections, tests, and calibrations to address potential issues early.'
+            },
+            {
+                icon: faHeartbeat,
+                name: 'Repairs and Calibration',
+                desc: 'Prompt and reliable service for repairing, calibrating, and replacing components of your medical equipment. Our skilled engineers ensure your equipment is up and running quickly.'
+            },
+            {
+                icon: faShieldAlt,
+                name: 'Compliance Verify',
+                desc: 'Comprehensive documentation of our services, including equipment status, maintenance history, and compliance with AS3551 standards.'
+            }
+            ]
     },
-    { 
-        id: 2, 
-        name: 'System Installation and Upgrades', 
-        title: '', 
-        description: 'At OHM Biomedical, we offer professional equipment installation and upgrades meeting AS3551 standards. Our experienced engineers ensure safe and efficient installation, minimizing downtime. We provide comprehensive project management, handling planning, scheduling, installation, and testing for a hassle-free experience.', 
-        services: 
-        [{ 
-            icon: faSyringe, 
-            name: 'Pre-Installation Check: Site Survey, Planning, and IT Requirements', 
-            desc: '' 
-        }, 
-        { 
-            icon: faPills, 
-            name: 'Equipment Installation and Setup', 
-            desc: '' 
-        },
-        { 
-            icon: faFlask, 
-            name: 'Onsite Electrical Safety Testing and Calibration', 
-            desc: '' 
-        },
-        { 
-            icon: faBookOpen, 
-            name: 'Training on Proper Usage and Maintenance', 
-            desc: '' 
-        },
-        { 
-            icon: faFileContract, 
-            name: 'Documentation and Compliance Reporting: ARTG Number Verification', 
-            desc: '' 
-        },
-        { 
-            icon: faHeadset, 
-            name: 'Post-Installation Support and Maintenance Services', 
-            desc: '' 
-        }
-        ] 
+    {
+        id: 2,
+        name: 'System Installation and Upgrades',
+        title: '',
+        description: 'At OHM Biomedical, we offer professional equipment installation and upgrades meeting AS3551 standards. Our experienced engineers ensure safe and efficient installation, minimizing downtime. We provide comprehensive project management, handling planning, scheduling, installation, and testing for a hassle-free experience.',
+        services:
+            [{
+                icon: faSyringe,
+                name: 'Pre-Installation Check: Site Survey, Planning, and IT Requirements',
+                desc: ''
+            },
+            {
+                icon: faPills,
+                name: 'Equipment Installation and Setup',
+                desc: ''
+            },
+            {
+                icon: faFlask,
+                name: 'Onsite Electrical Safety Testing and Calibration',
+                desc: ''
+            },
+            {
+                icon: faBookOpen,
+                name: 'Training on Proper Usage and Maintenance',
+                desc: ''
+            },
+            {
+                icon: faFileContract,
+                name: 'Documentation and Compliance Reporting: ARTG Number Verification',
+                desc: ''
+            },
+            {
+                icon: faHeadset,
+                name: 'Post-Installation Support and Maintenance Services',
+                desc: ''
+            }
+            ]
     },
-    { 
-        id: 3, 
-        name: 'TGA Recalls', 
-        title: '', 
-        description: 'Facing TGA recalls is stressful and poses risks to your organization`s reputation. At OHM Biomedical, we prioritize timely and effective TGA Recall remediation. Our skilled Biomedical Engineers upgrade your software/hardware, conduct user acceptance testing (UAT), ensuring compliance with TGA regulations. We guarantee minimal equipment downtime, offering comprehensive project management from start to finish. Trust OHM Biomedical for TGA standards compliance, ensuring the highest level of patient care.', 
-        services: 
-        [{ 
-            icon: faBandAid, 
-            name: 'Identification of affected equipment and documentation of the recall notice.', 
-            desc: '' 
-        }, 
-        { 
-            icon: faVirus, 
-            name: 'Development and implementation of remediation plans in line with TGA regulations and standards.', 
-            desc: '' 
-        },
-        { 
-            icon: faHandshake, 
-            name: 'Coordinating with equipment manufacturers and the end users to ensure timely availability of necessary parts and upgrades.', 
-            desc: '' 
-        }, 
-        { 
-            icon: faLaptopCode, 
-            name: 'Installation of software/hardware upgrades and performing necessary UAT.', 
-            desc: '' 
-        }, 
-        { 
-            icon: faVials, 
-            name: 'Comprehensive testing and validation of upgraded equipment to ensure compliance and safety.', 
-            desc: '' 
-        }, 
-        { 
-            icon: faFileAlt, 
-            name: 'Documentation of the entire process for TGA compliance purposes.', 
-            desc: '' 
-        }, 
-        ] 
+    {
+        id: 3,
+        name: 'TGA Recalls',
+        title: '',
+        description: 'Facing TGA recalls is stressful and poses risks to your organization`s reputation. At OHM Biomedical, we prioritize timely and effective TGA Recall remediation. Our skilled Biomedical Engineers upgrade your software/hardware, conduct user acceptance testing (UAT), ensuring compliance with TGA regulations. We guarantee minimal equipment downtime, offering comprehensive project management from start to finish. Trust OHM Biomedical for TGA standards compliance, ensuring the highest level of patient care.',
+        services:
+            [{
+                icon: faBandAid,
+                name: 'Identification of affected equipment and documentation of the recall notice.',
+                desc: ''
+            },
+            {
+                icon: faVirus,
+                name: 'Development and implementation of remediation plans in line with TGA regulations and standards.',
+                desc: ''
+            },
+            {
+                icon: faHandshake,
+                name: 'Coordinating with equipment manufacturers and the end users to ensure timely availability of necessary parts and upgrades.',
+                desc: ''
+            },
+            {
+                icon: faLaptopCode,
+                name: 'Installation of software/hardware upgrades and performing necessary UAT.',
+                desc: ''
+            },
+            {
+                icon: faVials,
+                name: 'Comprehensive testing and validation of upgraded equipment to ensure compliance and safety.',
+                desc: ''
+            },
+            {
+                icon: faFileAlt,
+                name: 'Documentation of the entire process for TGA compliance purposes.',
+                desc: ''
+            },
+            ]
     },
-    { 
-        id: 4, 
-        name: 'AS3551 Testing Electrical Safety and Performance Verifications', 
-        title: '', 
-        description: 'OHM Biomedical is committed to ensuring that your medical equipment meets the highest safety standards. We offer AS3551 testing services to verify the electrical safety and performance of your medical devices. Our team of experienced Engineers are trained and certified to perform these tests in accordance with Australian and New Zealand standards.', 
-        services: 
-        [{ 
-            icon: faBolt, 
-            name: 'Electrical safety testing', 
-            desc: 'We perform a range of tests to ensure that your equipment is electrically safe for use. This includes insulation resistance testing, earth continuity testing, and leakage current testing.' 
-        }, 
-        { 
-            icon: faChartLine, 
-            name: 'Performance verification', 
-            desc: 'We also perform tests to verify the performance of your equipment. This includes accuracy and calibration testing, as well as functionality testing to ensure that your equipment is operating as it should.' 
-        },
-        { 
-            icon: faChartBar, 
-            name: 'Comprehensive reporting', 
-            desc: 'We provide you with a detailed report outlining the results of our testing, including any recommended actions to address any issues we identify.' 
-        }, 
-        ] 
+    {
+        id: 4,
+        name: 'AS3551 Testing Electrical Safety and Performance Verifications',
+        title: '',
+        description: 'OHM Biomedical is committed to ensuring that your medical equipment meets the highest safety standards. We offer AS3551 testing services to verify the electrical safety and performance of your medical devices. Our team of experienced Engineers are trained and certified to perform these tests in accordance with Australian and New Zealand standards.',
+        services:
+            [{
+                icon: faBolt,
+                name: 'Electrical safety testing',
+                desc: 'We perform a range of tests to ensure that your equipment is electrically safe for use. This includes insulation resistance testing, earth continuity testing, and leakage current testing.'
+            },
+            {
+                icon: faChartLine,
+                name: 'Performance verification',
+                desc: 'We also perform tests to verify the performance of your equipment. This includes accuracy and calibration testing, as well as functionality testing to ensure that your equipment is operating as it should.'
+            },
+            {
+                icon: faChartBar,
+                name: 'Comprehensive reporting',
+                desc: 'We provide you with a detailed report outlining the results of our testing, including any recommended actions to address any issues we identify.'
+            },
+            ]
     },
-    { 
-        id: 5, 
-        name: 'Virtual Workshop', 
-        title: '', 
-        description: 'Looking to bring innovative Biomedical equipment to Australia, but don`t want to set up your own workshop? Look no further than OHM Biomedical`s WAAS (Workshop as a Service) offering. Our Virtual Workshop is here to help, providing instant access to trained engineers and technicians who can maintain a wide range of medical devices. With our expert Biomedical consultants guiding you through the repair process, you can rest assured that your equipment is in good hands. Our Virtual Workshop offers a range of services to help you stay focused on bringing new and innovative equipment to Australia:', 
-        services: 
-        [{ 
-            icon: faTools, 
-            name: 'Workshop Repair and Maintenance for Your Biomedical Equipment', 
-            desc: '' 
-        }, 
-        { 
-            icon: faCogs, 
-            name: 'Customized Maintenance and Service Plans to Fit Customer Needs', 
-            desc: '' 
-        },
-        { 
-            icon: faDollarSign, 
-            name: 'Cost-Effective Solutions to Reduce Operational Expenses', 
-            desc: '' 
-        }, 
-        { 
-            icon: faFileSignature,
-            name: 'Develop Maintenance Service Agreements for Your Equipment', 
-            desc: '' 
-        }, 
-        { 
-            icon: faUserMd, 
-            name: 'Expert Biomedical Consultants for Service Strategy and Lifecycle Management', 
-            desc: '' 
-        }, 
-        { 
-            icon: faPhoneAlt, 
-            name: 'Remote Diagnostics and Troubleshooting Support', 
-            desc: '' 
-        }, 
-        ] 
+    {
+        id: 5,
+        name: 'Virtual Workshop',
+        title: '',
+        description: 'Looking to bring innovative Biomedical equipment to Australia, but don`t want to set up your own workshop? Look no further than OHM Biomedical`s WAAS (Workshop as a Service) offering. Our Virtual Workshop is here to help, providing instant access to trained engineers and technicians who can maintain a wide range of medical devices. With our expert Biomedical consultants guiding you through the repair process, you can rest assured that your equipment is in good hands. Our Virtual Workshop offers a range of services to help you stay focused on bringing new and innovative equipment to Australia:',
+        services:
+            [{
+                icon: faTools,
+                name: 'Workshop Repair and Maintenance for Your Biomedical Equipment',
+                desc: ''
+            },
+            {
+                icon: faCogs,
+                name: 'Customized Maintenance and Service Plans to Fit Customer Needs',
+                desc: ''
+            },
+            {
+                icon: faDollarSign,
+                name: 'Cost-Effective Solutions to Reduce Operational Expenses',
+                desc: ''
+            },
+            {
+                icon: faFileSignature,
+                name: 'Develop Maintenance Service Agreements for Your Equipment',
+                desc: ''
+            },
+            {
+                icon: faUserMd,
+                name: 'Expert Biomedical Consultants for Service Strategy and Lifecycle Management',
+                desc: ''
+            },
+            {
+                icon: faPhoneAlt,
+                name: 'Remote Diagnostics and Troubleshooting Support',
+                desc: ''
+            },
+            ]
     },
     // { 
     //     id: 6, 
@@ -190,21 +193,35 @@ const Biomedicalservice = () => {
 
     return (
         <div>
-            <div className='relative pt-16 md:pt-0'>
-                <img
-                    src={productBgImg}
-                    alt="Product Background"
-                    className='w-full h-[30vh] md:h-[40vh] object-cover'
-                />
-                {/* Adjust positioning for mobile and larger screens */}
-                <div
-                    className='absolute bottom-[22%] md:top-[65%] w-full flex justify-center px-4'
-                >
-                    <h1
-                        className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
+            <div className="relative w-full h-[120px]">
+                {/* Fixed Height Image Container */}
+                <div className="relative w-full h-full overflow-hidden">
+                    <img
+                        src={productBgImg}
+                        alt="Product Background"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+
+                {/* Animated Text Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center px-2">
+                    <motion.h1
+                        className="font-semibold text-white text-center mx-auto
+                                        text-sm xs:text-base sm:text-lg md:text-xl
+                                        px-3 py-1 bg-black bg-opacity-40 rounded-md
+                                        backdrop-blur-sm"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.8,
+                            delay: 0.2,
+                            ease: [0, 0.71, 0.2, 1.01]
+                        }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                     >
-                        Biomedical Service <br />
-                    </h1>
+                        Biomedical Service
+                    </motion.h1>
                 </div>
             </div>
             <div className="container mx-auto px-4 lg:px-8 py-8">

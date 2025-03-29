@@ -96,21 +96,35 @@ const Sechrestblenderservice = () => {
 
     return (
         <div>
-            <div className='relative pt-16 md:pt-0'>
-                <img
-                    src={productBgImg}
-                    alt="Product Background"
-                    className='w-full h-[30vh] md:h-[40vh] object-cover'
-                />
-                {/* Adjust positioning for mobile and larger screens */}
-                <div
-                    className='absolute bottom-[22%] md:top-[65%] w-full flex justify-center px-4'
-                >
-                    <h1
-                        className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
+            <div className="relative w-full h-[120px]">
+                {/* Fixed Height Image Container */}
+                <div className="relative w-full h-full overflow-hidden">
+                    <img
+                        src={productBgImg}
+                        alt="Product Background"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+
+                {/* Animated Text Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center px-2">
+                    <motion.h1
+                        className="font-semibold text-white text-center mx-auto
+                                                    text-sm xs:text-base sm:text-lg md:text-xl
+                                                    px-3 py-1 bg-black bg-opacity-40 rounded-md
+                                                    backdrop-blur-sm"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.8,
+                            delay: 0.2,
+                            ease: [0, 0.71, 0.2, 1.01]
+                        }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                     >
-                        Sechrist Blender Service <br />
-                    </h1>
+                        Sechrist Blender Service
+                    </motion.h1>
                 </div>
             </div>
             <div className="bg-gray-100 text-gray-900">

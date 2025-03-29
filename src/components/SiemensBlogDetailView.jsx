@@ -8,6 +8,7 @@ import Blog22 from "../assets/products/Siemensultrasound/AcusonFreestyle1.webp";
 import Blog3 from "../assets/products/Siemensultrasound/maple.png";
 import Blog33 from "../assets/products/Siemensultrasound/maple2.webp";
 import emailjs from 'emailjs-com';
+import { motion } from "framer-motion";
 
 const blogs = [
     {
@@ -146,22 +147,35 @@ const SiemensBlogDetailView = () => {
 
     return (
         <div>
-            <div className='relative pt-16 md:pt-0'>
-                <img
-                    src={productBgImg}
-                    alt="Product Background"
-                    className='w-full h-[30vh] md:h-[40vh] object-cover'
-                />
+            <div className="relative w-full h-[120px] mb-10">
+                {/* Fixed Height Image Container */}
+                <div className="relative w-full h-full overflow-hidden">
+                    <img
+                        src={productBgImg}
+                        alt="Product Background"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
 
-                {/* Adjust positioning for mobile and larger screens */}
-                <div
-                    className='absolute bottom-[22%] md:top-[65%] w-full flex justify-center px-4'
-                >
-                    <h1
-                        className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
+                {/* Animated Text Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center px-2">
+                    <motion.h1
+                        className="font-semibold text-white text-center mx-auto
+                text-sm xs:text-base sm:text-lg md:text-xl
+                px-3 py-1 bg-black bg-opacity-40 rounded-md
+                backdrop-blur-sm"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.8,
+                            delay: 0.2,
+                            ease: [0, 0.71, 0.2, 1.01]
+                        }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                     >
-                        Products: Siemens Bird Blenders <br />
-                    </h1>
+                        Products: Siemens Ultrasound
+                    </motion.h1>
                 </div>
             </div>
             <div className="mx-auto my-12 px-4 lg:px-14 max-w-screen-2xl">

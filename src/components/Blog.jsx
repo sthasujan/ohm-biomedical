@@ -2,14 +2,15 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Blog1 from "../assets/blog/blog1.webp";
 import Blog2 from "../assets/blog/blog2.webp";
-import Blog3 from "../assets/blog/blog3.webp";
+import Blog3 from "../assets/blog/blog3.png";
 import Blog4 from "../assets/blog/blog4.webp";
 import Blog5 from "../assets/blog/blog5.webp";
-import Blog6 from "../assets/blog/blog6.webp";
+import Blog6 from "../assets/blog/blog6.png";
 import Blog7 from "../assets/blog/blog7.webp";
 import Blog8 from "../assets/blog/blog8.webp";
 
 import productBgImg from "../assets/products.webp";
+import { motion } from "framer-motion";
 
 const Blog = () => {
     const navigate = useNavigate();
@@ -79,21 +80,35 @@ const Blog = () => {
 
     return (
         <div>
-            <div className='relative pt-16 md:pt-0'>
-                <img
-                    src={productBgImg}
-                    alt="Product Background"
-                    className='w-full h-[30vh] md:h-[40vh] object-cover'
-                />
-                {/* Adjust positioning for mobile and larger screens */}
-                <div
-                    className='absolute bottom-[22%] md:top-[65%] w-full flex justify-center px-4'
-                >
-                    <h1
-                        className='font-semibold mb-2 leading-tight text-white text-xl sm:text-2xl text-center w-full md:w-3/4'
+            <div className="relative w-full h-[120px]">
+                {/* Fixed Height Image Container */}
+                <div className="relative w-full h-full overflow-hidden">
+                    <img
+                        src={productBgImg}
+                        alt="Product Background"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+
+                {/* Animated Text Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center px-2">
+                    <motion.h1
+                        className="font-semibold text-white text-center mx-auto
+                text-sm xs:text-base sm:text-lg md:text-xl
+                px-3 py-1 bg-black bg-opacity-40 rounded-md
+                backdrop-blur-sm"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.8,
+                            delay: 0.2,
+                            ease: [0, 0.71, 0.2, 1.01]
+                        }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                     >
-                        Blogs <br />
-                    </h1>
+                        Blogs
+                    </motion.h1>
                 </div>
             </div>
             <div className='px-4 lg:px-14 max-w-screen-2xl mx-auto my-12 mb-28'>
