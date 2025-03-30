@@ -24,7 +24,7 @@ const Home = () => {
                 <div className="absolute inset-0 flex items-center justify-center px-2">
                     <motion.h1
                         className="font-semibold text-white text-center mx-auto
-                text-sm xs:text-base sm:text-lg md:text-xl
+                text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl
                 px-3 py-1 bg-black bg-opacity-40 rounded-md
                 backdrop-blur-sm"
                         initial={{ opacity: 0, y: 20 }}
