@@ -2,6 +2,7 @@ import React from 'react';
 import { FaLinkedinIn } from 'react-icons/fa';
 import logo from '../assets/logo.png';
 import QualityLogo from '../assets/icon-iso-white.svg';
+import termcondition from '../assets/Terms&Conditions/OHM Biomedical Enginnering Terms of Supply and Sale  v 1.2_ 29_12_2024.pdf';
 
 const Footer = () => {
   return (
@@ -51,7 +52,7 @@ const Footer = () => {
                 Privacy Policy
               </a>
               <a
-                href="src/assets/Terms&Conditions/OHM Biomedical Enginnering Terms of Supply and Sale  v 1.2_ 29_12_2024.pdf"
+                href={termcondition}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline text-center md:text-right"

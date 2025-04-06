@@ -2,26 +2,43 @@ import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Trustedpartners from './Trustedpartners';
+import NSWHealth from '../assets/TrustedClients/NSW Health.png';
+import QLDHealth from '../assets/TrustedClients/Queensland Health.png';
+import ACTHealth from '../assets/TrustedClients/ACT Health.png';
+import TASHealth from '../assets/TrustedClients/Tasmania HealthService.png';
+import NThealth from '../assets/TrustedClients/NT Health.png';
+import WAHealth from '../assets/TrustedClients/WA Health.png';
+import RoyalChildrens from '../assets/TrustedClients/The Royal Childrens Hospital Melbourne.png';
+import WesternHealth from '../assets/TrustedClients/Western Health.png';
+import PerthChildrens from '../assets/TrustedClients/Perth Childrens Hospital.png';
+import KingEdward from '../assets/TrustedClients/King Edward Memorial Hospital.png';
+import HealthShareNSW from '../assets/TrustedClients/Healthshare NSW.png';
+import HealthShareVIC from '../assets/TrustedClients/Healthshare Victoria.png';
+import VeterinaryClinics from '../assets/TrustedClients/Multiple Veterinary Clinics.png';
+import CardiologyClinics from '../assets/TrustedClients/Cardiology Clinics.png';
+import RadiologyClinics from '../assets/TrustedClients/Radiology Clinics.png';
+import DentalHospitals from '../assets/TrustedClients/Dental Hospital.png';
 
 const TrustedClients = () => {
   const clients = [
-    { name: 'NSW Health', image: 'src/assets/TrustedClients/NSW Health.png' },
-    { name: 'QLD Health', image: 'src/assets/TrustedClients/Queensland Health.png' },
-    { name: 'ACT Health', image: 'src/assets/TrustedClients/ACT Health.png' },
-    { name: 'TAS Health', image: 'src/assets/TrustedClients/Tasmania HealthService.png' },
-    { name: 'NT Health', image: 'src/assets/TrustedClients/NT Health.png' },
-    { name: 'WA Health', image: 'src/assets/TrustedClients/WA Health.png' },
-    { name: "Royal Children's Hospital", image: 'src/assets/TrustedClients/The Royal Childrens Hospital Melbourne.png' },
-    { name: 'Western Health', image: 'src/assets/TrustedClients/Western Health.png' },
-    { name: "Perth Children's Hospital", image: 'src/assets/TrustedClients/Perth Childrens Hospital.png' },
-    { name: 'King Edward Memorial Hospital', image: 'src/assets/TrustedClients/King Edward Memorial Hospital.png' },
-    { name: 'HealthShare NSW', image: 'src/assets/TrustedClients/Healthshare NSW.png' },
-    { name: 'HealthShare VIC', image: 'src/assets/TrustedClients/Healthshare Victoria.png' },
-    { name: 'Multiple Veterinary Clinics', image: 'src/assets/TrustedClients/Multiple Veterinary Clinics.png' },
-    { name: 'Cardiology Clinics', image: 'src/assets/TrustedClients/Cardiology Clinics.png' },
-    { name: 'Radiology Clinics', image: 'src/assets/TrustedClients/Radiology Clinics.png' },
-    { name: 'Dental Hospitals', image: 'src/assets/TrustedClients/Dental Hospital.png' }
+    { name: 'NSW Health', image: NSWHealth },
+    { name: 'QLD Health', image: QLDHealth },
+    { name: 'ACT Health', image: ACTHealth },
+    { name: 'TAS Health', image: TASHealth },
+    { name: 'NT Health', image: NThealth },
+    { name: 'WA Health', image: WAHealth },
+    { name: "Royal Children's Hospital", image: RoyalChildrens },
+    { name: 'Western Health', image: WesternHealth },
+    { name: "Perth Children's Hospital", image: PerthChildrens },
+    { name: 'King Edward Memorial Hospital', image: KingEdward },
+    { name: 'HealthShare NSW', image: HealthShareNSW },
+    { name: 'HealthShare VIC', image: HealthShareVIC },
+    { name: 'Multiple Veterinary Clinics', image: VeterinaryClinics },
+    { name: 'Cardiology Clinics', image: CardiologyClinics },
+    { name: 'Radiology Clinics', image: RadiologyClinics },
+    { name: 'Dental Hospitals', image: DentalHospitals }
   ];
+  
 
   const marqueeRef = useRef(null);
 
