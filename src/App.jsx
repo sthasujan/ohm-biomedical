@@ -3,10 +3,8 @@ import About from './components/About';
 import MyFooter from './components/MyFooter';
 import Navbar from './components/Navbar';
 import YyaireVentilator from './components/VyaireVentilators';
-import Trustedpartners from './components/Trustedpartners';
 import Carefusionbirdblender from './components/Carefusionbirdblender';
 import Siemensultrasound from './components/Siemensultrasound';
-import Products from './components/Products';
 import Testimonial from './components/Testimonial';
 import Blog from './components/Blog';
 import BlogDetail from './components/BlogDetail';
@@ -30,6 +28,8 @@ import { HelmetProvider } from "react-helmet-async";
 import GoogleTag from "./components/GoogleTag";
 import ContactPopup from "./components/ContactPopup";
 import { useState } from 'react';
+
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 function AppWrapper() {
   const location = useLocation();
@@ -66,6 +66,7 @@ function AppWrapper() {
           <Route path="/Blog/:id" element={<BlogDetail />} />
           <Route path="/ContactPopup" element={<ContactPopup />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         </Routes>
         <MyFooter />
       </main>

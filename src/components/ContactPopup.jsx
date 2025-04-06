@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 
 const ContactPopup = ({ show, handleClose }) => {
-    if (!show) return null; // Don't render the popup if `show` is false.
-    //const handleClosePopup = () => show(false);
+    if (!show) return null;
 
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
         email: '',
-        phone: '',        
+        phone: '',
         comments: '',
         agreeToTerms: false,
     });
@@ -24,19 +23,25 @@ const ContactPopup = ({ show, handleClose }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (formData.firstName && formData.lastName && formData.phone && formData.agreeToTerms) {
-            emailjs.send(
-                'service_wck61fq', // Replace with your EmailJS service ID
-                'template_g0yu38f', // Replace with your EmailJS template ID
-                {
-                    firstName: formData.firstName,
-                    lastName: formData.lastName,
-                    email: formData.email,
-                    phone: formData.phone,
-                    comments: formData.comments,
-                },
-                'axf9xXZ07UFk3Vs7Z' // Replace with your EmailJS user ID (found in account settings)
-            )
+        if (
+            formData.firstName &&
+            formData.lastName &&
+            formData.phone &&
+            formData.agreeToTerms
+        ) {
+            emailjs
+                .send(
+                    'service_wck61fq',
+                    'template_g0yu38f',
+                    {
+                        firstName: formData.firstName,
+                        lastName: formData.lastName,
+                        email: formData.email,
+                        phone: formData.phone,
+                        comments: formData.comments,
+                    },
+                    'axf9xXZ07UFk3Vs7Z'
+                )
                 .then(() => {
                     alert('Your message has been sent!');
                     handleClose(false);
@@ -51,25 +56,35 @@ const ContactPopup = ({ show, handleClose }) => {
     };
 
     return (
-        <div className="fixed -inset-40 bg-black bg-opacity-50 flex justify-center items-center z-50">
-            <div className="bg-white rounded-lg w-11/12 md:w-1/2 p-8 relative shadow-lg">
-                <h2 className="text-red-600 text-center font-bold text-2xl mb-4">
+        <div
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-[1000]" // 🔄 Changed bg-opacity, added backdrop-blur, replaced padding
+        >
+            <div
+                className="bg-white rounded-xl shadow-2xl max-w-2xl w-full overflow-hidden p-6 md:p-8 relative" // 🔄 Changed rounded-lg ➜ rounded-xl, shadow-lg ➜ shadow-2xl, added overflow-hidden
+            >
+                <h2
+                    className="text-blue-900 text-center font-bold text-2xl md:text-2xl mb-6" // 🔄 Changed text-red-600 ➜ text-blue-900, increased spacing
+                >
                     Contact a Sales Representative
                 </h2>
+
                 <button
                     onClick={handleClose}
-                    className="absolute top-4 right-4 text-white bg-blue-900 border rounded-full p-2 hover:bg-red-600"
+                    className="absolute top-4 right-4 text-gray-500 hover:text-red-600 transition-colors p-1 rounded-full" // 🔄 Updated to match the cleaner icon style (gray hover red)
                 >
-                    X
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
                 </button>
-                <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                     <input
                         type="text"
                         name="firstName"
                         placeholder="First Name"
                         value={formData.firstName}
                         onChange={handleInputChange}
-                        className="border p-2 rounded"
+                        className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" // 🔄 Updated styling to match animated input
                         required
                     />
                     <input
@@ -78,7 +93,7 @@ const ContactPopup = ({ show, handleClose }) => {
                         placeholder="Last Name"
                         value={formData.lastName}
                         onChange={handleInputChange}
-                        className="border p-2 rounded"
+                        className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" // 🔄 Same here
                         required
                     />
                     <input
@@ -87,7 +102,7 @@ const ContactPopup = ({ show, handleClose }) => {
                         placeholder="Email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="border p-2 rounded"
+                        className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" // 🔄 Same
                         required
                     />
                     <input
@@ -96,35 +111,38 @@ const ContactPopup = ({ show, handleClose }) => {
                         placeholder="Phone Number"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="border p-2 rounded"
+                        className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" // 🔄 Same
                         required
                     />
-                    {/* Comment Section */}
-                    <div className="col-span-2">
+
+                    <div className="md:col-span-2">
                         <textarea
                             name="comments"
                             placeholder="Your comments or questions..."
                             value={formData.comments}
                             onChange={handleInputChange}
-                            className="border p-2 rounded w-full h-32 resize-none focus:outline-none focus:ring-2 focus:ring-blue-600"
+                            className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent h-32 resize-none transition-all" // 🔄 Enhanced styling, removed min-h-[120px]
                         ></textarea>
                     </div>
 
-                    <div className="col-span-2 flex items-center">
+                    <div className="md:col-span-2 flex items-center">
                         <input
                             type="checkbox"
                             name="agreeToTerms"
                             checked={formData.agreeToTerms}
                             onChange={handleInputChange}
-                            className="mr-2"
+                            className="w-4 h-4 mr-3 accent-blue-900" 
                             required
                         />
-                        <span>I have read and agree to OHM's Terms and Conditions</span>
+                        <span className="text-sm text-gray-600"> 
+                            I have read and agree to OHM's Terms and Conditions
+                        </span>
                     </div>
-                    <div className="col-span-2">
+
+                    <div className="md:col-span-2">
                         <button
                             type="submit"
-                            className="bg-blue-900 text-white font-bold py-2 px-6 rounded-lg hover:bg-red-600 transition-all"
+                            className="w-full bg-blue-900 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-800 transition-colors" // 🔄 Updated font, bg color, and hover transition
                         >
                             Get In Touch
                         </button>

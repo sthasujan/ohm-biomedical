@@ -74,16 +74,16 @@ const About = () => {
                             </h2>
 
                             <div className="space-y-5 md:space-y-6 text-justify">
-                                <p className="text-base sm:text-lg md:text-[17px] leading-relaxed md:leading-loose text-neutralGrey">
-                                    Our story began in 2022 when four clinical engineers, driven by a shared dedication to quality compliance and exceptional customer experience, recognized that the service standards they were delivering needed to evolve. United by these values, they founded OHM Biomedical, determined to set a new benchmark in the biomedical industry.
+                                <p className="text-base sm:text-lg md:text-[17px] leading-relaxed md:leading-loose text-black">
+                                    In 2022, a group of four visionary clinical engineers came together—united by a mission to redefine service excellence in the biomedical field. With a deep-rooted commitment to compliance and client care, they laid the foundation of <strong>OHM Biomedical</strong>, aiming to elevate industry standards and build lasting trust.
                                 </p>
 
-                                <p className="text-base sm:text-lg md:text-[17px] leading-relaxed md:leading-loose text-neutralGrey">
-                                    Today, OHM Biomedical has grown beyond its original team of four into a robust, experienced collective of professionals. Our expertise spans critical medical devices, including ventilators, anesthesia machines, and dialysis equipment, ensuring they perform flawlessly when lives depend on them.
+                                <p className="text-base sm:text-lg md:text-[17px] leading-relaxed md:leading-loose text-black">
+                                    Since then, we’ve grown into a dynamic and experienced team, trusted by healthcare professionals across the region. Our expertise spans a range of mission-critical medical technologies—from ventilators and anesthesia machines to dialysis systems—ensuring these life-saving devices perform at their absolute best when it matters most.
                                 </p>
 
-                                <p className="text-base sm:text-lg md:text-[17px] leading-relaxed md:leading-loose text-neutralGrey font-medium">
-                                    At OHM Biomedical, we are more than just a service provider—we are partners in your patient care. Our unwavering commitment to excellence and our extensive industry knowledge make us the trusted choice for all your medical equipment needs.
+                                <p className="text-base sm:text-lg md:text-[17px] leading-relaxed md:leading-loose text-black font-medium">
+                                    At <strong>OHM Biomedical</strong>, we’re not just technicians—we’re your partners in patient care. Every service we provide is backed by precision, integrity, and a passion for healthcare innovation. Your trust fuels our drive, and your success is our commitment.
                                 </p>
                             </div>
                         </motion.div>

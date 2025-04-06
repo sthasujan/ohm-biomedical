@@ -222,7 +222,6 @@ const Sechrestblenderservice = () => {
                                 </div>
                             </motion.div>
                         </div>
-
                         {/* Contact Popup */}
                         {showContactPopup && (
                             <motion.div
@@ -240,7 +239,7 @@ const Sechrestblenderservice = () => {
                                         <button
                                             onClick={() => setShowContactPopup(false)}
                                             className="absolute top-4 right-4 text-gray-500 hover:text-red-600
-                                                    transition-colors p-1 rounded-full"
+                                                            transition-colors p-1 rounded-full"
                                         >
                                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -254,7 +253,7 @@ const Sechrestblenderservice = () => {
                                         <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                                             {/* Form Fields */}
                                             {['First Name', 'Last Name', 'Email', 'Phone Number'].map((label, idx) => (
-                                                <div key={label} className={idx > 1 ? 'md:col-span-2' : ''}>
+                                                <div key={label} className={idx > 1 ? 'md:col-span-1' : ''}>
                                                     <input
                                                         type={idx === 2 ? 'email' : idx === 3 ? 'tel' : 'text'}
                                                         name={label.toLowerCase().replace(' ', '')}
@@ -262,8 +261,8 @@ const Sechrestblenderservice = () => {
                                                         value={formData[label.toLowerCase().replace(' ', '')]}
                                                         onChange={handleInputChange}
                                                         className="w-full px-4 py-2.5 border border-gray-200 rounded-lg
-                                                        focus:ring-2 focus:ring-blue-500 focus:border-transparent
-                                                        transition-all"
+                                                                focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                                                                transition-all"
                                                         required
                                                     />
                                                 </div>
@@ -276,8 +275,8 @@ const Sechrestblenderservice = () => {
                                                     value={formData.comments}
                                                     onChange={handleInputChange}
                                                     className="w-full px-4 py-2.5 border border-gray-200 rounded-lg
-                                                        focus:ring-2 focus:ring-blue-500 focus:border-transparent
-                                                        h-32 resize-none transition-all"
+                                                                focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                                                                h-32 resize-none transition-all"
                                                 />
                                             </div>
 
@@ -299,7 +298,7 @@ const Sechrestblenderservice = () => {
                                                 <button
                                                     type="submit"
                                                     className="w-full bg-blue-900 text-white py-3 px-6 rounded-lg
-                                                        font-semibold hover:bg-blue-800 transition-colors"
+                                                                font-semibold hover:bg-blue-800 transition-colors"
                                                 >
                                                     Get In Touch
                                                 </button>

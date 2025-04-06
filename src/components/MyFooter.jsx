@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col items-center md:items-end">
-            {/* <h3 className="font-semibold text-lg mb-3 underline">About</h3> */}
+            {/* LinkedIn Icon */}
             <a
               href="https://www.linkedin.com/company/ohmbiomedical/"
               target="_blank"
@@ -45,16 +45,24 @@ const Footer = () => {
               <FaLinkedinIn />
             </a>
 
-            {/* <ul>
-              <li className="hover:underline mt-3"><a href="/">Company Overview</a></li>
-            </ul> */}
-            {/* <div className="flex flex-col items-center">
-              <img src={logo} alt="OHM Biomedical Logo" className="h-20" />
-            </div> */}
-            <div className="flex flex-col md:flex-row md:items-end items-center space-y-2 md:space-y-0 md:space-x-4 mt-4 md:mt-20">
-              <div className="text-sm text-center md:text-right">
-                &copy; Copyright 2024 OHM Biomedical
-              </div>
+            {/* Privacy and Terms */}
+            <div className="flex flex-col text-sm text-white space-y-1 mb-2">
+              <a href="/PrivacyPolicy" className="hover:underline text-center md:text-right">
+                Privacy Policy
+              </a>
+              <a
+                href="src/assets/Terms&Conditions/OHM Biomedical Enginnering Terms of Supply and Sale  v 1.2_ 29_12_2024.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline text-center md:text-right"
+              >
+                Terms & Conditions
+              </a>
+            </div>
+
+            {/* Footer Text */}
+            <div className="text-sm text-center md:text-right mt-6 text-white">
+              &copy; Copyright 2024 OHM Biomedical
             </div>
           </div>
         </div>

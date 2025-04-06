@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import img1 from "../assets/products/Vyaireventilators/blog2.png";
 import img2 from "../assets/products/Carefusionbirdblenders/flow_meter1.png";
-import img3 from "../assets/products/Anesthesia.jpeg";
+import img3 from "../assets/products/Siemensultrasound/maple.png";
 import img4 from "../assets/Pictures/img3.JPEG";
 import img5 from "../assets/products/Biomedicalservice.jpg"
 import img6 from "../assets/services/Sechrist.png";
