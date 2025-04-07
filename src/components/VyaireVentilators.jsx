@@ -5,7 +5,7 @@ import Blog1 from "../assets/products/Vyaireventilators/blog1.png";
 import Blog2 from "../assets/products/Vyaireventilators/blog2.png";
 import Blog3 from "../assets/products/Vyaireventilators/blog3.png";
 import Blog4 from "../assets/products/Vyaireventilators/blog4.png";
-import Blog5 from "../assets/products/Vyaireventilators/blog5.png";
+// import Blog5 from "../assets/products/Vyaireventilators/blog5.png";
 import Blog6 from "../assets/products/Vyaireventilators/blog6.png";
 import { motion } from "framer-motion";
 
@@ -120,7 +120,7 @@ const YyaireVentilator = () => {
             <div className='flex justify-center mb-4'>
                 <button
                     onClick={() => navigate('/Consumablessales')} // or your preferred navigation method
-                    className='bg-white border-2 text-brandSecondary text-brandSecondary px-8 py-3 rounded-full font-semibold 
+                    className='bg-white border-2 text-brandSecondary px-8 py-3 rounded-full font-semibold 
                        hover:bg-brandSecondary hover:text-white transition-all duration-300
                        shadow-md hover:shadow-lg active:scale-95
                        text-sm sm:text-base md:text-lg'

@@ -240,8 +240,8 @@ const OurTeam = () => {
                                 </button>
 
                                 <div className="flex flex-col lg:flex-row">
-                                    {/* Image Section - Larger and properly sized */}
-                                    <div className="w-full lg:w-2/5 relative h-64 lg:h-auto lg:min-h-[400px]">
+                                    {/* Image Section - Mobile Optimized */}
+                                    <div className="w-full lg:w-2/5 relative h-48 sm:h-64 lg:h-auto lg:min-h-[400px]">
                                         <img
                                             src={selectedMember.image}
                                             alt={selectedMember.name}
@@ -249,18 +249,21 @@ const OurTeam = () => {
                                         />
                                     </div>
 
-                                    {/* Content Section - Perfectly aligned */}
-                                    <div className="w-full lg:w-3/5 p-6 md:p-8 flex flex-col">
-                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+                                    {/* Content Section with improved text alignment */}
+                                    <div className="w-full lg:w-3/5 p-4 md:p-6 lg:p-8 flex flex-col">
+                                        {/* Name - Mobile Optimized */}
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-2 sm:mb-3">
                                             {selectedMember.name}
                                         </h3>
-                                        <p className="text-lg text-brandPrimary font-medium mb-4 md:mb-6">
+
+                                        {/* Post - Mobile Optimized */}
+                                        <p className="text-base sm:text-lg text-brandPrimary font-medium mb-3 sm:mb-4">
                                             {selectedMember.post}
                                         </p>
 
-                                        {/* Description with proper alignment and scrolling */}
-                                        <div className="flex-grow overflow-y-auto pr-2 mb-6">
-                                            <p className="text-gray-600 leading-relaxed text-justify">
+                                        {/* Optimized Description Container */}
+                                        <div className="flex-grow overflow-y-auto pr-1 md:pr-3 mb-4 md:mb-6 max-h-[40vh] md:max-h-[50vh] scrollbar-thin">
+                                            <p className="text-gray-600 text-sm md:text-base leading-snug md:leading-normal text-justify md:text-justify lg:text-justify hyphens-auto">
                                                 {selectedMember.description}
                                             </p>
                                         </div>
@@ -274,15 +277,17 @@ const OurTeam = () => {
                                             >
                                                 <FaEnvelope />
                                             </a>
-                                            <a
-                                                href={selectedMember.linkedin}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-gray-700 hover:text-brandPrimary text-xl transition-colors p-2"
-                                                title="LinkedIn"
-                                            >
-                                                <FaLinkedin />
-                                            </a>
+                                            {selectedMember.linkedin && (
+                                                <a
+                                                    href={selectedMember.linkedin}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-gray-700 hover:text-brandPrimary text-xl transition-colors p-2"
+                                                    title="LinkedIn"
+                                                >
+                                                    <FaLinkedin />
+                                                </a>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
