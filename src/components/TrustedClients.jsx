@@ -137,8 +137,8 @@ const TrustedClients = () => {
               <div className="text-gray-600 text-sm sm:text-base">Specialist Clinics</div>
             </div>
             <div className="p-4">
-              <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">24/7</div>
-              <div className="text-gray-600 text-sm sm:text-base">Support Available</div>
+              <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">12+</div>
+              <div className="text-gray-600 text-sm sm:text-base">Trusted Partners</div>
             </div>
           </div>
         </motion.div>

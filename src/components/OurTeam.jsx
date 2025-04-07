@@ -11,6 +11,7 @@ import team7 from "../assets/Ourteam/abhiske.png";
 import team8 from "../assets/Ourteam/sujata.webp";
 import team9 from "../assets/Ourteam/abhishekk.png";
 import team10 from "../assets/Ourteam/Ayusha.jpeg";
+import team11 from "../assets/Ourteam/Smiriti Koirala.png";
 import { motion, AnimatePresence } from "framer-motion";
 
 const teamMembers = [
@@ -24,7 +25,7 @@ const teamMembers = [
     },
     {
         name: "Suman Kharel",
-        post: "Co Founder",
+        post: "Co-Founder",
         image: team2,
         description: "Suman Kharel is a Swinburne University graduate and former GE Healthcare professional, now leading as Workshop Manager at OHM Biomedical. He oversees the service and maintenance of critical Biomedical devices, ensuring high standards and operational excellence. Known for his meticulous approach and dedication to continuous improvement, Suman has enhanced the company’s reputation by focusing on advanced training and strict compliance. His leadership not only uplifts his team but also solidifies OHM Biomedical’s role as a trusted partner in the healthcare industry.",
         email: "Suman@ohmBiomedical.com.au",
@@ -32,7 +33,7 @@ const teamMembers = [
     },
     {
         name: "Subash Basnet",
-        post: "Co Founder",
+        post: "Co-Founder",
         image: team3,
         description: "Subash Basnet: Senior Biomedical Engineer with 10+ years' experience, excels in optimizing and repairing critical medical equipment, specializing in Anaesthesia, Patient Monitors, Central Monitors, Telemetry, Ventilators, and more.",
         email: "Subash@ohmBiomedical.com.au",
@@ -40,7 +41,7 @@ const teamMembers = [
     },
     {
         name: "Anupam Acharya",
-        post: "Co Founder",
+        post: "Co-Founder",
         image: team4,
         description: "A highly accomplished professional with over 10 years of experience in the biomedical field, holding a Master of Biomedical Engineering and an MBA. Demonstrates a proven track record in managing diverse projects and leading crossfunctional teams to achieve strategic objectives. Adept at integrating technical expertise with business acumen to drive innovation, optimize processes, and deliver exceptional results. Recognized for strong leadership, project management skills, and the ability to cultivate collaborative environments. Committed to advancing biomedical solutions through strategic planning and effective team management.",
         email: "anupam@ohmBiomedical.com.au",
@@ -92,6 +93,14 @@ const teamMembers = [
         image: team10,
         description: "Aayushi brings in vibrant energy, a strong background in customer service, and a passion for problem-solving and value-added selling. In her role, she supports both inbound and outbound sales inquiries, contributing to business development initiatives, and assisting with key account management. She plays a key role in expanding our advanced ventilation portfolio (Zoll Medical), engaging with OEM vendors and partners, and contributing to our specialist biomedical engineering programs as part of our ongoing collaboration with OEMs and industry stakeholders.",
         email: "AAYUSHI.KOIRALA28@GMAIL.COM",
+        linkedin: "",
+    },
+    {
+        name: "Smiriti Koirala",
+        post: "Marketing Co-Ordinator",
+        image: team11,
+        description: "With an undergraduate education in business administration and experience in the retail sector, Smriti plays a key role at OHM Biomedical. She is responsible for coordinating marketing campaigns, managing social media presence, and supporting branding initiatives. Her creativity and strategic approach help drive engagement and enhance the company’s visibility in the biomedical industry. Smriti is passionate about marketing and always brings fresh ideas and a positive attitude to the team. Her ability to multitask and collaborate effectively makes her an invaluable part of OHM Biomedical’s growth and success",
+        email: "",
         linkedin: "",
     },
 ];

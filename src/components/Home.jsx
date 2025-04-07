@@ -37,7 +37,7 @@ const Home = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
-                        Welcome to OHM Biomedical – Your Ally in Patient Care
+                        Authorized Distributor of ZOLL Medical in ANZ
                     </motion.h1>
                 </div>
             </div>
