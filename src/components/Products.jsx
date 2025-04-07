@@ -6,7 +6,7 @@ import img1 from "../assets/products/Vyaireventilators/blog2.png";
 import img2 from "../assets/products/Carefusionbirdblenders/flow_meter.jpg";
 import img3 from "../assets/products/Siemensultrasound/maple.png";
 import img4 from "../assets/Pictures/img3.JPEG";
-import img5 from "../assets/products/Biomedicalservice.jpg"
+import img5 from "../assets/products/Biomedical Service.png"
 import img6 from "../assets/services/Sechrist blender.png";
 import img7 from "../assets/services/GEAnaesthetic.png";
 

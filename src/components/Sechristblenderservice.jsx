@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import productBgImg from "../assets/products.webp";
 import { motion } from "framer-motion";
-import amimg from "../assets/services/Sechrist.png";
+import amimg from "../assets/services/Sechrist blender.png";
 
 import emailjs from 'emailjs-com';
 

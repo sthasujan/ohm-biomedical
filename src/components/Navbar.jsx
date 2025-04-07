@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import logo from '../assets/logo.png';
-import { FaXmark, FaBars, FaPhone } from "react-icons/fa6";
+import { FaXmark, FaBars } from "react-icons/fa6";
 import { NavLink } from 'react-router-dom';
 import ContactPopup from './ContactPopup';
 

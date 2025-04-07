@@ -100,7 +100,7 @@ const teamMembers = [
         post: "Marketing Co-Ordinator",
         image: team11,
         description: "With an undergraduate education in business administration and experience in the retail sector, Smriti plays a key role at OHM Biomedical. She is responsible for coordinating marketing campaigns, managing social media presence, and supporting branding initiatives. Her creativity and strategic approach help drive engagement and enhance the company’s visibility in the biomedical industry. Smriti is passionate about marketing and always brings fresh ideas and a positive attitude to the team. Her ability to multitask and collaborate effectively makes her an invaluable part of OHM Biomedical’s growth and success",
-        email: "",
+        email: "smriti@ohmbiomedical.com.au",
         linkedin: "",
     },
 ];
