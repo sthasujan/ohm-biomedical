@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import productBgImg from "../assets/products.webp";
 import img1 from "../assets/Testimonials/Aldo.png";
 import img2 from "../assets/Testimonials/Wei-Min.jpg";
-
+import img3 from "../assets/Testimonials/Nick-Lonergan.jpg";
 // Testimonial data constant
 const testimonials = [
   {
@@ -21,6 +21,14 @@ const testimonials = [
     subtitle: "",
     description: "We have been partnering with OHM Biomedical Engineering Services since Oct 2023. They have a group of professionals who are very customer-centric in what they do. We are happy with the quality of the service they provide our customers with across Australia and New Zealand. We truly value this partnership.",
     image: img2,
+  },
+  {
+    name: "Dr Nicholas Lonergan",
+    company: "",
+    title: "",
+    subtitle: "",
+    description: "I cannot speak highly enough about Sovit and his exceptional team at Ohm Biomedical. When our anaesthetic system developed an issue that threatened to disrupt an entire day of surgery, Sovit provided immediate, out-of-hours phone support along with clear, expert technical guidance. Remarkably, his dedicated team came out to our site during the Christmas break to resolve the issue promptly, enabling us to resume operations without delay. Although Ohm Biomedical is a smaller company, their boutique size translates into outstanding, personalised customer service and unparalleled responsiveness. Highly recommended for their commitment, professionalism, and genuine care.",
+    image: img3,
   },
 ];
 
@@ -90,7 +98,6 @@ const Testimonial = () => {
                 <p className="text-gray-500">{testimonial.company}</p>
               </motion.div>
             </div>
-
             {index < testimonials.length - 1 && <hr className="border-t border-gray-300 my-8" />}
           </div>
         ))}
