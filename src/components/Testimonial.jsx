@@ -4,6 +4,9 @@ import productBgImg from "../assets/products.webp";
 import img1 from "../assets/Testimonials/Aldo.png";
 import img2 from "../assets/Testimonials/Wei-Min.jpg";
 import img3 from "../assets/Testimonials/Nick-Lonergan.jpg";
+// Import LinkedIn icon from react-icons
+import { FaLinkedin } from 'react-icons/fa';
+
 // Testimonial data constant
 const testimonials = [
   {
@@ -13,6 +16,7 @@ const testimonials = [
     subtitle: "",
     description: "I greatly appreciate the exceptional service provided by the team at Ohm Biomedical. Their professionalism, expertise, rapid response, and dedication have been instrumental in keeping our critical ventilation equipment functional at all times.",
     image: img1,
+    linkedin: "",
   },
   {
     name: "Wei Min Yu",
@@ -21,6 +25,7 @@ const testimonials = [
     subtitle: "",
     description: "We have been partnering with OHM Biomedical Engineering Services since Oct 2023. They have a group of professionals who are very customer-centric in what they do. We are happy with the quality of the service they provide our customers with across Australia and New Zealand. We truly value this partnership.",
     image: img2,
+    linkedin: "",
   },
   {
     name: "Dr Nicholas Lonergan",
@@ -29,6 +34,7 @@ const testimonials = [
     subtitle: "",
     description: "I cannot speak highly enough about Sovit and his exceptional team at Ohm Biomedical. When our anaesthetic system developed an issue that threatened to disrupt an entire day of surgery, Sovit provided immediate, out-of-hours phone support along with clear, expert technical guidance. Remarkably, his dedicated team came out to our site during the Christmas break to resolve the issue promptly, enabling us to resume operations without delay. Although Ohm Biomedical is a smaller company, their boutique size translates into outstanding, personalised customer service and unparalleled responsiveness. Highly recommended for their commitment, professionalism, and genuine care.",
     image: img3,
+    linkedin: "https://www.linkedin.com/in/dr-n-lonergan/",
   },
 ];
 
@@ -92,6 +98,20 @@ const Testimonial = () => {
                 transition={{ delay: index * 0.5, duration: 0.8, ease: "easeInOut" }}
               >
                 <h3 className="text-2xl font-semibold">{testimonial.name}</h3>
+                {/* LinkedIn link - centered on mobile, left-aligned on desktop */}
+                {testimonial.linkedin && (
+                  <div className="flex justify-center md:justify-start mt-2">
+                    <a
+                      href={testimonial.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 transition-colors flex items-center gap-1"
+                      aria-label={`${testimonial.name}'s LinkedIn profile`}
+                    >
+                      <FaLinkedin className="text-2xl" />
+                    </a>
+                  </div>
+                )}
                 <h4 className="text-lg font-light text-gray-500">{testimonial.subtitle}</h4>
                 <p className="mt-4 text-gray-600 text-justify">{testimonial.description}</p>
                 <p className="mt-6 font-medium">{testimonial.title}</p>

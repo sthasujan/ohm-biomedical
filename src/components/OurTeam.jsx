@@ -33,7 +33,7 @@ const teamMembers = [
     },
     {
         name: "Subash Basnet",
-        post: "Co-Founder & Head of Engineering",
+        post: "Co-Founder & Sr. Biomedical Engineer",
         image: team3,
         description: "Subash Basnet: Senior Biomedical Engineer with 10+ years' experience, excels in optimizing and repairing critical medical equipment, specializing in Anaesthesia, Patient Monitors, Central Monitors, Telemetry, Ventilators, and more.",
         email: "Subash@ohmBiomedical.com.au",
@@ -41,7 +41,7 @@ const teamMembers = [
     },
     {
         name: "Anupam Acharya",
-        post: "Co-Founder & Clinical Application Specialist",
+        post: "Co-Founder & Clinical Engineer",
         image: team4,
         description: "A highly accomplished professional with over 10 years of experience in the biomedical field, holding a Master of Biomedical Engineering and an MBA. Demonstrates a proven track record in managing diverse projects and leading crossfunctional teams to achieve strategic objectives. Adept at integrating technical expertise with business acumen to drive innovation, optimize processes, and deliver exceptional results. Recognized for strong leadership, project management skills, and the ability to cultivate collaborative environments. Committed to advancing biomedical solutions through strategic planning and effective team management.",
         email: "anupam@ohmBiomedical.com.au",
